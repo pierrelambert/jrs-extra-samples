@@ -33,6 +33,9 @@ Repository
 -------------
 This will contain any repository exports. 
 
-Open items:
+The suggested repository location for a sample should be: Public/Samples/ExtraSamples/YourNewSampleHere
 
-* We should try and standardize repo locations for new samples, like Public -> Extra samples, for example!
+There is a repository export file called Skeleton.zip in the repository example that will help you with the suggested folder structure so that you adhere to repository best practices, for example sharing resources and using references where possible. 
+
+You can import Skeleton.zip to your repository, then when creating a new sample you can copy it from Public/Skeleton to Public/Samples/ExtraSamples/YourNewSamplehere - this will help you adhere to best repository practices.
+
