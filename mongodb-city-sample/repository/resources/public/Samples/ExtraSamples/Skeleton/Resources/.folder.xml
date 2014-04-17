@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/ExtraSamples/Skeleton</parent>
+    <name>Resources</name>
+    <label>Resources</label>
+    <description></description>
+    <creationDate>2014-04-15T10:54:31.845+01:00</creationDate>
+    <updateDate>2013-04-04T08:58:23.000+01:00</updateDate>
+    <folder>DataSources</folder>
+    <folder>Images</folder>
+    <folder>InputControls</folder>
+</folder>

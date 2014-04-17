@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/ExtraSamples</parent>
+    <name>Skeleton</name>
+    <label>MongoDB City Sample</label>
+    <description></description>
+    <creationDate>2014-04-15T10:54:31.845+01:00</creationDate>
+    <updateDate>2014-04-17T14:09:58.866+01:00</updateDate>
+    <folder>Dashboards</folder>
+    <folder>Reports</folder>
+    <folder>Resources</folder>
+</folder>

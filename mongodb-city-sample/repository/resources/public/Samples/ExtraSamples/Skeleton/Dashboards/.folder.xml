@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/ExtraSamples/Skeleton</parent>
+    <name>Dashboards</name>
+    <label>Dashboards</label>
+    <description></description>
+    <creationDate>2014-04-15T10:54:31.845+01:00</creationDate>
+    <updateDate>2013-01-10T12:34:20.000Z</updateDate>
+    <resource>MongoDB_City_Dashboard</resource>
+</folder>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/Samples/ExtraSamples/Skeleton/Reports</folder>
+    <name>CaseDetailReport</name>
+    <version>6</version>
+    <label>Case Detail Report</label>
+    <description></description>
+    <creationDate>2014-04-15T10:57:42.145+01:00</creationDate>
+    <updateDate>2014-04-15T11:06:55.823+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Samples/ExtraSamples/Skeleton/Reports/CaseDetailReport_files</folder>
+            <name>main_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <creationDate>2014-04-15T10:57:42.145+01:00</creationDate>
+            <updateDate>2014-04-15T10:57:42.145+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/ExtraSamples/Skeleton/Resources/DataSources/MongoDBCityData_Datasource</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/Samples/ExtraSamples/Skeleton/Reports/CaseDetailReport_files</folder>
+            <name>CaseId</name>
+            <version>1</version>
+            <label>CaseId</label>
+            <creationDate>2014-04-15T11:06:55.823+01:00</creationDate>
+            <updateDate>2014-04-15T11:06:55.823+01:00</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/public/Samples/ExtraSamples/Skeleton/Reports/CaseDetailReport_files/CaseId_files</folder>
+                    <name>myDatatype</name>
+                    <version>0</version>
+                    <label>myDatatype</label>
+                    <creationDate>2014-04-15T11:06:55.823+01:00</creationDate>
+                    <updateDate>2014-04-15T11:06:55.823+01:00</updateDate>
+                    <type>1</type>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/Samples/ExtraSamples/Skeleton/Reports/CaseDetailReport_files</folder>
+            <name>Open-sewer.png</name>
+            <version>0</version>
+            <label>Open-sewer.png</label>
+            <creationDate>2014-04-15T11:04:45.977+01:00</creationDate>
+            <updateDate>2014-04-15T11:04:45.977+01:00</updateDate>
+            <referenceUri>/public/Samples/ExtraSamples/Skeleton/Resources/Images/Open-sewer.png</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/Samples/ExtraSamples/Skeleton/Reports/CaseDetailReport_files</folder>
+            <name>Powered_by_MongoDB_3.png</name>
+            <version>0</version>
+            <label>Powered_by_MongoDB_3.png</label>
+            <creationDate>2014-04-15T11:04:15.518+01:00</creationDate>
+            <updateDate>2014-04-15T11:04:15.518+01:00</updateDate>
+            <referenceUri>/public/Samples/ExtraSamples/Skeleton/Resources/Images/Powered_by_MongoDB_3.png</referenceUri>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>
