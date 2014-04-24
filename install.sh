@@ -46,8 +46,8 @@ mongorestore --drop /jrs-extra-samples/${1}/database/mongodb/
 function Install(){ # Installs a specific sample (Repo, DB, ...)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/ ] && echo "Sample ${1} not found" && return
-ImportRepo ${1}
-ImportMongo ${1}
+JRSImport  ${1}
+MongoRestore ${1}
 }
 
 function Usage(){ # Help message
