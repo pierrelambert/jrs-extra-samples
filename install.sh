@@ -55,6 +55,17 @@ for dump in /jrs-extra-samples/${1}/database/mysql/*.sql; do
 done
 }
 
+function InfobrightRestore(){ # Import a mySQL dump for the specified sample (drops and recreates)
+[ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
+[ ! -d /jrs-extra-samples/${1}/database/infobright/ ] && echo "No Infobright database to import" && return
+echo "Importing ${1} Infobright database..."
+for dump in /jrs-extra-samples/${1}/database/infobright/*.sql; do
+    mysql -h localhost -uroot -proot -P5029 < ${dump}
+    echo "GRANT ALL PRIVILEGES ON \`states\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029
+    echo "GRANT ALL PRIVILEGES ON \`states\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029 
+done
+}
+
 function InstallFiles(){ # Installs files in tomcat's root
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/filesystem/ ] && echo "No file to install" && return
@@ -73,6 +84,7 @@ function Install(){ # Installs a specific sample (Repo, DB, ...)
 JRSImport  ${1}
 MongoRestore ${1}
 MySQLRestore ${1}
+InfobrightRestore ${1}
 InstallFiles ${1}
 }
 
