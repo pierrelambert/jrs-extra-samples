@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="400" pageHeight="400" columnWidth="400" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d5865a27-5842-4c2b-b87f-4437e5d0a2b9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SpiderChart/Reports/Spider"/>
+	<property name="ireport.jasperserver.url" value="http://192.168.113.139/jasperserver-pro/services/repository"/>
+	<queryString>
+		<![CDATA[SELECT
+     ln(count(opportunities.id)) AS nb,
+     extract(year from opportunities.date_closed) AS opp_year,
+     opportunities.sales_stage AS opportunities_sales_stage
+FROM
+     opportunities opportunities
+WHERE
+	extract(year from opportunities.date_closed) >= 2005
+	AND extract(year from opportunities.date_closed) <= 2006
+GROUP BY
+     extract(year from opportunities.date_closed),
+     opportunities_sales_stage
+ORDER BY
+     opportunities.sales_stage,
+     extract(year from opportunities.date_closed)]]>
+	</queryString>
+	<field name="nb" class="java.lang.Double"/>
+	<field name="opp_year" class="java.lang.Integer"/>
+	<field name="opportunities_sales_stage" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="399" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="400" height="399" uuid="b6b85d04-d008-496c-bb66-68ba78c585bc"/>
+				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sc:chartSettings>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</sc:chartSettings>
+					<sc:spiderDataset>
+						<categorySeries>
+							<seriesExpression><![CDATA[$F{opp_year}]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{opportunities_sales_stage}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{nb}]]></valueExpression>
+							<itemHyperlink hyperlinkType="ReportExecution">
+								<hyperlinkParameter name="reportUnit">
+									<hyperlinkParameterExpression><![CDATA["/public/SpiderChart/Reports/detail"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="stage">
+									<hyperlinkParameterExpression><![CDATA[$F{opportunities_sales_stage}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</itemHyperlink>
+						</categorySeries>
+					</sc:spiderDataset>
+					<sc:spiderPlot isWebFilled="true" interiorGap="0.3"/>
+				</sc:spiderChart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
