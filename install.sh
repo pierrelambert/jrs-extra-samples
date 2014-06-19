@@ -61,10 +61,20 @@ function PgRestore(){ # Import a PgSQL dump for the specified sample (drops and 
 [ ! -d /jrs-extra-samples/${1}/database/postgresql/ ] && echo "No PgSQL database to import" && return
 echo "Importing ${1} PgSQL database..."
 for dump in /jrs-extra-samples/${1}/database/postgresql/*.sql; do
-    [ -f ${dump} ] && (cat ${dump} | su - postgres -c "psql  ")
+    if [ -f ${dump} ]; then
+	    S=`basename "${dump}" .sql`
+	    echo "DROP DATABASE ${S}" | su - postgres -c "psql"
+	    echo "CREATE DATABASE ${S}" | su - postgres -c "psql"
+	    cat ${dump} | su - postgres -c "psql ${S} "
+    fi
 done
 for dump in /jrs-extra-samples/${1}/database/postgresql/*.sql.gz; do
-    [ -f ${dump} ] && (zcat ${dump} | su - postgres -c "psql  ")
+    if [ -f ${dump} ]; then
+	    S=`basename "${dump}" .sql.gz`
+	    echo "DROP DATABASE ${S}" | su - postgres -c "psql"
+	    echo "CREATE DATABASE ${S}" | su - postgres -c "psql"
+	    zcat ${dump} | su - postgres -c "psql ${S} "
+    fi
 done
 }
 
@@ -112,7 +122,9 @@ JRSImport  ${1}
 MongoRestore ${1}
 MySQLRestore ${1}
 InfobrightRestore ${1}
+PgRestore ${1}
 InstallFiles ${1}
+InstallPatch ${1}
 }
 
 function Usage(){ # Help message
