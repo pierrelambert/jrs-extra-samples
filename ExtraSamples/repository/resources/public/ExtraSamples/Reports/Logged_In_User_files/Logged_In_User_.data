@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/extra_samples/Logged_In_User"/>
+	<property name="ireport.jasperserver.url" value="http://ec2-23-20-132-117.compute-1.amazonaws.com/jasperserver-pro/services/repository"/>
+	<import value="com.jaspersoft.jasperserver.api.metadata.user.domain.User"/>
+	<parameter name="LoggedInUserExternallyDefined" class="java.lang.Boolean"/>
+	<parameter name="LoggedInUsername" class="java.lang.String"/>
+	<parameter name="LoggedInUserFullName" class="java.lang.String"/>
+	<parameter name="LoggedInUserEmailAddress" class="java.lang.String"/>
+	<parameter name="LoggedInUserEnabled" class="java.lang.Boolean"/>
+	<parameter name="LoggedInUserTenantId" class="java.lang.String"/>
+	<parameter name="LoggedInUserRoles" class="java.util.Collection"/>
+	<parameter name="LoggedInUserAttributes" class="java.util.Map"/>
+	<parameter name="LoggedInUserAttributeNames" class="java.util.Collection"/>
+	<parameter name="LoggedInUser" class="com.jaspersoft.jasperserver.api.metadata.user.domain.User"/>
+	<parameter name="LoggedInUserAttributeValues" class="java.util.Collection"/>
+	<parameter name="LoggedInUserAttribute_Cities" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1]]>
+	</queryString>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="116">
+			<textField>
+				<reportElement x="0" y="96" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Sample Use of Built-In Parameters for the Logged-In User"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="400" height="96"/>
+				<imageExpression><![CDATA["repo:js_samples.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="400" y="0" width="155" height="96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Logged-In User"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="368">
+			<textField>
+				<reportElement x="232" y="146" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUserExternallyDefined}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="66" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUsername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="86" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUserFullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="106" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUserEmailAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="126" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUserEnabled}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="166" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUserTenantId}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="186" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{LoggedInUserRoles}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="206" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{LoggedInUserAttributes}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="226" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{LoggedInUserAttributeNames}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="146" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Externally Defined?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="66" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="86" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Full Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="166" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tenant ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="126" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Enabled?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="206" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Attributes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="186" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="226" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Attribute Names]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="232" y="46" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LoggedInUser}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="46" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Logged-in User]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="35"/>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA["Built-in parameters are automatically filled during report execution. Custom built-in parameters can be defined."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="246" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Attribute Values]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="246" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{LoggedInUserAttributeValues}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="266" width="232" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Attribute -- Cities]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="232" y="266" width="323" height="20"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$P{LoggedInUserAttribute_Cities}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="313" width="555" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["Login as the sample user californiaUser to see the User Attributes in action."]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

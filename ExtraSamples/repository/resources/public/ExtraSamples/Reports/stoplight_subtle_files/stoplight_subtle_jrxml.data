@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Stoplight_subtle" language="groovy" pageWidth="170" pageHeight="270" columnWidth="170" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d2fb0a2d-b3a8-423b-a220-d6b925577559">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/ExtraSamples/Reports/stoplight_subtle"/>
+	<property name="ireport.jasperserver.url" value="http://192.168.113.139/jasperserver-pro/services/repository"/>
+	<parameter name="ResourcesOnServer" class="java.lang.String">
+		<parameterDescription><![CDATA[Just click OK (not "Use default")]]></parameterDescription>
+		<defaultValueExpression><![CDATA["yes"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer_sales.customer_fullname AS customer_sales_customer_fullname,
+     customer_sales.store_sales AS customer_sales_store_sales,
+     customer_sales.customer_id AS customer_sales_customer_id
+FROM
+     customer_sales customer_sales
+ORDER BY
+     customer_sales.customer_fullname ASC]]>
+	</queryString>
+	<field name="customer_sales_customer_fullname" class="java.lang.String"/>
+	<field name="customer_sales_store_sales" class="java.math.BigDecimal"/>
+	<field name="customer_sales_customer_id" class="java.lang.Integer"/>
+	<variable name="RYG" class="java.lang.String">
+		<variableExpression><![CDATA[($F{customer_sales_store_sales} < 100)
+? "red_ball.png"
+: ($F{customer_sales_store_sales} < 200)
+    ? "yellow_ball.png"
+    : "green_ball.png"]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[$V{REPORT_COUNT} <= 10]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField hyperlinkType="ReportExecution">
+				<reportElement mode="Opaque" x="20" y="0" width="100" height="20" uuid="edae5cbd-da84-4f91-86ea-10ef1d4612ae"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{customer_sales_customer_fullname}]]></textFieldExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/9.CustomerDetailReport"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="customerId">
+					<hyperlinkParameterExpression><![CDATA[$F{customer_sales_customer_id}]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</textField>
+			<textField pattern="#,##0.00" hyperlinkType="ReportExecution">
+				<reportElement mode="Opaque" x="120" y="0" width="50" height="20" uuid="7e5b3ef5-dee2-461a-a4dd-b63ca1378914"/>
+				<box rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{customer_sales_store_sales}]]></textFieldExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/9.CustomerDetailReport"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="customerId">
+					<hyperlinkParameterExpression><![CDATA[$F{customer_sales_customer_id}]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</textField>
+			<image hyperlinkType="ReportExecution">
+				<reportElement x="0" y="0" width="20" height="20" uuid="27d777cf-fd6b-49fe-a30c-f1244cd3936e"/>
+				<imageExpression><![CDATA[($P{ResourcesOnServer} == "yes" ? "repo:" : "")
++ $V{RYG}]]></imageExpression>
+				<hyperlinkParameter name="_report">
+					<hyperlinkParameterExpression><![CDATA["/public/Samples/Reports/9.CustomerDetailReport"]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+				<hyperlinkParameter name="customerId">
+					<hyperlinkParameterExpression><![CDATA[$F{customer_sales_customer_id}]]></hyperlinkParameterExpression>
+				</hyperlinkParameter>
+			</image>
+		</band>
+	</detail>
+	<summary>
+		<band height="70" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="5" width="170" height="1" uuid="ade0e6f1-e071-49b7-86c9-8afb49244abf"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="0" y="10" width="20" height="20" uuid="3370fef3-2614-45de-afbd-44ea4a351a3d"/>
+				<imageExpression><![CDATA[$P{ResourcesOnServer} == "yes" ? "repo:green_ball.png" : "green_ball.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="20" y="10" width="150" height="20" uuid="1befe5dc-9101-4cbc-8468-52f34e33f453"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sales over \$200"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="30" width="20" height="20" uuid="b693226b-8717-4f09-9080-167f5a4a18df"/>
+				<imageExpression><![CDATA[$P{ResourcesOnServer} == "yes" ? "repo:yellow_ball.png" : "yellow_ball.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="20" y="30" width="150" height="20" uuid="0940959a-3cb5-4389-b129-1d923879692d"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sales \$100 - \$200"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="50" width="20" height="20" uuid="d750186d-beb9-4187-a515-905dc1f84699"/>
+				<imageExpression><![CDATA[$P{ResourcesOnServer} == "yes" ? "repo:red_ball.png" : "red_ball.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement mode="Opaque" x="20" y="50" width="150" height="20" uuid="f1ea4510-ec7f-495b-95f8-9459dbec6b0c"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sales under \$100"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

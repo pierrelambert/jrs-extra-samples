@@ -97,6 +97,7 @@ echo "Installing ${1} files..."
 cd /jrs-extra-samples/${1}/filesystem
 for file in `find ./ -type f`; do
     [ -f ${file} ] && RESTART=1
+    rm -Rf ${TOMCATROOT}/${file}
     mkdir -p ${TOMCATROOT}/${file}
     rm -Rf ${TOMCATROOT}/${file}
     cp ${file} ${TOMCATROOT}/${file}

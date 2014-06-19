@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CascadingReport_2" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="feb927b2-fc3c-4ca6-92f1-77b7d9a4a5bb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="550"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/interactive/Cascading_Report_2_Updated"/>
+	<property name="ireport.jasperserver.url" value="http://ec2-23-20-151-115.compute-1.amazonaws.com/jasperserver-pro/services/repository"/>
+	<property name="net.sf.jasperreports.default.pdf.font.name" value="Verdena"/>
+	<style name="alternating" style="table_TD">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{product_name_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EFEFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="RegionWiseSales" uuid="8f86f702-ad7c-408e-a605-7e4568b7828b">
+		<parameter name="Product_Family" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Food"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Department" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Produce"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Category" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Vegetables"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Name" class="java.util.Collection">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select
+  r.sales_region,
+  sum(s.store_sales) as store_sales
+from
+  product p,
+  product_class pc,
+  sales_fact_1997 s,
+  store st,
+  region r
+where
+  s.product_id=p.product_id and
+  pc.product_class_id=p.product_class_id and
+  st.store_id = s.store_id and
+  r.region_id = st.region_id and
+  pc.product_family=$P{Product_Family} and
+  pc.product_department=$P{Product_Department} and
+  pc.product_category=$P{Product_Category} and
+  $X{IN,p.product_name,Product_Name}
+group by
+ r.sales_region]]>
+		</queryString>
+		<field name="sales_region" class="java.lang.String"/>
+		<field name="store_sales" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="table" uuid="5d3c9a64-af15-4d28-b1dd-cb0f2d09f2cb">
+		<parameter name="Product_Family" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Food"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Department" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Produce"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Category" class="java.lang.String">
+			<defaultValueExpression><![CDATA["Vegetables"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Product_Name" class="java.util.Collection">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select
+  p.product_name,
+  st.store_name,
+  st.store_type,
+  r.sales_region,
+  s.store_sales,
+  s.store_cost,
+  s.unit_sales
+from
+  product p,
+  product_class pc,
+  sales_fact_1997 s,
+  store st,
+  region r
+where
+  s.product_id=p.product_id and
+  pc.product_class_id=p.product_class_id and
+  st.store_id = s.store_id and
+  r.region_id = st.region_id and
+  pc.product_family=$P{Product_Family} and
+  pc.product_department=$P{Product_Department} and
+  pc.product_category=$P{Product_Category} and
+  $X{IN, p.product_name,Product_Name}
+order by
+ p.product_name]]>
+		</queryString>
+		<field name="product_name" class="java.lang.String"/>
+		<field name="store_name" class="java.lang.String"/>
+		<field name="store_type" class="java.lang.String"/>
+		<field name="sales_region" class="java.lang.String"/>
+		<field name="store_sales" class="java.math.BigDecimal"/>
+		<field name="store_cost" class="java.math.BigDecimal"/>
+		<field name="unit_sales" class="java.math.BigDecimal"/>
+		<variable name="sum_StoreSales" class="java.math.BigDecimal" resetType="Group" resetGroup="product_name" calculation="Sum">
+			<variableExpression><![CDATA[$F{store_sales}]]></variableExpression>
+		</variable>
+		<variable name="sum_StoreCost" class="java.math.BigDecimal" resetType="Group" resetGroup="product_name" calculation="Sum">
+			<variableExpression><![CDATA[$F{store_cost}]]></variableExpression>
+		</variable>
+		<variable name="sum_unitSales" class="java.lang.Integer" resetType="Group" resetGroup="product_name" calculation="Sum">
+			<variableExpression><![CDATA[$F{unit_sales}]]></variableExpression>
+		</variable>
+		<variable name="CountProducts" class="java.math.BigDecimal" incrementType="Group" incrementGroup="product_name" calculation="DistinctCount">
+			<variableExpression><![CDATA[$F{product_name}]]></variableExpression>
+		</variable>
+		<variable name="total_products" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{product_name}]]></variableExpression>
+		</variable>
+		<variable name="Region_Sum" class="java.math.BigDecimal" incrementType="Group" incrementGroup="product_name" calculation="Sum"/>
+		<variable name="SalesTotal" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{store_sales}]]></variableExpression>
+		</variable>
+		<group name="product_name" isStartNewPage="true">
+			<groupExpression><![CDATA[$F{product_name}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="Product_Family" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Food"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Product_Department" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Produce"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Product_Category" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Vegetables"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Product_Name" class="java.util.Collection">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="product_name" class="java.lang.String"/>
+	<field name="store_name" class="java.lang.String"/>
+	<field name="store_type" class="java.lang.String"/>
+	<field name="sales_region" class="java.lang.String"/>
+	<field name="store_sales" class="java.math.BigDecimal"/>
+	<field name="store_cost" class="java.math.BigDecimal"/>
+	<field name="unit_sales" class="java.lang.Integer"/>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement uuid="f17fcca3-13dc-42fc-a0f3-d7ba3c79cab6" x="0" y="0" width="572" height="752"/>
+				<imageExpression><![CDATA["repo:home_bkgd.png" ]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="112">
+			<frame>
+				<reportElement uuid="9d2b14eb-86ee-4e2f-a7ff-2d316b214901" style="table_TF" mode="Opaque" x="262" y="37" width="301" height="66"/>
+				<box>
+					<topPen lineWidth="1.0" lineColor="#DDDDDD"/>
+					<leftPen lineWidth="1.0" lineColor="#DDDDDD"/>
+					<bottomPen lineWidth="1.0" lineColor="#DDDDDD"/>
+					<rightPen lineWidth="1.0" lineColor="#DDDDDD"/>
+				</box>
+				<staticText>
+					<reportElement uuid="8628dd1e-e46e-4b5c-a2d1-a4fa76bfb686" style="table_TF" mode="Transparent" x="0" y="0" width="141" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Product Family]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="232ad58c-36bb-4a21-ad11-301ee2ff2a17" style="table_TF" mode="Transparent" x="0" y="22" width="141" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Product Department]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="20a5d4d7-2250-4c2a-8c5a-ccff0936bcd1" style="table_TF" mode="Transparent" x="0" y="44" width="141" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<text><![CDATA[Product Category]]></text>
+				</staticText>
+				<textField pattern="" isBlankWhenNull="false">
+					<reportElement uuid="a3d16dc5-3d25-4487-9c84-4f8af9c633d5" style="table_TF" mode="Transparent" x="141" y="0" width="160" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Product_Family}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="false">
+					<reportElement uuid="c55b52ad-776c-43ce-a68f-e48cbe7c2acb" style="table_TF" mode="Transparent" x="141" y="22" width="160" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Product_Department}]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="false">
+					<reportElement uuid="80eb128d-5a95-484e-8c09-9fe81ec99535" style="table_TF" mode="Transparent" x="141" y="44" width="160" height="22" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+						<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{Product_Category}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image>
+				<reportElement uuid="6978a599-40a4-40e1-968e-08cc1dc8578b" x="79" y="37" width="70" height="70"/>
+				<imageExpression><![CDATA["repo:ico-library.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="0db4980c-b124-490f-84d4-f64ee6fa6f2a" style="title" x="79" y="0" width="493" height="37"/>
+				<textElement/>
+				<text><![CDATA[Product Transaction Summary Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="80">
+			<componentElement>
+				<reportElement uuid="e4f481cb-89f7-4eb5-8c4d-f872ba288028" key="table" mode="Opaque" x="79" y="0" width="420" height="80"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="table" uuid="e524ed74-c8f9-4976-ac46-52c8fa6e3091">
+						<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:columnGroup uuid="80975e19-0cc2-4326-8631-ef80e684c67c" width="330">
+						<jr:tableFooter style="table_TF" height="107" rowSpan="1">
+							<staticText>
+								<reportElement uuid="33fdcb71-c541-4a75-aad2-4f26191506ca" style="table_TF" x="0" y="0" width="330" height="35"/>
+								<textElement/>
+								<text><![CDATA[Total Sales]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="2f28a12d-227a-4669-9008-092374e14716" style="table_TF" x="0" y="35" width="330" height="35"/>
+								<textElement/>
+								<text><![CDATA[Count Products]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="61e31c1c-ea4b-4a66-a1db-4a4f463e3d8d" style="table_TF" x="0" y="70" width="330" height="35"/>
+								<textElement/>
+								<text><![CDATA[Total Products]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:groupHeader groupName="product_name">
+							<jr:cell style="table_GH" height="30" rowSpan="1">
+								<textField>
+									<reportElement uuid="cdaebc5d-7529-42c1-93da-44b214194ff4" style="table_GH" x="0" y="0" width="330" height="30"/>
+									<textElement textAlignment="Center"/>
+									<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="product_name">
+							<jr:cell height="30" rowSpan="1">
+								<textField>
+									<reportElement uuid="e4fefc76-3f89-4395-b9f7-999eb4145b42" style="table_TF" x="0" y="0" width="330" height="30"/>
+									<textElement/>
+									<textFieldExpression><![CDATA["Total: " + $F{product_name}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:column uuid="0e3d029b-71cc-4f8b-a397-a6973ccbce6b" width="90">
+							<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement uuid="99f3d78d-2f55-45b9-8741-343631196766" style="table_TH" x="0" y="0" width="90" height="30"/>
+									<textElement/>
+									<text><![CDATA[Product Name]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="alternating" height="20" rowSpan="1">
+								<textField>
+									<reportElement uuid="3bd41bc4-8ad3-46d2-8361-be4376abdfa5" style="table_TD" x="0" y="0" width="90" height="20"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column uuid="f22c3e2a-8836-4210-9cb6-299657602dd1" width="90">
+							<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement uuid="a6cf16d8-8cb7-4c56-a90b-5906f1eb3589" style="table_TH" x="0" y="0" width="90" height="30"/>
+									<textElement/>
+									<text><![CDATA[Store Name]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="alternating" height="20" rowSpan="1">
+								<textField>
+									<reportElement uuid="db0d1714-e59e-480c-8772-001caaf5a1d3" style="table_TD" x="0" y="0" width="90" height="20"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$F{store_name}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column uuid="98b507b6-570b-43e2-9dea-0a5ced513869" width="90">
+							<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement uuid="794612ed-350a-4bda-99e1-ef2bc51c4b61" style="table_TH" x="0" y="0" width="90" height="30"/>
+									<textElement/>
+									<text><![CDATA[Store Type]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="alternating" height="20" rowSpan="1">
+								<textField>
+									<reportElement uuid="fd3f7cf0-8342-43a4-9238-7efa991ea467" style="table_TD" x="0" y="0" width="90" height="20"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$F{store_type}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column uuid="8545e856-27e1-4b42-93ea-9c6ad10248d0" width="60">
+							<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+								<staticText>
+									<reportElement uuid="12441212-60af-46a6-aff3-fc8cd19353f9" style="table_TH" x="0" y="0" width="60" height="30"/>
+									<textElement/>
+									<text><![CDATA[Region]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="alternating" height="20" rowSpan="1">
+								<textField>
+									<reportElement uuid="63ad9e04-6ab7-4e8f-9dba-f98037985034" style="table_TD" x="0" y="0" width="60" height="20"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$F{sales_region}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+					<jr:column uuid="4daeae5b-927a-45ba-841d-5297c02b0a96" width="50">
+						<jr:tableFooter style="table_TF" height="107" rowSpan="1">
+							<textField pattern="$ #,##0.00">
+								<reportElement uuid="3e4cc2c6-73a9-48c7-b3b5-aad887ff2765" style="table_TF" x="0" y="0" width="50" height="35"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{SalesTotal}]]></textFieldExpression>
+							</textField>
+							<textField pattern="###0">
+								<reportElement uuid="98ae1e6b-e516-47e2-8a89-00bb29f2d602" style="table_TF" x="0" y="35" width="50" height="35"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{CountProducts}]]></textFieldExpression>
+							</textField>
+							<textField pattern="###0">
+								<reportElement uuid="b3eb2215-c1f2-49c5-af77-5755fe9e5b23" style="table_TF" x="0" y="70" width="50" height="35"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$V{total_products}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:groupFooter groupName="product_name">
+							<jr:cell height="30" rowSpan="1">
+								<textField pattern="$ #,##0.00" isBlankWhenNull="false">
+									<reportElement uuid="32c7cfb7-58bc-419d-b25e-0d1dc34a3e2f" style="table_TF" x="0" y="0" width="50" height="30"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$V{sum_StoreSales}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="dd002228-071a-4c66-8dea-4374e8fc2584" style="table_TH" x="0" y="0" width="50" height="30"/>
+								<textElement/>
+								<text><![CDATA[Sales]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="alternating" height="20" rowSpan="1">
+							<textField pattern="$ #,##0.00">
+								<reportElement uuid="0a59e22c-c22b-407e-b258-6dfcc464b9ff" style="table_TD" x="0" y="0" width="50" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{store_sales}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="356add0f-dd55-4aea-a3da-8552a3786110" width="50">
+						<jr:tableFooter height="107" rowSpan="1"/>
+						<jr:groupFooter groupName="product_name">
+							<jr:cell height="30" rowSpan="1">
+								<textField pattern="$ #,##0.00">
+									<reportElement uuid="b1093b68-e03b-4690-948f-c9592bb73c9c" style="table_TF" x="0" y="0" width="50" height="30"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$V{sum_StoreCost}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="19318a65-6cc8-47a3-8edd-99b688ca66c1" style="table_TH" x="0" y="0" width="50" height="30"/>
+								<textElement/>
+								<text><![CDATA[Cost]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="alternating" height="20" rowSpan="1">
+							<textField pattern="$ #,##0.00">
+								<reportElement uuid="db6e63e1-cee8-40ec-b6b1-5fb73d72fe99" style="table_TD" x="0" y="0" width="50" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{store_cost}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="c633e407-7b2f-4fc2-a3c0-d9b6344dc1e6" width="50">
+						<jr:tableFooter height="107" rowSpan="1"/>
+						<jr:groupFooter groupName="product_name">
+							<jr:cell height="30" rowSpan="1">
+								<textField pattern="###0.00;-###0.00">
+									<reportElement uuid="1fd0b6e8-a3c1-4d98-87bd-487aaf44a57c" style="table_TF" x="0" y="0" width="50" height="30"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$V{sum_unitSales}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f0732f4e-f8ff-404e-945f-df0a8bce8ab8" style="table_TH" x="0" y="0" width="50" height="30"/>
+								<textElement/>
+								<text><![CDATA[Units]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="alternating" height="20" rowSpan="1">
+							<textField pattern="###0.00">
+								<reportElement uuid="574b9a81-49f9-44e1-ae1b-7fe8bd395a22" style="table_TD" x="0" y="0" width="50" height="20"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{unit_sales}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40">
+			<textField>
+				<reportElement uuid="c9207cff-d831-4445-a293-60326f2c6674" style="table_TD" x="433" y="10" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="b7ac772f-986a-40aa-9e68-6fb1fe907a4a" style="table_TD" x="513" y="10" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<elementGroup>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement uuid="c36f0ccf-03a5-4424-94a9-44e707d32588" style="table_TD" x="299" y="10" width="83" height="20"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6ee142c5-0601-472f-8811-ad43c6fedadd" style="table_TD" x="189" y="10" width="100" height="20"/>
+					<textElement/>
+					<text><![CDATA[Report executed on:]]></text>
+				</staticText>
+			</elementGroup>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Middle">
+				<reportElement uuid="4c8f97fc-becd-40ba-9955-e9ed04432220" x="0" y="10" width="168" height="20"/>
+				<imageExpression><![CDATA["repo:js_logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="158">
+			<multiAxisChart>
+				<chart theme="aegean">
+					<reportElement uuid="72369e61-ad34-4089-a106-a00e1aa5d87a" style="default" x="79" y="19" width="420" height="139"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<multiAxisPlot>
+					<plot orientation="Horizontal"/>
+					<axis position="rightOrBottom">
+						<lineChart>
+							<chart theme="aegean">
+								<reportElement uuid="bbe0e7b2-7e9a-40e8-8a2f-d234dbc3edd5" x="0" y="0" width="0" height="0" backcolor="#FFFFFF"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<dataset>
+									<datasetRun subDataset="table" uuid="22564573-2829-4945-9889-1a486e20fa15">
+										<datasetParameter name="Product_Family">
+											<datasetParameterExpression><![CDATA[$P{Product_Family}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Department">
+											<datasetParameterExpression><![CDATA[$P{Product_Department}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Category">
+											<datasetParameterExpression><![CDATA[$P{Product_Category}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Name">
+											<datasetParameterExpression><![CDATA[$P{Product_Name}]]></datasetParameterExpression>
+										</datasetParameter>
+										<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+									</datasetRun>
+								</dataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["Sales"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{product_name}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{store_sales}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<linePlot>
+								<plot/>
+							</linePlot>
+						</lineChart>
+					</axis>
+					<axis position="leftOrTop">
+						<barChart>
+							<chart theme="aegean">
+								<reportElement uuid="400ae5c6-1f96-4efd-a41f-af52b8eea19b" x="0" y="0" width="0" height="0" backcolor="#FFFFFF"/>
+								<chartTitle color="#000000"/>
+								<chartSubtitle color="#000000"/>
+								<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+							</chart>
+							<categoryDataset>
+								<dataset>
+									<datasetRun subDataset="table" uuid="5ac21ffc-31bf-4e68-8147-f6dc99fc717b">
+										<datasetParameter name="Product_Family">
+											<datasetParameterExpression><![CDATA[$P{Product_Family}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Department">
+											<datasetParameterExpression><![CDATA[$P{Product_Department}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Category">
+											<datasetParameterExpression><![CDATA[$P{Product_Category}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="Product_Name">
+											<datasetParameterExpression><![CDATA[$P{Product_Name}]]></datasetParameterExpression>
+										</datasetParameter>
+										<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+									</datasetRun>
+								</dataset>
+								<categorySeries>
+									<seriesExpression><![CDATA["Units"]]></seriesExpression>
+									<categoryExpression><![CDATA[$F{product_name}]]></categoryExpression>
+									<valueExpression><![CDATA[$F{unit_sales}]]></valueExpression>
+								</categorySeries>
+							</categoryDataset>
+							<barPlot>
+								<plot/>
+								<itemLabel/>
+							</barPlot>
+						</barChart>
+					</axis>
+				</multiAxisPlot>
+			</multiAxisChart>
+		</band>
+	</summary>
+</jasperReport>

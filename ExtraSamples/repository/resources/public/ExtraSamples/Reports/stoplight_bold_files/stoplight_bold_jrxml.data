@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Stoplight_bold" language="groovy" pageWidth="188" pageHeight="185" orientation="Landscape" columnWidth="188" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" resourceBundle="supermart" whenResourceMissingType="Key">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/extra_samples/stoplight_bold"/>
+	<property name="ireport.jasperserver.url" value="http://75.101.251.104:8080/jasperserver-pro/services/repository"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<import value="demo.bethreports.*"/>
+	<style name="Green" backcolor="#FFFFFF"/>
+	<style name="head3style" mode="Opaque" forecolor="#FFFFFF" backcolor="#993200" fill="Solid" hAlign="Center" vAlign="Middle" fontName="SansSerif" isBold="true">
+		<pen lineWidth="1.0" lineStyle="Solid"/>
+		<box padding="2">
+			<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000033"/>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000033"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000033"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000033"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000033"/>
+		</box>
+	</style>
+	<style name="head1style" mode="Opaque" forecolor="#FFFFFF" backcolor="#003066" hAlign="Center" vAlign="Middle" fontName="SansSerif" fontSize="12" isBold="true" isItalic="false" pdfFontName="Helvetica-BoldOblique">
+		<box padding="2"/>
+	</style>
+	<subDataset name="SubDatasetchart2">
+		<queryString>
+			<![CDATA[select  store.store_type,customer.state_province ,
+sum(sales_fact_1997.store_sales) store_sales from store,sales_fact_1997,customer where
+store.store_id=sales_fact_1997.store_id and
+customer.customer_id = sales_fact_1997.customer_id AND customer.country = "USA"
+ group by  customer.state_province ,store.store_type
+  order by customer.country,store.store_type]]>
+		</queryString>
+		<field name="store_type" class="java.lang.String"/>
+		<field name="state_province" class="java.lang.String"/>
+		<field name="store_sales" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="ResourcesOnServer" class="java.lang.String">
+		<parameterDescription><![CDATA[Just click OK (not "Use default")]]></parameterDescription>
+		<defaultValueExpression><![CDATA["yes"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sales_situation" class="java.lang.String">
+		<parameterDescription><![CDATA[Choose "Use default"]]></parameterDescription>
+		<defaultValueExpression><![CDATA["easier"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RevenueLowThreshold" class="java.lang.Double">
+		<parameterDescription><![CDATA[Choose "Use default"]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{sales_situation} == "easier"
+? 300000d
+: 500000d]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RevenueHighThreshold" class="java.lang.Double">
+		<parameterDescription><![CDATA[Choose "Use default"]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{sales_situation} == "easier"
+? 500000d
+: 750000d]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ProfitLowThreshold" class="java.lang.Double">
+		<parameterDescription><![CDATA[Choose "Use default"]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{sales_situation} == "easier"
+? 300000d
+: 500000d]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ProfitHighThreshold" class="java.lang.Double">
+		<parameterDescription><![CDATA[Choose "Use default"]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{sales_situation} == "easier"
+? 500000d
+: 750000d]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+    sum(store_sales) as revenue,
+    (sum(store_sales)-sum(store_cost)) as profit
+from sales_fact_1997]]>
+	</queryString>
+	<field name="revenue" class="java.math.BigDecimal"/>
+	<field name="profit" class="java.math.BigDecimal"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="180">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-1" style="head1style" mode="Opaque" x="0" y="0" width="188" height="29"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{SalesGauges.ReportTitle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-2" x="0" y="159" width="94" height="21"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Revenue}]]></textFieldExpression>
+			</textField>
+			<image hyperlinkType="Reference">
+				<reportElement key="Revenue-Green" x="0" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{revenue} > $P{ProfitHighThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:greenlight.png" /* normal location */
+: "./greenlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{revenue})]]></hyperlinkTooltipExpression>
+			</image>
+			<image hyperlinkType="Reference">
+				<reportElement key="Revenue-Yellow" x="0" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{revenue} >= $P{RevenueLowThreshold} && $F{revenue} <= $P{RevenueHighThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:yellowlight.png" /* normal location */
+: "./yellowlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{revenue})]]></hyperlinkTooltipExpression>
+			</image>
+			<image hyperlinkType="Reference">
+				<reportElement key="Revenue-Red" x="0" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{revenue} < $P{RevenueLowThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:redlight.png" /* normal location */
+: "./redlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{revenue})]]></hyperlinkTooltipExpression>
+			</image>
+			<image hyperlinkType="Reference">
+				<reportElement key="Profit-Green" x="94" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{profit} > $P{ProfitHighThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:greenlight.png" /* normal location */
+: "./greenlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{profit})]]></hyperlinkTooltipExpression>
+			</image>
+			<image hyperlinkType="Reference">
+				<reportElement key="Profit-Yellow" x="94" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{profit} >= $P{ProfitLowThreshold} && $F{profit} <= $P{ProfitHighThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:yellowlight.png" /* normal location */
+: "./yellowlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{profit})]]></hyperlinkTooltipExpression>
+			</image>
+			<image hyperlinkType="Reference">
+				<reportElement key="Profit-Red" x="94" y="29" width="94" height="130">
+					<printWhenExpression><![CDATA[$F{profit} < $P{ProfitLowThreshold}]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA[$P{ResourcesOnServer}.equals("yes")
+? "repo:redlight.png" /* normal location */
+: "./redlight.png" /* local file resource */]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["#"]]></hyperlinkReferenceExpression>
+				<hyperlinkTooltipExpression><![CDATA[new java.text.DecimalFormat(" #,###.00").format($F{profit})]]></hyperlinkTooltipExpression>
+			</image>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="94" y="159" width="94" height="21"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{Profit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band/>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

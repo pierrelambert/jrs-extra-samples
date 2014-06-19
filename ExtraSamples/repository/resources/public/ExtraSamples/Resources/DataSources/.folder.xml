@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/public/ExtraSamples/Resources</parent><name>DataSources</name><label>DataSources</label><description></description><creationDate>2014-01-27T13:22:29.000+01:00</creationDate><updateDate>2013-01-10T13:30:56.000+01:00</updateDate><resource>FoodmartDataSourceJNDI</resource><resource>MongoDB_in_the_Cloud</resource></folder>

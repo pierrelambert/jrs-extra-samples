@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="QRCode_Jaspersoft" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1"/>
+	<parameter name="TextToEncode" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Enter your own text to render as a QR Code"]]></defaultValueExpression>
+	</parameter>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="685" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="45" width="200" height="200"/>
+				<qr:qrcode xmlns:qr="http://jasperreports.sourceforge.net/jasperreports/components/qrcode" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components/qrcode QRCodeComponent.xsd">
+					<qr:codeExpression><![CDATA["http://www.jaspersoft.com/"]]></qr:codeExpression>
+				</qr:qrcode>
+			</componentElement>
+			<textField>
+				<reportElement x="200" y="45" width="355" height="200"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA["http://www.jaspersoft.com/"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="245" width="355" height="200"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="IPAPGothic" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Jaspersoft Business Intelligence Suite製品は、包括的なビジネスインテリジェンスファミリーとして、世界でもっとも使用されているオープンソースJavaレポーティング・ライブラ リー（JasperReport）とレポートデザイナー(i-Report)、インメモリー分析・OLAP分析そしてデータ統合のETLが統合されたス イート製品。"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["QR Codes in Jaspersoft JasperReports Server"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="0" y="245" width="200" height="200"/>
+				<qr:qrcode xmlns:qr="http://jasperreports.sourceforge.net/jasperreports/components/qrcode" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components/qrcode QRCodeComponent.xsd" charSet="SHIFT_JIS">
+					<qr:codeExpression><![CDATA["Jaspersoft Business Intelligence Suite製品は、包括的なビジネスインテリジェンスファミリーとして、世界でもっとも使用されているオープンソースJavaレポーティング・ライブラ リー（JasperReport）とレポートデザイナー(i-Report)、インメモリー分析・OLAP分析そしてデータ統合のETLが統合されたス イート製品。"]]></qr:codeExpression>
+				</qr:qrcode>
+			</componentElement>
+			<textField>
+				<reportElement x="0" y="645" width="555" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Note the use of Font Extensions to ensure Japanese text works correctly in PDF exports of this report."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="665" width="555" height="20"/>
+				<textElement verticalAlignment="Middle" markup="html"/>
+				<textFieldExpression><![CDATA["<a href=\"http://en.sourceforge.jp/projects/ipafonts/\">IPA PGothic</a> is used in this sample."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="445" width="355" height="200"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TextToEncode}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="0" y="445" width="200" height="200"/>
+				<qr:qrcode xmlns:qr="http://jasperreports.sourceforge.net/jasperreports/components/qrcode" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components/qrcode QRCodeComponent.xsd">
+					<qr:codeExpression><![CDATA[$P{TextToEncode}]]></qr:codeExpression>
+				</qr:qrcode>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

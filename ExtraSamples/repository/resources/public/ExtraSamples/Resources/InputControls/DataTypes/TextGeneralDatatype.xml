@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataType exportedWithPermissions="true"><folder>/public/ExtraSamples/Resources/InputControls/DataTypes</folder><name>TextGeneralDatatype</name><version>0</version><label>Text General Datatype</label><description>Use for text, no pattern or restrictions</description><creationDate>2014-01-27T13:22:30.000+01:00</creationDate><updateDate>2012-06-28T23:50:09.000+02:00</updateDate><type>1</type><regularExpr></regularExpr><strictMin>false</strictMin><strictMax>false</strictMax></dataType>
