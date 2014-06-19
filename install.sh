@@ -96,6 +96,7 @@ function InstallFiles(){ # Installs files in tomcat's root
 echo "Installing ${1} files..."
 cd /jrs-extra-samples/${1}/filesystem
 for file in `find ./ -type f`; do
+    [ -f ${file} ] && RESTART=1
     mkdir -p ${TOMCATROOT}/${file}
     rm -Rf ${TOMCATROOT}/${file}
     cp ${file} ${TOMCATROOT}/${file}
@@ -104,10 +105,11 @@ done
 
 function InstallPatch(){ # Try to patch files (no overwrite)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
-[ ! -d /jrs-extra-samples/${1}/patch/ ] && echo "No file to install" && return
+[ ! -d /jrs-extra-samples/${1}/patch/ ] && echo "No file to patch" && return
 echo "Installing ${1} patch"
 cd /jrs-extra-samples/${1}/patch
 for file in *.patch; do
+    [ -f ${file} ] && RESTART=1
     FOLDER=`echo ${file} | tr '_' '/' | sed 's~\.patch$~~'`
     cd ${FOLDER}
     patch < /jrs-extra-samples/${1}/patch/${file}
@@ -118,6 +120,7 @@ done
 function Install(){ # Installs a specific sample (Repo, DB, ...)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/ ] && echo "Sample ${1} not found" && return
+RESTART=0
 JRSImport  ${1}
 MongoRestore ${1}
 MySQLRestore ${1}
@@ -125,6 +128,11 @@ InfobrightRestore ${1}
 PgRestore ${1}
 InstallFiles ${1}
 InstallPatch ${1}
+if [ $RESTART = 1 ]; then
+    /etc/init.d/tomcat6 stop
+    rm /etc/tomcat6/Catalina/localhost/*
+    /etc/init.d/tomcat6 start
+fi
 }
 
 function Usage(){ # Help message

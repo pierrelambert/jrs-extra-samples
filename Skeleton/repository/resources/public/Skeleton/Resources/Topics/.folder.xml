@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/public/Skeleton/Resources</parent><name>Topics</name><label>Topics</label><description>This folder is placed in resources to be invisible to users and to be exported/imported in the VMSamples tree, but the topics must be copied in the /public/adhoc/topics special folder to be available.</description><creationDate>2014-01-27T13:16:41.000+01:00</creationDate><updateDate>2013-10-25T16:24:50.000+02:00</updateDate></folder>
