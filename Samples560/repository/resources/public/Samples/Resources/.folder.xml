@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Samples</parent>
+    <name>Resources</name>
+    <label>Resources</label>
+    <description>Resources</description>
+    <creationDate>2014-06-19T13:09:01.604+02:00</creationDate>
+    <updateDate>2012-10-15T18:25:42.571+02:00</updateDate>
+    <folder>Data_Types</folder>
+    <folder>Extras</folder>
+    <folder>Images</folder>
+    <folder>Input_Controls</folder>
+</folder>

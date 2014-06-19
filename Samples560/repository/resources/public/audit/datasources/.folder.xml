@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/audit</parent>
+    <name>datasources</name>
+    <label>Audit Datasources</label>
+    <description>Audit Datasources</description>
+    <creationDate>2014-06-19T13:08:19.096+02:00</creationDate>
+    <updateDate>2014-05-28T03:46:46.074+02:00</updateDate>
+    <resource>AuditDataSource</resource>
+</folder>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secureMondrianConnection exportedWithPermissions="true">
+    <folder>/organizations/organization_1/analysis/connections</folder>
+    <name>Foodmart</name>
+    <version>0</version>
+    <label>Foodmart</label>
+    <description>Foodmart Mondrian Analysis Connection</description>
+    <creationDate>2014-06-19T13:09:20.510+02:00</creationDate>
+    <updateDate>2014-05-28T03:48:50.878+02:00</updateDate>
+    <schema>
+        <uri>/organizations/organization_1/analysis/schemas/FoodmartSchema</uri>
+    </schema>
+    <dataSource>
+        <uri>/organizations/organization_1/analysis/datasources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <grant>
+        <uri>/organizations/organization_1/analysis/schemas/FoodmartNoTopGrant</uri>
+    </grant>
+</secureMondrianConnection>

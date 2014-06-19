@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/monitoring</parent>
+    <name>reports</name>
+    <label>Monitoring Reports</label>
+    <description>Monitoring Reports</description>
+    <creationDate>2014-06-19T13:08:19.282+02:00</creationDate>
+    <updateDate>2012-10-17T02:47:41.000+02:00</updateDate>
+    <resource>Report_Monitoring_Details_Report</resource>
+    <resource>Report_Monitoring_Details_Report_Adhoc_Data_View</resource>
+    <resource>Report_Monitoring_Resources_Report</resource>
+    <resource>Report_Monitoring_Resources_Report_Adhoc_Data_View</resource>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+</folder>

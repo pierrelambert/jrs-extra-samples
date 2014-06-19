@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-BUILDOMATIC="/root/jasperreports-server-5.5-bin/buildomatic/"
+BUILDOMATIC="/root/jasperreports-server-5.6-bin/buildomatic/"
 TOMCATROOT="/var/lib/tomcat6/"
 
 function Init(){ # Initializes the samples repository
@@ -55,14 +55,27 @@ for dump in /jrs-extra-samples/${1}/database/mysql/*.sql; do
 done
 }
 
+function PgRestore(){ # Import a PgSQL dump for the specified sample (drops and recreates)
+[ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
+[ ! -d /jrs-extra-samples/${1}/database/postgresql/ ] && echo "No PgSQL database to import" && return
+echo "Importing ${1} PgSQL database..."
+for dump in /jrs-extra-samples/${1}/database/postgresql/*.sql; do
+    [ -f ${dump} ] && (cat ${dump} | su - postgres -c "psql  ")
+done
+for dump in /jrs-extra-samples/${1}/database/postgresql/*.sql.gz; do
+    [ -f ${dump} ] && (zcat ${dump} | su - postgres -c "psql  ")
+done
+}
+
 function InfobrightRestore(){ # Import a mySQL dump for the specified sample (drops and recreates)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/database/infobright/ ] && echo "No Infobright database to import" && return
 echo "Importing ${1} Infobright database..."
 for dump in /jrs-extra-samples/${1}/database/infobright/*.sql; do
+    SCHEMA=`basename "$i" .sql`
     mysql -h localhost -uroot -proot -P5029 < ${dump}
-    echo "GRANT ALL PRIVILEGES ON \`states\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029
-    echo "GRANT ALL PRIVILEGES ON \`states\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029 
+    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029
+    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029 
 done
 }
 
@@ -75,6 +88,19 @@ for file in `find ./ -type f`; do
     mkdir -p ${TOMCATROOT}/${file}
     rm -Rf ${TOMCATROOT}/${file}
     cp ${file} ${TOMCATROOT}/${file}
+done
+}
+
+function InstallPatch(){ # Try to patch files (no overwrite)
+[ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
+[ ! -d /jrs-extra-samples/${1}/patch/ ] && echo "No file to install" && return
+echo "Installing ${1} patch"
+cd /jrs-extra-samples/${1}/patch
+for file in *.patch; do
+    FOLDER=`echo ${file} | tr '_' '/' | sed 's~\.patch$~~'`
+    cd ${FOLDER}
+    patch < /jrs-extra-samples/${1}/patch/${file}
+    cd -
 done
 }
 

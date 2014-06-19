@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/analysis</parent>
+    <name>datasources</name>
+    <label>Analysis Data Sources</label>
+    <description>Data sources used by Analysis</description>
+    <creationDate>2014-06-19T13:09:01.891+02:00</creationDate>
+    <updateDate>2014-05-28T03:48:14.611+02:00</updateDate>
+    <resource>FoodmartDataSource</resource>
+    <resource>FoodmartDataSourceJNDI</resource>
+    <resource>SugarCRMDataSource</resource>
+    <resource>SugarCRMDataSourceJNDI</resource>
+</folder>

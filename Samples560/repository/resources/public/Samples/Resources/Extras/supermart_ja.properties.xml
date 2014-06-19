@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="supermart_ja.properties.data">
+    <folder>/public/Samples/Resources/Extras</folder>
+    <name>supermart_ja.properties</name>
+    <version>0</version>
+    <label>supermart_ja.properties</label>
+    <description>Japanese resource bundle</description>
+    <creationDate>2014-06-19T13:09:10.273+02:00</creationDate>
+    <updateDate>2013-09-06T09:02:44.636+02:00</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

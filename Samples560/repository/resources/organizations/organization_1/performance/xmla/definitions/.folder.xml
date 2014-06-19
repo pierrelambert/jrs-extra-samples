@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/performance/xmla</parent>
+    <name>definitions</name>
+    <label>definitions</label>
+    <description>definitions folder</description>
+    <creationDate>2014-06-19T13:09:02.780+02:00</creationDate>
+    <updateDate>2014-05-28T03:48:51.166+02:00</updateDate>
+    <resource>ProfileXmlaDefinition</resource>
+</folder>

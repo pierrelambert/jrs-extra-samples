@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/audit</parent>
+    <name>domains</name>
+    <label>Audit Domains</label>
+    <description>Audit Domains</description>
+    <creationDate>2014-06-19T13:08:19.119+02:00</creationDate>
+    <updateDate>2014-05-28T03:46:46.176+02:00</updateDate>
+    <resource>AuditArchiveDomain</resource>
+    <resource>AuditDomain</resource>
+</folder>

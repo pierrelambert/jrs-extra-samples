@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1</parent>
+    <name>images</name>
+    <label>Images</label>
+    <description>Folder containing reusable images</description>
+    <creationDate>2014-06-19T13:09:00.912+02:00</creationDate>
+    <updateDate>2014-05-28T03:48:14.569+02:00</updateDate>
+    <resource>JRLogo</resource>
+    <permission>
+        <permissionMask>32</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

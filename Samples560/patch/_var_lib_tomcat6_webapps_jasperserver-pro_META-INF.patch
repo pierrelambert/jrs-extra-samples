@@ -1,0 +1,27 @@
+--- context.xml.orig	2014-06-19 14:09:59.000000000 +0200
++++ context.xml	2014-06-19 14:11:09.000000000 +0200
+@@ -33,6 +33,24 @@
+         factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"
+          />
+ 
++    <Resource name="jdbc/sugarcrm" auth="Container" type="javax.sql.DataSource"
++        maxActive="100" maxIdle="30" maxWait="10000"
++        username="postgres" password="postgres"
++        driverClassName="org.postgresql.Driver"
++        validationQuery="SELECT 1"
++        testOnBorrow="true"
++        url="jdbc:postgresql://localhost:5432/sugarcrm"
++        factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"/>
++
++    <Resource name="jdbc/foodmart" auth="Container" type="javax.sql.DataSource"
++        maxActive="100" maxIdle="30" maxWait="10000"
++        username="postgres" password="postgres"
++        driverClassName="org.postgresql.Driver"
++        validationQuery="SELECT 1"
++        testOnBorrow="true"
++        url="jdbc:postgresql://localhost:5432/foodmart"
++        factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"/>
++
+     <!-- Comment this line to enable session persistence across Tomcat restarts -->
+     <Manager pathname="" />
+ </Context>

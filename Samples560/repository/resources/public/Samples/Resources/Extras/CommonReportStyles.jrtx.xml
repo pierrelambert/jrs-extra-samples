@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="CommonReportStyles.jrtx.data">
+    <folder>/public/Samples/Resources/Extras</folder>
+    <name>CommonReportStyles.jrtx</name>
+    <version>0</version>
+    <label>CommonReportStyles.jrtx</label>
+    <description>Styles used by many sample reports</description>
+    <creationDate>2014-06-19T13:09:12.773+02:00</creationDate>
+    <updateDate>2012-11-09T13:16:48.509+01:00</updateDate>
+    <fileType>jrtx</fileType>
+</fileResource>
