@@ -1,0 +1,224 @@
+diff -uNr bundles.orig/adhoc_masks_de.properties bundles/adhoc_masks_de.properties
+--- bundles.orig/adhoc_masks_de.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_de.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_es.properties bundles/adhoc_masks_es.properties
+--- bundles.orig/adhoc_masks_es.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_es.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_fr.properties bundles/adhoc_masks_fr.properties
+--- bundles.orig/adhoc_masks_fr.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_fr.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_it.properties bundles/adhoc_masks_it.properties
+--- bundles.orig/adhoc_masks_it.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_it.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_ja.properties bundles/adhoc_masks_ja.properties
+--- bundles.orig/adhoc_masks_ja.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_ja.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks.properties bundles/adhoc_masks.properties
+--- bundles.orig/adhoc_masks.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_pt_BR.properties bundles/adhoc_masks_pt_BR.properties
+--- bundles.orig/adhoc_masks_pt_BR.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_pt_BR.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short
+diff -uNr bundles.orig/adhoc_masks_zh_CN.properties bundles/adhoc_masks_zh_CN.properties
+--- bundles.orig/adhoc_masks_zh_CN.properties	2014-06-20 10:52:20.000000000 +0200
++++ bundles/adhoc_masks_zh_CN.properties	2014-06-20 10:59:51.000000000 +0200
+@@ -11,12 +11,24 @@
+ ADH_100_MASK_int_1 = 0
+ ADH_100_MASK_int_2 = $#,##0;($#,##0)
+ ADH_100_MASK_int_3 = #,##0;(#,##0)
++ADH_100_MASK_int_4 = #,##0 %
++ADH_100_MASK_int_5 = #,##0 \u20ac
++ADH_100_MASK_int_6 = #,##0 \u00a3
+ 
+ ADH_100_MASK_dec_0 = #,##0.00
+ ADH_100_MASK_dec_1 = 0
+ ADH_100_MASK_dec_2 = $#,##0.00;($#,##0.00)
+ ADH_100_MASK_dec_3 = $#,##0;($#,##0)
+ ADH_100_MASK_dec_4 = $#,##0.000#############
++ADH_100_MASK_dec_5 = #,##0.00 %;(#,##0.00 %)                                    
++ADH_100_MASK_dec_6 = #,##0 %;(#,##0 %)
++ADH_100_MASK_dec_7 = #,##0.000############# %
++ADH_100_MASK_dec_8 = #,##0.00 \u20ac;(#,##0.00 \u20ac)
++ADH_100_MASK_dec_9 = #,##0 \u20ac;(#,##0 \u20ac)
++ADH_100_MASK_dec_10 = #,##0.000############# \u20ac
++ADH_100_MASK_dec_11 = #,##0.00 \u00a3;(#,##0.00 \u00a3)
++ADH_100_MASK_dec_12 = #,##0 \u00a3;(#,##0 \u00a3)
++ADH_100_MASK_dec_13 = #,##0.000############# \u00a3
+ 
+ ADH_100_MASK_time_0 = hide,medium
+ ADH_100_MASK_time_1 = hide,short

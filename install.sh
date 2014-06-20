@@ -113,7 +113,7 @@ for file in *.patch; do
     [ -f ${file} ] && RESTART=1
     FOLDER=`echo ${file} | tr '_' '/' | sed 's~\.patch$~~'`
     cd ${FOLDER}
-    patch < /jrs-extra-samples/${1}/patch/${file}
+    patch -p0 < /jrs-extra-samples/${1}/patch/${file}
     cd -
 done
 }
