@@ -44,24 +44,59 @@ echo "Importing ${1} MongoDB database..."
 mongorestore --drop /jrs-extra-samples/${1}/database/mongodb/
 }
 
+function SyncInfobright(){
+    echo "Importing ${1} MySQL database in Infobright, too..."
+    db=${1}
+    [ -d /tmp/ibsync/${db} ] && rm -Rf /tmp/ibsync/${db}
+    mkdir -p /tmp/ibsync/${db}
+    chmod 777 /tmp/ibsync/${db}
+    cd /tmp/ibsync/${db}
+
+    echo "DROP DATABASE ${db};" | mysql-ib -proot || true
+    echo "CREATE DATABASE ${db};" | mysql-ib -proot
+    mysqldump -proot --skip-add-drop-table --no-data ${db} \
+        | sed 's#/\*[^*]*\*/##;s/^;//' \
+        | grep -v -- -- \
+        | sed ':a;N;$!ba;s/,\n  \(UNIQUE \)\?KEY \+[^ ]\+ \+([^)]\+)//g' \
+        | sed ':a;N;$!ba;s/,\n  PRIMARY KEY \+([^)]\+)//g' \
+        | sed 's/ AUTO_INCREMENT\(=[0-9]\+\)\?//' \
+        | sed 's/ decimal(\([0-9]\+\),\([0-9]\+\))/ dec(18,\2)/' \
+        | sed 's/ENGINE=MyISAM//' \
+        | tee /tmp/ibsync/${db}/${db}.sql \
+        | mysql-ib -proot ${db}
+    mysqldump -proot --tab=/tmp/ibsync/${db} --fields-terminated-by ';' --fields-optionally-enclosed-by '"' ${db}
+    for data in *.txt; do 
+        sed -i 's/\\"//g' ${data}
+        echo "LOAD DATA INFILE '`pwd`/${data}' INTO TABLE \``basename ${data} .txt`\` FIELDS TERMINATED BY ';';" | mysql-ib -proot ${db}
+    done
+    cd /root
+    rm -Rf /tmp/ibsync/${db}
+    echo 'GRANT ALL PRIVILEGES ON *.* TO jasperdb@"%" IDENTIFIED BY "password"'  | mysql-ib -proot
+    echo 'GRANT ALL PRIVILEGES ON *.* TO jasperdb@"localhost" IDENTIFIED BY "password"'  | mysql-ib -proot
+    echo 'GRANT ALL PRIVILEGES ON *.* TO jasperdb@"127.0.0.1" IDENTIFIED BY "password"'  | mysql-ib -proot
+    echo 'GRANT ALL PRIVILEGES ON *.* TO jasperdb@"'${GUEST}'" IDENTIFIED BY "password"'  | mysql-ib -proot
+}
+
 function MySQLRestore(){ # Import a mySQL dump for the specified sample (drops and recreates)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/database/mysql/ ] && echo "No MySQL database to import" && return
 echo "Importing ${1} MySQL database..."
 for dump in /jrs-extra-samples/${1}/database/mysql/*.sql; do
     if [ -f ${dump} ]; then
-        SCHEMA=`basename "$i" .sql`
+        SCHEMA=`basename "$dump" .sql`
         cat ${dump} | mysql -h localhost -uroot -proot
         echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
         echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+        SyncInfobright ${SCHEMA}
     fi
 done
 for dump in /jrs-extra-samples/${1}/database/mysql/*.sql.gz; do
     if [ -f ${dump} ]; then
-        SCHEMA=`basename "$i" .sql.gz`
+        SCHEMA=`basename "$dump" .sql.gz`
         zcat ${dump} | mysql -h localhost -uroot -proot
         echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
         echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+        SyncInfobright ${SCHEMA}
     fi
 done
 }
