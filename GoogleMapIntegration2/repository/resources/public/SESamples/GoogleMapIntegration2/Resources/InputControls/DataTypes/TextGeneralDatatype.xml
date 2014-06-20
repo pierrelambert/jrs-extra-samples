@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataType exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration2/Resources/InputControls/DataTypes</folder>
+    <name>TextGeneralDatatype</name>
+    <version>0</version>
+    <label>Text General Datatype</label>
+    <description>Use for text, no pattern or restrictions</description>
+    <creationDate>2014-06-20T15:11:03.467+02:00</creationDate>
+    <updateDate>2013-04-09T18:52:43.000+02:00</updateDate>
+    <type>1</type>
+    <regularExpr></regularExpr>
+    <strictMin>false</strictMin>
+    <strictMax>false</strictMax>
+</dataType>

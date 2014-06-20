@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration2</folder>
+    <name>foodstore</name>
+    <version>0</version>
+    <label>FoodStore</label>
+    <description>used for google map demo</description>
+    <creationDate>2014-06-20T15:11:03.499+02:00</creationDate>
+    <updateDate>2013-10-17T16:25:06.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="foodstore_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration2/foodstore_files</folder>
+            <name>foodstore_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-20T15:11:03.499+02:00</creationDate>
+            <updateDate>2011-02-11T00:00:23.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/GoogleMapIntegration2/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/GoogleMapIntegration2/Resources/InputControls/Store_name</uri>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

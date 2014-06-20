@@ -1,0 +1,1 @@
+You can place here unix scripts which will be automatically executed when the VM's configuration changes (RAM, CPU, IP) before the services start. They can change the services configuration files.

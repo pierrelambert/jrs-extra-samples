@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/GoogleMapIntegration2/Resources</parent>
+    <name>DataSources</name>
+    <label>DataSources</label>
+    <description></description>
+    <creationDate>2014-06-20T15:11:03.181+02:00</creationDate>
+    <updateDate>2013-10-30T15:19:56.000+01:00</updateDate>
+    <resource>FoodmartDataSourceJNDI</resource>
+</folder>

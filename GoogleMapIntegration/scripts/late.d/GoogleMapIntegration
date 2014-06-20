@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Updates only when external GUEST IP changes
+[ "${GUEST}" == "${LAST_NET}" ] && return 0
+echo "[34;1m== [[32;1mINFO[34;1m] Guillaume's GoogleMap sample > [35;1mUpdate external IP address[0m"
+
 # Reconfigure GoogleMap if needed
 sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}/jasperserver-pro#" /var/lib/tomcat6/webapps/jasperserver-pro/my_gis.jsp
 cd /root/jasperreports-server-${JRSVERSION}-bin/buildomatic/

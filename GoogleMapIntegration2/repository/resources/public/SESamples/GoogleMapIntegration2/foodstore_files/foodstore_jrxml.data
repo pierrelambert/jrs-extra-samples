@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FoodStore_Postgres" language="groovy" pageWidth="550" pageHeight="525" columnWidth="550" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9ec54794-cc10-4c0e-8f97-694ba433814a">
+	<property name="ireport.jasperserver.reportUnit" value="/reports/gis/foodstore"/>
+	<property name="ireport.jasperserver.url" value="http://91.121.118.76:8081/jasperserver-pro/services/repository"/>
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter 1"/>
+	<parameter name="Store_name" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Tacoma"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     round(sum(sales_fact_1998.store_sales),1) AS sales_fact_1998_store_sales,
+     round(sum(sales_fact_1998.store_cost),1) AS sales_fact_1998_store_cost,
+     sales_fact_1998.store_id AS sales_fact_1998_store_id,
+     store.store_manager AS store_store_manager,
+     store.store_phone AS store_store_phone,
+     store.store_street_address AS store_store_street_address,
+     store.store_city AS store_store_city,
+     store.store_postal_code AS store_store_postal_code,
+     store.store_state AS store_store_state,
+
+     product_class.product_category AS product_class_product_category,
+     store.store_type AS store_store_type,
+     product_class.product_department AS product_class_product_department
+
+FROM
+     sales_fact_1998 sales_fact_1998 INNER JOIN store store ON sales_fact_1998.store_id = store.store_id
+     LEFT OUTER JOIN product product ON sales_fact_1998.product_id = product.product_id
+     LEFT OUTER JOIN product_class product_class ON product.product_class_id = product_class.product_class_id
+WHERE
+     store.store_city = $P{Store_name}
+GROUP BY
+     sales_fact_1998.store_id,store.store_manager,store.store_phone,store.store_street_address,store.store_city,store.store_postal_code,store.store_state,store.store_type,product_class.product_category,product_class.product_department
+     LIMIT 5]]>
+	</queryString>
+	<field name="sales_fact_1998_store_sales" class="java.math.BigDecimal"/>
+	<field name="sales_fact_1998_store_cost" class="java.math.BigDecimal"/>
+	<field name="sales_fact_1998_store_id" class="java.lang.Integer"/>
+	<field name="store_store_manager" class="java.lang.String"/>
+	<field name="store_store_phone" class="java.lang.String"/>
+	<field name="store_store_street_address" class="java.lang.String"/>
+	<field name="store_store_city" class="java.lang.String"/>
+	<field name="store_store_postal_code" class="java.lang.String"/>
+	<field name="store_store_state" class="java.lang.String"/>
+	<field name="store_store_type" class="java.lang.String"/>
+	<field name="product_class_product_department" class="java.lang.String"/>
+	<field name="product_class_product_category" class="java.lang.String"/>
+	<variable name="total_cost" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{sales_fact_1998_store_cost}]]></variableExpression>
+	</variable>
+	<variable name="total_sales" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{sales_fact_1998_store_sales}]]></variableExpression>
+	</variable>
+	<variable name="total_profit" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$V{profit}]]></variableExpression>
+	</variable>
+	<variable name="profit" class="java.math.BigDecimal" resetType="None">
+		<variableExpression><![CDATA[$F{sales_fact_1998_store_sales}-$F{sales_fact_1998_store_cost}]]></variableExpression>
+	</variable>
+	<group name="category">
+		<groupExpression><![CDATA[$F{product_class_product_department}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="12" y="26" width="275" height="20" backcolor="#CCFFCC" uuid="2ba71d46-7a01-4a11-87d1-aefce74c3789"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Managed by : " + $F{store_store_manager}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="12" y="86" width="275" height="20" backcolor="#F2F7F9" uuid="16437d86-3126-414c-b1f7-c6fbc35372ed"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{store_store_phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="12" y="46" width="275" height="20" backcolor="#F2F7F9" uuid="4fd6aeb3-ca96-4402-891a-90c8e20f03cf"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{store_store_street_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="12" y="66" width="96" height="20" backcolor="#F2F7F9" uuid="da63a30a-7cfe-4718-84f4-c439a48f3f1a"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{store_store_postal_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="108" y="66" width="126" height="20" backcolor="#F2F7F9" uuid="ad34f8e1-3e7b-4d08-88a4-8f33d2e36c82"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{store_store_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="234" y="66" width="53" height="20" backcolor="#F2F7F9" uuid="ae629263-5165-444c-83ea-b0af2e140008"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{store_store_state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="310" y="26" width="214" height="20" backcolor="#CCFFCC" uuid="615cc008-8731-4727-95a0-1d6efcd8bf27">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Store performance index"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="310" y="46" width="215" height="60" uuid="55542d48-090e-482d-8d2c-a6eb80266378">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<fw:horizontalLED xmlns:fw="http://jaspersoft.com/fusion" xsi:schemaLocation="http://jaspersoft.com/fusion http://jaspersoft.com/schema/fusion.xsd" evaluationTime="Report">
+					<fw:widgetProperty name="palette">
+						<fw:propertyExpression><![CDATA[new Integer(3)]]></fw:propertyExpression>
+					</fw:widgetProperty>
+					<fw:widgetProperty name="gaugeBorderThickness">
+						<fw:propertyExpression><![CDATA[new Integer(1)]]></fw:propertyExpression>
+					</fw:widgetProperty>
+					<fw:widgetProperty name="gaugeBorderAlpha">
+						<fw:propertyExpression><![CDATA[new Integer(0)]]></fw:propertyExpression>
+					</fw:widgetProperty>
+					<fw:widgetProperty name="gaugeBorderColor">
+						<fw:propertyExpression><![CDATA[new java.awt.Color(-16777216)]]></fw:propertyExpression>
+					</fw:widgetProperty>
+					<fw:widgetProperty name="showGaugeBorder">
+						<fw:propertyExpression><![CDATA[Boolean.TRUE]]></fw:propertyExpression>
+					</fw:widgetProperty>
+					<dataset/>
+					<fw:valueExpression><![CDATA[$V{total_profit}/15]]></fw:valueExpression>
+					<fw:colorRange color="#FF0000">
+						<fw:minValueExpression><![CDATA[new Double (0)]]></fw:minValueExpression>
+						<fw:maxValueExpression><![CDATA[new Double (100)]]></fw:maxValueExpression>
+						<fw:labelExpression><![CDATA["Bad"]]></fw:labelExpression>
+					</fw:colorRange>
+					<fw:colorRange color="#FF9900">
+						<fw:minValueExpression><![CDATA[new Double(101)]]></fw:minValueExpression>
+						<fw:maxValueExpression><![CDATA[new Double(200)]]></fw:maxValueExpression>
+						<fw:labelExpression><![CDATA["Low"]]></fw:labelExpression>
+					</fw:colorRange>
+					<fw:colorRange color="#FFFF00">
+						<fw:minValueExpression><![CDATA[new Double(201)]]></fw:minValueExpression>
+						<fw:maxValueExpression><![CDATA[new Double(300)]]></fw:maxValueExpression>
+						<fw:labelExpression><![CDATA["Average"]]></fw:labelExpression>
+					</fw:colorRange>
+					<fw:colorRange color="#00CC00">
+						<fw:minValueExpression><![CDATA[new Double(301)]]></fw:minValueExpression>
+						<fw:maxValueExpression><![CDATA[new Double(600)]]></fw:maxValueExpression>
+						<fw:labelExpression><![CDATA["Good"]]></fw:labelExpression>
+					</fw:colorRange>
+				</fw:horizontalLED>
+			</componentElement>
+			<textField isStretchWithOverflow="true">
+				<reportElement mode="Opaque" x="12" y="0" width="513" height="17" forecolor="#0000FF" backcolor="#FFFFFF" uuid="612256c2-dbf3-4ddf-b912-aa7843a33e85"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Store_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="397" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="12" y="215" width="512" height="180" backcolor="#CCFFCC" uuid="f74637c9-435f-412d-a1a1-65073d55bd03"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Top 5 Departments Sales vs Costs Profile"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="12" y="24" width="512" height="182" uuid="37de7ca1-db68-4089-830b-4ce233113fc6"/>
+				<fc:chart xmlns:fc="http://jaspersoft.com/fusion" xsi:schemaLocation="http://jaspersoft.com/fusion http://jaspersoft.com/schema/fusion.xsd" type="StackedBar">
+					<fc:chartProperty name="forceDecimals">
+						<fc:propertyExpression><![CDATA[Boolean.TRUE]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="decimals">
+						<fc:propertyExpression><![CDATA[new Integer(0)]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="palette">
+						<fc:propertyExpression><![CDATA[new Integer(2)]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="showBorder">
+						<fc:propertyExpression><![CDATA[Boolean.TRUE]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="borderColor">
+						<fc:propertyExpression><![CDATA[new java.awt.Color(-16777216)]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="borderThickness">
+						<fc:propertyExpression><![CDATA[new Integer(1)]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="legendPosition">
+						<fc:propertyExpression><![CDATA["BOTTOM"]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="showLimits">
+						<fc:propertyExpression><![CDATA[Boolean.TRUE]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="placeValuesInside">
+						<fc:propertyExpression><![CDATA[Boolean.FALSE]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartProperty name="showLabels">
+						<fc:propertyExpression><![CDATA[Boolean.TRUE]]></fc:propertyExpression>
+					</fc:chartProperty>
+					<fc:chartDataset>
+						<fc:item>
+							<fc:seriesExpression><![CDATA["Costs"]]></fc:seriesExpression>
+							<fc:labelExpression><![CDATA[$F{product_class_product_department}]]></fc:labelExpression>
+							<fc:valueExpression><![CDATA[$F{sales_fact_1998_store_cost}]]></fc:valueExpression>
+							<fc:displayValueExpression><![CDATA[""+$F{sales_fact_1998_store_cost}]]></fc:displayValueExpression>
+						</fc:item>
+						<fc:item>
+							<fc:seriesExpression><![CDATA["Profit"]]></fc:seriesExpression>
+							<fc:labelExpression><![CDATA[$F{product_class_product_department}]]></fc:labelExpression>
+							<fc:valueExpression><![CDATA[$V{profit}]]></fc:valueExpression>
+							<fc:displayValueExpression><![CDATA[""+$V{profit}]]></fc:displayValueExpression>
+						</fc:item>
+					</fc:chartDataset>
+				</fc:chart>
+			</componentElement>
+			<textField>
+				<reportElement mode="Opaque" x="12" y="3" width="512" height="20" backcolor="#CCFFCC" uuid="d7c36d0c-da68-4a59-b62a-ce549fe04f75"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Top 5 Departments Sales vs Costs"]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="13" y="234" width="511" height="159" uuid="a0ddbd92-c3e1-449f-a7b1-7246983579df">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<sc:spiderChart xmlns:sc="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sc:chartSettings backcolor="#F2F7F9">
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</sc:chartSettings>
+					<sc:spiderDataset>
+						<categorySeries>
+							<seriesExpression><![CDATA["Costs"]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{product_class_product_department}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{sales_fact_1998_store_cost}]]></valueExpression>
+							<labelExpression><![CDATA[""+$F{sales_fact_1998_store_cost}]]></labelExpression>
+						</categorySeries>
+						<categorySeries>
+							<seriesExpression><![CDATA["Sales"]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{product_class_product_department}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{sales_fact_1998_store_sales}]]></valueExpression>
+							<labelExpression><![CDATA[""+$F{sales_fact_1998_store_sales}]]></labelExpression>
+						</categorySeries>
+					</sc:spiderDataset>
+					<sc:spiderPlot isWebFilled="true" axisLineColor="#000000" backcolor="#F9F9F2"/>
+				</sc:spiderChart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

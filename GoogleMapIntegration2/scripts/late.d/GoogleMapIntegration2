@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Updates only when external GUEST IP changes
+[ "${GUEST}" == "${LAST_NET}" ] && return 0
+echo "[34;1m== [[32;1mINFO[34;1m] Guillaume's GoogleMap2 sample > [35;1mUpdate external IP address[0m"
+
+# Reconfigure GoogleMap if needed
+sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}/jasperserver-pro#" /var/lib/tomcat6/webapps/jasperserver-pro/maps/map_1.jsp
+cd /root/jasperreports-server-${JRSVERSION}-bin/buildomatic/
+./js-export.sh --output-dir /tmp/Google2 --uris /public/SESamples/GoogleMapIntegration2
+sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}/jasperserver-pro#" /tmp/Google2/resources/public/SESamples/GoogleMapIntegration2/GoogleMap_Sample.xml
+./js-import.sh --input-dir /tmp/Google2 --update
+cd -
+rm -Rf /tmp/Google2
+
