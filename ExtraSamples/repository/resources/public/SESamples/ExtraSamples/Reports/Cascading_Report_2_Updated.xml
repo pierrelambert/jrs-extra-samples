@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/ExtraSamples/Reports</folder>
+    <name>Cascading_Report_2_Updated</name>
+    <version>3</version>
+    <label>Interactive Cascading Report</label>
+    <description>4 Levels of Cascading Input Controls</description>
+    <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+    <updateDate>2012-07-09T19:43:29.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Cascading_Report_2_Updated_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>Cascading_Report_2_Updated_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>Product_Family</name>
+            <version>1</version>
+            <label>Product Family</label>
+            <description>Displays all the "Product Families"</description>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <type>4</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files/Product_Family_files</folder>
+                    <name>ProductFamily_Query</name>
+                    <version>0</version>
+                    <label>ProductFamily Query</label>
+                    <description></description>
+                    <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+                    <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct(pc.product_family) from product_class pc, product p where pc.product_class_id = p.product_class_id</queryString>
+                    <dataSource>
+                        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>product_family</queryVisibleColumn>
+            <queryValueColumn>product_family</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>Product_Department</name>
+            <version>1</version>
+            <label>Product Department</label>
+            <description>Displays all the "Product Departments" depending upon the "Product Family" selected.</description>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <type>4</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files/Product_Department_files</folder>
+                    <name>ProductDepartment_Query</name>
+                    <version>0</version>
+                    <label>ProductDepartment Query</label>
+                    <description></description>
+                    <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+                    <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct(pc.product_department) from product_class pc, product p where pc.product_class_id = p.product_class_id  and pc.product_family = ($P{Product_Family})</queryString>
+                    <dataSource>
+                        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>product_department</queryVisibleColumn>
+            <queryValueColumn>product_department</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>Product_Category</name>
+            <version>1</version>
+            <label>Product Category</label>
+            <description></description>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <type>4</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files/Product_Category_files</folder>
+                    <name>ProductCategory_Query</name>
+                    <version>0</version>
+                    <label>ProductCategory Query</label>
+                    <description></description>
+                    <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+                    <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct(pc.product_category) from product_class pc, product p where pc.product_class_id = p.product_class_id  and pc.product_department=($P{Product_Department}) and pc.product_family =($P{Product_Family})</queryString>
+                    <dataSource>
+                        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>product_category</queryVisibleColumn>
+            <queryValueColumn>product_category</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>Product_Name</name>
+            <version>1</version>
+            <label>Product Name</label>
+            <description>Displays distinct "Product's Names" depending upon the "Product Category" is selected.</description>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <type>7</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <query>
+                <localResource exportedWithPermissions="false" xsi:type="query">
+                    <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files/Product_Name_files</folder>
+                    <name>ProductName_Query</name>
+                    <version>0</version>
+                    <label>ProductName Query</label>
+                    <description></description>
+                    <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+                    <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+                    <language>sql</language>
+                    <queryString>select distinct(p.product_name) from product_class pc, product p where pc.product_class_id=p.product_class_id and pc.product_category=($P{Product_Category}) and pc.product_family =($P{Product_Family}) and pc.product_department=($P{Product_Department})</queryString>
+                    <dataSource>
+                        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+                    </dataSource>
+                </localResource>
+            </query>
+            <queryVisibleColumn>product_name</queryVisibleColumn>
+            <queryValueColumn>product_name</queryValueColumn>
+        </localResource>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>home_bkgd.png</name>
+            <version>1</version>
+            <label>home_bkgd.png</label>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Images/home_bkgd.png</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>ico-library.jpg</name>
+            <version>1</version>
+            <label>ico-library.jpg</label>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Images/ico-library.jpg</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>js_logo.png</name>
+            <version>1</version>
+            <label>js_logo.png</label>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Images/js_logo.png</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Cascading_Report_2_Updated_files</folder>
+            <name>StyleTemplate.jrtx</name>
+            <version>1</version>
+            <label>StyleTemplate.jrtx</label>
+            <creationDate>2014-06-19T19:22:01.927+02:00</creationDate>
+            <updateDate>2012-07-11T18:50:00.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/JRTX/StyleTemplate.jrtx</referenceUri>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

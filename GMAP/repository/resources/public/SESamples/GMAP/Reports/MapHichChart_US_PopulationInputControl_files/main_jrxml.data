@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TrainingMap" pageWidth="595" pageHeight="1300" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37edc0c5-1f35-4793-9798-f3a257bf0bdd">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.jasperserver.url" value="http://192.168.42.128:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/organizations/organization_1/GMAP/Reports/MapHichChart_US_PopulationInputControl_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/organizations/organization_1/GMAP/Reports/MapHichChart_US_PopulationInputControl"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Imported JDBC DataAdapter "/>
+	<subDataset name="StyleArea" uuid="56c9e69e-3600-4efa-91f4-fe0ef626b75b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="foodmart"/>
+		<parameter name="LastColor" class="java.lang.String">
+			<parameterDescription><![CDATA[Last Hex Color to generate the Gradient]]></parameterDescription>
+			<defaultValueExpression><![CDATA["#00000F"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="FirstColor" class="java.lang.String">
+			<parameterDescription><![CDATA[First Hex Color to generate the Gradient]]></parameterDescription>
+			<defaultValueExpression><![CDATA["#008FF2"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="Steps" class="java.lang.Integer">
+			<parameterDescription><![CDATA[Number of Steps for the Gradient]]></parameterDescription>
+			<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT distinct states_pop.pop_2013,
+	states_coord.state_code,
+	states_coord.state_colour,
+	states_coord.state_name,
+	states_pop.ratio,
+	states_pop.diff,
+	states_pop.state
+FROM states_pop INNER JOIN states_coord ON 
+	 states_coord.state_code = states_pop.state_code
+	 order by states_pop.diff]]>
+		</queryString>
+		<field name="pop_2013" class="java.lang.Integer"/>
+		<field name="state_code" class="java.lang.String"/>
+		<field name="state_colour" class="java.lang.String"/>
+		<field name="state_name" class="java.lang.String"/>
+		<field name="ratio" class="java.math.BigDecimal"/>
+		<field name="diff" class="java.math.BigDecimal"/>
+		<field name="state" class="java.lang.String"/>
+		<variable name="Val" class="java.lang.Integer">
+			<variableExpression><![CDATA[(($F{pop_2013}>30000000)?5:(($F{pop_2013}>20000000)?4:(($F{pop_2013}>10000000)?3:(($F{pop_2013}>5000000)?2:(($F{pop_2013}>2000000)?1:0)))))]]></variableExpression>
+		</variable>
+		<variable name="Gradient" class="java.lang.String">
+			<variableExpression><![CDATA[GET_LINEAR_GRADIENT("#0000F2","#00000F",$F{diff}.intValue(),Integer.valueOf(-1159),Integer.valueOf(1300000))]]></variableExpression>
+		</variable>
+		<variable name="Gradient_Steps" class="java.lang.String">
+			<variableExpression><![CDATA[GET_STEP_GRADIENT($P{FirstColor},$P{LastColor},$V{Val},Integer.valueOf(0),Integer.valueOf(6),$P{Steps})]]></variableExpression>
+		</variable>
+		<variable name="Gradient_Array" class="java.lang.String">
+			<variableExpression><![CDATA[GET_FIXED_STEP_GRADIENT_ARRAY("#008FF2","#00000F",Integer.valueOf(8))]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="FirstColor" class="java.lang.String">
+		<parameterDescription><![CDATA[First Hex Color to generate the Gradient]]></parameterDescription>
+		<defaultValueExpression><![CDATA["#008FF2"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LastColor" class="java.lang.String">
+		<parameterDescription><![CDATA[Last Hex Color to generate the Gradient]]></parameterDescription>
+		<defaultValueExpression><![CDATA["#00000F"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Steps" class="java.lang.Integer">
+		<parameterDescription><![CDATA[Number of Steps for the Gradient]]></parameterDescription>
+		<defaultValueExpression><![CDATA[10]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT states_pop.pop_2013,
+	states_coord.state_code,
+	states_coord.state_colour,
+	states_coord.lat,
+	states_coord.lng as lng,
+	states_coord.state_name,
+	states_pop.ratio,
+	states_pop.diff,
+	states_pop.state
+FROM states_pop INNER JOIN states_coord ON 
+	 states_coord.state_code = states_pop.state_code]]>
+	</queryString>
+	<field name="lat" class="java.math.BigDecimal"/>
+	<field name="lng" class="java.math.BigDecimal"/>
+	<field name="state_colour" class="java.lang.String"/>
+	<field name="state_name" class="java.lang.String"/>
+	<field name="state_code" class="java.lang.String"/>
+	<field name="ratio" class="java.math.BigDecimal"/>
+	<field name="diff" class="java.math.BigDecimal"/>
+	<field name="state" class="java.lang.String"/>
+	<field name="pop_2013" class="java.lang.Integer"/>
+	<variable name="colour" class="java.lang.String">
+		<variableExpression><![CDATA[($F{pop_2013}.doubleValue()>15000000.0)?"#FF0000":($F{pop_2013}.doubleValue()>10000000.0)?"#00FF00":($F{pop_2013}.doubleValue()>5000000.0)?"#00FFFF":($F{pop_2013}.doubleValue()>2000000.0)?"#0000FF":"#FFFF00"]]></variableExpression>
+	</variable>
+	<variable name="opacity" class="java.lang.Double">
+		<variableExpression><![CDATA[($F{pop_2013}.doubleValue()>15000000.0)?1.0:($F{pop_2013}.doubleValue()>10000000.0)?0.8:($F{pop_2013}.doubleValue()>5000000.0)?0.6:($F{pop_2013}.doubleValue()>2000000.0)?0.4:0.2]]></variableExpression>
+	</variable>
+	<variable name="Variable_1" class="java.lang.String"/>
+	<variable name="Val" class="java.lang.Integer">
+		<variableExpression><![CDATA[(($F{pop_2013}>30000000)?10:(($F{pop_2013}>25000000)?9:(($F{pop_2013}>15000000)?8:(($F{pop_2013}>10000000)?5:(($F{pop_2013}>5000000)?3:1)))))]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="1259" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="552" height="260" uuid="3a5d6c4a-d54d-4549-bc73-648ab9cb79d4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<c:map xmlns:c="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<c:latitudeExpression><![CDATA[31.433968f]]></c:latitudeExpression>
+					<c:longitudeExpression><![CDATA[-85.337967f]]></c:longitudeExpression>
+					<c:zoomExpression><![CDATA[2]]></c:zoomExpression>
+					<c:markerData>
+						<dataset/>
+					</c:markerData>
+					<c:pathStyle>
+						<dataset>
+							<datasetRun subDataset="StyleArea" uuid="6e74fd19-9613-4dc6-a6ed-2a743c3619a2">
+								<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+							</datasetRun>
+						</dataset>
+						<c:item>
+							<c:itemProperty name="strokeOpacity">
+								<valueExpression><![CDATA[1.0]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="strokeWeight">
+								<valueExpression><![CDATA[1]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="isPolygon">
+								<valueExpression><![CDATA[true]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="name">
+								<valueExpression><![CDATA[$F{state_name}]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="fillOpacity">
+								<valueExpression><![CDATA[0.9]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="fillColor">
+								<valueExpression><![CDATA[$V{Gradient_Steps}]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="strokeColor">
+								<valueExpression><![CDATA[$V{Gradient_Steps}]]></valueExpression>
+							</c:itemProperty>
+						</c:item>
+					</c:pathStyle>
+					<c:pathData>
+						<dataset/>
+						<c:item>
+							<c:itemProperty name="latitude">
+								<valueExpression><![CDATA[$F{lat}]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="longitude">
+								<valueExpression><![CDATA[$F{lng}]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="name">
+								<valueExpression><![CDATA[$F{state_name}]]></valueExpression>
+							</c:itemProperty>
+							<c:itemProperty name="style">
+								<valueExpression><![CDATA[$F{state_name}]]></valueExpression>
+							</c:itemProperty>
+						</c:item>
+					</c:pathData>
+				</c:map>
+			</componentElement>
+			<componentElement>
+				<reportElement x="2" y="270" width="550" height="440" uuid="da3a6086-821d-4b48-8a10-acc9ce73750a">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Column" evaluationTime="Report">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="chart.shadow">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.zoomType">
+							<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset>
+							<dataset>
+								<datasetRun subDataset="StyleArea" uuid="7dafea5a-5a3c-455a-9744-2fded99c977c">
+									<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+									<datasetParameter name="LastColor">
+										<datasetParameterExpression><![CDATA[$P{LastColor}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="FirstColor">
+										<datasetParameterExpression><![CDATA[$P{FirstColor}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="Steps">
+										<datasetParameterExpression><![CDATA[$P{Steps}]]></datasetParameterExpression>
+									</datasetParameter>
+								</datasetRun>
+							</dataset>
+						</multiAxisDataset>
+						<dataAxis axis="Rows">
+							<axisLevel name="Level1">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA["Population by State"]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="State">
+								<labelExpression><![CDATA[]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{state_name}]]></bucketExpression>
+									<bucketProperty name="color"><![CDATA[GET_STEP_GRADIENT($P{FirstColor},$P{LastColor},$V{Val},Integer.valueOf(0),Integer.valueOf(6),$P{Steps})]]></bucketProperty>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="DIFF" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA["Population"]]></labelExpression>
+							<valueExpression><![CDATA[$F{pop_2013}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="DIFF">
+						<hc:contributor name="SeriesProperty">
+							<hc:contributorProperty name="color" valueType="Bucket" value="State.color"/>
+						</hc:contributor>
+					</hc:series>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

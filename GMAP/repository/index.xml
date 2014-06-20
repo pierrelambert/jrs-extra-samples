@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<export><property name="pathProcessorId" value="zip"/><property name="jsVersion" value="5.5.0 PRO"/><module id="repositoryResources"><folder>/organizations/organization_1/GoogleMap_Samples</folder></module><module id="reportJobs"/></export>
+<export><property name="pathProcessorId" value="file"/><property name="jsVersion" value="5.6.0 PRO"/><module id="repositoryResources"><folder>/public/SESamples/GMAP</folder></module></export>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/GMAP/Reports</folder>
+    <name>MapHichChart_US_PopulationInputControl</name>
+    <version>0</version>
+    <label>Map&amp;HichChart_US_Population&amp;InputControl</label>
+    <description></description>
+    <creationDate>2014-06-19T18:34:31.491+02:00</creationDate>
+    <updateDate>2014-04-18T15:43:18.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/GMAP/Reports/MapHichChart_US_PopulationInputControl_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main Jrxml</label>
+            <creationDate>2014-06-19T18:34:31.491+02:00</creationDate>
+            <updateDate>2014-04-18T13:27:13.000+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/GMAP/Resources/DataSources/states_datasource</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/GMAP/Resources/InputControls/FirstColor</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/SESamples/GMAP/Resources/InputControls/LastColor</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/SESamples/GMAP/Resources/InputControls/Steps</uri>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

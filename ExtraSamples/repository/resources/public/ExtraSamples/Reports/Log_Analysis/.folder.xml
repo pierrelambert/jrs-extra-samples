@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<folder exportedWithPermissions="true"><parent>/public/ExtraSamples/Reports</parent><name>Log_Analysis</name><label>Log Analysis</label><creationDate>2014-01-27T13:22:29.000+01:00</creationDate><updateDate>2012-03-09T22:48:11.000+01:00</updateDate><folder>common</folder><resource>bytes_by_Port</resource><resource>bytes_handled</resource><resource>http_status</resource><resource>user_agent</resource><resource>Web_Server_Log_Analysis_Dashboard</resource></folder>

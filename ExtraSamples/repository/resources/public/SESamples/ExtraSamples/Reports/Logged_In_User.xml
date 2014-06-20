@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/ExtraSamples/Reports</folder>
+    <name>Logged_In_User</name>
+    <version>3</version>
+    <label>Logged-In User</label>
+    <description></description>
+    <creationDate>2014-06-19T19:22:02.689+02:00</creationDate>
+    <updateDate>2012-03-19T22:08:21.000+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Logged_In_User_.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Logged_In_User_files</folder>
+            <name>Logged_In_User_</name>
+            <version>1</version>
+            <label>Logged-In User</label>
+            <creationDate>2014-06-19T19:22:02.689+02:00</creationDate>
+            <updateDate>2012-03-19T21:51:38.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/Logged_In_User_files</folder>
+            <name>js_samples.png</name>
+            <version>1</version>
+            <label>js_samples.png</label>
+            <creationDate>2014-06-19T19:22:02.689+02:00</creationDate>
+            <updateDate>2012-03-19T21:53:02.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Images/js_samples.png</referenceUri>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

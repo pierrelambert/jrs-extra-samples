@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples</parent>
+    <name>ExtraSamples</name>
+    <label>ExtraSamples</label>
+    <description></description>
+    <creationDate>2014-06-19T19:06:35.398+02:00</creationDate>
+    <updateDate>2013-11-29T12:02:06.000+01:00</updateDate>
+    <folder>Dashboards</folder>
+    <folder>Domains</folder>
+    <folder>Reports</folder>
+    <folder>Resources</folder>
+    <folder>Views</folder>
+</folder>

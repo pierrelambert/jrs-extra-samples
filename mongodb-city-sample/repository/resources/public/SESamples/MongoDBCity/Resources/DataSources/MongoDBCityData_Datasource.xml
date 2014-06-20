@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customDataSource exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Resources/DataSources</folder>
+    <name>MongoDBCityData_Datasource</name>
+    <version>0</version>
+    <label>MongoDBCityData Datasource</label>
+    <description></description>
+    <creationDate>2014-06-19T18:32:31.133+02:00</creationDate>
+    <updateDate>2013-11-27T14:39:53.256+01:00</updateDate>
+    <serviceClass>com.jaspersoft.mongodb.jasperserver.MongoDbDataSourceService</serviceClass>
+    <property>
+        <key>username</key>
+        <value>username</value>
+    </property>
+    <property>
+        <key>mongoURI</key>
+        <value>mongodb://127.0.0.1:27017/test</value>
+    </property>
+    <property>
+        <key>_cds_name</key>
+        <value>MongoDbDataSource</value>
+    </property>
+    <property>
+        <key>password</key>
+        <value>ENC&lt;5138E073D85983D4BC86A2BEDBE0CA8D&gt;</value>
+    </property>
+</customDataSource>

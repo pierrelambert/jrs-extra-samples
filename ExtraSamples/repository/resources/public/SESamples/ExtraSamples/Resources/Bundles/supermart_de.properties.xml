@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="supermart_de.properties.data">
+    <folder>/public/SESamples/ExtraSamples/Resources/Bundles</folder>
+    <name>supermart_de.properties</name>
+    <version>3</version>
+    <label>supermart_de.properties</label>
+    <description>German resource bundle</description>
+    <creationDate>2014-06-19T19:22:03.331+02:00</creationDate>
+    <updateDate>2012-06-28T23:50:07.000+02:00</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

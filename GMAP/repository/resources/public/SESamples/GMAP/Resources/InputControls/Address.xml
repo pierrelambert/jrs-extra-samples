@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputControl exportedWithPermissions="false">
+    <folder>/public/SESamples/GMAP/Resources/InputControls</folder>
+    <name>Address</name>
+    <version>0</version>
+    <label>Address</label>
+    <description></description>
+    <creationDate>2014-06-19T18:34:30.929+02:00</creationDate>
+    <updateDate>2014-04-18T15:57:27.000+02:00</updateDate>
+    <type>2</type>
+    <mandatory>false</mandatory>
+    <readOnly>false</readOnly>
+    <visible>true</visible>
+    <dataType>
+        <uri>/public/SESamples/GMAP/Resources/InputControls/DataTypes/Address</uri>
+    </dataType>
+</inputControl>

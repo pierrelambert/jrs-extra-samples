@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/ExtraSamples/Reports</folder>
+    <name>stoplight_bold</name>
+    <version>3</version>
+    <label>Stoplight Bold</label>
+    <description>Example of a stoplight report.
+Large images. Useful in a dashboard.</description>
+    <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+    <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="stoplight_bold_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>stoplight_bold_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/ExtraSamples/Resources/DataSources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>sales_situation</name>
+            <version>1</version>
+            <label>Sales Situation</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <type>3</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <listOfValues>
+                <localResource exportedWithPermissions="false" xsi:type="listOfValues">
+                    <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files/sales_situation_files</folder>
+                    <name>x</name>
+                    <version>0</version>
+                    <label>x</label>
+                    <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+                    <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+                    <item>
+                        <itemLabel>Easier</itemLabel>
+                        <itemValue xsi:type="java:java.lang.String">easier</itemValue>
+                    </item>
+                    <item>
+                        <itemLabel>Harder</itemLabel>
+                        <itemValue xsi:type="java:java.lang.String">harder</itemValue>
+                    </item>
+                </localResource>
+            </listOfValues>
+        </localResource>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="greenlight.png.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>greenlight.png</name>
+            <version>1</version>
+            <label>greenlight.png</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <fileType>img</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="redlight.png.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>redlight.png</name>
+            <version>1</version>
+            <label>redlight.png</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <fileType>img</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="yellowlight.png.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>yellowlight.png</name>
+            <version>1</version>
+            <label>yellowlight.png</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <fileType>img</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_de.properties</name>
+            <version>1</version>
+            <label>supermart_de.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_de.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_en_US.properties</name>
+            <version>1</version>
+            <label>supermart_en_US.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_en_US.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_es.properties</name>
+            <version>1</version>
+            <label>supermart_es.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_es.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_fr.properties</name>
+            <version>1</version>
+            <label>supermart_fr.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_fr.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_ja.properties</name>
+            <version>1</version>
+            <label>supermart_ja.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_ja.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart_zh_CN.properties</name>
+            <version>1</version>
+            <label>supermart_zh_CN.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart_zh_CN.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExtraSamples/Reports/stoplight_bold_files</folder>
+            <name>supermart.properties</name>
+            <version>1</version>
+            <label>supermart.properties</label>
+            <creationDate>2014-06-19T19:22:03.682+02:00</creationDate>
+            <updateDate>2012-03-17T04:31:19.000+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExtraSamples/Resources/Bundles/supermart.properties</referenceUri>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>3</controlsLayout>
+</reportUnit>

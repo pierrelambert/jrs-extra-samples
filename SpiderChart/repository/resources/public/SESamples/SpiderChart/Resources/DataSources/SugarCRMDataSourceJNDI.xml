@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiJdbcDataSource exportedWithPermissions="false">
+    <folder>/public/SESamples/SpiderChart/Resources/DataSources</folder>
+    <name>SugarCRMDataSourceJNDI</name>
+    <version>0</version>
+    <label>SugarCRM Data Source JNDI</label>
+    <description>SugarCRM Data Source JNDI</description>
+    <creationDate>2014-06-19T18:28:35.063+02:00</creationDate>
+    <updateDate>2013-10-01T19:12:07.000+02:00</updateDate>
+    <jndiName>jdbc/sugarcrm</jndiName>
+</jndiJdbcDataSource>

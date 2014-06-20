@@ -7,6 +7,7 @@ this simple spider chart with hyperlinks on a detail report.
 Francois Cerbelle
 
 ##Requirements
+sugarcrm database provided by Samples560
 
 ##Instructions
 Open the Spider report and click on any of the red points

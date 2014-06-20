@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/MongoDBCity</parent>
+    <name>Dashboards</name>
+    <label>Dashboards</label>
+    <description></description>
+    <creationDate>2014-06-19T18:32:30.654+02:00</creationDate>
+    <updateDate>2013-01-10T13:34:20.000+01:00</updateDate>
+    <resource>MongoDB_City_Dashboard</resource>
+</folder>

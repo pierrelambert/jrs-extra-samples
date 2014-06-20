@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/MongoDBCity/Resources</parent>
+    <name>Images</name>
+    <label>Images</label>
+    <description></description>
+    <creationDate>2014-06-19T18:32:30.949+02:00</creationDate>
+    <updateDate>2013-01-10T13:32:03.000+01:00</updateDate>
+    <resource>decrease.svg</resource>
+    <resource>increase.svg</resource>
+    <resource>Open-sewer.png</resource>
+    <resource>Powered_by_MongoDB_3.png</resource>
+</folder>

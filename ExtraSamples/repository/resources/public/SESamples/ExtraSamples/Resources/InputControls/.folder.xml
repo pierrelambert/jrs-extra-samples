@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/ExtraSamples/Resources</parent>
+    <name>InputControls</name>
+    <label>InputControls</label>
+    <description></description>
+    <creationDate>2014-06-19T19:06:36.362+02:00</creationDate>
+    <updateDate>2013-01-10T13:31:43.000+01:00</updateDate>
+    <folder>DataTypes</folder>
+    <folder>ListsOfValues</folder>
+    <folder>Queries</folder>
+    <resource>RACE</resource>
+</folder>

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<export><property name="pathProcessorId" value="file"/><property name="jsVersion" value="5.5.0 PRO"/><module id="repositoryResources"><folder>/public/Samples/ExtraSamples/Skeleton</folder></module></export>
+<export><property name="pathProcessorId" value="file"/><property name="jsVersion" value="5.6.0 PRO"/><module id="repositoryResources"><folder>/public/SESamples/MongoDBCity</folder></module></export>

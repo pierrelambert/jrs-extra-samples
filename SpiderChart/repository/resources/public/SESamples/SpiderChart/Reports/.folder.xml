@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/SpiderChart</parent>
+    <name>Reports</name>
+    <label>Reports</label>
+    <description></description>
+    <creationDate>2014-06-19T18:28:33.826+02:00</creationDate>
+    <updateDate>2013-01-10T13:36:43.000+01:00</updateDate>
+    <resource>detail</resource>
+    <resource>Spider</resource>
+</folder>

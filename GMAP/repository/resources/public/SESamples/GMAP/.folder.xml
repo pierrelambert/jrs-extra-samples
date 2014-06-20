@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples</parent>
+    <name>GMAP</name>
+    <label>GMAP</label>
+    <description></description>
+    <creationDate>2014-06-19T18:34:29.255+02:00</creationDate>
+    <updateDate>2014-04-18T12:32:20.000+02:00</updateDate>
+    <folder>Dashboards</folder>
+    <folder>Domains</folder>
+    <folder>Reports</folder>
+    <folder>Resources</folder>
+    <folder>Views</folder>
+</folder>

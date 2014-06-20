@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputControl exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Resources/InputControls</folder>
+    <name>services</name>
+    <version>0</version>
+    <label>Services</label>
+    <description></description>
+    <creationDate>2014-06-19T18:32:31.196+02:00</creationDate>
+    <updateDate>2014-04-15T12:40:40.973+02:00</updateDate>
+    <type>7</type>
+    <mandatory>false</mandatory>
+    <readOnly>false</readOnly>
+    <visible>true</visible>
+    <query>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="query">
+            <folder>/public/SESamples/MongoDBCity/Resources/InputControls/services_files</folder>
+            <name>Query</name>
+            <version>0</version>
+            <label>Query</label>
+            <description></description>
+            <creationDate>2014-06-19T18:32:31.196+02:00</creationDate>
+            <updateDate>2014-04-15T11:57:05.664+02:00</updateDate>
+            <language>MongoDbQuery</language>
+            <queryString>{
+  runCommand:{
+    aggregate:"cases",
+    pipeline:[
+      {
+        $sort:{
+          "ServiceName":1
+        }
+      },
+      {
+        $group:{
+          _id:"$ServiceName"
+        }
+      }
+    ]
+  }
+}</queryString>
+            <dataSource>
+                <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDBCityData_Datasource</uri>
+            </dataSource>
+        </localResource>
+    </query>
+    <queryVisibleColumn>_id</queryVisibleColumn>
+    <queryValueColumn>_id</queryValueColumn>
+</inputControl>

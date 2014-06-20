@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/SpiderChart/Resources</parent>
+    <name>OLAP</name>
+    <label>OLAP</label>
+    <description></description>
+    <creationDate>2014-06-19T18:28:34.491+02:00</creationDate>
+    <updateDate>2013-04-04T10:27:12.000+02:00</updateDate>
+    <folder>ClientsConnections</folder>
+    <folder>Grants</folder>
+    <folder>Schemas</folder>
+    <folder>XMLASource</folder>
+</folder>

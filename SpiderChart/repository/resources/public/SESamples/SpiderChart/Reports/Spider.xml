@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/SpiderChart/Reports</folder>
+    <name>Spider</name>
+    <version>0</version>
+    <label>spider</label>
+    <description></description>
+    <creationDate>2014-06-19T18:28:35.231+02:00</creationDate>
+    <updateDate>2013-12-09T16:48:43.000+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="Spider_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/SpiderChart/Reports/Spider_files</folder>
+            <name>Spider_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-19T18:28:35.231+02:00</creationDate>
+            <updateDate>2011-11-20T14:37:34.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/SpiderChart/Resources/DataSources/SugarCRMDataSourceJNDI</uri>
+    </dataSource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

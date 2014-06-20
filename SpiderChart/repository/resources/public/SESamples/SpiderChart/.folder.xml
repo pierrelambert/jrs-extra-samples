@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples</parent>
+    <name>SpiderChart</name>
+    <label>SpiderChart</label>
+    <description></description>
+    <creationDate>2014-06-19T18:28:33.630+02:00</creationDate>
+    <updateDate>2013-12-09T16:16:57.000+01:00</updateDate>
+    <folder>Dashboards</folder>
+    <folder>Domains</folder>
+    <folder>Reports</folder>
+    <folder>Resources</folder>
+    <folder>Views</folder>
+</folder>
