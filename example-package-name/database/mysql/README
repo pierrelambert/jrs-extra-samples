@@ -2,5 +2,5 @@ The install script expects :
 - One dump file for each schema
 - Dump files to be named "<schema>.sql" (case sensitive)
 - Each dump create with the following command :
-  mysqldump --add-drop-table --database <schema>"
+  mysqldump --add-drop-table --databases <schema>"
 

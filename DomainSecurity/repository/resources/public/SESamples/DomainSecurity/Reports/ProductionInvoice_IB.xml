@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/DomainSecurity/Reports</folder>
+    <name>ProductionInvoice_IB</name>
+    <version>0</version>
+    <label>ProductionInvoice_IB</label>
+    <creationDate>2014-06-20T16:35:42.511+02:00</creationDate>
+    <updateDate>2011-12-23T17:22:53.000+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="ProductionInvoice_IB_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/DomainSecurity/Reports/ProductionInvoice_IB_files</folder>
+            <name>ProductionInvoice_IB_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-20T16:35:42.511+02:00</creationDate>
+            <updateDate>2011-12-23T17:21:46.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/DomainSecurity/Resources/DataSources/ProductionDS_IB</uri>
+    </dataSource>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/public/SESamples/DomainSecurity/Reports/ProductionInvoice_IB_files</folder>
+            <name>cust_id</name>
+            <version>0</version>
+            <label>CustomerId</label>
+            <creationDate>2014-06-20T16:35:42.511+02:00</creationDate>
+            <updateDate>2011-12-23T17:22:40.000+01:00</updateDate>
+            <type>2</type>
+            <mandatory>false</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <uri>/public/SESamples/DomainSecurity/Resources/InputControls/DataTypes/NumberGeneralDatatype</uri>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

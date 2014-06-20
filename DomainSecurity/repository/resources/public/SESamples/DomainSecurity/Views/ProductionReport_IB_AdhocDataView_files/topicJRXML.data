@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="32b2312f-a289-4c2c-b149-c047dc97d2d5">
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="customer.orders.orderline.orderline_quantity" />
+    <queryField id="customer.orders.orderline.orderline_total" />
+    <queryField id="customer.orders.orderline.prod_name" />
+    <queryField id="customer.orders.orderline.prod_price" />
+    <queryField id="customer.orders.orders_date" />
+    <queryField id="customer.cust_address" />
+    <queryField id="customer.cust_city" />
+    <queryField id="customer.cust_firstname" />
+    <queryField id="customer.cust_lastname" />
+    <queryField id="customer.cust_region" />
+    <queryField id="customer.cust_sex" />
+    <queryField id="customer.cust_zipcode" />
+    <queryField id="customer.Departement" />
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="customer.cust_address" class="java.lang.String">
+		<property name="semantic.tree.sort.order" value="{&quot;cust_sex&quot;:7,&quot;orderline&quot;:12,&quot;cust_lastname&quot;:5,&quot;cust_city&quot;:3,&quot;cust_zipcode&quot;:8,&quot;orders_date&quot;:11,&quot;customer&quot;:1,&quot;cust_firstname&quot;:4,&quot;cust_region&quot;:6,&quot;cust_address&quot;:2,&quot;prod_price&quot;:16,&quot;orderline_quantity&quot;:13,&quot;Departement&quot;:9,&quot;orders&quot;:10,&quot;orderline_total&quot;:14,&quot;prod_name&quot;:15}"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Adresse"/>
+		<property name="semantic.item.desc" value="cust_address"/>
+		<property name="defaultMask"/>
+		<property name="adhoc.tree.labels" value="[{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Client&quot;,&quot;uri&quot;:&quot;/customer&quot;,&quot;labelId&quot;:&quot;CUSTOMER.LABEL&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Commandes&quot;,&quot;uri&quot;:&quot;/customer/orders&quot;,&quot;labelId&quot;:&quot;CUSTOMER.ORDERS.LABEL&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Lignes&quot;,&quot;uri&quot;:&quot;/customer/orders/orderline&quot;,&quot;labelId&quot;:&quot;CUSTOMER.ORDERS.ORDERLINE.LABEL&quot;}]"/>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="adhoc.tree.uri" value="/customer/cust_address"/>
+		<property name="semantic.tree.uri" value="/customer/cust_address"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_address"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_ADDRESS.DESCR"/>
+		<fieldDescription><![CDATA[customer.cust_address]]></fieldDescription>
+	</field>
+	<field name="customer.cust_city" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/cust_city"/>
+		<property name="semantic.tree.uri" value="/customer/cust_city"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_city"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_CITY.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Ville"/>
+		<property name="semantic.item.desc" value="cust_city"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.cust_city]]></fieldDescription>
+	</field>
+	<field name="customer.cust_firstname" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/cust_firstname"/>
+		<property name="semantic.tree.uri" value="/customer/cust_firstname"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_firstname"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_FIRSTNAME.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Prénom"/>
+		<property name="semantic.item.desc" value="cust_firstname"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.cust_firstname]]></fieldDescription>
+	</field>
+	<field name="customer.cust_lastname" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/cust_lastname"/>
+		<property name="semantic.tree.uri" value="/customer/cust_lastname"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_lastname"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_LASTNAME.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Nom"/>
+		<property name="semantic.item.desc" value="cust_lastname"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.cust_lastname]]></fieldDescription>
+	</field>
+	<field name="customer.cust_region" class="java.lang.Integer">
+		<property name="adhoc.tree.uri" value="/customer/cust_region"/>
+		<property name="semantic.tree.uri" value="/customer/cust_region"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_region"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_REGION.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Région"/>
+		<property name="semantic.item.desc" value="cust_region"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[customer.cust_region]]></fieldDescription>
+	</field>
+	<field name="customer.cust_sex" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/cust_sex"/>
+		<property name="semantic.tree.uri" value="/customer/cust_sex"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_sex"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_SEX.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sexe"/>
+		<property name="semantic.item.desc" value="cust_sex"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.cust_sex]]></fieldDescription>
+	</field>
+	<field name="customer.cust_zipcode" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/cust_zipcode"/>
+		<property name="semantic.tree.uri" value="/customer/cust_zipcode"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="resourceId" value="JoinTree_1.customer.cust_zipcode"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.CUST_ZIPCODE.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Code Postal"/>
+		<property name="semantic.item.desc" value="cust_zipcode"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.cust_zipcode]]></fieldDescription>
+	</field>
+	<field name="customer.Departement" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/Departement"/>
+		<property name="semantic.tree.uri" value="/customer/Departement"/>
+		<property name="semantic.tree.sort.order" value="7"/>
+		<property name="resourceId" value="JoinTree_1.customer.Departement"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.DEPARTEMENT.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Département"/>
+		<property name="semantic.item.desc" value="Departement"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.Departement]]></fieldDescription>
+	</field>
+	<field name="customer.orders.orders_date" class="java.util.Date">
+		<property name="adhoc.tree.uri" value="/customer/orders/orders_date"/>
+		<property name="semantic.tree.uri" value="/customer/orders/orders_date"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="resourceId" value="JoinTree_1.orders.orders_date"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.ORDERS.ORDERS_DATE.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Date"/>
+		<property name="semantic.item.desc" value="orders_date"/>
+		<property name="defaultMask" value="short,hide"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.orders.orders_date]]></fieldDescription>
+	</field>
+	<field name="customer.orders.orderline.orderline_quantity" class="java.lang.Integer">
+		<property name="adhoc.tree.uri" value="/customer/orders/orderline/orderline_quantity"/>
+		<property name="semantic.tree.uri" value="/customer/orders/orderline/orderline_quantity"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="resourceId" value="JoinTree_1.orderline.orderline_quantity"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_QUANTITY.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Quantité"/>
+		<property name="semantic.item.desc" value="orderline_quantity"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[customer.orders.orderline.orderline_quantity]]></fieldDescription>
+	</field>
+	<field name="customer.orders.orderline.orderline_total" class="java.lang.Float">
+		<property name="adhoc.tree.uri" value="/customer/orders/orderline/orderline_total"/>
+		<property name="semantic.tree.uri" value="/customer/orders/orderline/orderline_total"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="resourceId" value="JoinTree_1.orderline_total"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_TOTAL.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Total"/>
+		<property name="semantic.item.desc" value="orderline_total"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[customer.orders.orderline.orderline_total]]></fieldDescription>
+	</field>
+	<field name="customer.orders.orderline.prod_name" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/customer/orders/orderline/prod_name"/>
+		<property name="semantic.tree.uri" value="/customer/orders/orderline/prod_name"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="resourceId" value="JoinTree_1.product.prod_name"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.ORDERS.ORDERLINE.PROD_NAME.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Produit"/>
+		<property name="semantic.item.desc" value="prod_name"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[customer.orders.orderline.prod_name]]></fieldDescription>
+	</field>
+	<field name="customer.orders.orderline.prod_price" class="java.lang.Double">
+		<property name="adhoc.tree.uri" value="/customer/orders/orderline/prod_price"/>
+		<property name="semantic.tree.uri" value="/customer/orders/orderline/prod_price"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="resourceId" value="JoinTree_1.product.prod_price"/>
+		<property name="dimensionOrMeasure"/>
+		<property name="semantic.item.desc.id" value="CUSTOMER.ORDERS.ORDERLINE.PROD_PRICE.DESCR"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Prix unitaire"/>
+		<property name="semantic.item.desc" value="prod_price"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[customer.orders.orderline.prod_price]]></fieldDescription>
+	</field>
+</jasperReport>

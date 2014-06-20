@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/DomainSecurity</parent>
+    <name>Dashboards</name>
+    <label>Dashboards</label>
+    <description></description>
+    <creationDate>2014-06-20T16:35:38.613+02:00</creationDate>
+    <updateDate>2013-01-10T13:34:20.000+01:00</updateDate>
+    <resource>ProductionDashboard_Invoices</resource>
+    <resource>ProductionDashboard_Report</resource>
+</folder>

@@ -49,10 +49,20 @@ function MySQLRestore(){ # Import a mySQL dump for the specified sample (drops a
 [ ! -d /jrs-extra-samples/${1}/database/mysql/ ] && echo "No MySQL database to import" && return
 echo "Importing ${1} MySQL database..."
 for dump in /jrs-extra-samples/${1}/database/mysql/*.sql; do
-    SCHEMA=`basename "$i" .sql`
-    mysql -h localhost -uroot -proot < ${dump}
-    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
-    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+    if [ -f ${dump} ]; then
+        SCHEMA=`basename "$i" .sql`
+        cat ${dump} | mysql -h localhost -uroot -proot
+        echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+        echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+    fi
+done
+for dump in /jrs-extra-samples/${1}/database/mysql/*.sql.gz; do
+    if [ -f ${dump} ]; then
+        SCHEMA=`basename "$i" .sql.gz`
+        zcat ${dump} | mysql -h localhost -uroot -proot
+        echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+        echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot
+    fi
 done
 }
 

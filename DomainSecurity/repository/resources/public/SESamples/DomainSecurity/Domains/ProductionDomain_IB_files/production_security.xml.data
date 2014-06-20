@@ -1,0 +1,37 @@
+<securityDefinition xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0" itemGroupDefaultAccess="granted">
+
+    <resourceAccessGrants>
+        <resourceAccessGrantList id="sales_join_resource_access_grant" label="aLabel" resourceId="JoinTree_1">
+            <resourceAccessGrants>
+                <resourceAccessGrant id="region_filter_row_grant">
+                    <principalExpression>((authentication.principal.tenantId != null) &amp;&amp; (authentication.principal.tenantId != 'organization_1'))</principalExpression>
+                    <filterExpression>customer.cust_region in (groovy('authentication.principal.tenantId.toUpperCase()'))</filterExpression>
+                </resourceAccessGrant>
+            </resourceAccessGrants>
+        </resourceAccessGrantList>
+    </resourceAccessGrants>
+    <itemGroupAccessGrants>
+        <itemGroupAccessGrantList id="restricted_orderline" label="aLabel" itemGroupId="orderline" defaultAccess="granted">
+            <itemGroupAccessGrants>
+                <itemGroupAccessGrant id="restricted_product2" access="granted">
+                    <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_ADMINISTRATOR','ROLE_SALES'] }</principalExpression>
+                    <itemAccessGrantList id="restricted_product2_items" defaultAccess="granted">
+                        <itemAccessGrants>
+                            <itemAccessGrant id="restricted_product2_item1" itemId="prod_price" access="granted" />
+                            <itemAccessGrant id="restricted_product2_item2" itemId="orderline_total" access="granted" />
+                        </itemAccessGrants>
+                    </itemAccessGrantList>
+                </itemGroupAccessGrant>
+                <itemGroupAccessGrant id="restricted_product1" access="granted">
+                    <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_USER'] }</principalExpression>
+                    <itemAccessGrantList id="restricted_product1_items" defaultAccess="granted">
+                        <itemAccessGrants>
+                            <itemAccessGrant id="restricted_product1_item1" itemId="prod_price" access="denied" />
+                            <itemAccessGrant id="restricted_product1_item2" itemId="orderline_total" access="denied" />
+                        </itemAccessGrants>
+                    </itemAccessGrantList>
+                </itemGroupAccessGrant>
+            </itemGroupAccessGrants>
+        </itemGroupAccessGrantList>
+    </itemGroupAccessGrants>
+</securityDefinition>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataType exportedWithPermissions="false">
+    <folder>/public/SESamples/DomainSecurity/Resources/InputControls/DataTypes</folder>
+    <name>NumberGeneralDatatype</name>
+    <version>0</version>
+    <label>Number General Datatype</label>
+    <description>Positive numbers</description>
+    <creationDate>2014-06-20T16:35:42.370+02:00</creationDate>
+    <updateDate>2011-12-08T10:55:25.000+01:00</updateDate>
+    <type>2</type>
+    <minValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">0</minValue>
+    <strictMin>false</strictMin>
+    <strictMax>false</strictMax>
+</dataType>

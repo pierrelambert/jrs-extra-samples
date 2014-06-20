@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0">
+  <itemGroups>
+    <itemGroup description="customer" descriptionId="CUSTOMER.DESCR" id="customer" label="customer" labelId="CUSTOMER.LABEL" resourceId="JoinTree_1">
+      <itemGroups>
+        <itemGroup description="orders" descriptionId="CUSTOMER.ORDERS.DESCR" id="orders" label="orders" labelId="CUSTOMER.ORDERS.LABEL" resourceId="JoinTree_1">
+          <itemGroups>
+            <itemGroup description="orderline" descriptionId="CUSTOMER.ORDERS.ORDERLINE.DESCR" id="orderline" label="orderline" labelId="CUSTOMER.ORDERS.ORDERLINE.LABEL" resourceId="JoinTree_1">
+              <items>
+                <item description="orderline_quantity" descriptionId="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_QUANTITY.DESCR" dimensionOrMeasure="Measure" id="orderline_quantity" label="orderline_quantity" labelId="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_QUANTITY.LABEL" resourceId="JoinTree_1.orderline.orderline_quantity" />
+                <item description="orderline_total" descriptionId="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_TOTAL.DESCR" id="orderline_total" label="orderline_total" labelId="CUSTOMER.ORDERS.ORDERLINE.ORDERLINE_TOTAL.LABEL" resourceId="JoinTree_1.orderline_total" />
+                <item description="prod_name" descriptionId="CUSTOMER.ORDERS.ORDERLINE.PROD_NAME.DESCR" id="prod_name" label="prod_name" labelId="CUSTOMER.ORDERS.ORDERLINE.PROD_NAME.LABEL" resourceId="JoinTree_1.product.prod_name" />
+                <item description="prod_price" descriptionId="CUSTOMER.ORDERS.ORDERLINE.PROD_PRICE.DESCR" id="prod_price" label="prod_price" labelId="CUSTOMER.ORDERS.ORDERLINE.PROD_PRICE.LABEL" resourceId="JoinTree_1.product.prod_price" />
+              </items>
+            </itemGroup>
+          </itemGroups>
+          <items>
+            <item defaultMask="short,hide" description="orders_date" descriptionId="CUSTOMER.ORDERS.ORDERS_DATE.DESCR" dimensionOrMeasure="Dimension" id="orders_date" label="orders_date" labelId="CUSTOMER.ORDERS.ORDERS_DATE.LABEL" resourceId="JoinTree_1.orders.orders_date" />
+          </items>
+        </itemGroup>
+      </itemGroups>
+      <items>
+        <item description="cust_address" descriptionId="CUSTOMER.CUST_ADDRESS.DESCR" id="cust_address" label="cust_address" labelId="CUSTOMER.CUST_ADDRESS.LABEL" resourceId="JoinTree_1.customer.cust_address" />
+        <item description="cust_city" descriptionId="CUSTOMER.CUST_CITY.DESCR" id="cust_city" label="cust_city" labelId="CUSTOMER.CUST_CITY.LABEL" resourceId="JoinTree_1.customer.cust_city" />
+        <item description="cust_firstname" descriptionId="CUSTOMER.CUST_FIRSTNAME.DESCR" id="cust_firstname" label="cust_firstname" labelId="CUSTOMER.CUST_FIRSTNAME.LABEL" resourceId="JoinTree_1.customer.cust_firstname" />
+        <item description="cust_lastname" descriptionId="CUSTOMER.CUST_LASTNAME.DESCR" id="cust_lastname" label="cust_lastname" labelId="CUSTOMER.CUST_LASTNAME.LABEL" resourceId="JoinTree_1.customer.cust_lastname" />
+        <item description="cust_region" descriptionId="CUSTOMER.CUST_REGION.DESCR" id="cust_region" label="cust_region" labelId="CUSTOMER.CUST_REGION.LABEL" resourceId="JoinTree_1.customer.cust_region" />
+        <item description="cust_sex" descriptionId="CUSTOMER.CUST_SEX.DESCR" id="cust_sex" label="cust_sex" labelId="CUSTOMER.CUST_SEX.LABEL" resourceId="JoinTree_1.customer.cust_sex" />
+        <item description="cust_zipcode" descriptionId="CUSTOMER.CUST_ZIPCODE.DESCR" id="cust_zipcode" label="cust_zipcode" labelId="CUSTOMER.CUST_ZIPCODE.LABEL" resourceId="JoinTree_1.customer.cust_zipcode" />
+        <item description="Departement" descriptionId="CUSTOMER.DEPARTEMENT.DESCR" id="Departement" label="Departement" labelId="CUSTOMER.DEPARTEMENT.LABEL" resourceId="JoinTree_1.customer.Departement" />
+      </items>
+    </itemGroup>
+  </itemGroups>
+  <resources>
+    <jdbcTable id="customer" datasourceId="OpenDemo_DS" tableName="customer">
+      <fieldList>
+        <field id="cust_address" type="java.lang.String" />
+        <field id="cust_city" type="java.lang.String" />
+        <field id="cust_firstname" type="java.lang.String" />
+        <field id="cust_id" type="java.lang.Integer" />
+        <field id="cust_lastname" type="java.lang.String" />
+        <field id="cust_region" type="java.lang.Integer" />
+        <field id="cust_sex" type="java.lang.String" />
+        <field id="cust_zipcode" type="java.lang.String" />
+        <field id="Departement" dataSetExpression="SUBSTRING(cust_zipcode,1,2)" type="java.lang.String" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="orderline" datasourceId="OpenDemo_DS" tableName="orderline">
+      <fieldList>
+        <field id="orderline_id" type="java.lang.Integer" />
+        <field id="orderline_orders" type="java.lang.Integer" />
+        <field id="orderline_product" type="java.lang.Integer" />
+        <field id="orderline_quantity" type="java.lang.Integer" />
+      </fieldList>
+      <filterString>orderline_quantity &gt; 0</filterString>
+    </jdbcTable>
+    <jdbcTable id="orders" datasourceId="OpenDemo_DS" tableName="orders">
+      <fieldList>
+        <field id="orders_customer" type="java.lang.Integer" />
+        <field id="orders_date" type="java.util.Date" />
+        <field id="orders_id" type="java.lang.Integer" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="product" datasourceId="OpenDemo_DS" tableName="product">
+      <fieldList>
+        <field id="prod_id" type="java.lang.Integer" />
+        <field id="prod_name" type="java.lang.String" />
+        <field id="prod_price" type="java.lang.Double" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="JoinTree_1" datasourceId="OpenDemo_DS" tableName="orders">
+      <fieldList>
+        <field id="product.prod_id" type="java.lang.Integer" />
+        <field id="product.prod_name" type="java.lang.String" />
+        <field id="product.prod_price" type="java.lang.Double" />
+        <field id="customer.cust_address" type="java.lang.String" />
+        <field id="customer.cust_city" type="java.lang.String" />
+        <field id="customer.cust_firstname" type="java.lang.String" />
+        <field id="customer.cust_id" type="java.lang.Integer" />
+        <field id="customer.cust_lastname" type="java.lang.String" />
+        <field id="customer.cust_region" type="java.lang.Integer" />
+        <field id="customer.cust_sex" type="java.lang.String" />
+        <field id="customer.cust_zipcode" type="java.lang.String" />
+        <field id="customer.Departement" dataSetExpression="SUBSTRING(customer.cust_zipcode,1,2)" type="java.lang.String" />
+        <field id="orders.orders_customer" type="java.lang.Integer" />
+        <field id="orders.orders_date" type="java.util.Date" />
+        <field id="orders.orders_id" type="java.lang.Integer" />
+        <field id="orderline.orderline_id" type="java.lang.Integer" />
+        <field id="orderline.orderline_orders" type="java.lang.Integer" />
+        <field id="orderline.orderline_product" type="java.lang.Integer" />
+        <field id="orderline.orderline_quantity" type="java.lang.Integer" />
+        <field id="orderline_total" dataSetExpression="(orderline.orderline_quantity*product.prod_price)" type="java.lang.Float" />
+      </fieldList>
+      <filterString>orderline.orderline_quantity &gt; 0</filterString>
+      <joinInfo alias="orders" referenceId="orders" />
+      <joinedDataSetList>
+        <joinedDataSetRef>
+          <joinString>join customer customer on (orders.orders_customer == customer.cust_id)</joinString>
+        </joinedDataSetRef>
+        <joinedDataSetRef>
+          <joinString>join orderline orderline on (orderline.orderline_orders == orders.orders_id)</joinString>
+        </joinedDataSetRef>
+        <joinedDataSetRef>
+          <joinString>join product product on (orderline.orderline_product == product.prod_id)</joinString>
+        </joinedDataSetRef>
+      </joinedDataSetList>
+    </jdbcTable>
+  </resources>
+</schema>
+

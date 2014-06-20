@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhocDataView exportedWithPermissions="false">
+    <folder>/public/SESamples/DomainSecurity/Views</folder>
+    <name>ProductionReport_IB_AdhocDataView</name>
+    <version>0</version>
+    <label>ProductionReport_IB Ad Hoc View</label>
+    <description>Ad Hoc view created from the ProductionReport_IB report</description>
+    <creationDate>2014-06-20T16:35:43.115+02:00</creationDate>
+    <updateDate>2013-11-14T09:43:50.000+01:00</updateDate>
+    <dataSource>
+        <uri>/public/SESamples/DomainSecurity/Domains/ProductionDomain_IB</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="production.properties.data" xsi:type="fileResource">
+            <folder>/public/SESamples/DomainSecurity/Views/ProductionReport_IB_AdhocDataView_files</folder>
+            <name>production.properties</name>
+            <version>0</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2014-06-20T16:35:43.115+02:00</creationDate>
+            <updateDate>2013-11-14T09:43:50.000+01:00</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="production_fr.properties.data" xsi:type="fileResource">
+            <folder>/public/SESamples/DomainSecurity/Views/ProductionReport_IB_AdhocDataView_files</folder>
+            <name>production_fr.properties</name>
+            <version>0</version>
+            <label>bundle</label>
+            <description>bundle</description>
+            <creationDate>2014-06-20T16:35:43.115+02:00</creationDate>
+            <updateDate>2013-11-14T09:43:50.000+01:00</updateDate>
+            <fileType>prop</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="stateXML.data" xsi:type="fileResource">
+            <folder>/public/SESamples/DomainSecurity/Views/ProductionReport_IB_AdhocDataView_files</folder>
+            <name>stateXML</name>
+            <version>0</version>
+            <label>stateXML</label>
+            <creationDate>2014-06-20T16:35:43.115+02:00</creationDate>
+            <updateDate>2013-11-14T09:43:50.000+01:00</updateDate>
+            <fileType>img</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="topicJRXML.data" xsi:type="fileResource">
+            <folder>/public/SESamples/DomainSecurity/Views/ProductionReport_IB_AdhocDataView_files</folder>
+            <name>topicJRXML</name>
+            <version>0</version>
+            <label>topicJRXML</label>
+            <creationDate>2014-06-20T16:35:43.115+02:00</creationDate>
+            <updateDate>2013-11-14T09:43:50.000+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</adhocDataView>

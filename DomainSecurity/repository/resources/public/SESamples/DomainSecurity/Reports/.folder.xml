@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/DomainSecurity</parent>
+    <name>Reports</name>
+    <label>Reports</label>
+    <description></description>
+    <creationDate>2014-06-20T16:35:38.685+02:00</creationDate>
+    <updateDate>2013-01-10T13:36:43.000+01:00</updateDate>
+    <resource>ProductionInvoice</resource>
+    <resource>ProductionInvoice_IB</resource>
+    <resource>ProductionReport</resource>
+    <resource>ProductionReport_IB</resource>
+</folder>
