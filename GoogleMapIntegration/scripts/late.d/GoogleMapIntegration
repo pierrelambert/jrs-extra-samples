@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Reconfigure GoogleMap if needed
+sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}/jasperserver-pro#" /var/lib/tomcat6/webapps/jasperserver-pro/my_gis.jsp
+cd /root/jasperreports-server-${JRSVERSION}-bin/buildomatic/
+./js-export.sh --output-dir /tmp/Google --uris /public/SESamples/GoogleMapIntegration
+sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}/jasperserver-pro#" /tmp/Google/resources/public/SESamples/GoogleMapIntegration/GoogleMap_Dashboard.xml
+./js-import.sh --input-dir /tmp/Google --update
+cd -
+rm -Rf /tmp/Google

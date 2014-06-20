@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listOfValues exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration</folder>
+    <name>USWesternStatesList</name>
+    <version>0</version>
+    <label>US Western States List</label>
+    <description>State Name, 2 character abbreviation</description>
+    <creationDate>2014-06-20T11:29:15.654+02:00</creationDate>
+    <updateDate>2011-09-29T12:04:42.000+02:00</updateDate>
+    <item>
+        <itemLabel>Washington</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">WA</itemValue>
+    </item>
+    <item>
+        <itemLabel>Oregon</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">OR</itemValue>
+    </item>
+    <item>
+        <itemLabel>California</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">CA</itemValue>
+    </item>
+</listOfValues>

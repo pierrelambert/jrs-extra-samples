@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="supermart_en_US.properties.data">
+    <folder>/public/SESamples/GoogleMapIntegration/Common</folder>
+    <name>supermart_en_US.properties</name>
+    <version>0</version>
+    <label>supermart_en_US.properties</label>
+    <description>US English resource bundle</description>
+    <creationDate>2014-06-20T11:29:15.750+02:00</creationDate>
+    <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

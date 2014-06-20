@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration</folder>
+    <name>RevenueCityMonthReport</name>
+    <version>0</version>
+    <label>Revenue City Month Report</label>
+    <description>Linked to by Sales By Month Report when parameter isJasperAnalysis = "false"</description>
+    <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+    <updateDate>2013-10-23T16:36:27.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="RevenueCityMonthReport_.data" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>RevenueCityMonthReport_</name>
+            <version>0</version>
+            <label>Revenue City Month Report</label>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/GoogleMapIntegration/Common/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/GoogleMapIntegration/Common/monthNumber</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/SESamples/GoogleMapIntegration/Common/states</uri>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart.properties</name>
+            <version>0</version>
+            <label>supermart.properties</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_en_US.properties</name>
+            <version>0</version>
+            <label>supermart_en_US.properties</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_en_US.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_de.properties</name>
+            <version>0</version>
+            <label>supermart_de.properties</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_de.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_fr.properties</name>
+            <version>0</version>
+            <label>supermart_fr.properties</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_fr.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_es.properties</name>
+            <version>0</version>
+            <label>supermart_es.properties</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_es.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_ja.properties</name>
+            <version>0</version>
+            <label>supermart_ja.properties</label>
+            <description>supermart_ja.properties</description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_ja.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>supermart_zh_CN.properties</name>
+            <version>0</version>
+            <label>supermart_zh_CN.properties</label>
+            <description>supermart_zh_CN.properties</description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/supermart_zh_CN.properties</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/RevenueCityMonthReport_files</folder>
+            <name>DemoChartLabels.jar</name>
+            <version>0</version>
+            <label>DemoChartLabels.jar</label>
+            <description></description>
+            <creationDate>2014-06-20T11:29:16.053+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+            <referenceUri>/public/SESamples/GoogleMapIntegration/Common/DemoChartLabels.jar</referenceUri>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <reportRenderingView></reportRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

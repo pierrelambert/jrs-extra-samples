@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/GoogleMapIntegration</parent>
+    <name>Common</name>
+    <label>Common</label>
+    <description>Modifiable by Administrators. Resource bundles for localization, input controls, etc.</description>
+    <creationDate>2014-06-20T11:29:14.779+02:00</creationDate>
+    <updateDate>2011-09-20T20:00:41.000+02:00</updateDate>
+    <resource>DemoChartLabels.jar</resource>
+    <resource>FoodmartDataSourceJNDI</resource>
+    <resource>monthNumber</resource>
+    <resource>states</resource>
+    <resource>SugarCRMDataSourceJNDI</resource>
+    <resource>supermart_de.properties</resource>
+    <resource>supermart_en_US.properties</resource>
+    <resource>supermart_es.properties</resource>
+    <resource>supermart_fr.properties</resource>
+    <resource>supermart_ja.properties</resource>
+    <resource>supermart_zh_CN.properties</resource>
+    <resource>supermart.properties</resource>
+</folder>

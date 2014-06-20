@@ -101,6 +101,7 @@ for file in `find ./ -type f`; do
     mkdir -p ${TOMCATROOT}/${file}
     rm -Rf ${TOMCATROOT}/${file}
     cp ${file} ${TOMCATROOT}/${file}
+    chown tomcat6.tomcat6 ${TOMCATROOT}/${file}
 done
 }
 
@@ -118,6 +119,15 @@ for file in *.patch; do
 done
 }
 
+function InstallScripts(){ # Installs Early/Late init scripts
+[ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
+[ ! -d /jrs-extra-samples/${1}/scripts/ ] && echo "No scripts to install" && return
+echo "Installing ${1} scripts"
+cp -r /jrs-extra-samples/${1}/scripts /
+chmod -R +x /scripts
+rm -f /root/lastvalues.sh
+}
+
 function Install(){ # Installs a specific sample (Repo, DB, ...)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/ ] && echo "Sample ${1} not found" && return
@@ -129,6 +139,7 @@ InfobrightRestore ${1}
 PgRestore ${1}
 InstallFiles ${1}
 InstallPatch ${1}
+InstallScripts ${1}
 if [ $RESTART = 1 ]; then
     /etc/init.d/tomcat6 stop
     rm /etc/tomcat6/Catalina/localhost/*

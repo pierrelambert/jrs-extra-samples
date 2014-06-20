@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputControl exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration/Common</folder>
+    <name>states</name>
+    <version>0</version>
+    <label>States Input Control</label>
+    <description>Uses USWesternRegionStatesList. Maps to states parameter.</description>
+    <creationDate>2014-06-20T11:29:15.664+02:00</creationDate>
+    <updateDate>2011-09-29T12:04:42.000+02:00</updateDate>
+    <type>3</type>
+    <mandatory>false</mandatory>
+    <readOnly>false</readOnly>
+    <visible>true</visible>
+    <listOfValues>
+        <uri>/public/SESamples/GoogleMapIntegration/USWesternStatesList</uri>
+    </listOfValues>
+</inputControl>

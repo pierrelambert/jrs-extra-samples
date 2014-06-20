@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiJdbcDataSource exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration/Common</folder>
+    <name>FoodmartDataSourceJNDI</name>
+    <version>0</version>
+    <label>Foodmart Data Source JNDI</label>
+    <description>Foodmart Data Source JNDI</description>
+    <creationDate>2014-06-20T11:29:15.075+02:00</creationDate>
+    <updateDate>2012-07-03T21:59:10.000+02:00</updateDate>
+    <jndiName>jdbc/foodmart</jndiName>
+</jndiJdbcDataSource>

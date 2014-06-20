@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="supermart_es.properties.data">
+    <folder>/public/SESamples/GoogleMapIntegration/Common</folder>
+    <name>supermart_es.properties</name>
+    <version>0</version>
+    <label>supermart_es.properties</label>
+    <description>Spanish resource bundle</description>
+    <creationDate>2014-06-20T11:29:15.894+02:00</creationDate>
+    <updateDate>2011-09-29T12:04:43.000+02:00</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

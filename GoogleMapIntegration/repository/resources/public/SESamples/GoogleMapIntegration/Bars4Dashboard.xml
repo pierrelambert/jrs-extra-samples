@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration</folder>
+    <name>Bars4Dashboard</name>
+    <version>0</version>
+    <label>Bars4Dashboard</label>
+    <description></description>
+    <creationDate>2014-06-20T11:29:14.918+02:00</creationDate>
+    <updateDate>2013-10-23T16:16:48.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Bars4Dashboard_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/Bars4Dashboard_files</folder>
+            <name>Bars4Dashboard_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-20T11:29:14.918+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:44.000+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/GoogleMapIntegration/Common/SugarCRMDataSourceJNDI</uri>
+    </dataSource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

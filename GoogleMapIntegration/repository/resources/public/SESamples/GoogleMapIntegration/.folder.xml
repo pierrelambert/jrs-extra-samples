@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples</parent>
+    <name>GoogleMapIntegration</name>
+    <label>GoogleMapIntegration</label>
+    <description></description>
+    <creationDate>2014-06-20T11:29:14.725+02:00</creationDate>
+    <updateDate>2013-10-23T16:08:57.000+02:00</updateDate>
+    <folder>Common</folder>
+    <resource>Bars4Dashboard</resource>
+    <resource>foodstore</resource>
+    <resource>GIS_START</resource>
+    <resource>GoogleMap_Dashboard</resource>
+    <resource>MonthNamesList</resource>
+    <resource>Pie</resource>
+    <resource>RevenueCityMonthReport</resource>
+    <resource>Store_name</resource>
+    <resource>TextGeneralDatatype</resource>
+    <resource>USWesternStatesList</resource>
+</folder>

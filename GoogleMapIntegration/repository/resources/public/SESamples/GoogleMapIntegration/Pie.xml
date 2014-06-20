@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration</folder>
+    <name>Pie</name>
+    <version>0</version>
+    <label>Pie</label>
+    <description></description>
+    <creationDate>2014-06-20T11:29:15.396+02:00</creationDate>
+    <updateDate>2013-10-23T16:18:01.000+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="Pie_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/GoogleMapIntegration/Pie_files</folder>
+            <name>Pie_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-06-20T11:29:15.396+02:00</creationDate>
+            <updateDate>2011-09-29T12:04:41.000+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/GoogleMapIntegration/Common/SugarCRMDataSourceJNDI</uri>
+    </dataSource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

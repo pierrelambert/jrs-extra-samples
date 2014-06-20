@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputControl exportedWithPermissions="false">
+    <folder>/public/SESamples/GoogleMapIntegration</folder>
+    <name>Store_name</name>
+    <version>0</version>
+    <label>Store Name</label>
+    <description></description>
+    <creationDate>2014-06-20T11:29:15.199+02:00</creationDate>
+    <updateDate>2013-10-23T16:19:55.000+02:00</updateDate>
+    <type>2</type>
+    <mandatory>true</mandatory>
+    <readOnly>false</readOnly>
+    <visible>true</visible>
+    <dataType>
+        <uri>/public/SESamples/GoogleMapIntegration/TextGeneralDatatype</uri>
+    </dataType>
+</inputControl>
