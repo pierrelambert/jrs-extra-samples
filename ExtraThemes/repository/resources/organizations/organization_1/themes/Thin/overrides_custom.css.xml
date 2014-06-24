@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="overrides_custom.css.data">
+    <folder>/organizations/organization_1/themes/Thin</folder>
+    <name>overrides_custom.css</name>
+    <version>0</version>
+    <label>overrides_custom.css</label>
+    <description></description>
+    <creationDate>2014-06-24T17:30:14.217+02:00</creationDate>
+    <updateDate>2011-10-07T09:53:48.000+02:00</updateDate>
+    <fileType>css</fileType>
+</fileResource>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/themes</parent>
+    <name>Thin</name>
+    <label>Thin</label>
+    <creationDate>2014-06-24T17:30:14.129+02:00</creationDate>
+    <updateDate>2011-10-07T09:53:48.000+02:00</updateDate>
+    <resource>overrides_custom.css</resource>
+</folder>

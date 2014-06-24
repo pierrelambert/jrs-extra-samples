@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="overrides_custom.css.data">
+    <folder>/organizations/organization_1/themes/GreenBay</folder>
+    <name>overrides_custom.css</name>
+    <version>0</version>
+    <label>overrides_custom.css</label>
+    <description>overrides_custom.css</description>
+    <creationDate>2014-06-24T17:29:40.360+02:00</creationDate>
+    <updateDate>2013-04-29T22:21:51.000+02:00</updateDate>
+    <fileType>css</fileType>
+</fileResource>

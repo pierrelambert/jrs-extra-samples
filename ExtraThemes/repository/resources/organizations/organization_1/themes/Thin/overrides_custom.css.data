@@ -1,0 +1,261 @@
+@import url('http://fonts.googleapis.com/css?family=Cantarell:regular,bold');
+/*
+.overrides_custom css
+
+Theme created by Matthew Dahlman
+The main goal is to reclaim the generous borders and margins that the 
+	default theme creates. It also tries to reduce reliance on absolute positioning.
+It has been tested almost exclusively in Firefox.
+
+*/
+
+/* Main footer */
+#footer { display:none; }
+
+/* Remove some margins on main page frame */
+#frame { 
+	margin-left:   0;
+	margin-right:  0;
+	margin-bottom: 0;
+}
+#frame > .corner { display: none; }
+#frame > .edge.rl { display: none; }
+#frame > .edge.tb.top { display: none; }
+#frame > .edge.tb.bottom { display: none; }
+#frame > .content { bottom: 0; }
+
+/* In the default theme the iframes are position: static and display: inline.                         */
+/* But the static positioning of these causes problems if we want to do any non-absolute positioning. */
+/* I cannot find any reason for displaying these items. So I hide them                                */
+#ajax-download-iframe, #ajax-upload-iframe { display: none; }
+
+/* In this theme I hide the logo further down.                                  */
+/* But I set it to fixed positioning here anyway because fixed makes more sense */
+/*   than absolute (in the default theme), and I'll later create variations on  */
+/*   this theme where I want fixed positioning for these items near the top.    */
+#logo, #globalSearch, #metaLinks { position: fixed; }
+
+/* In general in this theme I want the footers to appear after the main content.  */
+/* If the main content is larger than the page size, then you'll have to scroll   */
+/* down to get to the footer. The default theme uses absolute positioning to have */
+/* the footers always visible at the bottom of the screen.                        */
+.footer { position: static; }
+
+/* The very top heading */
+body { background: #CCCCFF; }
+#metaLinks { top: 7px; right: 0; }
+#logo { display: none; }
+#globalSearch { left: auto; right: 220px; top: 3px; }
+#globalSearch .button {display:none;}
+.column.decorated.minimized {
+  height: 25px;
+  min-width: 0;
+  width: 18px !important;
+}
+.menu.primaryNav { margin-top: 3px; }
+.menu.primaryNav .up,
+.menu.primaryNav .wrap,
+.menu.primaryNav .up.over,
+.menu.primaryNav .up.pressed,
+.menu.primaryNav .wrap.over,
+.menu.primaryNav .wrap.pressed
+{ color: #FAFAFA; }
+
+/* Sets the overall page header. (Purple) */
+#frame { 
+	position: static; /* overrides the default of absolute */
+	top: 50px;        /* this puts the top just underneath the fixed height header (logo, search, metaLinks) */
+	top:  7px;        /* this moves it up to the same level as the header (logo, search, metaLinks) */
+	margin-top: 0;
+}
+#frame > .content > .header > .cosmetic {
+	right: 0;
+	background-image: none;
+	background: -moz-linear-gradient(top, #CCCCFF, #8888DD);
+	background: -webkit-gradient(linear, left top, left bottom, from(#CCCCFF), to(#8888DD));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#CCCCFF', EndColorStr='#8888DD', GradientType=0);
+}
+
+/* In general overflow for #display is set to hidden (see theme.css line 677).                   */
+/* That is used because the overall page never scrolls in the default theme.                     */
+/* But in this theme we want pages to scroll rather than scrolling within the individual frames. */
+#display { position: fixed; top: 28px; overflow: auto; }
+
+/* these guys have to be absolute or else I there's no way to put them next to each other. */
+#display > .primary { position: absolute; top: 0; }
+#display > .secondary { position: absolute; top: 0; }
+
+.button.minimize { position: absolute; }
+
+#display > .content > .body { position: relative; top: 0 } /* top is 0 so it appears immediately below the header */
+.centered_horz { position: relative; }
+
+/* Remove margins and edges and negative positioning for panels */
+/* The default of -3px, -1px, -3px, -3px set in containers.css line 459 causes undesired vertical scrolling in several places. */
+.column.decorated { margin: 0; }
+.column.decorated > .corner, .column.decorated > .edge { display: none; }
+.column.decorated > .content { top: 0; right: 0; bottom: 0; left: 1px; }
+
+.primary.column, 
+.twoColumn > .primary.column, .body.twoColumn > .primary.column, .row.twoColumn > .primary.column
+.threeColumn > .primary.column, .body.threeColumn > .primary.column, .row.threeColumn > .primary.column
+{ 
+	margin-right: 0; 
+	margin-left: 0;
+	overflow: auto;
+}
+
+.threeColumn > .primary.column > .content { right: 6px; }
+
+/* Create a double-line between the frames. For example, between the folders and the content in the repoBrowse page. */
+.secondary.column > .sizer, .tertiary.column > .sizer {
+	margin-right: -6px;
+	border-left:  thin solid;
+	border-right: thin solid;
+	width: 4px;
+	background-color: white;
+}
+#display.body > .primary > .content > .header > .sub { left: 5px; } /* This moves the subheader so that it doesn't overlap the filters panel in the search page */
+.tertiary.column > .sizer { margin-left: -6px; }
+
+
+body,
+textarea,
+.body,
+.title>.path,
+input,
+select { 
+  font-size: small;
+  line-height:1.182em; /* 11 x 1.182 = 13 */
+  font-family: "Cantarell", Verdana, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+/* line-height seems to be overriden frequently */
+/* To make things closer in Repo, for example, edit this from lists.css: */
+.collapsible > li > p, .filters > li > p, .fields > li > p,
+.collapsible .icon, .filters .icon, .fields .icon
+{ 
+	line-height: 1.182em;
+	vertical-align: text-bottom; /* This makes the text slightly higher than its default position of baseline. */
+}
+.collapsible > li > .wrap > .icon, .filters > li > .wrap > .icon, .stepIndicator .icon { top: 2px; } /* The default of 6px is an awful lot of space */
+
+/* Since we're hiding the footer, we should let the main display area run to the bottom. */
+/* Perhaps it might make sense to display the footer on this page.                       */
+/* Todo: find somewhere to put the "About" and Copyright information.                    */
+#loginPage #display { bottom: 0; }
+
+/* repoBrowse */
+/* No need for a footer in the folders panel */
+#folders .footer { display: none; }
+#folders > .content > .body { bottom: 0; }
+
+/* This must be absolute positioning to allow the folder frame to scroll separately from the content frame. */
+#repoBrowse .column.secondary > .content > .body { position: absolute; }
+#repoBrowse .column.primary > .content > .body { margin-top: 0; position: absolute; top: 72px; }
+.panel.nothingToDisplay > .content > .body { margin: 0; }
+
+/* Column Three shows the resource type, but this is useless */
+#repoBrowse .list.resources .column.three { display: none; }
+#repoBrowse .list.resources .column.four  { right: 2px; width: 15% }
+
+/* repoSearch */
+#repoSearch #display { overflow: hidden; } /* Needed because on this page we want independent scrolling for the two frames. */
+#repoSearch .column.secondary > .content > .body {
+    bottom: 0;
+    overflow: auto;
+    position: absolute;
+    top: 26px;
+}
+#resultsContainer.body { top: 26px; bottom: 0; position: absolute; } /* The absolute positioning is needed so this panel can scroll independently. */
+#repoSearch .column.primary > .content > .body.showingSubHeader { top: 54px; margin-top: 0; }
+
+/* Reduce these column headers from 35px to 25px in repoBrowse and repoSearch (and more?) */
+.column .header .title {
+    height: 25px;
+    line-height: 25px;
+    vertical-align: top;
+}
+#sortMode { top: 7px; }
+#repoSearch #sortMode { top: 7px; } /* No, this is not redundant with the previous line. It overrides the setting in pageSpecific.css line 730. */
+.column.decorated > .content > .header { min-height: 25px; }
+#repoBrowse .column.secondary > .content > .body { top: 26px; }
+#repoBrowse .column.primary > .content > .body { top: 59px; }
+.header > .searchLockup { top: 2px; }
+
+
+/* No need for a footer in many places             */
+/* (But removing ALL footers will cause problems.) */
+/* Here we remove the footer from only the Admin Home page. */
+html body#home_admin div#frame.column div.content div#display.body div.column div.content div.footer { display: none; }
+
+#display.body > .column > .content > .footer { display: none; } /* This is mostly good... but it still hides some footers that we need. */
+#reportViewer #display.body > .column > .content > .footer { display: block; }     /* The reportViewer footer lets you change pages. We need to display this! */
+div#properties.column div.content div#propertiesButtons.footer { display: block; } /* The Manage Users properties footer lets you Edit, Login As, and Delete. We need to display this! */
+
+.content { position: absolute; }
+
+/* Ad Hoc source chooser - get rid of a bunch of extra space. */
+#sourceDialog.panel > .content > .body { padding: 0; }
+#sourceDialog.panel > .content > .body > .control { top: 0; right: 0; bottom: 0; left: 0; margin: 0 0 0 0; }
+#sourceDialog.panel > .content > .body > .control > .corner { display: none; }
+#sourceDialog.panel > .content > .body > .control > .edge { display: none; }
+#sourceDialog.panel > .content > .body > .control > .content { margin-right: 0; }
+#sourceDialog.panel > .content > .body > .control > .content > .body { top: 0; }
+
+#grouper { display: none; }
+#mainTableContainer { left: 0; }
+
+/* This section mainly removes some absolute positioning so that the                                             */
+/* edit resource pages display all info and then the footer                                                      */
+/* instead of always putting footer at the bottom of the screen and forcing in-page scrolling to see properties. */
+.column.decorated > .content > .body { position: static; top: 26px; }         /* This body must be static (or relative) so the footer will be pushed below it. */
+.column.home > .content > .body { position: absolute; bottom: 0; } /* But on the homepage only we stick with absolute positioning so the background can stretch to the bottom. */
+.oneColumn > .primary.column { position: static; }
+#stepDisplay .row .column .content .body { position: static; } /* these are static to avoid in-page scrolling */
+.column.decorated > .content > .footer { border-top: none; } 
+
+/* get Domain properties into one column list */
+.twoColumn_equal > .primary.column, .body.twoColumn_equal > .primary.column, .row.twoColumn_equal > .primary.column,
+.twoColumn_equal > .secondary.column, .body.twoColumn_equal > .secondary.column, .row.twoColumn_equal > .secondary.column { position: static; }
+
+
+#designer #availableFields.body { margin-top: 0; }
+
+.toolbar { position: relative; } /* Previously I needed left: 6px; to avoid the ad hoc toolbar sneaking into the fields panel just a little. But I think it's no longer needed. */
+#adhocCanvasContainer { position: absolute; }
+
+/* To avoid pixel flowing into the left divider in ad hoc: */
+/* #designer #frame.column div.content div#display.body div.column div.content div.header div.sub { left: 6px; } */
+#display .tertiary .content .header { margin-left: 3px; }
+
+/* Report viewer */
+.panel.nothingToDisplay > .content > .body {
+	border: medium double;
+	position: static;
+	margin-left: 0;
+    margin-top: 0;
+}
+#reportViewer .column.primary > .content > .body { 
+	padding-top: 0;
+	margin-top: 0;
+}
+
+/* Scheduling */
+#nothingToDisplay { margin-top: 3px !important; } /* This overrides logic in the .jsp code that tries to center this box vertically. */
+
+/* List of values editing page */
+.groupBox.scrollable, .groupBox.scrollable > .content {
+    position: static;
+    width: 100%;
+}
+#lofForm #stepDisplay .content { position: static; }
+.groupBox > .corner, .groupBox > .edge { display: none; }
+
+/* There are problems with the Dashboard Designer */
+/* These are helpful but insufficient: */
+#dashboardDesigner #dashboardDropZone { position: absolute; top: 58px; margin-top: 0; bottom: 0; }
+#dashboardDesigner #display { overflow: hidden; }
+#dashboardFolderContainer { position: absolute; }
+#sizeGuide { position: static; }

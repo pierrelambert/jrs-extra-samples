@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/themes</parent>
+    <name>GreenBay</name>
+    <label>GreenBay</label>
+    <creationDate>2014-06-24T17:29:40.155+02:00</creationDate>
+    <updateDate>2013-04-29T22:21:51.000+02:00</updateDate>
+    <folder>images</folder>
+    <resource>overrides_custom.css</resource>
+</folder>

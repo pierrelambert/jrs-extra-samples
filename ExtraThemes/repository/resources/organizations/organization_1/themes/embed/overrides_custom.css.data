@@ -1,0 +1,26 @@
+/*
+.overrides_custom css
+JRS v 4.7
+Theme for Embedding JRS 
+
+*/
+
+/* themes.css */
+
+body {
+	background-color: white;
+	background: none;
+}
+
+#banner {
+	background: none;
+	display:none;
+}
+
+#frame {
+	top: 0;
+}
+
+#frameFooter {
+	display:none !important;
+}

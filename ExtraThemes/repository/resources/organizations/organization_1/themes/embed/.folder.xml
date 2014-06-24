@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/themes</parent>
+    <name>embed</name>
+    <label>embed</label>
+    <creationDate>2014-06-24T17:29:05.554+02:00</creationDate>
+    <updateDate>2011-12-11T13:29:45.000+01:00</updateDate>
+    <resource>overrides_custom.css</resource>
+</folder>

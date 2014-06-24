@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/themes/GreenBay</parent>
+    <name>images</name>
+    <label>images</label>
+    <creationDate>2014-06-24T17:29:40.234+02:00</creationDate>
+    <updateDate>2013-04-29T22:21:51.000+02:00</updateDate>
+    <resource>adhoc_toolbar_buttons_sprite.png</resource>
+    <resource>banner_bkgd.png</resource>
+    <resource>body_bkgnd.png</resource>
+    <resource>button_action_primary_sprite.png</resource>
+    <resource>button_capsule_sprite.png</resource>
+    <resource>column_header_bkgd.png</resource>
+    <resource>disclosure_indicators_sprite.png</resource>
+    <resource>footer_bkgd.png</resource>
+    <resource>lists_sprite.png</resource>
+    <resource>logo.png</resource>
+    <resource>menu_primaryNav_sprite.png</resource>
+    <resource>tabs_horizontal_sprite.png</resource>
+    <resource>tabs_vertical_sprite.png</resource>
+    <resource>wait_animation_large.gif</resource>
+</folder>
