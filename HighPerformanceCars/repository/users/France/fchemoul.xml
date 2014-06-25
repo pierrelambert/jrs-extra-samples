@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user><username>fchemoul</username><fullName>Frank Chemoul</fullName><password>ENC&lt;E1A7E2D9C61C727467F159E772D8BF97&gt;</password><email></email><externallyDefined>false</externallyDefined><enabled>true</enabled><role>ROLE_USER</role><role>ROLE_SALES_REP</role><attribute name="Country"><value>France</value></attribute><attribute name="SalesRepName"><value>Frank Chemoul</value></attribute><tenantId>France</tenantId></user>

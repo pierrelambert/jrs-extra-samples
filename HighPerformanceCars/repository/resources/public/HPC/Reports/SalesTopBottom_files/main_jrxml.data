@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesTopBottom" language="groovy" pageWidth="300" pageHeight="500" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="393777f2-dc33-4428-a7c6-70591c9f9565">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Reports/SalesTopBottom_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Reports/SalesTopBottom"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#DC143C">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFBFCC">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#F6C4CE"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#B8CCE4">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#DCE6F1"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#B8CCE4">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#4F81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#B8CCE4">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#DCE6F1"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="topItemsDataset" uuid="5dcecd51-1938-41a4-acbd-558facef4b88">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="quarter" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{quarter}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="selectTopBottom" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{nrTopBottom}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="nrTopBottom" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{nrTopBottom}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="dimensionAlias2" class="java.lang.String"/>
+		<parameter name="selectTotalComponent" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{selectTotalComponent}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="selectItemType" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{selectItemType}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="dimensionAlias" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{dimensionAlias}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="subSelectWhereCondition" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{subSelectWhereCondition}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="queryWhere" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{queryWhere}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="fiscalYear" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{fiscalYear}]]></defaultValueExpression>
+		</parameter>
+		<parameter name="queryGroupAndOrder" class="java.lang.String">
+			<defaultValueExpression><![CDATA[$P{queryGroupAndOrder}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT $P!{selectTotalComponent} as total,
+ $P!{selectItemType} as item,
+ (	
+ 	SELECT $P!{selectTotalComponent} as previous_value
+FROM 
+  public.order_2012 a 
+  INNER JOIN public.agency b ON b.agency_id = a.agency_id 
+  INNER JOIN public.part c ON c.part_id = a.part_id 
+  INNER JOIN public.time d ON d.time_id = a.time_id
+WHERE $P!{dimensionAlias}.$P!{selectItemType}=$P!{dimensionAlias2}.$P!{selectItemType}  $P!{subSelectWhereCondition} 
+ 	
+ ) as previous_value
+FROM 
+  public.order_2012, 
+  public.agency, 
+  public.part, 
+  public.time
+WHERE 
+  agency.agency_id = order_2012.agency_id AND
+  part.part_id = order_2012.part_id AND
+  time.time_id = order_2012.time_id 
+ $P!{queryWhere} AND
+  year=$P!{fiscalYear} 
+ $P!{queryGroupAndOrder}]]>
+		</queryString>
+		<field name="total" class="java.math.BigDecimal"/>
+		<field name="item" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="previous_value" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="totalComponent" class="java.lang.String">
+		<defaultValueExpression><![CDATA["discount"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="itemType" class="java.lang.String">
+		<defaultValueExpression><![CDATA["part_family"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isTop" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nrTopBottom" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[5]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectTopBottom" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[IF($P{isTop},"desc","asc")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectTotalComponent" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[GET_QUERY_FIELD_TOTAL($P{totalComponent})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectItemType" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{itemType}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fiscalYear" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2012]]></defaultValueExpression>
+	</parameter>
+	<parameter name="quarter" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Q2"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="queryGroupAndOrder" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[" GROUP BY "+    $P{selectItemType} +
+" ORDER BY "+ $P{selectTotalComponent} + "  "+
+$P{selectTopBottom} +
+" LIMIT " + $P{nrTopBottom}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dimensionAlias" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[IF(EQUALS($P{itemType},"agency_name"),"b","c")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="subSelectWhereCondition" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[GET_QUERY_PREVIOUS_PERIOD($P{fiscalYear},$P{quarter})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="queryWhere" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[IF(EQUALS($P{quarter},null)," ",CONCATENATE(" AND quarter='",$P{quarter},"' "))]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dimensionAlias2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[IF(EQUALS($P{itemType},"agency_name"),"agency","part")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="dummy" class="java.lang.Integer"/>
+	<title>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="260" height="30" forecolor="#800040" uuid="ff904c6f-3fb1-4b1c-81c3-cdeeb22e0b46"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($P{isTop},"TOP","BOTTOM")+" by "+GET_TITLE_TEXT($P{totalComponent})]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="274">
+			<componentElement>
+				<reportElement x="0" y="0" width="260" height="200" uuid="61a553c5-9d20-44d4-a02c-689df191c48d"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="topItemsDataset" uuid="f9fd74a9-5953-4751-a9a1-07ac6759296e">
+						<datasetParameter name="selectTotalComponent">
+							<datasetParameterExpression><![CDATA[$P{selectTotalComponent}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="selectItemType">
+							<datasetParameterExpression><![CDATA[$P{selectItemType}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="dimensionAlias">
+							<datasetParameterExpression><![CDATA[$P{dimensionAlias}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="subSelectWhereCondition">
+							<datasetParameterExpression><![CDATA[$P{subSelectWhereCondition}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="queryWhere">
+							<datasetParameterExpression><![CDATA[$P{queryWhere}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="fiscalYear">
+							<datasetParameterExpression><![CDATA[$P{fiscalYear}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="queryGroupAndOrder">
+							<datasetParameterExpression><![CDATA[$P{queryGroupAndOrder}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="dimensionAlias2">
+							<datasetParameterExpression><![CDATA[$P{dimensionAlias2}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="110" uuid="aeef9bd0-3dd2-48b0-9a7d-c0445bee6966">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" forecolor="#FFFFFF" uuid="35b89458-6eca-441b-9522-c76f83b34aa6"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Dimension]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="c02a9002-47c6-4bff-b4ff-d3485dafc306"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74" uuid="3c905732-2332-42c2-92e0-ef2a463d7c83">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="30" forecolor="#FFFFFF" uuid="6faa0b42-899f-4df5-ac75-d3c3aa9b3280"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Total]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="74" height="30" uuid="36d621ab-4776-4de5-a55f-5c8ec2d050c8"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[new DecimalFormat("#0.##").format($F{total})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="18eb7f29-da16-4a15-9b09-004ffc0fb4d2">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="76" height="30" forecolor="#FFFFFF" uuid="af66f9cf-af34-4a5b-ab15-600ef658d54e"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Previous]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="76" height="30" uuid="ca8c433a-096a-41a4-bf81-9bb10108b288"/>
+								<box leftPadding="10"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[new DecimalFormat("#0.##").format($F{previous_value})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

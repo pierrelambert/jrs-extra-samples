@@ -1,0 +1,60 @@
+<Schema name="MAN">
+  <Dimension type="TimeDimension" highCardinality="false" name="Time">
+    <Hierarchy hasAll="true" primaryKey="time_id">
+      <Table name="time" schema="public">
+      </Table>
+      <Level name="Year" column="year" type="Numeric" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="Quarter" column="quarter" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+      </Level>
+      <Level name="Month" column="month_of_year" type="Numeric" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Agency">
+    <Hierarchy hasAll="true" primaryKey="agency_id">
+      <Table name="agency" schema="public">
+      </Table>
+      <Level name="Country" column="agency_country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SalesRep" column="sales_rep_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" column="agency_region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Agency" column="agency_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Part">
+    <Hierarchy hasAll="true" primaryKey="part_id">
+      <Table name="part" schema="public">
+      </Table>
+      <Level name="Family" column="part_family" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="PartRef" column="part_ref" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Orders" cache="true" enabled="true">
+    <Table name="order_2012" schema="public">
+    </Table>
+    <DimensionUsage source="Agency" name="Agency" foreignKey="agency_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Part" name="Part" foreignKey="part_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Time" name="Time" foreignKey="time_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Sales" column="sales" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="SalesPreDiscount" column="sales_prediscount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="IsStressfullOrder" column="is_stressful_order" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Discount" column="discount" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="DiscountPercentage" column="discount_perc" datatype="Numeric" aggregator="avg" visible="true">
+    </Measure>
+    <CalculatedMember name="Sales last Period" formula="COALESCEEMPTY((Measures.[Sales], [Time].[Time].PREVMEMBER), Measures.[Sales])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+</Schema>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="evolutionInTime" language="groovy" pageWidth="570" pageHeight="144" columnWidth="570" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fa338734-ac1b-46dd-b5bc-66d578cb0ec0">
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Dashboards/CMDashboard_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Dashboards/CMDashboard"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="countryFilter" class="java.lang.String"/>
+	<parameter name="YearList" class="java.util.Collection" nestedType="java.lang.Integer"/>
+	<parameter name="QuarterList" class="java.util.Collection" nestedType="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="totalComponent" class="java.lang.String">
+		<defaultValueExpression><![CDATA["discount"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectMeasure" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["sum(order_2012."+$P{totalComponent}+")"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT 	time.date,
+	agency.sales_rep_name as sales_rep,
+	  $P!{selectMeasure} as measure
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+where 
+agency.agency_country= $P{countryFilter} and
+$X{IN,time.year,YearList}
+AND $X{IN,time.quarter,QuarterList}
+GROUP BY time.date,
+	agency.sales_rep_name
+ORDER BY time.date]]>
+	</queryString>
+	<field name="date" class="java.sql.Timestamp"/>
+	<field name="sales_rep" class="java.lang.String"/>
+	<field name="measure" class="java.math.BigDecimal"/>
+	<summary>
+		<band height="143" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="570" height="143" uuid="9d500057-303f-4c12-ba4f-7c9622dfee0c"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Column">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="chart.marginBottom">
+							<hc:propertyExpression><![CDATA[new Integer(30)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.zoomType">
+							<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.align">
+							<hc:propertyExpression><![CDATA["right"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.floating">
+							<hc:propertyExpression><![CDATA[Boolean.FALSE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.layout">
+							<hc:propertyExpression><![CDATA["vertical"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.lineHeight">
+							<hc:propertyExpression><![CDATA[new Integer(4)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.margin">
+							<hc:propertyExpression><![CDATA[new Integer(5)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.maxHeight">
+							<hc:propertyExpression><![CDATA[new Integer(130)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.verticalAlign">
+							<hc:propertyExpression><![CDATA["middle"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.witdh">
+							<hc:propertyExpression><![CDATA[new Integer(30)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="Level1">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.util.Date">
+									<bucketExpression><![CDATA[DATEFORMAT($F{date},"MMM-yy")]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="salesRep">
+								<labelExpression><![CDATA[]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{sales_rep}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="Measure1" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{measure}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="Measure1"/>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

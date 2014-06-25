@@ -1,0 +1,333 @@
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_de.properties WEB-INF/bundles/jasperserver_messages_de.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_de.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_de.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Willkommen in der High Performance Cars POC f\u00fcr Jaspersoft Academy
+  # utility words
+ and=und
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[neues Passwort eingeben]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Andere Benutzer sind verf\u00fcgbar, aber deaktiviert. Melden Sie sich als Superuser an, um diese zu aktivieren.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Neuerungen in Jaspersoft 5
++LOGIN_ROTATING_0_WHAT_IS_NEW=Neuerungen
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=Verbesserte Datenanalyse
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=Es sind neue Visualisierungen und erweiterte benutzerdefinierte Berechnungen mit Ihren Daten verf\u00fcgbar.
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Erweiterte Verbindungsm\u00f6glichkeiten
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_es.properties WEB-INF/bundles/jasperserver_messages_es.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_es.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_es.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Bienvenido a la High Performance Cars   POC de Jaspersoft Academy
+  # utility words
+ and=y
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[introduzca una nueva contrase\u00f1a]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Hay otros usuarios disponibles, pero est\u00e1n desactivados. Inicie sesi\u00f3n como superusuario para activarlos.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Novedades en Jaspersoft 5
++LOGIN_ROTATING_0_WHAT_IS_NEW=Novedades
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=An\u00e1lisis de datos mejorado
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=Nuevas visualizaciones y c\u00e1lculos personalizados avanzados con todos sus datos
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Conectividad avanzada
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_fr.properties WEB-INF/bundles/jasperserver_messages_fr.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_fr.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_fr.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Bienvenue au High Performance Cars   POC pour Jaspersoft Academy
+  # utility words
+ and=et
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[saisir le nouveau mot de passe]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=D\u2019autres utilisateurs sont disponibles mais ils sont d\u00e9sactiv\u00e9s. Connectez-vous en tant que superutilisateur pour les activer.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Quelles sont les nouveaut\u00e9s de Jaspersoft 5 ?
++LOGIN_ROTATING_0_WHAT_IS_NEW=Nouveaut\u00e9s
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=Analyse am\u00e9lior\u00e9e des donn\u00e9es
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=Nouvelles visualisations et calculs personnalis\u00e9s avanc\u00e9s de toutes vos donn\u00e9es
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Connectivit\u00e9 avanc\u00e9e
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_it.properties WEB-INF/bundles/jasperserver_messages_it.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_it.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_it.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Benvenuti alla High Performance Cars   POC per la Jaspersoft Academy
+  # utility words
+ and=e
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[immettere la nuova password]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Sono disponibili altri utenti, ma sono disattivati. Accedere come utente con privilegi avanzati per attivarli.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Novit\u00e0 in Jaspersoft 5
++LOGIN_ROTATING_0_WHAT_IS_NEW=Novit\u00e0
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=Analisi dati avanzata
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=Nuove visualizzazioni e calcoli personalizzati avanzati per tutti i dati
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Connettivit\u00e0 avanzata
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_ja.properties WEB-INF/bundles/jasperserver_messages_ja.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_ja.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_ja.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
+  # utility words
+ and=\u304a\u3088\u3073
+ 
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages.properties WEB-INF/bundles/jasperserver_messages.properties
+--- WEB-INF.orig/bundles/jasperserver_messages.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
+  # utility words
+ and=and
+ 
+@@ -1951,7 +1952,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[enter new password]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Other users are available, but they are disabled. Login as superuser to enable them.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=What's new in Jaspersoft 5?
++LOGIN_ROTATING_0_WHAT_IS_NEW=News
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=Enhanced Data Analysis
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=New visualizations and advanced custom calculations against all your data
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Advanced Connectivity
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_pt_BR.properties WEB-INF/bundles/jasperserver_messages_pt_BR.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_pt_BR.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_pt_BR.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
+  # utility words
+ and=e
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[digite nova senha]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Outros usu\u00e1rio est\u00e3o dispon\u00edveis, mas est\u00e3o desativados. Fa\u00e7a login como superusu\u00e1rio para ativ\u00e1-los.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Quais s\u00e3o as novidades no Jaspersoft 5?
++LOGIN_ROTATING_0_WHAT_IS_NEW=Quais s\u00e3o as novidades
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=An\u00e1lise de dados aprimorada
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=Novas visualiza\u00e7\u00f5es e c\u00e1lculos personalizados avan\u00e7ados com todos seus dados
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Conectividade avan\u00e7ada
+diff -uNr WEB-INF.orig/bundles/jasperserver_messages_zh_CN.properties WEB-INF/bundles/jasperserver_messages_zh_CN.properties
+--- WEB-INF.orig/bundles/jasperserver_messages_zh_CN.properties	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_zh_CN.properties	2014-06-25 15:14:55.000000000 +0200
+@@ -1,3 +1,4 @@
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
+  # utility words
+ and=\u4e0e
+ 
+@@ -1950,7 +1951,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[\u8f93\u5165\u65b0\u5bc6\u7801]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=\u5176\u4ed6\u7528\u6237\u53ef\u7528\uff0c\u4f46\u4e3a\u7981\u7528\u72b6\u6001\u3002\u8bf7\u4ee5\u8d85\u7ea7\u7528\u6237\u8eab\u4efd\u767b\u5f55\u4ee5\u542f\u7528\u4ed6\u4eec\u3002
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=Jaspersoft 5.0 \u65b0\u589e\u529f\u80fd
++LOGIN_ROTATING_0_WHAT_IS_NEW=\u65b0\u589e\u529f\u80fd
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=\u589e\u5f3a\u7684\u6570\u636e\u5206\u6790
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=\u6839\u636e\u60a8\u7684\u5168\u90e8\u6570\u636e\u65b0\u5efa\u53ef\u89c6\u5316\u548c\u9ad8\u7ea7\u81ea\u5b9a\u4e49\u8ba1\u7b97
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=\u9ad8\u7ea7\u8fde\u63a5
+diff -uNr WEB-INF.orig/jsp/modules/home/custom/homeForCM.jsp WEB-INF/jsp/modules/home/custom/homeForCM.jsp
+--- WEB-INF.orig/jsp/modules/home/custom/homeForCM.jsp	1970-01-01 01:00:00.000000000 +0100
++++ WEB-INF/jsp/modules/home/custom/homeForCM.jsp	2014-06-25 15:14:55.000000000 +0200
+@@ -0,0 +1,48 @@
++<%--
++  ~ Copyright (C) 2005 - 2011 Jaspersoft Corporation. All rights reserved.
++  ~ http://www.jaspersoft.com.
++  ~ Licensed under commercial Jaspersoft Subscription License Agreement
++  --%>
++<%@ page import="com.jaspersoft.ji.license.LicenseManager" %>
++<%@ page import="com.jaspersoft.jasperserver.api.common.util.spring.StaticApplicationContext" %>
++<%@ page import="com.jaspersoft.ji.license.LicenseReportCounter" %>
++
++<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
++<%@ taglib uri="/spring" prefix="spring"%>
++
++<%
++    request.setAttribute("homePage","true");
++    LicenseManager licenseManager = LicenseManager.getInstance();
++    LicenseReportCounter licenseReportCounter = StaticApplicationContext.getApplicationContext().getBean("licenseReportCounter", LicenseReportCounter.class);
++%>
++
++<%if (licenseReportCounter != null && licenseReportCounter.isReportRunsLimitReached()) {%>
++    <script>
++        window.location="${pageContext.request.contextPath}/flow.html?_flowId=dashboardRuntimeFlow&dashboardResource=${demoHomeResource}&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>";
++    </script>
++<% } else {%>
++    <t:insertTemplate template="/WEB-INF/jsp/templates/page.jsp">
++        <t:putAttribute name="pageTitle"><spring:message code='home.title'/></t:putAttribute>
++        <t:putAttribute name="bodyID">home_user</t:putAttribute>
++        <t:putAttribute name="bodyClass" value="oneColumn"/>
++        <t:putAttribute name="headerContent" >
++            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/require-jquery.js"></script>
++            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/require.config.js"></script>
++            <script type="text/javascript">
++                require(["commons.main"]);
++            </script>
++        </t:putAttribute>
++        <t:putAttribute name="bodyContent" >
++            <t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
++                <t:putAttribute name="containerClass" value="column decorated primary"/>
++                <t:putAttribute name="containerTitle"><spring:message code="home.header.title"/></t:putAttribute>
++                <t:putAttribute name="swipeScroll" value="${isIPad}"/>
++                <t:putAttribute name="bodyContent">
++                    <iframe id="outerFrame" class="outerDashboardFrame" name="Dashboard" allowtransparency="true" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" height="100%" width="100%" scrolling="no"
++                            src="${pageContext.request.contextPath}/flow.html?_flowId=dashboardRuntimeFlow&dashboardResource=%2Fpublic%2FHPC%2FDashboards%2FCountry_Manager_Dashboard&viewAsDashboardFrame=true&decorate=no&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>">
++                    </iframe>
++                </t:putAttribute>
++            </t:insertTemplate>
++        </t:putAttribute>
++    </t:insertTemplate>
++<%}%>
+diff -uNr WEB-INF.orig/jsp/modules/home/custom/homeForHpcAdmin.jsp WEB-INF/jsp/modules/home/custom/homeForHpcAdmin.jsp
+--- WEB-INF.orig/jsp/modules/home/custom/homeForHpcAdmin.jsp	1970-01-01 01:00:00.000000000 +0100
++++ WEB-INF/jsp/modules/home/custom/homeForHpcAdmin.jsp	2014-06-25 15:14:55.000000000 +0200
+@@ -0,0 +1,48 @@
++<%--
++  ~ Copyright (C) 2005 - 2011 Jaspersoft Corporation. All rights reserved.
++  ~ http://www.jaspersoft.com.
++  ~ Licensed under commercial Jaspersoft Subscription License Agreement
++  --%>
++<%@ page import="com.jaspersoft.ji.license.LicenseManager" %>
++<%@ page import="com.jaspersoft.jasperserver.api.common.util.spring.StaticApplicationContext" %>
++<%@ page import="com.jaspersoft.ji.license.LicenseReportCounter" %>
++
++<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
++<%@ taglib uri="/spring" prefix="spring"%>
++
++<%
++    request.setAttribute("homePage","true");
++    LicenseManager licenseManager = LicenseManager.getInstance();
++    LicenseReportCounter licenseReportCounter = StaticApplicationContext.getApplicationContext().getBean("licenseReportCounter", LicenseReportCounter.class);
++%>
++
++<%if (licenseReportCounter != null && licenseReportCounter.isReportRunsLimitReached()) {%>
++    <script>
++        window.location="${pageContext.request.contextPath}/flow.html?_flowId=dashboardRuntimeFlow&dashboardResource=${demoHomeResource}&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>";
++    </script>
++<% } else {%>
++    <t:insertTemplate template="/WEB-INF/jsp/templates/page.jsp">
++        <t:putAttribute name="pageTitle"><spring:message code='home.title'/></t:putAttribute>
++        <t:putAttribute name="bodyID">home_user</t:putAttribute>
++        <t:putAttribute name="bodyClass" value="oneColumn"/>
++        <t:putAttribute name="headerContent" >
++            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/require-jquery.js"></script>
++            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/require.config.js"></script>
++            <script type="text/javascript">
++                require(["commons.main"]);
++            </script>
++        </t:putAttribute>
++        <t:putAttribute name="bodyContent" >
++            <t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
++                <t:putAttribute name="containerClass" value="column decorated primary"/>
++                <t:putAttribute name="containerTitle"><spring:message code="home.header.title"/></t:putAttribute>
++                <t:putAttribute name="swipeScroll" value="${isIPad}"/>
++                <t:putAttribute name="bodyContent">
++                    <iframe id="outerFrame" class="outerDashboardFrame" name="Dashboard" allowtransparency="true" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" height="100%" width="100%" scrolling="no"
++                            src="${pageContext.request.contextPath}/flow.html?_flowId=dashboardRuntimeFlow&dashboardResource=%2Fpublic%2FHPC%2FDashboards%2FAdministrator_s_Dashboard&viewAsDashboardFrame=true&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>">
++                    </iframe>
++                </t:putAttribute>
++            </t:insertTemplate>
++        </t:putAttribute>
++    </t:insertTemplate>
++<%}%>
+diff -uNr WEB-INF.orig/jsp/modules/home/home.jsp WEB-INF/jsp/modules/home/home.jsp
+--- WEB-INF.orig/jsp/modules/home/home.jsp	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/jsp/modules/home/home.jsp	2014-06-25 15:14:55.000000000 +0200
+@@ -9,19 +9,25 @@
+ <%@ taglib uri="http://www.springframework.org/security/tags" prefix="authz"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
++<%-- Default Home page --%>
++<c:set  var="homePageRequested">homeForNonDemo.jsp</c:set>
++
+ <authz:authorize ifAllGranted="ROLE_DEMO">
+     <%--
+         We have special home page for demo user only on PostgreSQL db.
+         For other DB's it have same home page as other users.
+     --%>
+     <c:if test="${demoHomeResourceExists}">
+-        <jsp:include page="homeForDemo.jsp"/>
+-    </c:if>
+-    <c:if test="${not demoHomeResourceExists}">
+-        <jsp:include page="homeForNonDemo.jsp"/>
++        <c:set  var="homePageRequested">homeForDemo.jsp</c:set>
+     </c:if>
+ </authz:authorize>
+-<authz:authorize ifNotGranted="ROLE_DEMO">
+-    <jsp:include page="homeForNonDemo.jsp"/>
++
++<authz:authorize ifAllGranted="ROLE_COUNTRY_MANAGER">   
++	<c:set  var="homePageRequested">custom/homeForCM.jsp</c:set>	
++</authz:authorize>
++
++<authz:authorize ifAllGranted="ROLE_HPC_ADMIN">   
++	<c:set  var="homePageRequested">custom/homeForHpcAdmin.jsp</c:set>	
+ </authz:authorize>
+ 
++<jsp:include page="${homePageRequested}"/>
+diff -uNr WEB-INF.orig/jsp/modules/login/login.jsp WEB-INF/jsp/modules/login/login.jsp
+--- WEB-INF.orig/jsp/modules/login/login.jsp	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/jsp/modules/login/login.jsp	2014-06-25 15:14:55.000000000 +0200
+@@ -50,6 +50,7 @@
+     <t:putAttribute name="headerContent">
+ 
+         <meta name="noMenu" content="true">
++		<meta name="companyNameBanner" content="true">
+         <meta name="pageHeading" content="<spring:message code='jsp.Login.pageHeading'/>"/>
+ 
+         <% response.setHeader("LoginRequested","true");
+@@ -71,13 +72,23 @@
+         <c:set var='showPasswordChange' value='<%=request.getParameter("showPasswordChange")%>'/>
+ 
+         <div class="wrapper">
++			<t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
++				<t:putAttribute name="containerClass" value="panel info"/>
++				<t:putAttribute name="containerID" value="bannerCustom"/>
++				<t:putAttribute name="bodyContent">
++					<div id="bannerWelcome" >
++						<div class="textAreaCustom">
++							<h2 class="textAccent02"><spring:message code='LOGIN_WELCOME_OS'/></h2>
++							<p><spring:message code='LOGIN_WELCOME_MESSAGE_OS'/></p>
++						</div>
++						<!--<h1 class="textAccent02"><spring:message code='LOGIN_WELCOME_TITLE_OS'/></h1> -->
++					</div>                              
++				</t:putAttribute>
++			</t:insertTemplate>
+             <t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
+                 <t:putAttribute name="containerClass" value="panel info"/>
+-                <t:putAttribute name="containerID" value="copy"/>
++                <t:putAttribute name="containerID" value="copy2"/>
+                 <t:putAttribute name="bodyContent">
+-                    <div id="welcome" class="row">
+-                        <h1 class="textAccent02"><spring:message code='LOGIN_WELCOME_OS'/></h1>
+-                    </div>
+ <%--
+                     <div id="buttons" class="row">
+                         <div class="primary">
+diff -uNr WEB-INF.orig/jsp/modules/login/rotating/login_rotating_pro_0.jsp WEB-INF/jsp/modules/login/rotating/login_rotating_pro_0.jsp
+--- WEB-INF.orig/jsp/modules/login/rotating/login_rotating_pro_0.jsp	2014-06-25 15:09:52.000000000 +0200
++++ WEB-INF/jsp/modules/login/rotating/login_rotating_pro_0.jsp	2014-06-25 15:14:55.000000000 +0200
+@@ -8,14 +8,17 @@
+ 
+ <div class="primary">
+ 	<h2 class="textAccent"><spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW'/></h2>
++	<div class="infoBoxCustom">
+ 		<ul class="list decorated">
+ 			<li><span class="sellPoint"><spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1'/>:</span> <spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2'/></li>
+ 			<li><span class="sellPoint"><spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1'/>:</span> <spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_2'/></li>
+ 			<li><span class="sellPoint"><spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_3_1'/>:</span> <spring:message code='LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_3_2'/></li>
+ 		</ul>
++	</div>
+ </div>
+ <div class="secondary">
+ 	<h2 class="textAccent"><spring:message code='LOGIN_ROTATING_0_GETTING_STARTED'/></h2>
++	<div class="infoBoxCustom">
+ 	<ul class="list decorated">
+ 		<li><a class="launcher" href="http://community.jaspersoft.com/wiki/jasperreports-server-how-videos-playlist" target="_blank"><spring:message code='LOGIN_ROTATING_PRO_0_GETTING_STARTED_ITEM_1'/></a></li>
+ 		<li><a class="launcher" href="http://community.jaspersoft.com/wiki/community-wiki" target="_blank"><spring:message code='LOGIN_ROTATING_PRO_0_GETTING_STARTED_ITEM_2'/></a></li>
+@@ -24,4 +27,5 @@
+ 		<li><a class="launcher" href="http://www.jaspersoft.com/editions" target="_blank"><spring:message code='LOGIN_ROTATING_PRO_0_GETTING_STARTED_ITEM_5'/></a></li>
+ 		<li><a class="launcher" href="http://www.jaspersoft.com/getting-started" target="_blank"><spring:message code='LOGIN_ROTATING_PRO_0_GETTING_STARTED_ITEM_6'/></a></li>
+ 	</ul>
++	</div>
+ </div>
+\ No newline at end of file

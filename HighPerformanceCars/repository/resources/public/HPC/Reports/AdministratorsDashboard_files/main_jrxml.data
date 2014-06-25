@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Performance Summary" language="groovy" pageWidth="980" pageHeight="700" orientation="Landscape" columnWidth="980" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="47c7cdbc-0dc4-49a4-9257-8063861d15fc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Reports/AdministratorsDashboard_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Reports/AdministratorsDashboard"/>
+	<subDataset name="SalesPerContractType" uuid="155103ac-55f7-4f64-baaf-69797a70f4e1">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="fiscalYearListSub1" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<parameter name="quarterListSub1" class="java.util.Collection" nestedType="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 	time.date,
+	agency.agency_contract_type as contract_type,
+	sum(order_2012.sales) as sales
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+WHERE $X{IN,time.year,fiscalYearListSub1}
+AND $X{IN,time.quarter,quarterListSub1}
+GROUP BY time.date,
+	agency.agency_contract_type
+ORDER BY time.date,
+	agency.agency_contract_type desc]]>
+		</queryString>
+		<field name="date" class="java.sql.Timestamp"/>
+		<field name="contract_type" class="java.lang.String"/>
+		<field name="sales" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="SalesPerCertified" uuid="94cedb37-1f31-4a56-9a6d-18ed2b4c1244">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="fiscalYearListSub2" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<parameter name="quarterListSub2" class="java.util.Collection" nestedType="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT 	time.date,
+	agency.agency_certified_2012 as certified,
+	sum(order_2012.sales) as sales
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+	 WHERE $X{IN,time.year,fiscalYearListSub2}
+AND $X{IN,time.quarter,quarterListSub2}
+GROUP BY time.date,
+	agency.agency_certified_2012
+ORDER BY time.date,
+	agency.agency_certified_2012]]>
+		</queryString>
+		<field name="date" class="java.sql.Timestamp"/>
+		<field name="certified" class="java.lang.Boolean"/>
+		<field name="sales" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="StressfulCountCertified" uuid="e8e90b11-59a5-4a1a-93cd-0af1e1d6ef5c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="fiscalYearListSub3" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<parameter name="quarterListSub3" class="java.util.Collection" nestedType="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 	is_stressful_order,count(*) as count,
+	agency.agency_certified_2012 as certified
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+	 WHERE $X{IN,time.year,fiscalYearListSub3}
+AND $X{IN,time.quarter,quarterListSub3}
+GROUP BY is_stressful_order,agency.agency_certified_2012
+ORDER BY agency.agency_certified_2012]]>
+		</queryString>
+		<field name="certified" class="java.lang.Boolean"/>
+		<field name="is_stressful_order" class="java.lang.Integer"/>
+		<field name="count" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="StressfulCountContractType" uuid="1d23d5db-6786-4f23-9fb4-8fb0ad5892fe">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="fiscalYearListSub4" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<parameter name="quarterListSub4" class="java.util.Collection" nestedType="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 	is_stressful_order,count(*) as count,
+	agency.agency_contract_type as contract_type
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+	 WHERE $X{IN,time.year,fiscalYearListSub4}
+AND $X{IN,time.quarter,quarterListSub4}
+GROUP BY is_stressful_order,agency.agency_contract_type
+ORDER BY is_stressful_order,agency.agency_contract_type]]>
+		</queryString>
+		<field name="contract_type" class="java.lang.String"/>
+		<field name="is_stressful_order" class="java.lang.Integer"/>
+		<field name="count" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="isTop" class="java.lang.Boolean" isForPrompting="false">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nrTopBottom" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[3]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fiscalYearList" class="java.util.Collection" nestedType="java.lang.Integer">
+		<defaultValueExpression><![CDATA[[2012]]]></defaultValueExpression>
+	</parameter>
+	<parameter name="quartersList" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[["Q2","Q3"]]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsDiscount" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["discount"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsSales" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["sales"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsStressfulOrder" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["stressful_order"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="dummy" class="java.lang.Integer"/>
+	<summary>
+		<band height="699" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement mode="Opaque" x="3" y="1" width="977" height="47" backcolor="#F1F1F2" uuid="c65e80cb-e498-4bc6-8c45-be220048dce3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</frame>
+			<textField>
+				<reportElement x="12" y="0" width="403" height="48" forecolor="#004667" uuid="d8ccd601-fb69-40af-9e92-dab4607bdaf5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<box topPadding="10" leftPadding="0" bottomPadding="0"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Administrator Dashboard"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="630" y="430" width="330" height="260" backcolor="#F7F7F8" uuid="6d79ec83-123f-4e71-a712-90dc0ce6eddb">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="10" y="50" width="150" height="199" backcolor="#F1F1F2" uuid="1fe7b911-66ed-4bd9-a4ef-49b8dfdac0ab">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="170" y="50" width="150" height="198" backcolor="#F1F1F2" uuid="40203815-706f-4692-9565-dd6f0ba54e0e">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<componentElement>
+					<reportElement x="170" y="58" width="150" height="189" uuid="e98b808e-e8a7-4a97-908f-fcb11d811d23"/>
+					<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="StackedPercentColumn">
+						<hc:chartSetting name="default">
+							<hc:chartProperty name="chart.zoomType">
+								<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.enabled">
+								<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.href">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="subtitle.style.fontSize">
+								<hc:propertyExpression><![CDATA["8px"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="yAxis.title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+						</hc:chartSetting>
+						<multiAxisData>
+							<multiAxisDataset>
+								<dataset>
+									<datasetRun subDataset="StressfulCountCertified" uuid="2848a55b-1ef6-4dc7-bfa7-d114be14e16d">
+										<datasetParameter name="fiscalYearListSub3">
+											<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="quarterListSub3">
+											<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+										</datasetParameter>
+									</datasetRun>
+								</dataset>
+							</multiAxisDataset>
+							<dataAxis axis="Rows">
+								<axisLevel name="IsCertified">
+									<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[IF($F{certified},"Certified","Not")]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<dataAxis axis="Columns">
+								<axisLevel name="isStressful">
+									<labelExpression><![CDATA[]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[IF(EQUALS($F{is_stressful_order},1),"yes","no")]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<multiAxisMeasure name="Measure1" class="java.lang.Integer" calculation="Nothing">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<valueExpression><![CDATA[$F{count}]]></valueExpression>
+							</multiAxisMeasure>
+						</multiAxisData>
+						<hc:series name="Measure1"/>
+					</hc:chart>
+				</componentElement>
+				<componentElement>
+					<reportElement x="10" y="58" width="150" height="189" uuid="1ba3a77a-d220-44d1-9cbc-a3b27615af41"/>
+					<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="StackedPercentColumn">
+						<hc:chartSetting name="default">
+							<hc:chartProperty name="chart.zoomType">
+								<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.enabled">
+								<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.href">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="subtitle.style.fontSize">
+								<hc:propertyExpression><![CDATA["10px"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="yAxis.title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+						</hc:chartSetting>
+						<multiAxisData>
+							<multiAxisDataset>
+								<dataset>
+									<datasetRun subDataset="StressfulCountContractType" uuid="4355fe3e-b565-4ed0-a646-b747cfc0ae5a">
+										<datasetParameter name="fiscalYearListSub4">
+											<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="quarterListSub4">
+											<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+										</datasetParameter>
+									</datasetRun>
+								</dataset>
+							</multiAxisDataset>
+							<dataAxis axis="Rows">
+								<axisLevel name="IsCertified">
+									<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[$F{contract_type}]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<dataAxis axis="Columns">
+								<axisLevel name="isStressful">
+									<labelExpression><![CDATA[]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[IF(EQUALS($F{is_stressful_order},1),"yes","no")]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<multiAxisMeasure name="Measure1" class="java.lang.Integer" calculation="Nothing">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<valueExpression><![CDATA[$F{count}]]></valueExpression>
+							</multiAxisMeasure>
+						</multiAxisData>
+						<hc:series name="Measure1"/>
+					</hc:chart>
+				</componentElement>
+				<textField>
+					<reportElement x="10" y="0" width="260" height="30" forecolor="#0980BA" uuid="86e68cf6-fa9d-4427-9253-5709095098a2">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Percentage of Stressful Orders"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="170" y="40" width="150" height="18" forecolor="#58595B" backcolor="#E9E9E8" uuid="121744c2-f09a-461d-aed1-1dadb9e3d19d">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="10" rightPadding="0">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Per Certified"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="10" y="40" width="150" height="18" forecolor="#58595B" backcolor="#E9E9E8" uuid="2fce2c13-5b57-47f1-baea-71bff6423ebf">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="10" rightPadding="0">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Per Contract Type"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="12" y="59" width="947" height="361" backcolor="#F7F7F8" uuid="285dde2a-011b-4c66-a498-41dc78282e0e">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="10" y="50" width="450" height="305" forecolor="#F1F1F2" backcolor="#F1F1F2" uuid="a1250c78-1eaa-4455-be38-6575378074c2">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="480" y="50" width="450" height="305" backcolor="#F1F1F2" uuid="ac28451b-699e-4470-947b-91119b68ef0e">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="480" y="49" width="450" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="c61ad24b-56bf-4e91-bfe8-2fe5f9a80671">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box leftPadding="10">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Per Certified"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="10" y="50" width="450" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="98562683-c550-4916-a8e9-a1fc2d938df9">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="10" rightPadding="0">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Per Contract Type"]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement x="20" y="100" width="430" height="240" uuid="bfc1f8e6-02a5-4332-80e9-1fda48e6a2e1"/>
+					<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="TimeSeriesArea">
+						<hc:chartSetting name="default">
+							<hc:chartProperty name="chart.zoomType">
+								<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.enabled">
+								<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.href">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="yAxis.title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+						</hc:chartSetting>
+						<multiAxisData>
+							<multiAxisDataset>
+								<dataset>
+									<datasetRun subDataset="SalesPerContractType" uuid="a43eebf3-82bf-408f-bd8e-024406858d13">
+										<datasetParameter name="fiscalYearListSub1">
+											<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="quarterListSub1">
+											<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+										</datasetParameter>
+									</datasetRun>
+								</dataset>
+							</multiAxisDataset>
+							<dataAxis axis="Rows">
+								<axisLevel name="Date">
+									<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+									<axisLevelBucket class="java.util.Date">
+										<bucketExpression><![CDATA[$F{date}]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<dataAxis axis="Columns">
+								<axisLevel name="ContractType">
+									<labelExpression><![CDATA[]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[$F{contract_type}]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<multiAxisMeasure name="Measure1" class="java.math.BigDecimal" calculation="Nothing">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<valueExpression><![CDATA[$F{sales}]]></valueExpression>
+							</multiAxisMeasure>
+						</multiAxisData>
+						<hc:series name="Measure1"/>
+					</hc:chart>
+				</componentElement>
+				<componentElement>
+					<reportElement x="490" y="100" width="430" height="240" uuid="df2c2b26-055e-4913-8541-9695b154c242"/>
+					<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="TimeSeriesArea">
+						<hc:chartSetting name="default">
+							<hc:chartProperty name="chart.zoomType">
+								<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.enabled">
+								<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.href">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="credits.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+							<hc:chartProperty name="yAxis.title.text">
+								<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+							</hc:chartProperty>
+						</hc:chartSetting>
+						<multiAxisData>
+							<multiAxisDataset>
+								<dataset>
+									<datasetRun subDataset="SalesPerCertified" uuid="6b890876-096e-40e5-831d-129fdb853917">
+										<datasetParameter name="fiscalYearListSub2">
+											<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+										</datasetParameter>
+										<datasetParameter name="quarterListSub2">
+											<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+										</datasetParameter>
+									</datasetRun>
+								</dataset>
+							</multiAxisDataset>
+							<dataAxis axis="Rows">
+								<axisLevel name="Date">
+									<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+									<axisLevelBucket class="java.util.Date">
+										<bucketExpression><![CDATA[$F{date}]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<dataAxis axis="Columns">
+								<axisLevel name="Certified">
+									<labelExpression><![CDATA[]]></labelExpression>
+									<axisLevelBucket class="java.lang.String">
+										<bucketExpression><![CDATA[$F{certified}]]></bucketExpression>
+									</axisLevelBucket>
+								</axisLevel>
+							</dataAxis>
+							<multiAxisMeasure name="Measure1" class="java.math.BigDecimal" calculation="Nothing">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<valueExpression><![CDATA[$F{sales}]]></valueExpression>
+							</multiAxisMeasure>
+						</multiAxisData>
+						<hc:series name="Measure1"/>
+					</hc:chart>
+				</componentElement>
+				<textField>
+					<reportElement x="15" y="10" width="260" height="30" forecolor="#0980BA" uuid="92353a07-048d-4711-987b-3e0c4f8e4933">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Total Sales Per Month"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="12" y="430" width="608" height="260" backcolor="#F7F7F8" uuid="1805b380-b0cf-47ab-bde2-61f665c43730">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<subreport>
+					<reportElement x="5" y="50" width="180" height="197" uuid="2103428c-12e4-485d-94cd-fd0ac8e6e4c1">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+					</reportElement>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsDiscount}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="isTop">
+						<subreportParameterExpression><![CDATA[$P{isTop}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="nrTopBottom">
+						<subreportParameterExpression><![CDATA[$P{nrTopBottom}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="fiscalYearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="quartersList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA["repo:topItems"]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement x="203" y="50" width="180" height="197" uuid="0a74c101-e3b5-456a-bb3f-abef04c2c399">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+					</reportElement>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsStressfulOrder}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="isTop">
+						<subreportParameterExpression><![CDATA[$P{isTop}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="nrTopBottom">
+						<subreportParameterExpression><![CDATA[$P{nrTopBottom}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="fiscalYearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="quartersList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA["repo:topItems"]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement x="400" y="50" width="180" height="197" uuid="35c76098-3bfe-4b9b-92a0-8ec8777996c5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsSales}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="isTop">
+						<subreportParameterExpression><![CDATA[$P{isTop}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="nrTopBottom">
+						<subreportParameterExpression><![CDATA[$P{nrTopBottom}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="fiscalYearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="quartersList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA["repo:topItems"]]></subreportExpression>
+				</subreport>
+				<textField>
+					<reportElement x="15" y="10" width="260" height="30" forecolor="#0980BA" uuid="3ce228e6-1aa5-4340-be95-c8d9c89b3103">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Top "+$P{nrTopBottom}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

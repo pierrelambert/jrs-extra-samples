@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/</parent><name>temp</name><label>Temp</label><description>Temp</description><creationDate>2013-12-04T16:59:16.390Z</creationDate><updateDate>2013-10-24T14:05:40.975+01:00</updateDate><permission><permissionMask>30</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission><permission><permissionMask>0</permissionMask><recipient recipientType="role">ROLE_ADMINISTRATOR</recipient></permission></folder>

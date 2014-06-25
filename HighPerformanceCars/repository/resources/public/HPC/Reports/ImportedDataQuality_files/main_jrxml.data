@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30a543c2-53b6-4d3e-9f22-8ff107fcbd86">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.data.cache.persistable" value="false"/>
+	<property name="net.sf.jasperreports.data.cache.recordable" value="false"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Reports/ImportedDataQuality_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Reports/ImportedDataQuality"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#4E81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#4E81BD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#B8CCE4">
+		<box>
+			<pen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="0.5" lineColor="#FFFFFF"/>
+			<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#DCE6F1"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="rejectPerSalesRep" uuid="eae4b6b6-ac15-400d-a0bc-1e44b27a40fe">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<queryString language="SQL">
+			<![CDATA[select count(*), sales_rep_country, sales_rep_name  from rejects
+ group by sales_rep_country,sales_rep_name
+ order by sales_rep_country,sales_rep_name]]>
+		</queryString>
+		<field name="count" class="java.lang.Long"/>
+		<field name="sales_rep_name" class="java.lang.String"/>
+		<field name="sales_rep_country" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="rejectsPerType" uuid="75bc8a73-45de-4a36-8316-0c6d1c17b2bc">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<queryString>
+			<![CDATA[select reject_type, count(*) from rejects group by reject_type order by reject_type]]>
+		</queryString>
+		<field name="reject_type" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="RejectsList" uuid="af42dacd-4b64-4ead-b8ce-10ff64318f2a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<queryString>
+			<![CDATA[select reject_type, excel_line, reason_reject,sales_rep_name,sales_rep_country
+ from rejects  
+order by reject_type desc,sales_rep_country,sales_rep_name asc, excel_line]]>
+		</queryString>
+		<field name="reject_type" class="java.lang.String"/>
+		<field name="excel_line" class="java.lang.Integer"/>
+		<field name="reason_reject" class="java.lang.String"/>
+		<field name="sales_rep_name" class="java.lang.String"/>
+		<field name="sales_rep_country" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="dummy" class="java.lang.Integer"/>
+	<title>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="155" y="0" width="244" height="30" uuid="3a9af032-fff8-4f29-ae46-07d4f2d40bb5"/>
+				<textElement>
+					<font fontName="SansSerif" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Imported Data Quality Report"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="700">
+			<componentElement>
+				<reportElement x="50" y="290" width="430" height="410" uuid="ae3af158-781d-421c-a30f-7a1027dd1cd3"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="RejectsList" uuid="1a622180-8f1f-4936-9bcb-b274239270ad">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="bbf74b0d-77e2-4c66-98f1-8f734285b0e1">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" forecolor="#FFFFFF" uuid="fd8efad6-5af7-4554-921b-0c902ca32a7d"/>
+								<box leftPadding="10"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Reject Type]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="cbc96031-3dd7-449e-8505-b09d0157dfe5"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{reject_type}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="17bdd5b7-9993-40b7-a8e6-5d560bd5d0c0">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" forecolor="#FFFFFF" uuid="333efd03-4800-4689-88d4-2dbac40e5008"/>
+								<box leftPadding="10"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Excel Line]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="d6322b35-b92b-414c-8602-98f08d185ff9"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{excel_line}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="10ecfee8-a94b-4970-b54c-eca0b2211d8f">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="30" forecolor="#FFFFFF" uuid="c7811532-9ade-478c-8df6-a01e50442a5b"/>
+								<box leftPadding="10"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Reason of Reject]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="180" height="30" uuid="1868832b-54b5-4f5a-9827-6c0835b2e470"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{reason_reject}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="3d690d8b-8cf4-42d9-9a98-6943b52ad90e">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" forecolor="#FFFFFF" uuid="cccb1cf6-d3d8-45ac-96a1-739929958e16"/>
+								<box leftPadding="10"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sales Rep]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="a71de28b-61bf-44a6-8617-76ae43f26c59"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_rep_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="480e1f83-ea61-4484-84bd-1fc6246a78d9">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" forecolor="#FFFFFF" uuid="e171dc3e-7aad-4963-8078-f77686dd5b10"/>
+								<box leftPadding="10"/>
+								<textElement>
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Country]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="8965cf02-7c01-4dac-859c-cb9e7b4eede5"/>
+								<box leftPadding="10"/>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{sales_rep_country}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement x="10" y="20" width="201" height="250" uuid="7ad35957-9a06-4f6b-8006-214e0a6c1941"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Pie" evaluationTime="Report">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="chart.zoomType">
+							<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.pie.showInLegend" value="true"/>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.formatter">
+							<hc:propertyExpression><![CDATA["function() { return this.point.name+\" : \"+Highcharts.numberFormat(this.percentage,0)+\"%\"; }"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset>
+							<dataset>
+								<datasetRun subDataset="rejectsPerType" uuid="1ff95efe-01ab-4ead-9d16-bc136a6ec79f"/>
+							</dataset>
+						</multiAxisDataset>
+						<dataAxis axis="Rows">
+							<axisLevel name="Type">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket order="Descending" class="java.lang.String">
+									<bucketExpression><![CDATA[$F{reject_type}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns"/>
+						<multiAxisMeasure name="Count" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{count}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="Count"/>
+				</hc:chart>
+			</componentElement>
+			<componentElement>
+				<reportElement x="220" y="20" width="325" height="250" uuid="bc5c63fd-7476-4673-a7bd-e92c50340107"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Bar" evaluationTime="Report">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="chart.zoomType">
+							<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.align">
+							<hc:propertyExpression><![CDATA["center"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.layout">
+							<hc:propertyExpression><![CDATA["horizontal"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.verticalAlign">
+							<hc:propertyExpression><![CDATA["bottom"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.series.groupPadding" value="0"/>
+						<hc:chartProperty name="plotOptions.series.pointPadding" value="0.1"/>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.formatter">
+							<hc:propertyExpression><![CDATA["function() { return this.series.name+\" : \"+this.y; }"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.shadow">
+							<hc:propertyExpression><![CDATA[Boolean.FALSE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset>
+							<dataset>
+								<datasetRun subDataset="rejectPerSalesRep" uuid="27198fd1-e96a-4b86-988a-ddda0d7e8e38"/>
+							</dataset>
+						</multiAxisDataset>
+						<dataAxis axis="Rows">
+							<axisLevel name="Country">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[""]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="Country">
+								<labelExpression><![CDATA[]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{sales_rep_country}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="Count" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{count}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="Count"/>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
