@@ -129,7 +129,13 @@ function InfobrightRestore(){ # Import a mySQL dump for the specified sample (dr
 echo "Importing ${1} Infobright database..."
 for dump in /jrs-extra-samples/${1}/database/infobright/*.sql; do
     SCHEMA=`basename "$i" .sql`
-    mysql -h localhost -uroot -proot -P5029 < ${dump}
+    cat ${dump} | mysql -h localhost -uroot -proot -P5029
+    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029
+    echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029 
+done
+for dump in /jrs-extra-samples/${1}/database/infobright/*.sql.gz; do
+    SCHEMA=`basename "$i" .sql.gz`
+    zcat ${dump} | mysql -h localhost -uroot -proot -P5029
     echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'%' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029
     echo "GRANT ALL PRIVILEGES ON \`${SCHEMA}\`.* TO 'jasperdb'@'localhost' IDENTIFIED BY 'password';" | mysql -h localhost -uroot -proot -P5029 
 done
