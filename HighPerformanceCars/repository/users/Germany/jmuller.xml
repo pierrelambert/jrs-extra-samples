@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user><username>jmuller</username><fullName>Jan Muller</fullName><password>ENC&lt;8D827325DDDE30436FE6FFAE508C4294&gt;</password><email></email><externallyDefined>false</externallyDefined><enabled>true</enabled><role>ROLE_USER</role><role>ROLE_SALES_REP</role><attribute name="Country"><value>Germany</value></attribute><attribute name="SalesRepName"><value>Jan Muller</value></attribute><tenantId>Germany</tenantId></user>

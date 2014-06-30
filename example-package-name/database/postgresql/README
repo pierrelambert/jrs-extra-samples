@@ -1,7 +1,12 @@
 The install script expects :
 - One dump file for each database
 - Dump files to be named "<database>.sql" (case sensitive)
-- Each dump create with the following command :
-  pg_dump --clean -f <database>.sql <database>
 - Each dump file might eventually be gziped and MUST have the following name "<database>.sql.gz"
-  gzip <database>.sql
+- Each dump create with the following command :
+  pg_dump --clean <database> > <database>.sql
+  or
+  pg_dump --clean <database> | gzip -9 > <database>.sql.gz
+
+Should you need to import it manually, you can use the following commands :
+zcat <database>.sql.gz | psql <database>
+cat <database>.sql | psql <database>

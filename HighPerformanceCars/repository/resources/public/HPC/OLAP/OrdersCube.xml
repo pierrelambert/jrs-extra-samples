@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secureMondrianConnection exportedWithPermissions="true"><folder>/public/HPC/OLAP</folder><name>OrdersCube</name><version>1</version><label>OrdersCube</label><description></description><creationDate>2014-01-16T12:05:48.024Z</creationDate><updateDate>2014-01-16T12:17:09.715Z</updateDate><schema><uri>/public/HPC/OLAP/MAN_orders_cube.xml</uri></schema><dataSource><uri>/public/HPC/DataSources/manDWH</uri></dataSource><grant><uri>/public/HPC/OLAP/JRS_CubeGrants.xml</uri></grant></secureMondrianConnection>

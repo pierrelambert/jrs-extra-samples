@@ -1,0 +1,405 @@
+/*
+.overrides_custom css
+
+Place styles for simple UI customization in this file.
+
+This file is loaded after all other CSS, so selectors here will win in case of conflict with default rules.
+
+Using this file to customize is the method most likely to conserve your customizations even if markup changes in future product releases.
+
+Extensive customizations may be easier to implement by replacing one or more of the standard theme files in your custom theme folder.
+
+However, if future product releases place styles for new markup components into the files you have replaced, your theme will not have these new styles,
+and therefore, will not display the new components correctly.
+
+TO USE THIS THEME MUST CUSTOMIZE THESE JSP>
+ \WEB-INF\jsp\modules\login\rotating\login_rotating_pro_0.jsp
+ \WEB-INF\jsp\modules\login\login.jsp
+
+PS - GN
+*/
+
+.show_chartTypeSelector_wrapper {
+	display:none;
+}
+
+html {
+    overflow:hidden\9;
+}
+
+/*BUTTONS AND MENUS*/
+.menu.primaryNav .node > .wrap > .icon {
+	background-position:0 -719px;
+}
+
+.menu.primaryNav .node > .wrap.over > .icon {
+	background-position:0 -79px;
+}
+
+body:nth-of-type(1) .menu.primaryNav .node > .wrap > .icon {
+    background-position: 0 -719px;  /* Chrome + Safari hack */
+}
+
+body:nth-of-type(1) .menu.primaryNav .node > .wrap.over > .icon {
+    background-position: 0 -79px;  /* Chrome + Safari hack */
+}
+
+.menu.primaryNav #main_home .wrap.over > .icon, 
+.menu.primaryNav #main_home .wrap.pressed > .icon {
+	background-position:left -121px;
+}
+
+body:nth-of-type(1) .menu.primaryNav #main_home .wrap.over > .icon,
+body:nth-of-type(1) .menu.primaryNav #main_home .wrap.pressed > .icon {
+	background-position: left -121px; /* Chrome + Safari hack */
+}
+
+
+.menu.primaryNav .wrap.over,
+.menu.primaryNav .wrap.pressed {
+	background-image: url(images/menu_primaryNav_sprite.png)\9;  /* for all ie browsers */	
+	background-position: center top\9;                           /* for all ie browsers */	
+}
+
+.menu.primaryNav .wrap.over,
+.menu.primaryNav .wrap.pressed {
+	/* gradient end values are from #94c011 to #439000 */
+	background: url("images/menu_primaryNav_sprite.png") repeat-x scroll 0 0;
+}
+
+.menu.vertical {
+	border:none \9; /* for all ie browsers */	
+}
+
+
+/* CONTAINERS */
+
+body {
+	background: none repeat scroll 0 0 #bf4f5f;
+}
+
+.banner {
+	background: url("images/banner_bkgd.png") repeat-x scroll 0 0 #fff;
+	height: 50px;
+	position: relative;
+	border-bottom:6px solid #d00039;
+}
+
+#frame {
+	top:50px;
+}
+
+.sectionLeft {
+	margin-left:12px;
+}
+
+.sectionRight, .sectionLeft {
+	margin-top: 13px;
+}
+
+#frameFooter {
+	background: url("images/footer_bkgd.png") repeat-y scroll 0 0 #fff;
+	border-top: 1px solid #bf4f5f;
+	border-bottom: 1px solid #fff;
+}
+
+/* COLORS */
+.palette08, 
+.button.action.primary.disabled, 
+.button.action.primary[disabled],  
+.tabSet.buttons.vertical [disabled]  {
+	color:#aaa;
+}
+
+.menu.primaryNav .wrap,
+.tabSet.vertical.buttons .button,
+.tabSet.horizontal.buttons .selected>.button>.wrap {
+	color:#fff;
+}
+
+button.action.primary.up,
+.menu.primaryNav .up {
+	color:#fff;
+}
+
+.menu.primaryNav .wrap.over{
+	color:#acb1b6;
+}
+
+.content .header>.title,
+.resourceName,
+.column.decorated.minimized .vtitle {
+    color: #c00a26;
+}
+
+.palette11, .textAccent02, .tabSet.text .selected.tab>.wrap,
+.tabSet.text .selected.tab>.wrap.over, 
+.tabSet.text .selected.tab>.wrap.pressed, 
+.list.filters>li.selected>.wrap, .list.filters>.leaf>.wrap.pressed,
+.list.stepIndicator .selected>.wrap, 
+.panel.info.system .message, 
+.resourceName, .fsection, #reportContainer a {
+	color: #c00a26;
+}
+
+.royal,
+.textAccent02,
+.tabSet .selected .button,
+.list.filters>li.selected>.wrap,
+.list.filters>.leaf>.wrap.pressed,
+.list.stepIndicator .selected>.wrap,
+.panel.info.system .message,
+.data.table .label,
+.control.path .step.pressed,
+a:focus, a:hover, a:active,
+a#about:hover, a#about:active  {
+	color:#c00a26;
+}
+
+.royal_bkgd,
+.menu.vertical li>.wrap.over,
+.list.responsive>li>.wrap.pressed,
+.list.responsive>li.selected:focus>.wrap,
+.list.responsive>li.selected:focus>.wrap.over,
+div:focus li.selected>.wrap {
+	background-color:#c00a26;
+}
+
+
+.list>li>.wrap.pressed, .list>li.selected>.wrap, .list>li.selected>.wrap.over {
+	background-color:#DB6B7E;
+}
+
+#resultsList li.selected > div.wrap > div.resourceType, #resultsList li.pressed > div.wrap > div.resourceType {
+background: #c00a26 !important;
+}
+
+.button.action.jumbo {
+	color:#c00a26;
+}
+
+#metaLinks li, #metaLinks a, #metaLinks a:hover, #metaLinks a:active{
+	color:#fff;
+}
+
+#globalSearch.searchLockup>.wrap {
+	border: 1px solid #c00a26;
+}
+
+#copyright {
+    color: #575756;
+}
+
+
+/* LOGO CUSTOMIZATION*/
+#logo {
+    background: url("images/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    height: 52px;
+    margin: 5px 0 0 8px;
+    width: 147px;
+	float:left;
+}
+
+/* pageSpecific.css */
+
+/* LOGIN PAGE */
+
+#loginPage .banner {
+	height: 90px;	
+}
+
+#loginPage #frame {
+	top: 97px;
+	text-align: center;
+	overflow: auto;	
+}
+
+#loginPage #display{
+	overflow:visible;
+	width: 1024px;
+	margin: auto;
+	text-align: left;
+}
+
+#loginPage #bannerWrapper{
+	width: 1024px;
+	margin: auto;
+	text-align: left;
+}
+
+#loginPage {
+	background: none repeat scroll 0 0 #ecf0f1;
+}
+
+#loginPage #bannerWelcome {
+	top:90px;
+}
+
+#loginPage #companyNameBanner {
+	margin-top:30px;
+}
+
+#loginPage .wrapper {
+	background-color:#ecf0f1;
+	top:0px;
+}
+
+#loginPage #bannerCustom {
+	height: 453px;
+	background-image: url("images/login_welcome_bkgd.jpg");
+	background-color: #bdc3c7;
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	position:absolute;
+
+	overflow-y:hidden;
+	overflow-x:hidden;
+	margin:0;
+	border:none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+
+#loginPage #welcome {
+	height: 75px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 15px;
+}
+
+#loginPage #logo {
+    background: url("images/logo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    height: 69px;
+    margin: 15px 45px 0 8px;
+    width: 147px;
+	float:left;
+}
+
+#loginPage #copy2, #loginPage #loginForm{
+    margin-top:470px;
+	background-color:#ecf0f1;
+	border:none;
+}
+
+#loginPage .pane .body, #loginPage .panel {
+	background-color: #ecf0f1;
+}
+
+#loginPage  .infoBoxCustom  {
+	padding-top:10px;
+	background-color: #fff;
+	height:250px;
+	
+}
+
+#loginPage #bannerWelcome .textAreaCustom {
+	background: url("images/bg_opacity.png");
+	margin-top: 69px;
+	margin-left: 700px;
+	min-height: 200px;
+	width: 200px;
+	padding: 27px 32px 0px;
+	line-height: 24px;
+}
+
+#loginPage #bannerWelcome .textAreaCustom .textAccent02 {
+	color:#000;
+}
+
+
+
+#loginPage #rotating h2:after {
+	position: absolute;
+	content: '';
+	top: 8px;
+	left: -9px;
+}
+
+#loginPage #rotating h2 {
+	color:#000;
+	font-size: 23px;
+	position: relative;
+	margin-left: 20px;
+	padding-left: 30px;
+}
+
+#loginPage #rotating .primary h2:after {
+	background: url("images/login_sprite.png") no-repeat;
+	height: 21px;
+	width: 25px;
+}
+
+#loginPage #rotating .secondary h2:after {
+	background: url("images/login_sprite.png") no-repeat -32px -1px;
+	height: 20px;
+	width: 21px;
+}
+
+#loginPage #companyNameBanner {
+	color: #acb1b6;
+}
+
+/* LOGIN FORM CUSTOMIZATION */
+
+#loginPage .login .header {
+	background: none;
+	border: none;
+	height: 40px;
+}
+
+#loginPage .login .header div.title:after {
+	background: url("images/login_sprite.png") no-repeat -60px -1px;
+	height: 22px;
+	width: 17px;
+}
+
+#loginPage .login .header div.title:after {
+	position: absolute;
+	content: '';
+	top: 4px;
+	left: 8px;
+}
+
+#loginPage .login .header div.title {
+	color:#000;
+	font-size: 23px;
+	position: relative;
+	margin-left: 20px;
+	margin-top: 8px;
+	padding-left: 30px;
+}
+
+#loginPage #loginForm input[type="text"], 
+#loginPage #loginForm input[type="password"] {
+	font-size: 16px;
+	line-height: 26px;
+	color: #000;
+	padding: 5px 5px;
+	height: 26px;
+	display: block;
+	border: 1px solid #d8dcdd;
+	-webkit-box-shadow: 0px 0px 2px 1px #e2e6e7;
+	-moz-box-shadow: 0px 0px 2px 1px #e2e6e7;
+	box-shadow: 0px 0px 2px 1px #e2e6e7;
+	background: #fff;
+	margin: 0 0 3px;
+	width: 200px;
+}
+
+#loginPage #license {	
+	left:250px;	
+}
+
+#loginPage #loginForm {	
+	width:250px;
+}
+

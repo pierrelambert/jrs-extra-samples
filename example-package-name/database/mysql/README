@@ -2,5 +2,11 @@ The install script expects :
 - One dump file for each schema
 - Dump files to be named "<schema>.sql" (case sensitive)
 - Each dump create with the following command :
-  mysqldump --add-drop-table --databases <schema>"
+  mysqldump -h localhost -uroot -proot --add-drop-table --databases <schema>" > <schema>.sql
+  or
+  mysqldump -h localhost -uroot -proot --add-drop-table --databases <schema>" | gzip -9 > <schema>.sql.gz
 
+Should you need to import it manually, you can use the following command :
+cat <schema>.sql | mysql -h localhost -uroot -proot
+or
+zcat <schema>.sql.gz | mysql -h localhost -uroot -proot

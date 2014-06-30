@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/public</parent><name>HPC</name><label>HPC</label><description></description><creationDate>2014-01-16T12:04:32.966Z</creationDate><updateDate>2014-01-16T12:04:32.966Z</updateDate><folder>Dashboards</folder><folder>DataSources</folder><folder>OLAP</folder><folder>Reports</folder></folder>

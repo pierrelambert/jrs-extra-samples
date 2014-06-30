@@ -1,0 +1,5 @@
+The installation script expects that the dump was created with the following command :
+mongodump -d test
+
+You should be able to import the DB with the following command :
+mongorestore --drop <DumpFolder>
