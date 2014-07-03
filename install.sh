@@ -2,6 +2,7 @@
 
 BUILDOMATIC="/root/jasperreports-server-5.6-bin/buildomatic/"
 TOMCATROOT="/var/lib/tomcat6/"
+HTTPDROOT="/var/www/"
 
 function Init(){ # Initializes the samples repository
 aptitude -y update \
@@ -154,6 +155,16 @@ if [ -d /jrs-extra-samples/${1}/filesystem/TOMCATROOT ]; then
         rm -Rf ${TOMCATROOT}/${file}
         cp ${file} ${TOMCATROOT}/${file}
         chown tomcat6.tomcat6 ${TOMCATROOT}/${file}
+    done
+fi
+if [ -d /jrs-extra-samples/${1}/filesystem/HTTPDROOT ]; then
+    cd /jrs-extra-samples/${1}/filesystem/HTTPDROOT
+    for file in `find ./ -type f`; do
+        rm -Rf ${HTTPDROOT}/${file}
+        mkdir -p ${HTTPDROOT}/${file}
+        rm -Rf ${HTTPDROOT}/${file}
+        cp ${file} ${HTTPDROOT}/${file}
+        chown www-data.www-data ${HTTPDROOT}/${file}
     done
 fi
 }

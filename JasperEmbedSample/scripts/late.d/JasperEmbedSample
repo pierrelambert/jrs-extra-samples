@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Updates only when external GUEST IP changes
+[ "${GUEST}" == "${LAST_NET}" ] && return 0
+echo "[34;1m== [[32;1mINFO[34;1m] Mariano/Bing JasperEmbbedSample sample > [35;1mUpdate external IP address[0m"
+
+# Reconfigure GoogleMap if needed
+for file in `find /var/www/JasperEmbedSample -type f -name '*.html'`; do
+    sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}:8080/jasperserver-pro#" ${file}
+done
