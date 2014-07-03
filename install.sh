@@ -199,8 +199,14 @@ if [ $REBOOT = 1 ]; then
     echo '!!! Need to reboot !!!'
 fi
 if [ $TOMCATRESTART = 1 ]; then
-    rm /etc/tomcat6/Catalina/localhost/*
     echo '!!! Need to restart tomcat !!!'
+    /etc/init.d/tomcat6 stop
+    sleep 1
+    sync
+    rm -Rf /etc/tomcat6/Catalina/localhost/*
+    sync
+    sleep 1
+    /etc/init.d/tomcat6 start
 fi
 }
 
