@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+ * ========================================================================
+ * reportInteraction2.html 
+ * 
+ * ========================================================================
+ * Copyright 2013 
+ * Author: Ernesto 0ngaro
+ *
+ * Unless you have purchased a commercial license agreement from Jaspersoft Inc., the following license terms apply:
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the 
+ * GNU Affero General Public License as published by the Free Software Foundation, either version 3 
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public 
+ * License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License 
+ * along with this program. If not, see http://www.gnu.org/licenses/.
+ * ======================================================================== */
+-->
+
+<html lang="en">
+<head>
+	<title>Report Interaction - JRS Embedded Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+
+	<script src="js/jquery.min.js"></script>
+	
+	<script src="js/bootstrap.js"></script>
+
+    <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+    <script src="js/visualizeHelper.js"></script>
+
+	<script type="text/javascript">
+        var masterReport;
+        var slaveReport;
+
+        // Get my Client Object
+        visualize(function(v){
+            JRSClient = v;
+            initializeReports();
+        });
+
+        // @todo This will need to be moved to the Helper somehow...
+        // I'm not able to bind the link catcher after the fact
+        function renderReportLink(uri, container, v) {
+            return v.report({
+                resource: uri,
+                container: container,
+                linkOptions: {
+                    events: {
+                        "click"  : function(evt, link){
+
+                            // console.log(evt.target); // prints dom elem which represents link in report
+                            //console.log(link); // print link's data look in report data schema
+                            /*
+                            link Object looks like this
+                            for a reference Hyperlink:
+                             Object {
+                                 href: "javascript:updateState('CA')"
+                                 id: "561719435"
+                                 reference: "javascript:updateState('CA')"
+                                 selector: "._jrHyperLink.Reference"
+                                 type: "Reference"
+                                 typeValue: "Reference"
+                             }
+                             And like this for a Report Execution:
+                             Object {
+                             id: "2021149141"
+                                parameters: Object {
+                                     _report: "/public/Samples/VisualizeJS/Cities"
+                                     action: "doThisAction"
+                                     reportInstance: "slaveReport"
+                                     store_state: "CA"
+                                     total_sales: "159167.8400"
+                                     }
+                                 selector: "._jrHyperLink.ReportExecution"
+                                 type: "ReportExecution"
+                                 typeValue: "Custom"
+                             }
+                             */
+
+                            updateState(link.parameters.store_state, link.parameters.total_sales);
+                        }
+                    }
+                },
+                error: function(err) {
+                    console.log(err.message);
+                }
+            });
+
+        }
+
+        function initializeReports() {
+            var master = '/public/Samples/Reports/States';
+            var slave = '/public/Samples/Reports/Cities';
+
+            masterReport = renderReportLink(master, '#states', JRSClient);
+            slaveReport = renderReport(slave, '#cities', JRSClient);
+            updateState('CA', 159167.84);
+
+            /*
+            // This function is not working if I bind it here, @todo check syntax
+            // For now using renderReportLink() as a workaround
+            masterReport.linkOptions({
+                events: {
+                    "click" : function(evt, link){
+                        console.log('Link Clicked:');
+                        console.log(evt.target); // prints dom elem which represents link in report
+                        console.log(link); // print link's data look in report data schema
+                    }
+                }
+            });
+            */
+
+        }
+
+        // Update Slave report with the passed State Parameter
+        function updateState(stateName, stateTotal) {
+            var parameters = {};
+            var fullstatename = '';
+            parameters['state'] = [ stateName ];
+            slaveReport.params(parameters).run();
+            switch (stateName) {
+                    case 'CA':
+                        fullstatename = 'California';
+                        break;
+                    case 'WA':
+                        fullstatename = 'Washington';
+                        break;
+                    case 'OR':
+                        fullstatename = 'Oregon';
+                        break;
+                    default:
+                        fullstatename = 'N/A';
+            }
+            $('#StateName').html(fullstatename);
+            $('#StateName1').html(stateName);
+            $('#StateNameTitle').html(fullstatename);
+            $('#StateSales').html('$ ' + Number(stateTotal).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+
+        };
+
+	</script>
+    <style type="text/css">
+	    #repo h3 {
+	        padding: 5px 0;
+	        margin: 0;
+	    }
+	    #repo table {
+	        border-collapse: collapse;
+	    }
+	    #repo td {
+	        border: solid 1px #eee;
+	        padding: 4px 0;
+	    }
+	    .fill { top:20; right:0; bottom:0; left:0}
+	    #overlay { background: #333; opacity: 0.33}
+	    #ajax-icon { width:64px; height: 64px; margin:auto; color: #fff; text-align: center}
+	    .mygrid-wrapper-div {
+		    overflow: scroll;
+		    height: 400px;
+			}
+	</style>
+</head>
+<body onLoad="">
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="container" style="width:100%; ">
+			<a href="#" class="navbar-brand">Jaspersoft Portal</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Extra Samples <b class="caret"></b><a/>
+						<ul class="dropdown-menu">
+							<li><a href="context-ic.html">Contextual Input Controls</a></li>
+							<li><a href="reportInteraction.html">External Report Interaction</a></li>
+							<li><a href="reportInteraction2.html">Report Interaction</a></li>
+							<li><a href="reportPopUp.html">Report Popup</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="http://github.com/marianol/JasperEmbedSample">About</a></li>
+				</ul>
+			</div>
+	</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Selected State: <span id="StateName" style="font-weight: bold;"></span>
+                   
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    Total Sales in <span id="StateName1" ></span>: <span id="StateSales" class="badge"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="row">
+
+<div class="col-md-5">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Sales by State</h3>
+        </div>
+        <div class="panel-body">
+            Overall sales by state for 2014.
+        </div>
+        <div class="panel-body">
+            <div id="states"></div>
+        </div>
+    </div>
+
+    	</div>
+
+		<div class="col-md-7">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sales by City for <span id="StateNameTitle" style="font-weight: bold;"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <div id="cities"></div>
+                </div>
+            </div>
+		</div>
+
+		
+
+</div>
+
+	
+
+
+
+</body>
+</html>

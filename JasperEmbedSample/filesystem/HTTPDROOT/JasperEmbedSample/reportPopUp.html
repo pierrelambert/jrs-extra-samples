@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--
+ * ========================================================================
+ * reportPopUp.html 
+ * 
+ * ========================================================================
+ * Copyright 2014 
+ * Author: Gene Arnold, Mariano Luna
+ *
+ * Unless you have purchased a commercial license agreement from Jaspersoft Inc., the following license terms apply:
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the 
+ * GNU Affero General Public License as published by the Free Software Foundation, either version 3 
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public 
+ * License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License 
+ * along with this program. If not, see http://www.gnu.org/licenses/.
+ * ======================================================================== */
+-->
+
+<html lang="en">
+<head>
+	<title>Hyperlink PopUp - JRS Embedded Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
+	<link href="css/redmond/jquery-ui-1.10.4.custom.min.css" rel="stylesheet"  />
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	
+	<script src="js/bootstrap.js"></script>
+
+    <script src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+	<script src="js/visualizeHelper.js"></script>
+
+	<script type="text/javascript">
+        var myReport;
+        var myLinkedReport;
+        var masterURI = '/public/Samples/Reports/AccountList';
+
+    
+        // Get my Client Object
+        visualize(function(v){
+            JRSClient = v;
+            // @todo It will be nice to bind the link catcher after the report exec or pass extra parameters to the helper class are using in the other samples.
+
+            myReport = v.report( {
+                resource: masterURI,
+                container: "#accountList",
+                defaultJiveUi: { enabled: true },
+                linkOptions: {
+                    events: {
+                        "click"  : function(evt, link){
+                            // console.log(evt.target); // prints dom elem which triggered the event
+                            // console.log(link); // print link's data passed
+                            renderSlaveReport(link);
+                        }
+                    }
+                },
+                success: printComponentsNames,
+                error: handleError
+            });
+
+        });
+
+
+        // Code rendering the Drill-Down Report coming form the Hyperlink Event
+
+        function renderSlaveReport(hyperlinkObject){
+
+            var report_Title = hyperlinkObject.parameters.reportTitle;
+
+            // $("#report").html('Loading....')
+
+            //Setting up jquery dialog box and loading it into window
+            $("#dialog").dialog({
+                height: "auto",
+                width: "450px",
+                minWidth: 300,
+                title: report_Title,
+                position: { my: "center+500", at: "top+200", of: "#accountList" } ,
+                autoOpen: true,
+                show: {
+                    effect: "blind",
+                    duration: 10
+                      },
+                hide: {
+                    effect: "clip",
+                    duration: 1000
+              }
+            });
+
+            // Extracting the Report Parameters from the Hyperlink object
+            var myLinkedReportSettings = {
+                resource: hyperlinkObject.parameters._report,
+                container: '#report',
+                events: {
+                    reportCompleted: function(status, error) {
+                        console.log('Report Completed: ' + status);
+                    }
+                },
+                params: { parStoreId : [ hyperlinkObject.parameters.parStoreId ] },
+                error: function(err) {
+                    alert(err.message);
+                }
+            };
+            /*
+            console.log('Report Object: ' );
+            console.log( myLinkedReportSettings );
+            */
+            myLinkedReport =  JRSClient.report(myLinkedReportSettings);
+
+        };
+
+        //Profit Slider
+        $(function() {
+    		$( "#slider-range" ).slider({
+      		orientation: "horizontal",
+      		range: true,
+      		min: 0,
+      		max: 55000,
+      		values: [ 0, 55000 ],
+            slide: function( event, ui ) {
+                $( "#profit" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            },
+            change: function( event, ui ) {
+                console.log("Slider Change");
+                filterProfit();
+            }
+    		});
+    		$( "#profit" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      			" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  			});
+        
+        function filterProfit() {
+            var lowValue = Number($( "#slider-range" ).slider( "values", 0 ));
+            var highValue = Number($( "#slider-range" ).slider( "values", 1 ));
+            console.log("Profit Filter - from: " + lowValue + " to: " + highValue + " ");
+
+            if (lowValue == 0 && highValue == 55000) {
+                myReport.updateComponent("Profit", {
+                    filter: {
+                        
+                    }, detailsRowFormat : {pattern: {
+                        negativeFormat: "(-###0)",
+                        precision: 2,
+                        currency: "USD"
+                    } } }).fail(handleError);
+            } else {
+                myReport.updateComponent("Profit", {
+                    filter: {
+                        operator: "between",
+                        value: [ lowValue , highValue ]
+                    }, detailsRowFormat : {pattern: {
+                        negativeFormat: "(-###0)",
+                        precision: 2,
+                        currency: "USD"
+                    } } }).fail(handleError);
+            }
+        }
+        
+        
+        function filterStores() {
+            var filterValue = Number($("#filterStore").val());
+            console.log(filterValue);
+            if (filterValue == 0) {
+                myReport.updateComponent("store_sales", { 
+                    filter: {
+                        
+                    }, detailsRowFormat : {pattern: {
+                        negativeFormat: "(-###0)",
+                        precision: 2,
+                        currency: "USD"
+                    } } }).fail(handleError);
+            } else {
+                myReport.updateComponent("store_sales", { 
+                    filter: {
+                        operator: "greater_or_equal",
+                        value: filterValue
+                    }, detailsRowFormat : {pattern: {
+                        negativeFormat: "(-###0)",
+                        precision: 2,
+                        currency: "USD"
+                    } } }).fail(handleError);
+            }
+            
+        }
+
+        function printComponentsNames(data){
+            data.components.forEach(function(c){
+                console.log("Component Name: " + c.name, " - Component Label: "+ c.label);
+            });
+        }
+
+        //show error
+        function handleError(err){
+            alert(err.message);
+        }
+	</script>
+    <style type="text/css">
+	    .mygrid-wrapper-div {
+		    overflow: scroll;
+		    height: 400px;
+		}
+        #accountList {
+            width: 550px;
+            height: 450px;
+            overflow: hidden;
+        }
+        ._jrHyperLink {
+             cursor: pointer; 
+             cursor: hand;
+        }
+        #progressbar {
+            height: 15px;
+        }
+  		#progressbar .ui-progressbar-value {
+    		background-color: #5C9CCC;
+  		}
+		#progressbar .progress-label {
+		    position: absolute;
+		    left: 50%;
+		    top: 2px;
+		    font-weight: bold;
+		    text-shadow: 1px 1px 0 #fff;
+		}
+	</style>
+</head>
+<body onLoad="$('#progressbar').progressbar({ value: false });">
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="container" style="width:100%; ">
+			<a href="#" class="navbar-brand">Jaspersoft Portal</a>
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+			<div class="collapse navbar-collapse navHeaderCollapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Extra Samples <b class="caret"></b><a/>
+						<ul class="dropdown-menu">
+							<li><a href="context-ic.html">Contextual Input Controls</a></li>
+							<li><a href="reportInteraction.html">External Report Interaction</a></li>
+							<li><a href="reportInteraction2.html">Report Interaction</a></li>
+                            <li><a href="reportPopUp.html">Report Popup</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="http://github.com/marianol/JasperEmbedSample">About</a></li>
+				</ul>
+			</div>
+	</div>
+</div>
+
+<div class="container">
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;Actual Store Sales
+                   
+                    </h3>
+
+                    <br>
+                    <div class="input-group input-group-sm" style="width: 250px; height: 41px; float: left; padding-right: 20px">
+                      <span class="input-group-addon">Sales >= </span>
+                      <input id="filterStore" type="text" class="form-control" placeholder="" style="height: 41px; " onChange="filterStores();">
+                    </div>
+
+                    <div class="input-group input-group-sm" style="width: 492px;" >
+                        <span class="input-group-addon">Profit Range: </span>
+                        <input type="text" id="profit" class="form-control" disabled >
+
+                        <div id="slider-range" style="width:400px; " ></div>
+                    </div>
+                </div>
+                <div class="panel-body">
+
+                    <div id="accountList">
+                        <div id="progressbar"></div>
+                    </div>
+                    
+                </span>
+                </div>
+            </div>
+        </div>
+        <div id="dialog" title="Basic dialog">
+            <div id="report"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

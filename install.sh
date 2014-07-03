@@ -2,6 +2,7 @@
 
 BUILDOMATIC="/root/jasperreports-server-5.6-bin/buildomatic/"
 TOMCATROOT="/var/lib/tomcat6/"
+HTTPDROOT="/var/www/"
 
 function Init(){ # Initializes the samples repository
 aptitude -y update \
@@ -44,7 +45,7 @@ echo "Importing ${1} MongoDB database..."
 mongorestore --drop /jrs-extra-samples/${1}/database/mongodb/
 }
 
-function SyncInfobright(){
+function SyncInfobright(){ # Makes a copy of a MySQL Schema to a Bighthouse schema
     echo "Importing ${1} MySQL database in Infobright, too..."
     db=${1}
     [ -d /tmp/ibsync/${db} ] && rm -Rf /tmp/ibsync/${db}
@@ -145,15 +146,27 @@ function InstallFiles(){ # Installs files in tomcat's root
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/filesystem/ ] && echo "No file to install" && return
 echo "Installing ${1} files..."
-cd /jrs-extra-samples/${1}/filesystem
-for file in `find ./ -type f`; do
-    [ -f ${file} ] && RESTART=1
-    rm -Rf ${TOMCATROOT}/${file}
-    mkdir -p ${TOMCATROOT}/${file}
-    rm -Rf ${TOMCATROOT}/${file}
-    cp ${file} ${TOMCATROOT}/${file}
-    chown tomcat6.tomcat6 ${TOMCATROOT}/${file}
-done
+if [ -d /jrs-extra-samples/${1}/filesystem/TOMCATROOT ]; then
+    TOMCATRESTART=1
+    cd /jrs-extra-samples/${1}/filesystem/TOMCATROOT
+    for file in `find ./ -type f`; do
+        rm -Rf ${TOMCATROOT}/${file}
+        mkdir -p ${TOMCATROOT}/${file}
+        rm -Rf ${TOMCATROOT}/${file}
+        cp ${file} ${TOMCATROOT}/${file}
+        chown tomcat6.tomcat6 ${TOMCATROOT}/${file}
+    done
+fi
+if [ -d /jrs-extra-samples/${1}/filesystem/HTTPDROOT ]; then
+    cd /jrs-extra-samples/${1}/filesystem/HTTPDROOT
+    for file in `find ./ -type f`; do
+        rm -Rf ${HTTPDROOT}/${file}
+        mkdir -p ${HTTPDROOT}/${file}
+        rm -Rf ${HTTPDROOT}/${file}
+        cp ${file} ${HTTPDROOT}/${file}
+        chown www-data.www-data ${HTTPDROOT}/${file}
+    done
+fi
 }
 
 function InstallPatch(){ # Try to patch files (no overwrite)
@@ -162,7 +175,7 @@ function InstallPatch(){ # Try to patch files (no overwrite)
 echo "Installing ${1} patch"
 cd /jrs-extra-samples/${1}/patch
 for file in *.patch; do
-    [ -f ${file} ] && RESTART=1
+    TOMCATRESTART=1
     FOLDER=`echo ${file} | tr '_' '/' | sed 's~\.patch$~~'`
     cd ${FOLDER}
     patch -p0 < /jrs-extra-samples/${1}/patch/${file}
@@ -174,15 +187,16 @@ function InstallScripts(){ # Installs Early/Late init scripts
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/scripts/ ] && echo "No scripts to install" && return
 echo "Installing ${1} scripts"
+REBOOT=1
 cp -r /jrs-extra-samples/${1}/scripts /
 chmod -R +x /scripts
-rm -f /root/lastvalues.sh
 }
 
 function Install(){ # Installs a specific sample (Repo, DB, ...)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 [ ! -d /jrs-extra-samples/${1}/ ] && echo "Sample ${1} not found" && return
-RESTART=0
+TOMCATRESTART=0
+REBOOT=0
 JRSImport  ${1}
 MongoRestore ${1}
 MySQLRestore ${1}
@@ -191,9 +205,18 @@ PgRestore ${1}
 InstallFiles ${1}
 InstallPatch ${1}
 InstallScripts ${1}
-if [ $RESTART = 1 ]; then
+if [ $REBOOT = 1 ]; then
+    rm -f /root/lastvalues.sh
+    echo '!!! Need to reboot !!!'
+fi
+if [ $TOMCATRESTART = 1 ]; then
+    echo '!!! Need to restart tomcat !!!'
     /etc/init.d/tomcat6 stop
-    rm /etc/tomcat6/Catalina/localhost/*
+    sleep 1
+    sync
+    rm -Rf /etc/tomcat6/Catalina/localhost/*
+    sync
+    sleep 1
     /etc/init.d/tomcat6 start
 fi
 }
