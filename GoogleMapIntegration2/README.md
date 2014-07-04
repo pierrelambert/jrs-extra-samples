@@ -1,6 +1,6 @@
 GoogleMap integration 2 in a dashboard
 =================
-
+Integration of an external feature/component in a JRS dashboard
 
 Guillaume Autier
 

@@ -1,6 +1,6 @@
-title
+High Performance Cars
 =================
-description
+Whole standalone use case with theme, reports, dashboards, OLAP, customizations, custom JAR functions...
 
 I (FCE) adjusted the changes to match the sample-package requirements :
 - removed the extra comments (here is a change), as I use a patch system, the changes are easily auditables. Furthermore, it makes the patch more light and portable throught the different JRS versions
