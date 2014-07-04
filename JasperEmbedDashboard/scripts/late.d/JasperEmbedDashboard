@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Updates only when external GUEST IP changes
+[ "${GUEST}" == "${LAST_NET}" ] && return 0
+echo "[34;1m== [[32;1mINFO[34;1m] Gene's Visualize Dashboard sample > [35;1mUpdate external IP address[0m"
+
+for file in `find /var/www/JasperEmbedDashboard -type f -name '*.html'`; do
+    sed -i "s#https\?://.*/jasperserver-pro#http://${GUEST}:8080/jasperserver-pro#" ${file}
+done

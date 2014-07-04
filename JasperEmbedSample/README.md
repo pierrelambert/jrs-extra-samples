@@ -1,9 +1,11 @@
-title
+Mariano's and Bings Visualize samples
 =================
-description
+https://github.com/marianol/JasperEmbedSample
 
-author
+Mariano Luna / Bing Wang
 
 ##Requirements
+Default samples installed
+
 
 ##Instructions
