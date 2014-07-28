@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/ExcelFeatures/Resources</parent>
+    <name>DataSources</name>
+    <label>DataSources</label>
+    <description></description>
+    <creationDate>2014-07-28T12:54:51.202+01:00</creationDate>
+    <updateDate>2014-07-28T12:54:51.202+01:00</updateDate>
+    <resource>Foodmart_JNDI</resource>
+</folder>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExcelFeatures" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7bd66c35-b3f9-42ad-a8ca-b20d82f2ba4a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.graphics" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.ignore.cell.background" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.0" value="title"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.1" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.2" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.3" value="groupHeader"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.group.3" value="Month"/>
+	<property name="net.sf.jasperreports.export.xls.white.page.background" value="false"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.freeze.row" value="2"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/ExcelFeatures/Resources/Reports/ExcelFeatures_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SESamples/ExcelFeatures/Resources/Reports/ExcelFeatures"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from monthly_profit order by the_date ASC]]>
+	</queryString>
+	<field name="the_year" class="java.lang.Integer"/>
+	<field name="the_month" class="java.lang.String"/>
+	<field name="store_sales" class="java.math.BigDecimal"/>
+	<field name="profit" class="java.math.BigDecimal"/>
+	<field name="the_date" class="java.sql.Date"/>
+	<group name="Month">
+		<groupExpression><![CDATA[$F{the_month}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement mode="Opaque" x="-21" y="7" width="597" height="24" forecolor="#B89F7D" backcolor="#F2EBDF" uuid="c6608f40-a02d-47b9-8310-7be06e65d76c"/>
+					<rectangle>
+						<reportElement mode="Opaque" x="21" y="0" width="36" height="24" backcolor="#736343" uuid="fb3cff4b-a57e-4f59-a965-db6fcbb34c7e"/>
+						<graphicElement>
+							<pen lineWidth="0.0"/>
+						</graphicElement>
+					</rectangle>
+					<textField>
+						<reportElement style="SubTitle" x="68" y="0" width="413" height="24" forecolor="#736343" uuid="bc3a6cdb-8909-4206-8cd5-a824d73fdd77">
+							<property name="net.sf.jasperreports.export.xls.row.outline.level.Month" value="Body"/>
+						</reportElement>
+						<textElement>
+							<font size="18" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{the_month}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6">
+				<property name="net.sf.jasperreports.export.xls.row.outline.level.Month" value="End"/>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="37ecac18-14be-41b3-8458-4c99e99d1bb3"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="170" y="0" width="263" height="62" uuid="2fa24874-2643-4f8f-9ab5-1b7b0fb4e2fc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="26" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Monthly Profit Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="219" y="62" width="196" height="22" uuid="cfac7c81-3ab9-487d-8e6a-902d5cedf403"/>
+				<textElement>
+					<font fontName="Times New Roman" size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Demo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="67e2d4d7-4b66-45f0-9d36-585df8283c46"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[This is an example of exporting out to pixel perfect formats like PDF and also to XLS where we remove images, floating headers, groups and show the calculation for Cost in formula]]></text>
+			</staticText>
+			<image scaleImage="Clip">
+				<reportElement x="290" y="-20" width="285" height="114" uuid="00b78a57-e4a4-408f-b239-ab5076235c79"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<property name="net.sf.jasperreports.export.xls.freeze.row.edge" value="Bottom"/>
+			<property name="net.sf.jasperreports.export.xls.freeze.column.edge&#xA;" value="Left"/>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="0d5f5428-97f8-4dc6-bc5c-96e136897c42"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="120" height="15" forecolor="#736343" uuid="8b8f7581-b61f-44ab-92b1-b29e7926255b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="277" y="0" width="137" height="15" forecolor="#736343" uuid="91a218f0-16a7-4770-a0ec-42f33584af43"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Profit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="120" y="0" width="157" height="15" forecolor="#736343" uuid="fedf0375-42cd-4216-a98f-81eaf74a47e6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="0" width="137" height="15" forecolor="#736343" uuid="a5fb6db2-af6b-41ef-b051-84dd0b0c33e2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="fba6fa18-4da9-4491-bafc-f2a39f5eae44"/>
+				<textField isStretchWithOverflow="true" pattern="$#,##0.##;$-#,##0.##">
+					<reportElement style="Detail" x="0" y="0" width="120" height="15" uuid="aad15b19-d070-4eef-9f9c-9ab8c68bde91"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{store_sales}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$#,##0.##;$-#,##0.##">
+					<reportElement style="Detail" x="277" y="0" width="138" height="15" uuid="df0028cf-8014-4f88-a755-883c41b87551"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{profit}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="$#,##0.##;$-#,##0.##">
+					<reportElement style="Detail" x="120" y="0" width="157" height="15" uuid="b4646113-d2c2-4e68-993f-aed2afed381b">
+						<propertyExpression name="net.sf.jasperreports.export.xls.formula"><![CDATA["=A"+ ($V{REPORT_COUNT}+1) + "-D" + ($V{REPORT_COUNT}+1)]]></propertyExpression>
+					</reportElement>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{store_sales}.subtract( $F{profit} )]]></textFieldExpression>
+				</textField>
+				<textField pattern="MMM d, yyyy" isBlankWhenNull="false">
+					<reportElement style="Detail" mode="Transparent" x="415" y="0" width="135" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="af311cbb-01c0-40d8-94b7-705d62a4834f"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="Arial" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{the_date}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f65f05a9-5c2c-4b4c-9f30-cba2361494fd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="e7f2845f-7362-42ea-a65c-53958ab66421"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="c219b2eb-1306-40b7-acc6-8d8d64d0309b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="d26cc764-6eb6-4d84-b352-e21a2333226b"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="d3d8c452-a4a4-42f0-b355-9f16a14c3309"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

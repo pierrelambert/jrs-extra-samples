@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/ExcelFeatures/Resources/Reports</folder>
+    <name>ExcelFeatures</name>
+    <version>20</version>
+    <label>ExcelFeatures</label>
+    <description></description>
+    <creationDate>2014-07-28T13:56:00.426+01:00</creationDate>
+    <updateDate>2014-07-28T16:52:17.553+01:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/ExcelFeatures/Resources/Reports/ExcelFeatures_files</folder>
+            <name>main_jrxml</name>
+            <version>16</version>
+            <label>Main jrxml</label>
+            <creationDate>2014-07-28T13:56:00.426+01:00</creationDate>
+            <updateDate>2014-07-28T16:52:17.430+01:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/ExcelFeatures/Resources/DataSources/Foodmart_JNDI</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExcelFeatures/Resources/Reports/ExcelFeatures_files</folder>
+            <name>coffee_stain.png</name>
+            <version>0</version>
+            <label>coffee_stain.png</label>
+            <creationDate>2014-07-28T13:57:07.769+01:00</creationDate>
+            <updateDate>2014-07-28T13:57:07.769+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExcelFeatures/Resources/Images/coffee_stain.png</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/ExcelFeatures/Resources/Reports/ExcelFeatures_files</folder>
+            <name>coffee.jpg</name>
+            <version>0</version>
+            <label>coffee.jpg</label>
+            <creationDate>2014-07-28T13:56:37.765+01:00</creationDate>
+            <updateDate>2014-07-28T13:56:37.765+01:00</updateDate>
+            <referenceUri>/public/SESamples/ExcelFeatures/Resources/Images/coffee.jpg</referenceUri>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>
