@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<folder exportedWithPermissions="false">
+<folder exportedWithPermissions="true">
     <parent>/public/SESamples/ExcelFeatures/Resources</parent>
     <name>Images</name>
     <label>Images</label>
     <description></description>
-    <creationDate>2014-07-28T12:54:26.765+01:00</creationDate>
-    <updateDate>2014-07-28T12:54:26.765+01:00</updateDate>
+    <creationDate>2014-07-31T17:05:46.751+02:00</creationDate>
+    <updateDate>2013-01-10T13:32:03.000+01:00</updateDate>
     <resource>coffee_stain.png</resource>
     <resource>coffee.jpg</resource>
 </folder>

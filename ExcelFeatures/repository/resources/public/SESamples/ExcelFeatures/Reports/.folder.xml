@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/SESamples/ExcelFeatures</parent>
+    <name>Reports</name>
+    <label>Reports</label>
+    <description></description>
+    <creationDate>2014-07-31T17:05:46.288+02:00</creationDate>
+    <updateDate>2013-01-10T13:36:43.000+01:00</updateDate>
+    <resource>ExcelFeatures</resource>
+</folder>
