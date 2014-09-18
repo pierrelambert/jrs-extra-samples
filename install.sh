@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-BUILDOMATIC="/root/jasperreports-server-5.6-bin/buildomatic/"
+BUILDOMATIC="/root/jasperreports-server-5.6.1-bin/buildomatic/"
 TOMCATROOT="/var/lib/tomcat6/"
 HTTPDROOT="/var/www/"
 
@@ -19,6 +19,8 @@ function Update(){ # Updates the local samples repository (no upgrade)
 [ ! -d /jrs-extra-samples ] && echo "Samples repository not initialized, please 'init' first." && exit 1
 cd /jrs-extra-samples
 git pull
+echo WARNING : The package file were updated to the latest revision which might not be compatible with 
+echo           the versions of the software installed here.
 }
 
 function List(){ # Lists available samples
