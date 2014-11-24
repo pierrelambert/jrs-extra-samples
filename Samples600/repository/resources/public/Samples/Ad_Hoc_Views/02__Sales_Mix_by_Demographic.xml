@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhocDataView exportedWithPermissions="false">
+    <folder>/public/Samples/Ad_Hoc_Views</folder>
+    <name>02__Sales_Mix_by_Demographic</name>
+    <version>0</version>
+    <label>02. Sales Mix by Demographic</label>
+    <description>Sample HTML5 Spider Line chart from OLAP source</description>
+    <creationDate>2014-11-24T11:49:35.064+01:00</creationDate>
+    <updateDate>2014-04-25T18:05:59.578+02:00</updateDate>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/connections/Foodmart2013</uri>
+    </dataSource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="topicJRXML.data" xsi:type="fileResource">
+            <folder>/public/Samples/Ad_Hoc_Views/02__Sales_Mix_by_Demographic_files</folder>
+            <name>topicJRXML</name>
+            <version>0</version>
+            <label>topicJRXML</label>
+            <creationDate>2014-11-24T11:49:35.064+01:00</creationDate>
+            <updateDate>2014-04-25T17:57:43.702+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="stateXML.data" xsi:type="fileResource">
+            <folder>/public/Samples/Ad_Hoc_Views/02__Sales_Mix_by_Demographic_files</folder>
+            <name>stateXML</name>
+            <version>0</version>
+            <label>stateXML</label>
+            <creationDate>2014-11-24T11:49:35.064+01:00</creationDate>
+            <updateDate>2014-04-25T17:57:43.702+02:00</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </resource>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</adhocDataView>

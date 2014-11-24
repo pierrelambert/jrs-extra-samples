@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="States" pageWidth="400" pageHeight="300" columnWidth="400" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6c32e644-a7a8-498c-8c99-c9a60e11f5dc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Foodmart"/>
+	<property name="ireport.jasperserver.url" value="http://172.17.10.4:8080/jasperserver-pro-branch/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/Samples/VisualizeJS/StatesJFC_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/Samples/VisualizeJS/StatesJFC"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT store.store_state,
+	sum(sales_fact_1997.store_sales) as sum_sales
+FROM store INNER JOIN sales_fact_1997 ON 
+	 sales_fact_1997.store_id = store.store_id 
+GROUP BY store.store_state]]>
+	</queryString>
+	<field name="store_state" class="java.lang.String"/>
+	<field name="sum_sales" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="297" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report" theme="default">
+					<reportElement x="0" y="0" width="400" height="297" uuid="ddb53063-66ad-41a3-818c-5f52a387ba0e">
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{store_state}]]></keyExpression>
+					<valueExpression><![CDATA[$F{sum_sales}]]></valueExpression>
+					<sectionHyperlink hyperlinkType="ReportExecution">
+						<hyperlinkParameter name="_report">
+							<hyperlinkParameterExpression><![CDATA["/public/Samples/VisualizeJS/Cities"]]></hyperlinkParameterExpression>
+						</hyperlinkParameter>
+						<hyperlinkParameter name="reportInstance">
+							<hyperlinkParameterExpression><![CDATA["slaveReport"]]></hyperlinkParameterExpression>
+						</hyperlinkParameter>
+						<hyperlinkParameter name="store_state">
+							<hyperlinkParameterExpression><![CDATA[$F{store_state}]]></hyperlinkParameterExpression>
+						</hyperlinkParameter>
+						<hyperlinkParameter name="total_sales">
+							<hyperlinkParameterExpression><![CDATA[$F{sum_sales}]]></hyperlinkParameterExpression>
+						</hyperlinkParameter>
+						<hyperlinkParameter name="action">
+							<hyperlinkParameterExpression><![CDATA["doThisAction"]]></hyperlinkParameterExpression>
+						</hyperlinkParameter>
+					</sectionHyperlink>
+				</pieDataset>
+				<piePlot>
+					<plot>
+						<seriesColor seriesOrder="0" color="#1A1A1A"/>
+						<seriesColor seriesOrder="1" color="#738096"/>
+						<seriesColor seriesOrder="2" color="#4179BB"/>
+					</plot>
+					<itemLabel color="#788298">
+						<font fontName="Helvetica" size="12"/>
+					</itemLabel>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/Resources</parent>
+    <name>Data_Types</name>
+    <label>Data Types</label>
+    <description>Data Types</description>
+    <creationDate>2014-11-24T11:49:29.019+01:00</creationDate>
+    <updateDate>2012-10-15T18:26:05.528+02:00</updateDate>
+    <resource>MonthNamesList</resource>
+    <resource>USWesternStatesList</resource>
+    <resource>YesOrNoList</resource>
+</folder>

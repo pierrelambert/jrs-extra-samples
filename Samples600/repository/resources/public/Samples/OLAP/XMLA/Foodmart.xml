@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secureMondrianConnection exportedWithPermissions="false">
+    <folder>/public/Samples/OLAP/XMLA</folder>
+    <name>Foodmart</name>
+    <version>0</version>
+    <label>Foodmart</label>
+    <description>Foodmart Mondrian Analysis Connection</description>
+    <creationDate>2014-11-24T11:49:49.871+01:00</creationDate>
+    <updateDate>2013-04-10T23:37:55.969+02:00</updateDate>
+    <schema>
+        <uri>/public/Samples/OLAP/Schemas/FoodmartSchema2013.xml</uri>
+    </schema>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <grant>
+        <uri>/public/Samples/OLAP/Schemas/FoodmartNoTopGrant</uri>
+    </grant>
+</secureMondrianConnection>

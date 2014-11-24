@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/Data_Sources</parent>
+    <name>connections</name>
+    <label>Analysis Connections</label>
+    <description>Connections used by Analysis</description>
+    <creationDate>2014-11-24T11:49:28.956+01:00</creationDate>
+    <updateDate>2012-10-15T22:16:13.705+02:00</updateDate>
+    <resource>Foodmart2013</resource>
+    <resource>FoodmartXmlaConnection</resource>
+</folder>
