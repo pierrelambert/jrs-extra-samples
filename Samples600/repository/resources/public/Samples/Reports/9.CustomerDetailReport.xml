@@ -5,7 +5,7 @@
     <version>0</version>
     <label>09. Customer Detail Report</label>
     <description>Sample report with multiple charts, interactive table, and input controls. Also called as drill-through from the SuperMart and Performance Summary Dashboards.</description>
-    <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+    <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
     <updateDate>2014-05-14T01:30:29.194+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-09-16T09:53:22.803+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -36,7 +36,7 @@
             <version>0</version>
             <label>CustomerPurchasesReport.jrxml</label>
             <description>CustomerPurchasesReport.jrxml</description>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:48.302+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -49,7 +49,7 @@
             <name>no.png</name>
             <version>0</version>
             <label>no.png</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:48.536+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/no_blue</referenceUri>
         </localResource>
@@ -62,7 +62,7 @@
             <name>yes.png</name>
             <version>0</version>
             <label>yes.png</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:48.772+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/yes_blue</referenceUri>
         </localResource>
@@ -75,7 +75,7 @@
             <name>supermart_de.properties</name>
             <version>0</version>
             <label>supermart_de.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:49.007+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
@@ -88,7 +88,7 @@
             <name>supermart_en_US.properties</name>
             <version>0</version>
             <label>supermart_en_US.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:49.249+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>
@@ -101,7 +101,7 @@
             <name>supermart_es.properties</name>
             <version>0</version>
             <label>supermart_es.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:49.489+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
@@ -114,7 +114,7 @@
             <name>supermart_fr.properties</name>
             <version>0</version>
             <label>supermart_fr.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:49.735+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
@@ -127,7 +127,7 @@
             <name>supermart_ja.properties</name>
             <version>0</version>
             <label>supermart_ja.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:49.981+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
@@ -140,7 +140,7 @@
             <name>supermart_zh_CN.properties</name>
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:50.232+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
@@ -153,7 +153,7 @@
             <name>supermart.properties</name>
             <version>0</version>
             <label>supermart.properties</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-08-29T12:46:50.490+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
@@ -166,7 +166,7 @@
             <name>SampleReportStyles.jrtx</name>
             <version>0</version>
             <label>SampleReportStyles.jrtx</label>
-            <creationDate>2014-11-24T11:49:40.900+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:44.872+01:00</creationDate>
             <updateDate>2013-09-25T13:38:48.431+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/SampleReportStyles.jrtx</referenceUri>
         </localResource>

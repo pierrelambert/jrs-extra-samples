@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Promotion Name ID Query</label>
     <description>Retrieves promotion name and Id. Note inner join and hard coded table names.</description>
-    <creationDate>2014-11-24T11:49:49.994+01:00</creationDate>
+    <creationDate>2014-11-24T17:21:54.923+01:00</creationDate>
     <updateDate>2012-10-17T16:21:15.336+02:00</updateDate>
     <language>sql</language>
     <queryString>select distinct promotion.promotion_id, promotion.promotion_name from promotion INNER JOIN sales_fact_1997 sales_fact_1997 ON promotion.promotion_id = sales_fact_1997.promotion_id order by promotion.promotion_name ASC, promotion.promotion_id ASC</queryString>

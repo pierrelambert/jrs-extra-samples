@@ -5,7 +5,7 @@
     <version>0</version>
     <label>01. Geographic Results by Segment Report</label>
     <description>Sample HTML5 multi-axis column chart from Domain showing Sales, Units, and $ Per Square Foot by Country and Store Type with various filters. Created from an Ad Hoc View.</description>
-    <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+    <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
     <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
     <mainReport>
         <localResource
@@ -16,7 +16,7 @@
             <name>mainReportJrxml</name>
             <version>0</version>
             <label>mainReportJrxml</label>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -34,7 +34,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -49,7 +49,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -64,7 +64,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -79,7 +79,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -94,7 +94,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -109,7 +109,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -124,7 +124,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -137,7 +137,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T11:49:38.534+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:42.618+01:00</creationDate>
             <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

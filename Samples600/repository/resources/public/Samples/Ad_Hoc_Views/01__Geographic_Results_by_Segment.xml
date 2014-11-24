@@ -5,7 +5,7 @@
     <version>0</version>
     <label>01. Geographic Results by Segment</label>
     <description>Sample HTML5 multi-axis column chart from Domain showing Sales, Units, and $ Per Square Foot by Country and Store Type with various filters</description>
-    <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+    <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
     <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Domains/supermartDomain</uri>
@@ -18,7 +18,7 @@
             <name>sales_fact_ALL__store_sales_2013_1</name>
             <version>0</version>
             <label>$R{supermart.sales_fact_2013.store_sales.label} is greater than</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
@@ -30,7 +30,7 @@
                     <name>number</name>
                     <version>0</version>
                     <label>Number</label>
-                    <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+                    <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
                     <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
                     <type>2</type>
                     <strictMin>false</strictMin>
@@ -47,7 +47,7 @@
             <name>sales__product__low_fat_1</name>
             <version>0</version>
             <label>$R{supermart.product.low_fat.label}</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <type>10</type>
             <mandatory>false</mandatory>
@@ -59,7 +59,7 @@
                     <name>sales__product__low_fat_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.low_fat.label}</label>
-                    <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+                    <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
                     <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
                     <item>
                         <itemLabel>true</itemLabel>
@@ -81,7 +81,7 @@
             <name>sales__product__recyclable_package_1</name>
             <version>0</version>
             <label>$R{supermart.product.recyclable_package.label}</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <type>10</type>
             <mandatory>false</mandatory>
@@ -93,7 +93,7 @@
                     <name>sales__product__recyclable_package_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.recyclable_package.label}</label>
-                    <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+                    <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
                     <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
                     <item>
                         <itemLabel>true</itemLabel>
@@ -115,7 +115,7 @@
             <name>sales__product__product_name_1</name>
             <version>0</version>
             <label>$R{supermart.product.product_name.label}</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -127,7 +127,7 @@
                     <name>sales__product__product_name_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.product_name.label}</label>
-                    <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+                    <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
                     <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -161,7 +161,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -176,7 +176,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -191,7 +191,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -206,7 +206,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -221,7 +221,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -236,7 +236,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -251,7 +251,7 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
@@ -264,7 +264,7 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -277,7 +277,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T11:49:34.913+01:00</creationDate>
+            <creationDate>2014-11-24T17:21:39.361+01:00</creationDate>
             <updateDate>2014-05-14T19:38:49.174+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
