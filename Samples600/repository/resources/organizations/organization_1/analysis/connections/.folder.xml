@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/analysis</parent>
+    <name>connections</name>
+    <label>Analysis Connections</label>
+    <description>Connections used by Analysis</description>
+    <creationDate>2014-11-25T19:06:31.507+01:00</creationDate>
+    <updateDate>2014-11-21T15:14:14.519+01:00</updateDate>
+</folder>

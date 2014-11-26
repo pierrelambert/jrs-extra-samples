@@ -5,7 +5,7 @@
     <version>0</version>
     <label>06. Sales Mix by Gender</label>
     <description>Sample HTML5 stacked bar chart from a Topic showing Sales Mix by Gender across Countries and Product Families </description>
-    <creationDate>2014-11-24T17:21:39.778+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:36.570+01:00</creationDate>
     <updateDate>2014-04-25T17:54:21.634+02:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
@@ -18,7 +18,7 @@
             <name>quarter_1</name>
             <version>0</version>
             <label>Quarter</label>
-            <creationDate>2014-11-24T17:21:39.778+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:36.570+01:00</creationDate>
             <updateDate>2014-04-25T17:54:21.634+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -30,7 +30,7 @@
                     <name>quarter_1</name>
                     <version>0</version>
                     <label>Quarter</label>
-                    <creationDate>2014-11-24T17:21:39.778+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:36.570+01:00</creationDate>
                     <updateDate>2014-04-25T17:54:21.634+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -562,7 +562,7 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2014-11-24T17:21:39.778+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:36.570+01:00</creationDate>
             <updateDate>2014-04-25T17:54:21.634+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -575,7 +575,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T17:21:39.778+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:36.570+01:00</creationDate>
             <updateDate>2014-04-25T17:54:21.634+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

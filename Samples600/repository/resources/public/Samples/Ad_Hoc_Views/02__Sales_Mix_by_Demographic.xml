@@ -5,7 +5,7 @@
     <version>0</version>
     <label>02. Sales Mix by Demographic</label>
     <description>Sample HTML5 Spider Line chart from OLAP source</description>
-    <creationDate>2014-11-24T17:21:39.506+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:36.324+01:00</creationDate>
     <updateDate>2014-04-25T18:05:59.578+02:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/connections/Foodmart2013</uri>
@@ -18,7 +18,7 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2014-11-24T17:21:39.506+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:36.324+01:00</creationDate>
             <updateDate>2014-04-25T17:57:43.702+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -31,7 +31,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T17:21:39.506+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:36.324+01:00</creationDate>
             <updateDate>2014-04-25T17:57:43.702+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

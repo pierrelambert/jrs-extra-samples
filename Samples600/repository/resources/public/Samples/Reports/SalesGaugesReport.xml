@@ -5,7 +5,7 @@
     <version>0</version>
     <label>15. Sales Gauges Report</label>
     <description>Meter Gauges used in the Supermart Dashboard.</description>
-    <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
     <updateDate>2013-09-16T13:41:40.680+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:13:03.922+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -40,7 +40,7 @@
             <name>supermart.properties</name>
             <version>0</version>
             <label>supermart.properties</label>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
@@ -54,7 +54,7 @@
             <version>0</version>
             <label>supermart_en_US.properties</label>
             <description>supermart_en_US.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>
@@ -68,7 +68,7 @@
             <version>0</version>
             <label>supermart_de.properties</label>
             <description>supermart_de.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
@@ -82,7 +82,7 @@
             <version>0</version>
             <label>supermart_fr.properties</label>
             <description>supermart_fr.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
@@ -96,7 +96,7 @@
             <version>0</version>
             <label>supermart_es.properties</label>
             <description>supermart_es.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
@@ -110,7 +110,7 @@
             <version>0</version>
             <label>supermart_ja.properties</label>
             <description>supermart_ja.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
@@ -124,7 +124,7 @@
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
             <description>supermart_zh_CN.properties</description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-08-29T15:05:05.019+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
@@ -138,7 +138,7 @@
             <version>0</version>
             <label>DemoChartLabels.jar</label>
             <description></description>
-            <creationDate>2014-11-24T17:21:41.251+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.142+01:00</creationDate>
             <updateDate>2013-09-06T13:39:21.034+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/DemoChartLabels.jar</referenceUri>
         </localResource>

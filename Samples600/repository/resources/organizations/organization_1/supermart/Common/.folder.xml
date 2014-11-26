@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/supermart</parent>
+    <name>Common</name>
+    <label>Common</label>
+    <description>Modifiable by Administrators. Resource bundles for localization, input controls, etc.</description>
+    <creationDate>2014-11-25T19:06:31.818+01:00</creationDate>
+    <updateDate>2014-11-21T15:16:48.734+01:00</updateDate>
+</folder>

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Foodmart XML/A Connection</label>
     <description>Foodmart XML/A Connection</description>
-    <creationDate>2014-11-24T17:21:54.323+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:48.532+01:00</creationDate>
     <updateDate>2012-10-15T22:16:38.514+02:00</updateDate>
     <connectionURL>http://localhost:8080/jasperserver-pro/xmla</connectionURL>
     <dataSource>Provider=Mondrian;DataSource=JRS</dataSource>

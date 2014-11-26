@@ -4,7 +4,7 @@
     <name>Country</name>
     <version>0</version>
     <label>Country</label>
-    <creationDate>2014-11-24T17:21:44.451+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:40.694+01:00</creationDate>
     <updateDate>2013-09-16T08:21:55.920+02:00</updateDate>
     <type>7</type>
     <mandatory>true</mandatory>
@@ -18,7 +18,7 @@
             <name>Query</name>
             <version>0</version>
             <label>Query</label>
-            <creationDate>2014-11-24T17:21:44.451+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:40.694+01:00</creationDate>
             <updateDate>2013-09-16T08:21:55.920+02:00</updateDate>
             <language>sql</language>
             <queryString>SELECT distinct sales_country as "country"

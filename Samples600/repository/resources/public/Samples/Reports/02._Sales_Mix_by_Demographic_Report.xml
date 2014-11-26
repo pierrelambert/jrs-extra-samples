@@ -5,7 +5,7 @@
     <version>0</version>
     <label>02. Sales Mix by Demographic Report</label>
     <description>Sample HTML5 Spider Line chart from OLAP source. Created from an Ad Hoc View.</description>
-    <creationDate>2014-11-24T17:21:42.673+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:39.318+01:00</creationDate>
     <updateDate>2014-04-25T18:05:59.896+02:00</updateDate>
     <mainReport>
         <localResource
@@ -16,7 +16,7 @@
             <name>mainReportJrxml</name>
             <version>0</version>
             <label>mainReportJrxml</label>
-            <creationDate>2014-11-24T17:21:42.673+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:39.318+01:00</creationDate>
             <updateDate>2014-04-25T18:05:59.896+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -32,7 +32,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T17:21:42.673+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:39.318+01:00</creationDate>
             <updateDate>2014-04-25T18:05:59.896+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

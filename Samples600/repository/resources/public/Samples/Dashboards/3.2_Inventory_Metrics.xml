@@ -5,7 +5,7 @@
     <version>0</version>
     <label>3.2 Inventory Metrics</label>
     <description>Sample containing Inventory related data and a hidden filter for embedded Visualize.js demo.</description>
-    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
     <defaultFoundation>default</defaultFoundation>
     <foundation>
@@ -50,7 +50,7 @@
             <name>wiring</name>
             <version>0</version>
             <label>wiring</label>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <fileType>json</fileType>
         </localResource>
@@ -63,7 +63,7 @@
             <name>layout</name>
             <version>0</version>
             <label>layout</label>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <fileType>html</fileType>
         </localResource>
@@ -76,7 +76,7 @@
             <name>components</name>
             <version>0</version>
             <label>components</label>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <fileType>dashboardComponent</fileType>
         </localResource>
@@ -90,7 +90,7 @@
             <version>0</version>
             <label>tmpAdv_1414793849592_bhzw</label>
             <description>Dashboard visualization.</description>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <dataSource>
                 <uri>/public/Samples/Domains/supermartDomain</uri>
@@ -101,7 +101,7 @@
                     <name>inventory_fact_ALL__warehouse_sales_2013_1</name>
                     <version>0</version>
                     <label>$R{supermart.inventory_fact_2013.warehouse_sales.label} is greater than</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>2</type>
                     <mandatory>false</mandatory>
@@ -113,7 +113,7 @@
                             <name>number</name>
                             <version>0</version>
                             <label>Number</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <type>2</type>
                             <strictMin>false</strictMin>
@@ -128,7 +128,7 @@
                     <name>inv_store__store_contact__store_country_1</name>
                     <version>0</version>
                     <label>$R{supermart.store.store_country.label}</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -140,7 +140,7 @@
                             <name>inv_store__store_contact__store_country_1</name>
                             <version>0</version>
                             <label>$R{supermart.store.store_country.label}</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -172,7 +172,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -185,7 +185,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -198,7 +198,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -211,7 +211,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -224,7 +224,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -237,7 +237,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -250,7 +250,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -262,7 +262,7 @@
                     <name>topicJRXML</name>
                     <version>0</version>
                     <label>topicJRXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>jrxml</fileType>
                 </localResource>
@@ -274,7 +274,7 @@
                     <name>stateXML</name>
                     <version>0</version>
                     <label>stateXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>xml</fileType>
                 </localResource>
@@ -285,7 +285,7 @@
                     <name>dashboardReport</name>
                     <version>1</version>
                     <label>dashboardReport</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <mainReport>
                         <localResource exportedWithPermissions="false"
@@ -294,7 +294,7 @@
                             <name>mainReportJrxml</name>
                             <version>0</version>
                             <label>mainReportJrxml</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>jrxml</fileType>
                         </localResource>
@@ -307,7 +307,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -320,7 +320,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -333,7 +333,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -346,7 +346,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -359,7 +359,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -372,7 +372,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -385,7 +385,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -397,7 +397,7 @@
                             <name>stateXML</name>
                             <version>0</version>
                             <label>stateXML</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>xml</fileType>
                         </localResource>
@@ -419,7 +419,7 @@
             <version>0</version>
             <label>tmpAdv_1414794222174_bxtn</label>
             <description>Dashboard visualization.</description>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <dataSource>
                 <uri>/public/Samples/Domains/supermartDomain</uri>
@@ -430,7 +430,7 @@
                     <name>inv_store__region__sales_country_1</name>
                     <version>0</version>
                     <label>$R{supermart.region.sales_country.label}</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -442,7 +442,7 @@
                             <name>inv_store__region__sales_country_1</name>
                             <version>0</version>
                             <label>$R{supermart.region.sales_country.label}</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -474,7 +474,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -487,7 +487,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -500,7 +500,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -513,7 +513,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -526,7 +526,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -539,7 +539,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -552,7 +552,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -564,7 +564,7 @@
                     <name>topicJRXML</name>
                     <version>0</version>
                     <label>topicJRXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>jrxml</fileType>
                 </localResource>
@@ -576,7 +576,7 @@
                     <name>stateXML</name>
                     <version>0</version>
                     <label>stateXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>xml</fileType>
                 </localResource>
@@ -587,7 +587,7 @@
                     <name>dashboardReport</name>
                     <version>1</version>
                     <label>dashboardReport</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <mainReport>
                         <localResource exportedWithPermissions="false"
@@ -596,7 +596,7 @@
                             <name>mainReportJrxml</name>
                             <version>0</version>
                             <label>mainReportJrxml</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>jrxml</fileType>
                         </localResource>
@@ -609,7 +609,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -622,7 +622,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -635,7 +635,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -648,7 +648,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -661,7 +661,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -674,7 +674,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -687,7 +687,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -699,7 +699,7 @@
                             <name>stateXML</name>
                             <version>0</version>
                             <label>stateXML</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>xml</fileType>
                         </localResource>
@@ -721,7 +721,7 @@
             <version>0</version>
             <label>tmpAdv_1414794373505_jpca</label>
             <description>Dashboard visualization.</description>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <dataSource>
                 <uri>/public/Samples/Domains/supermartDomain</uri>
@@ -732,7 +732,7 @@
                     <name>inv_store__region__sales_country_1</name>
                     <version>0</version>
                     <label>$R{supermart.region.sales_country.label}</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -744,7 +744,7 @@
                             <name>inv_store__region__sales_country_1</name>
                             <version>0</version>
                             <label>$R{supermart.region.sales_country.label}</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -776,7 +776,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -789,7 +789,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -802,7 +802,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -815,7 +815,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -828,7 +828,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -841,7 +841,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -854,7 +854,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -866,7 +866,7 @@
                     <name>topicJRXML</name>
                     <version>0</version>
                     <label>topicJRXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>jrxml</fileType>
                 </localResource>
@@ -878,7 +878,7 @@
                     <name>stateXML</name>
                     <version>0</version>
                     <label>stateXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>xml</fileType>
                 </localResource>
@@ -889,7 +889,7 @@
                     <name>dashboardReport</name>
                     <version>1</version>
                     <label>dashboardReport</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <mainReport>
                         <localResource exportedWithPermissions="false"
@@ -898,7 +898,7 @@
                             <name>mainReportJrxml</name>
                             <version>0</version>
                             <label>mainReportJrxml</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>jrxml</fileType>
                         </localResource>
@@ -911,7 +911,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -924,7 +924,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -937,7 +937,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -950,7 +950,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -963,7 +963,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -976,7 +976,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -989,7 +989,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1001,7 +1001,7 @@
                             <name>stateXML</name>
                             <version>0</version>
                             <label>stateXML</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>xml</fileType>
                         </localResource>
@@ -1023,7 +1023,7 @@
             <version>0</version>
             <label>tmpAdv_1414794492634_fkba</label>
             <description>Dashboard visualization.</description>
-            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
             <dataSource>
                 <uri>/public/Samples/Domains/supermartDomain</uri>
@@ -1034,7 +1034,7 @@
                     <name>inv__product__brand_name_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.brand_name.label}</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -1046,7 +1046,7 @@
                             <name>inv__product__brand_name_1</name>
                             <version>0</version>
                             <label>$R{supermart.product.brand_name.label}</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1076,7 +1076,7 @@
                     <name>inv_store__region__sales_country_1</name>
                     <version>0</version>
                     <label>$R{supermart.region.sales_country.label}</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -1088,7 +1088,7 @@
                             <name>inv_store__region__sales_country_1</name>
                             <version>0</version>
                             <label>$R{supermart.region.sales_country.label}</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1118,7 +1118,7 @@
                     <name>inv_store__region__sales_district_1</name>
                     <version>0</version>
                     <label>$R{supermart.region.sales_district.label} not </label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <type>7</type>
                     <mandatory>false</mandatory>
@@ -1130,7 +1130,7 @@
                             <name>inv_store__region__sales_district_1</name>
                             <version>0</version>
                             <label>$R{supermart.region.sales_district.label} not </label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <language>domain</language>
                             <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1162,7 +1162,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1175,7 +1175,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1188,7 +1188,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1201,7 +1201,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1214,7 +1214,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1227,7 +1227,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1240,7 +1240,7 @@
                     <version>0</version>
                     <label>bundle</label>
                     <description>bundle</description>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>prop</fileType>
                 </localResource>
@@ -1252,7 +1252,7 @@
                     <name>topicJRXML</name>
                     <version>0</version>
                     <label>topicJRXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>jrxml</fileType>
                 </localResource>
@@ -1264,7 +1264,7 @@
                     <name>stateXML</name>
                     <version>0</version>
                     <label>stateXML</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <fileType>xml</fileType>
                 </localResource>
@@ -1275,7 +1275,7 @@
                     <name>dashboardReport</name>
                     <version>1</version>
                     <label>dashboardReport</label>
-                    <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                    <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                     <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                     <mainReport>
                         <localResource exportedWithPermissions="false"
@@ -1284,7 +1284,7 @@
                             <name>mainReportJrxml</name>
                             <version>0</version>
                             <label>mainReportJrxml</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>jrxml</fileType>
                         </localResource>
@@ -1297,7 +1297,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1310,7 +1310,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1323,7 +1323,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1336,7 +1336,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1349,7 +1349,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1362,7 +1362,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1375,7 +1375,7 @@
                             <version>0</version>
                             <label>bundle</label>
                             <description>bundle</description>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>prop</fileType>
                         </localResource>
@@ -1387,7 +1387,7 @@
                             <name>stateXML</name>
                             <version>0</version>
                             <label>stateXML</label>
-                            <creationDate>2014-11-24T17:21:41.878+01:00</creationDate>
+                            <creationDate>2014-11-25T19:06:38.651+01:00</creationDate>
                             <updateDate>2014-10-31T23:36:26.531+01:00</updateDate>
                             <fileType>xml</fileType>
                         </localResource>
