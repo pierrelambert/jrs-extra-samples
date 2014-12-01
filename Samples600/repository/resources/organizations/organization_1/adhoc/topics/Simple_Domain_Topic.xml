@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Simple Domain Topic</label>
     <description>Simple example of Domain saved as Topic</description>
-    <creationDate>2014-11-25T19:06:45.184+01:00</creationDate>
-    <updateDate>2014-11-21T15:17:28.928+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:47.014+01:00</creationDate>
+    <updateDate>2014-11-29T00:50:15.339+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>simple_domain_topic.jrxml</label>
             <description>simple_domain_topic.jrxml file used by 'Simple Domain Topic' topic</description>
-            <creationDate>2014-11-25T19:06:45.184+01:00</creationDate>
-            <updateDate>2014-11-21T15:17:28.928+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:47.014+01:00</creationDate>
+            <updateDate>2014-11-29T00:50:15.339+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>

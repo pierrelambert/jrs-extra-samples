@@ -5,7 +5,7 @@
     <version>0</version>
     <label>ExampleVDSDomain</label>
     <description></description>
-    <creationDate>2014-11-25T19:06:39.221+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:40.601+01:00</creationDate>
     <updateDate>2013-01-03T15:36:04.457+01:00</updateDate>
     <schema>
         <localResource
@@ -16,7 +16,7 @@
             <version>0</version>
             <label>schema</label>
             <description>schema</description>
-            <creationDate>2014-11-25T19:06:39.221+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:40.601+01:00</creationDate>
             <updateDate>2013-01-03T15:36:00.245+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

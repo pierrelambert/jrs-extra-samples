@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="FoodmartNoTopGrant.data">
+    <folder>/organizations/organization_1/analysis/schemas</folder>
+    <name>FoodmartNoTopGrant</name>
+    <version>0</version>
+    <label>Foodmart Grant without top levels</label>
+    <description>ANALYSIS Foodmart Grant with no top levels allowing navigation in the browser</description>
+    <creationDate>2014-12-01T20:56:47.406+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:53.551+01:00</updateDate>
+    <fileType>accessGrantSchema</fileType>
+</fileResource>

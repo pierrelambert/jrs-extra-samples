@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Employees</label>
     <description>Employee List topic based on Employee List report in /Reports/Samples folder</description>
-    <creationDate>2014-11-25T19:06:45.019+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:51.094+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:46.806+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:41.537+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>Employees.jrxml file used by Employees topic</label>
             <description>Employees.jrxml file used by Employees topic</description>
-            <creationDate>2014-11-25T19:06:45.019+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:51.094+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.806+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:41.537+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>

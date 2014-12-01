@@ -1,4 +1,4 @@
-<unifiedState dataSize="sample" filterPanelShowing="true" hasMargins="false" ignoreMaxRows="false" initedSubFilterList="true" launchType="ADH_045a_DOMAIN" maxDisplayColumns="0" maxDisplayRows="0" maxRowChoices="0" maxRows="0" mode="ichart" pageOrientation="Portrait" paperSize="content" showTableDetails="true" showTableTotals="false" summaryRowTitle="Totals" theme="default" titleBarShowing="true" titleHeight="40" topicName="Supermart Domain">
+<unifiedState dataSize="sample" filterPanelShowing="true" hasMargins="false" ignoreMaxRows="false" initedSubFilterList="true" launchType="ADH_045a_DOMAIN" maxDisplayColumns="0" maxDisplayRows="0" maxRowChoices="0" maxRows="0" mode="ichart" pageOrientation="Portrait" paperSize="content" showTableDetails="true" showTableTotals="false" summaryRowTitle="Totals" theme="default" titleBarShowing="true" titleHeight="0" topicName="Supermart Domain">
   <chartState availableChartHeight="0" availableChartWidth="0" backgroundFilled="false" chartHeight="0" chartIsVertical="true" chartWidth="0" displayXAxisLabel="true" displayYAxisLabel="false" offsetX="0" offsetY="0">
     <chartTitle />
     <chartType>1_bar</chartType>
@@ -104,7 +104,7 @@
       </entry>
     </threeDMap>
   </chartState>
-  <crosstabState numberOfColumns="5" safeColumnMode="true" safeRowMode="true" showLabels="true">
+  <crosstabState numberOfColumns="0" safeColumnMode="true" safeRowMode="true" showLabels="true">
     <columnGroups>
       <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String">
         <visibleLevels>
@@ -121,12 +121,12 @@
           <string>sales_fact_ALL.sales__store.sales__store__store_type</string>
         </visibleLevels>
       </queryDimension>
-      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String">
         <expandedLevels>
-          <string>sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country</string>
+          <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
         </expandedLevels>
         <visibleLevels>
-          <string>sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country</string>
+          <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
         </visibleLevels>
       </queryDimension>
     </rowGroups>
@@ -141,16 +141,16 @@
         <string>sales_fact_ALL.sales__store.sales__store__store_type</string>
       </visibleLevels>
     </queryDimension>
-    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country" sortStatus="0" type="java.lang.String">
+    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String">
       <expandedLevels>
-        <string>sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country</string>
+        <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
       </expandedLevels>
       <visibleLevels>
-        <string>sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country</string>
+        <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
       </visibleLevels>
     </queryDimension>
   </groups>
-  <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="true" typeString="multi_axis_column" />
+  <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" invertedAxis="false" labelOffset="0.0" legend="none" legendBorder="true" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="false" showSingleMeasuresLabels="false" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="multi_axis_column" />
   <measures>
     <measure aggregateType="java.math.BigDecimal" fieldName="sales_fact_ALL.sales_fact_ALL__store_sales_2013" function="Sum" mask="#,##0.00" measure="true" name="sales_fact_ALL.sales_fact_ALL__store_sales_2013" showSummary="false" width="125" />
     <measure aggregateType="java.math.BigDecimal" fieldName="sales_fact_ALL.sales_fact_ALL__store_cost_2013" function="Sum" mask="#,##0.00" measure="true" name="sales_fact_ALL.sales_fact_ALL__store_cost_2013" showSummary="false" width="125" />
@@ -164,7 +164,7 @@
       <string />
     </entry>
     <entry key="typeOfViewChange">
-      <string>unexpectedBehavior</string>
+      <string>willReflectChanges</string>
     </entry>
   </propertyMap>
   <subFilterList>
@@ -185,5 +185,4 @@
       <parameterizedExpressionString>sales_fact_ALL.sales__product.sales__product__product_name in sales__product__product_name_1</parameterizedExpressionString>
     </subFilter>
   </subFilterList>
-  <title>Geographic Segment Performance</title>
 </unifiedState>

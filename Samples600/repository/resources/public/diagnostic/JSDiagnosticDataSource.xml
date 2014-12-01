@@ -5,7 +5,7 @@
     <version>1</version>
     <label>Diagnostic Data Source</label>
     <description></description>
-    <creationDate>2014-11-25T19:06:32.233+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:32.806+01:00</creationDate>
     <updateDate>2012-09-06T15:22:12.774+02:00</updateDate>
     <serviceClass>com.jaspersoft.jasperserver.api.logging.diagnostic.datasource.DiagnosticCustomDataSourceService</serviceClass>
     <property>

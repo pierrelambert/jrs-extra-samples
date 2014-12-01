@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Product Department</label>
     <description>Displays all the "Product Departments" depending upon the "Product Family" selected.</description>
-    <creationDate>2014-11-25T19:06:40.599+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.057+01:00</creationDate>
     <updateDate>2013-09-20T08:30:11.241+02:00</updateDate>
     <type>4</type>
     <mandatory>true</mandatory>
@@ -19,7 +19,7 @@
             <name>ProductDepartment_Query</name>
             <version>0</version>
             <label>ProductDepartment Query</label>
-            <creationDate>2014-11-25T19:06:40.599+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.057+01:00</creationDate>
             <updateDate>2013-09-20T08:30:11.241+02:00</updateDate>
             <language>sql</language>
             <queryString>select 

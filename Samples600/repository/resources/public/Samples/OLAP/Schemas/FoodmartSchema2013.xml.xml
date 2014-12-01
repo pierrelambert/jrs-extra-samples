@@ -5,7 +5,7 @@
     <version>0</version>
     <label>FoodmartSchema</label>
     <description>Foodmart OLAP schema with updated dates</description>
-    <creationDate>2014-11-25T19:06:36.297+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:37.354+01:00</creationDate>
     <updateDate>2013-04-10T23:22:02.746+02:00</updateDate>
     <fileType>olapMondrianSchema</fileType>
 </fileResource>

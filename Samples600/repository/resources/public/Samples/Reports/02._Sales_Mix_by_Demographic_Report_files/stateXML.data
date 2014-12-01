@@ -104,7 +104,7 @@
       </entry>
     </threeDMap>
   </chartState>
-  <crosstabState numberOfColumns="0" safeColumnMode="true" safeRowMode="true" showLabels="true">
+  <crosstabState numberOfColumns="4" safeColumnMode="true" safeRowMode="true" showLabels="true">
     <columnGroups>
       <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String">
         <visibleLevels>
@@ -125,12 +125,12 @@
     <rowGroups>
       <queryDimension fieldName="Marital Status" includeAll="true" name="Marital Status" sortStatus="0" type="java.lang.String">
         <expandedLevels>
-          <string>(All)[Marital Status]</string>
           <string>Marital Status[Marital Status]</string>
+          <string>(All)[Marital Status]</string>
         </expandedLevels>
         <visibleLevels>
-          <string>(All)[Marital Status]</string>
           <string>Marital Status[Marital Status]</string>
+          <string>(All)[Marital Status]</string>
         </visibleLevels>
       </queryDimension>
       <queryDimension fieldName="Education Level" includeAll="true" name="Education Level" sortStatus="0" type="java.lang.String">
@@ -147,12 +147,12 @@
   <groups>
     <queryDimension fieldName="Marital Status" includeAll="true" name="Marital Status" sortStatus="0" type="java.lang.String">
       <expandedLevels>
-        <string>(All)[Marital Status]</string>
         <string>Marital Status[Marital Status]</string>
+        <string>(All)[Marital Status]</string>
       </expandedLevels>
       <visibleLevels>
-        <string>(All)[Marital Status]</string>
         <string>Marital Status[Marital Status]</string>
+        <string>(All)[Marital Status]</string>
       </visibleLevels>
     </queryDimension>
     <queryDimension fieldName="Education Level" includeAll="true" name="Education Level" sortStatus="0" type="java.lang.String">
@@ -164,9 +164,9 @@
       </visibleLevels>
     </queryDimension>
   </groups>
-  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="false" typeString="spider_line" />
+  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" hideSingleMeasuresLabels="true" invertedAxis="false" labelOffset="0.0" legend="bottom" legendBorder="true" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="false" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="spider_line" />
   <measures>
-    <measure fieldName="Store Sales" measure="true" name="Store Sales" width="125" />
+    <measure fieldName="Store Sales" measure="true" name="Store Sales" showSummary="false" width="125" />
   </measures>
   <propertyMap>
     <entry key="hideEmptyRows">

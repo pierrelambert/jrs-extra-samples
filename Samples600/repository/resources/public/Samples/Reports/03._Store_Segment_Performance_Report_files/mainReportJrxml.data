@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="03. Store Segment Performance Report" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="7e38b8d5-ac16-4eed-9a61-f354c3129511">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="03. Store Segment Performance Report" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="21d7161c-beab-48ce-b71a-4cb16742cf7c">
 	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="false"/>
 	<property name="net.sf.jasperreports.export.html.border.collapse" value="separate"/>
 	<property name="net.sf.jasperreports.export.docx.frames.as.nested.tables" value="false"/>
@@ -237,14 +237,14 @@
 	<title>
 		<band height="335" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement key="staticText" style="ChartReportTitle" x="0" y="0" width="572" height="0" uuid="d2840bc3-5fb0-4835-959b-450d6f911149">
+				<reportElement key="staticText" style="ChartReportTitle" x="0" y="0" width="572" height="0" uuid="87c721eb-37ef-45d6-bf1d-c641d68c8ab4">
 					<printWhenExpression><![CDATA[$P{REPORT_TITLE} != null && $P{REPORT_TITLE}.length() > 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement key="chart" positionType="Float" mode="Opaque" x="5" y="5" width="572" height="330" uuid="1b8b45fb-9c02-4fbd-96ca-e44159ff2d83"/>
+				<reportElement key="chart" positionType="Float" mode="Opaque" x="5" y="5" width="572" height="330" uuid="8720645e-1376-4be6-9d11-e7d2ebb05b89"/>
 				<jrhc:chart xmlns:jrhc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Bar" preferredHeight="353">
 					<jrhc:chartSetting name="_jrs_adhoc">
 						<jrhc:chartProperty name="_JRS_ADHOC_CHART_STATE">

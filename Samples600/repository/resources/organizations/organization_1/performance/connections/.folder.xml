@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/performance</parent>
+    <name>connections</name>
+    <label>Connections</label>
+    <description>Connections used by Analysis</description>
+    <creationDate>2014-12-01T20:55:57.910+01:00</creationDate>
+    <updateDate>2014-11-29T00:28:56.683+01:00</updateDate>
+    <resource>Profile</resource>
+    <resource>ProfileXmlaConnection</resource>
+</folder>

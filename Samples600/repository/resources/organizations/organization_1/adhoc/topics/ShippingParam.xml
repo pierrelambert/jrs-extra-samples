@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Parameterized Report</label>
     <description>Parameterized Report</description>
-    <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>ParametersJRXML_label</label>
             <description>ParametersJRXML description</description>
-            <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>Country</label>
             <description>Country</description>
-            <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
             <type>4</type>
             <mandatory>true</mandatory>
             <readOnly>false</readOnly>
@@ -46,8 +46,8 @@
                     <name>CountryQuery</name>
                     <version>0</version>
                     <label>CountryQuery</label>
-                    <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-                    <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+                    <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+                    <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
                     <language>sql</language>
                     <queryString>select distinct SHIPCOUNTRY from ORDERS</queryString>
                     <dataSource>
@@ -68,8 +68,8 @@
             <version>0</version>
             <label>RequestDate</label>
             <description>RequestDate</description>
-            <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -81,8 +81,8 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-                    <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+                    <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+                    <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -99,8 +99,8 @@
             <version>0</version>
             <label>OrderId</label>
             <description>OrderId</description>
-            <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -112,8 +112,8 @@
                     <version>0</version>
                     <label>Number_label</label>
                     <description>Number description</description>
-                    <creationDate>2014-11-25T19:06:45.143+01:00</creationDate>
-                    <updateDate>2014-11-21T15:16:53.868+01:00</updateDate>
+                    <creationDate>2014-12-01T20:56:46.953+01:00</creationDate>
+                    <updateDate>2014-11-29T00:49:44.114+01:00</updateDate>
                     <type>2</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>

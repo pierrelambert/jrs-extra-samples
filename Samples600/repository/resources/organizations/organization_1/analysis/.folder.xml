@@ -4,6 +4,12 @@
     <name>analysis</name>
     <label>Analysis Components</label>
     <description>Analysis Components</description>
-    <creationDate>2014-11-25T19:06:30.703+01:00</creationDate>
-    <updateDate>2014-11-21T15:14:14.507+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:31.286+01:00</creationDate>
+    <updateDate>2014-11-29T00:47:23.077+01:00</updateDate>
+    <folder>connections</folder>
+    <folder>datasources</folder>
+    <folder>reports</folder>
+    <folder>schemas</folder>
+    <folder>views</folder>
+    <folder>xmla</folder>
 </folder>

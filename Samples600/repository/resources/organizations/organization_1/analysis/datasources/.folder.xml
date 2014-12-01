@@ -4,6 +4,10 @@
     <name>datasources</name>
     <label>Analysis Data Sources</label>
     <description>Data sources used by Analysis</description>
-    <creationDate>2014-11-25T19:06:31.523+01:00</creationDate>
-    <updateDate>2014-11-21T15:14:14.546+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:32.081+01:00</creationDate>
+    <updateDate>2014-11-29T00:47:23.108+01:00</updateDate>
+    <resource>FoodmartDataSource</resource>
+    <resource>FoodmartDataSourceJNDI</resource>
+    <resource>SugarCRMDataSource</resource>
+    <resource>SugarCRMDataSourceJNDI</resource>
 </folder>

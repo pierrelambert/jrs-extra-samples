@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Family</label>
     <description>Uses ProductFamilyList. Maps to productFamily parameter.</description>
-    <creationDate>2014-11-25T19:06:45.256+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:56.551+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:47.105+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:46.092+01:00</updateDate>
     <type>3</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>

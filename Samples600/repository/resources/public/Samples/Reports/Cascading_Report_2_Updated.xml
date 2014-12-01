@@ -5,7 +5,7 @@
     <version>0</version>
     <label>16. Interactive Sales Report</label>
     <description>Interactive table and chart.</description>
-    <creationDate>2014-11-25T19:06:41.270+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.754+01:00</creationDate>
     <updateDate>2014-05-14T01:34:40.689+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>main_jrxml</label>
-            <creationDate>2014-11-25T19:06:41.270+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.754+01:00</creationDate>
             <updateDate>2013-09-03T09:21:52.421+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -49,7 +49,7 @@
             <name>js_logo.png</name>
             <version>0</version>
             <label>js_logo.png</label>
-            <creationDate>2014-11-25T19:06:41.270+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.754+01:00</creationDate>
             <updateDate>2012-11-09T00:36:27.684+01:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Jaspersoft_logo.png</referenceUri>
         </localResource>
@@ -62,7 +62,7 @@
             <name>SampleReportStyles.jrtx</name>
             <version>0</version>
             <label>SampleReportStyles.jrtx</label>
-            <creationDate>2014-11-25T19:06:41.270+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.754+01:00</creationDate>
             <updateDate>2013-09-25T13:43:31.152+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/SampleReportStyles.jrtx</referenceUri>
         </localResource>

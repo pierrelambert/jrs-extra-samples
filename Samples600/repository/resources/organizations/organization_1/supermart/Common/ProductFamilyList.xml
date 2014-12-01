@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Family List</label>
     <description>Displays Food, Drink, Non-Consumable</description>
-    <creationDate>2014-11-25T19:06:45.251+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:55.819+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:47.100+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:45.601+01:00</updateDate>
     <item>
         <itemLabel>Food</itemLabel>
         <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="java:java.lang.String">Food</itemValue>

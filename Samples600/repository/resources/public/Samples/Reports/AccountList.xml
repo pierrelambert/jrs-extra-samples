@@ -5,7 +5,7 @@
     <version>0</version>
     <label>20.1 Account List</label>
     <description>Sample Report used for basic Visualize.js demo</description>
-    <creationDate>2014-11-25T19:06:41.180+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.680+01:00</creationDate>
     <updateDate>2014-05-16T17:17:01.630+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-25T19:06:41.180+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.680+01:00</creationDate>
             <updateDate>2014-04-24T23:11:20.409+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>

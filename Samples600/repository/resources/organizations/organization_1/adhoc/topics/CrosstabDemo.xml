@@ -5,8 +5,8 @@
     <version>0</version>
     <label>foodmart data for crosstab</label>
     <description>foodmart data for crosstab</description>
-    <creationDate>2014-11-25T19:06:44.952+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:52.571+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:46.736+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:43.066+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <version>0</version>
             <label>foodmart data for crosstab</label>
             <description>foodmart data for crosstab</description>
-            <creationDate>2014-11-25T19:06:44.952+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:52.571+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.736+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:43.066+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>

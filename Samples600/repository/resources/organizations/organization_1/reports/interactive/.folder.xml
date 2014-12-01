@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/reports</parent>
+    <name>interactive</name>
+    <label>Interactive</label>
+    <description>Interactive</description>
+    <creationDate>2014-12-01T20:56:32.315+01:00</creationDate>
+    <updateDate>2014-11-29T00:47:38.071+01:00</updateDate>
+    <resource>CsvData</resource>
+    <resource>CsvDataAdapter</resource>
+    <resource>CustomersData</resource>
+    <resource>CustomersDataAdapter</resource>
+    <resource>CustomersReport</resource>
+    <resource>MapReport</resource>
+    <resource>TableReport</resource>
+</folder>

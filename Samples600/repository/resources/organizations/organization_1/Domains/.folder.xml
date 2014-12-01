@@ -4,6 +4,9 @@
     <name>Domains</name>
     <label>Domains</label>
     <description>Domains Folder</description>
-    <creationDate>2014-11-25T19:06:30.787+01:00</creationDate>
-    <updateDate>2014-11-21T15:17:18.853+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:31.380+01:00</creationDate>
+    <updateDate>2014-11-29T00:50:07.118+01:00</updateDate>
+    <resource>Simple_Domain</resource>
+    <resource>supermartDomain</resource>
+    <resource>virtualDSDomain</resource>
 </folder>

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>isJasperAnalysis</label>
     <description>JasperAnalysis = true JasperServer only = false</description>
-    <creationDate>2014-11-25T19:06:38.111+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:39.258+01:00</creationDate>
     <updateDate>2012-10-17T16:14:35.537+02:00</updateDate>
     <type>3</type>
     <mandatory>false</mandatory>
@@ -19,7 +19,7 @@
             <name>booleanValues</name>
             <version>0</version>
             <label>booleanValues</label>
-            <creationDate>2014-11-25T19:06:38.111+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.258+01:00</creationDate>
             <updateDate>2012-10-17T16:14:35.537+02:00</updateDate>
             <item>
                 <itemLabel>true</itemLabel>

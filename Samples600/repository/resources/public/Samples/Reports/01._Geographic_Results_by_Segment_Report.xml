@@ -5,8 +5,8 @@
     <version>0</version>
     <label>01. Geographic Results by Segment Report</label>
     <description>Sample HTML5 multi-axis column chart from Domain showing Sales, Units, and $ Per Square Foot by Country and Store Type with various filters. Created from an Ad Hoc View.</description>
-    <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-    <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+    <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+    <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <name>mainReportJrxml</name>
             <version>0</version>
             <label>mainReportJrxml</label>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -49,8 +49,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -64,8 +64,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -79,8 +79,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -94,8 +94,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -109,8 +109,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -124,8 +124,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -137,8 +137,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-25T19:06:39.263+01:00</creationDate>
-            <updateDate>2014-05-14T19:46:00.949+02:00</updateDate>
+            <creationDate>2014-12-01T20:56:40.657+01:00</creationDate>
+            <updateDate>2014-09-24T18:41:56.907+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

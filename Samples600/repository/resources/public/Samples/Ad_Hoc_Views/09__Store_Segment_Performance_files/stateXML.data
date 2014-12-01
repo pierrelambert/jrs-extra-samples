@@ -106,7 +106,7 @@
   </chartState>
   <crosstabState numberOfColumns="20" safeColumnMode="true" safeRowMode="true" showLabels="true">
     <columnGroups>
-      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__store_type" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__store_type" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__store_type" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__store_type" sortStatus="0" type="java.lang.String" uniqueName="sales_fact_ALL.sales__store.sales__store__store_type">
         <expandedLevels>
           <string>sales_fact_ALL.sales__store.sales__store__store_type</string>
         </expandedLevels>
@@ -114,14 +114,14 @@
           <string>sales_fact_ALL.sales__store.sales__store__store_type</string>
         </visibleLevels>
       </queryDimension>
-      <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String">
+      <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String" uniqueName="Measures">
         <visibleLevels>
           <string>Measures</string>
         </visibleLevels>
       </queryDimension>
     </columnGroups>
     <rowGroups>
-      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String" uniqueName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country">
         <expandedLevels>
           <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
         </expandedLevels>
@@ -129,7 +129,7 @@
           <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
         </visibleLevels>
       </queryDimension>
-      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" sortStatus="0" type="java.lang.String" uniqueName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province">
         <visibleLevels>
           <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province</string>
         </visibleLevels>
@@ -138,7 +138,7 @@
     <sortingState />
   </crosstabState>
   <groups>
-    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String">
+    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" sortStatus="0" type="java.lang.String" uniqueName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country">
       <expandedLevels>
         <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
       </expandedLevels>
@@ -146,17 +146,17 @@
         <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country</string>
       </visibleLevels>
     </queryDimension>
-    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" sortStatus="0" type="java.lang.String">
+    <queryDimension categorizerName="all" fieldName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" includeAll="true" name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province" sortStatus="0" type="java.lang.String" uniqueName="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province">
       <visibleLevels>
         <string>sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_state_province</string>
       </visibleLevels>
     </queryDimension>
   </groups>
-  <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="true" typeString="bubble" />
+  <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" invertedAxis="false" labelOffset="0.0" legend="bottom" legendBorder="true" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="true" showSingleMeasuresLabels="true" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="bubble" />
   <measures>
-    <measure aggregateType="java.math.BigDecimal" fieldName="sales_fact_ALL.sales_fact_ALL__store_sales_2013" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="sales_fact_ALL.sales_fact_ALL__store_sales_2013" showSummary="false" width="125" />
-    <measure aggregateType="java.math.BigDecimal" fieldName="Margin" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="Margin" showSummary="false" width="125" />
-    <measure aggregateType="java.math.BigDecimal" fieldName="$SQFT" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="$SQFT" showSummary="false" width="125" />
+    <measure aggregateType="java.math.BigDecimal" fieldName="sales_fact_ALL.sales_fact_ALL__store_sales_2013" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="sales_fact_ALL.sales_fact_ALL__store_sales_2013" showSummary="false" type="java.math.BigDecimal" width="125" />
+    <measure aggregateType="java.math.BigDecimal" fieldName="Margin" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="Margin" showSummary="false" type="java.math.BigDecimal" width="125" />
+    <measure aggregateType="java.math.BigDecimal" fieldName="$SQFT" function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="$SQFT" showSummary="false" type="java.math.BigDecimal" width="125" />
   </measures>
   <propertyMap>
     <entry key="hideEmptyRows">
@@ -167,6 +167,9 @@
     </entry>
     <entry key="typeOfViewChange">
       <string />
+    </entry>
+    <entry key="ADHOC_VERSION">
+      <string>4.5.0</string>
     </entry>
   </propertyMap>
   <subFilterList>

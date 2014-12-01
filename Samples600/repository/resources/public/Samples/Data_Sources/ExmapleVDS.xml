@@ -5,7 +5,7 @@
     <version>0</version>
     <label>ExampleVDS</label>
     <description></description>
-    <creationDate>2014-11-25T19:06:39.150+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:40.517+01:00</creationDate>
     <updateDate>2013-01-03T15:40:18.245+01:00</updateDate>
     <dataSource>
         <alias>SugarCRMDataSource</alias>

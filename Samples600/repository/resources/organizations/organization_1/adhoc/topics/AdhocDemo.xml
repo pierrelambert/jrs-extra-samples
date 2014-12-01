@@ -5,8 +5,8 @@
     <version>0</version>
     <label>demo for adhoc</label>
     <description>Topic containing shipping costs for orders</description>
-    <creationDate>2014-11-25T19:06:44.822+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:51.590+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:46.616+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:41.970+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>ShippingReport.jrxml file used by 'demo for adhoc' topic</label>
             <description>ShippingReport.jrxml file used by 'demo for adhoc' topic</description>
-            <creationDate>2014-11-25T19:06:44.822+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:51.590+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.616+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:41.970+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>

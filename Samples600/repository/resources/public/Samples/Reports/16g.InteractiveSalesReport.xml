@@ -5,7 +5,7 @@
     <version>0</version>
     <label>16g. Interactive Sales Report</label>
     <description>Interactive table and chart with alternate color scheme.</description>
-    <creationDate>2014-11-25T19:06:40.735+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.226+01:00</creationDate>
     <updateDate>2014-05-14T01:34:06.578+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-25T19:06:40.735+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.226+01:00</creationDate>
             <updateDate>2013-09-03T09:37:48.150+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -49,7 +49,7 @@
             <name>SampleReportStylesG</name>
             <version>0</version>
             <label>SampleReportStylesG</label>
-            <creationDate>2014-11-25T19:06:40.735+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.226+01:00</creationDate>
             <updateDate>2013-09-25T13:28:57.587+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/SampleReportStylesG</referenceUri>
         </localResource>

@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Customers Report</label>
     <description>Parameterized Report with no default values for parameters</description>
-    <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-    <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+    <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>CustomersReport_label</label>
             <description>CustomersReport description</description>
-            <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>DateFrom</label>
             <description>DateFrom</description>
-            <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
             <readOnly>false</readOnly>
@@ -47,8 +47,8 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-                    <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+                    <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+                    <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -65,8 +65,8 @@
             <version>0</version>
             <label>DateTo</label>
             <description>DateTo</description>
-            <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-            <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+            <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
             <readOnly>false</readOnly>
@@ -78,8 +78,8 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2014-11-25T19:06:44.984+01:00</creationDate>
-                    <updateDate>2014-11-21T15:16:55.172+01:00</updateDate>
+                    <creationDate>2014-12-01T20:56:46.766+01:00</creationDate>
+                    <updateDate>2014-11-29T00:49:45.142+01:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
