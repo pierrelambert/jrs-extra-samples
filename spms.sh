@@ -66,17 +66,17 @@ function config(){
             return
             ;;
         *) 
-            echo "Usage : $0 config <edit|show>"
+            echo "Usage : $0 config <edit|show|check>"
             exit 0
             ;;
     esac
-    echo -n "Package repo ";              if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$SPMSREPO] : ";     TMP=""; read TMP; [ "x${TMP}" != "x" ] && SPMSREPO=${TMP};     else echo ": ${SPMSREPO}";  fi;
-    echo -n "Buildomatic dir ";           if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$BUILDOMATIC] : ";  TMP=""; read TMP; [ "x${TMP}" != "x" ] && BUILDOMATIC=${TMP};  else echo ": ${BUILDOMATIC}";  fi;
-    echo -n "Tomcat dir ";                if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$TOMCATROOT] : ";   TMP=""; read TMP; [ "x${TMP}" != "x" ] && TOMCATROOT=${TMP};   else echo ": ${TOMCATROOT}";   fi;
-    echo -n "Httpd/PHP document root ";   if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$HTTPDROOT] : ";    TMP=""; read TMP; [ "x${TMP}" != "x" ] && HTTPDROOT=${TMP};    else echo ": ${HTTPDROOT}";    fi;
-    echo -n "SVN repository dir ";        if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$SVNROOT] : ";      TMP=""; read TMP; [ "x${TMP}" != "x" ] && SVNROOT=${TMP};      else echo ": ${SVNROOT}";      fi;
-    echo -n "Author email ";              if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$AUTHOREMAIL] : ";  TMP=""; read TMP; [ "x${TMP}" != "x" ] && AUTHOREMAIL=${TMP};  else echo ": ${AUTHOREMAIL}";  fi;
-    echo -n "Author name ";               if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$AUTHORNAME] : ";   TMP=""; read TMP; [ "x${TMP}" != "x" ] && AUTHORNAME=${TMP};   else echo ": ${AUTHORNAME}";   fi;
+    echo -n "Package repo ";              if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$SPMSREPO] : ";     TMP=""; read TMP; [ -z "${TMP}" ] && SPMSREPO=${TMP};     else echo ": ${SPMSREPO}";  fi;
+    echo -n "Buildomatic dir ";           if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$BUILDOMATIC] : ";  TMP=""; read TMP; [ -z "${TMP}" ] && BUILDOMATIC=${TMP};  else echo ": ${BUILDOMATIC}";  fi;
+    echo -n "Tomcat dir ";                if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$TOMCATROOT] : ";   TMP=""; read TMP; [ -z "${TMP}" ] && TOMCATROOT=${TMP};   else echo ": ${TOMCATROOT}";   fi;
+    echo -n "Httpd/PHP document root ";   if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$HTTPDROOT] : ";    TMP=""; read TMP; [ -z "${TMP}" ] && HTTPDROOT=${TMP};    else echo ": ${HTTPDROOT}";    fi;
+    echo -n "SVN repository dir ";        if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$SVNROOT] : ";      TMP=""; read TMP; [ -z "${TMP}" ] && SVNROOT=${TMP};      else echo ": ${SVNROOT}";      fi;
+    echo -n "Author email ";              if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$AUTHOREMAIL] : ";  TMP=""; read TMP; [ -z "${TMP}" ] && AUTHOREMAIL=${TMP};  else echo ": ${AUTHOREMAIL}";  fi;
+    echo -n "Author name ";               if [ ${INTERACTIVE} -eq 1 ]; then echo -n "[$AUTHORNAME] : ";   TMP=""; read TMP; [ -z "${TMP}" ] && AUTHORNAME=${TMP};   else echo ": ${AUTHORNAME}";   fi;
 
     # Save actual config to file
     cat > ${CONFIGFILE} << EOF
@@ -115,24 +115,26 @@ function reset(){
 # dump the databases (Infobright, MySQL, PostgreSQL, MongoDB, LDAP, ...)
 # Export the repositories (JRS, JETL...)
 function create(){
-    [ "x$1" == "x" ] && echo "Usage : $0 create <packagename>" && exit
+    [ -z "$1" ] && echo "Usage : $0 create <packagename>" && exit
     echo "Creating new package..."
-    PACKAGENAME=$1
+    PACKAGENAME=${1##*/}
     # Create the folder structure
     [ -d "${PACKAGENAME}" ] && echo "Package folder already exists" && exit
     mkdir ${PACKAGENAME}
-    mkdir -p ${PACKAGENAME}/database/{infobright,mysql,postgresql,mongodb,ldap}
-    mkdir -p ${PACKAGENAME}/filesystem/{TOMCATROOT,HTTPDROOT}
-    mkdir -p ${PACKAGENAME}/patch/{TOMCATROOT,HTTPDROOT}
+    mkdir -p ${PACKAGENAME}/{infobright,mysql,postgresql,mongodb,ldap}
+    mkdir -p ${PACKAGENAME}/{TOMCATROOT,HTTPDROOT}
+    mkdir -p ${PACKAGENAME}/patch
     mkdir -p ${PACKAGENAME}/scripts/{early.d,late.d}
-    mkdir -p ${PACKAGENAME}/repositories/{JRS,JETL,SVN}
-    mkdir -p ${PACKAGENAME}/javasrc/
+    mkdir -p ${PACKAGENAME}/{JRS,JETL,SVN}
+    mkdir -p ${PACKAGENAME}/java
 }
 
 # Check the source package against validation rules
 # such as the DB dump format, the JRS repository folder
 # structure, ...
 function lint(){
+    [ -z "$1" ] && echo "Usage : $0 lint <packagename>" && exit
+    PACKAGENAME=${1##*/}
     echo "Checking source package validity..."
     echo "Source package validation not yet implemented"
 }
@@ -142,20 +144,50 @@ function lint(){
 # Copy the files in the binary structure
 # Zip the binary package distribution
 function build(){
-    [ "x$1" == "x" ] && echo "Usage : $0 build <packagename>" && exit
+    [ -z "$1" ] && echo "Usage : $0 build <packagename>" && exit
     echo "Creating a binary package in the local cache from a source package..."
-    PACKAGENAME=$1
+    PACKAGENAME=${1##*/}
+
+    # Check package
+    lint ${PACKAGENAME}
 
     # Create a temporary working folder
     TMPDIR=`mktemp -d /tmp/spms.XXXX`
 
     # Create the binary package folder structure
-    cp -r "${PACKAGENAME}" "${TMPDIR}"
+    for i in `find "${PACKAGENAME}/" -type f`; do 
+        mkdir -p "${TMPDIR}/$i"
+        rmdir "${TMPDIR}/$i"
+        cp "$i" "${TMPDIR}/$i"
+    done
+
+    CURDIR=`pwd`
+    cd "${TMPDIR}/${PACKAGENAME}"
+
+    # Compress database dumps
+    for i in `find "infobright" -type f 2> /dev/null`; do [ "${i##*.}" != "gz" ] && gzip "$i"; done
+    for i in `find "mysql" -type f 2> /dev/null`; do [ "${i##*.}" != "gz" ] && gzip "$i"; done
+    for i in `find "postgresql" -type f 2> /dev/null`; do [ "${i##*.}" != "gz" ] && gzip "$i"; done
+    for i in `find "ldap" -type f 2> /dev/null`; do [ "${i##*.}" != "gz" ] && gzip "$i"; done
+
+    # Compile java, install in filesystems and remove sources
+    if [ -d "java/" ]; then
+        # Compile with ANT
+        rm -Rf "java/"
+    fi
+
+    # Compress filesystems
+    [ -d "TOMCATROOT" ] && zip -r TOMCATROOT.zip TOMCATROOT > /dev/null 2>&1 && rm -Rf TOMCATROOT
+    [ -d "HTTPDROOT" ] && zip -r HTTPDROOT.zip HTTPDROOT > /dev/null 2>&1 && rm -Rf HTTPDROOT
+
+    # Compress repositories
+    [ -d "JRS" ] && zip -r JRS.zip JRS > /dev/null 2>&1 && rm -Rf JRS
+    [ -d "JETL" ] && zip -r JETL.zip JETL > /dev/null 2>&1 && rm -Rf JETL
+    [ -d "SVN" ] && zip -r SVN.zip SVN > /dev/null 2>&1 && rm -Rf SVN
 
     # Create the actual package
-    CURDIR=`pwd`
     cd "${TMPDIR}"
-    zip -r "${PACKAGENAME}.zip" "${PACKAGENAME}"
+    zip -r "${PACKAGENAME}.zip" "${PACKAGENAME}" > /dev/null 2>&1 
     cd ${CURDIR}
     mv "${TMPDIR}/${PACKAGENAME}.zip" "${SPMSREPO}"
 
@@ -198,19 +230,21 @@ function list(){
 
 # Install a locally available binary package
 function install(){
-    [ "x$1" == "x" ] && echo "Usage : $0 install <packagename>" && exit
-    check "$1"
+    [ -z "$1" ] && echo "Usage : $0 install <packagename>" && exit
+    PACKAGENAME=${1##*/}
+
+    check "${PACKAGENAME}"
     [ $? -eq 0 ] && echo "Package already installed" && exit
-    echo "Installing a binary package from the local cache..."
-    PACKAGENAME=$1
+
     [ ! -f "${SPMSREPO}/${PACKAGENAME}.zip" ] && echo "Package ${PACKAGENAME} not found (try $0 list) !" && exit 1
 
+    echo "Installing a binary package from the local cache..."
     # Create a temporary working folder
     TMPDIR=`mktemp -d /tmp/spms.XXXX`
 
     CURDIR=`pwd`
     cd "${TMPDIR}"
-    unzip "${SPMSREPO}/${PACKAGENAME}.zip"
+    unzip "${SPMSREPO}/${PACKAGENAME}.zip" > /dev/null 2>&1
     cd "${TMPDIR}/${PACKAGENAME}"
     echo "JRS repository import not yet implemented"
     echo "MongoDB restore not yet implemented"
@@ -220,9 +254,8 @@ function install(){
     echo "Infobright restore not yet implemented"
     echo "OpenLDAP restore not yet implemented"
     echo "Tomcat files installation not yet implemented"
-    echo "Tomcat patches application not yet implemented"
     echo "HTTPd files installation not yet implemented"
-    echo "HTTPd patches application not yet implemented"
+    echo "Patches application not yet implemented"
     echo "early boot scripts installation not yet implemented"
     echo "late boot scripts installation not yet implemented"
     echo "JETL repository import not yet implemented"
@@ -245,20 +278,23 @@ function status(){
 
 # Check binary package installation status
 function check(){
-    [ "x$1" == "x" ] && echo "Usage : $0 check <packagename>" && exit
+    [ -z "$1" ] && echo "Usage : $0 check <packagename>" && exit
+    PACKAGENAME=${1##*/}
     echo "Checking binary package installation status..."
     [ ! -f "${SPMSREPO}/installed.lst" ] && return 1
-    cat "${SPMSREPO}/installed.lst" | grep "$1"
+    cat "${SPMSREPO}/installed.lst" | grep "${PACKAGENAME}"
     return $?
 }
 
 # Uninstall an installed binary package
 function uninstall(){
-    [ "x$1" == "x" ] && echo "Usage : $0 uninstall <packagename>" && exit
-    check "$1"
+    [ -z "$1" ] && echo "Usage : $0 uninstall <packagename>" && exit
+    PACKAGENAME=${1##*/}
+
+    check "${PACKAGENAME}"
     [ $? -eq 1 ] && echo "Package already uninstalled" && exit
+
     echo "Uninstalling a binary package..."
-    PACKAGENAME=$1
     [ ! -f "${SPMSREPO}/${PACKAGENAME}.zip" ] && echo "Package ${PACKAGENAME} not found (try $0 list) !" && exit 1
 
     # Create a temporary working folder
@@ -276,9 +312,8 @@ function uninstall(){
     echo "Infobright deletion not yet implemented"
     echo "OpenLDAP deletion not yet implemented"
     echo "Tomcat files deletion not yet implemented"
-    echo "Tomcat patches unapplication not yet implemented"
     echo "HTTPd files deletion not yet implemented"
-    echo "HTTPd patches unapplication not yet implemented"
+    echo "Patches unapplication not yet implemented"
     echo "early boot scripts deletion not yet implemented"
     echo "late boot scripts deletion not yet implemented"
     echo "JETL repository deletion not yet implemented"
@@ -297,7 +332,7 @@ function uninstall(){
 COMMAND=$1
 shift || true
 
-[ "x${COMMAND}" == "x" ] && COMMAND="help"
+[ -z "${COMMAND}" ] && COMMAND="help" 
 set | grep "^${COMMAND} ()" > /dev/null 2>&1
 [ $? -eq 1 ] && COMMAND="help"
 ${COMMAND} $*
