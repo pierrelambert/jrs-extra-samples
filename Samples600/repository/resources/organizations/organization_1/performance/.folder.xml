@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1</parent>
+    <name>performance</name>
+    <label>Performance</label>
+    <description>Performance Components</description>
+    <creationDate>2014-12-01T20:55:57.374+01:00</creationDate>
+    <updateDate>2014-11-29T00:28:56.319+01:00</updateDate>
+</folder>

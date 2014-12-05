@@ -113,12 +113,12 @@
       </queryDimension>
       <queryDimension fieldName="Store Type" includeAll="true" name="Store Type" sortStatus="0" type="java.lang.String">
         <expandedLevels>
-          <string>(All)[Store Type]</string>
           <string>Store Type[Store Type]</string>
+          <string>(All)[Store Type]</string>
         </expandedLevels>
         <visibleLevels>
-          <string>(All)[Store Type]</string>
           <string>Store Type[Store Type]</string>
+          <string>(All)[Store Type]</string>
         </visibleLevels>
       </queryDimension>
     </columnGroups>
@@ -134,14 +134,14 @@
       </queryDimension>
       <queryDimension fieldName="Product" includeAll="true" name="Product" sortStatus="0" type="java.lang.String">
         <expandedLevels>
-          <string>(All)[Product]</string>
           <string>Product Family[Product]</string>
           <string>Product Department[Product]</string>
+          <string>(All)[Product]</string>
         </expandedLevels>
         <visibleLevels>
-          <string>(All)[Product]</string>
           <string>Product Family[Product]</string>
           <string>Product Department[Product]</string>
+          <string>(All)[Product]</string>
           <string>Product Category[Product]</string>
         </visibleLevels>
       </queryDimension>
@@ -160,21 +160,21 @@
     </queryDimension>
     <queryDimension fieldName="Product" includeAll="true" name="Product" sortStatus="0" type="java.lang.String">
       <expandedLevels>
-        <string>(All)[Product]</string>
         <string>Product Family[Product]</string>
         <string>Product Department[Product]</string>
+        <string>(All)[Product]</string>
       </expandedLevels>
       <visibleLevels>
-        <string>(All)[Product]</string>
         <string>Product Family[Product]</string>
         <string>Product Department[Product]</string>
+        <string>(All)[Product]</string>
         <string>Product Category[Product]</string>
       </visibleLevels>
     </queryDimension>
   </groups>
-  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="false" typeString="bar" />
+  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" invertedAxis="false" labelOffset="0.0" legend="right" legendBorder="false" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="false" showSingleMeasuresLabels="false" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="bar" />
   <measures>
-    <measure fieldName="Store Sales" measure="true" name="Store Sales" width="125" />
+    <measure fieldName="Store Sales" measure="true" name="Store Sales" showSummary="false" width="125" />
   </measures>
   <propertyMap>
     <entry key="hideEmptyRows">
@@ -192,7 +192,7 @@
   </propertyMap>
   <subFilterList>
     <subFilter id="filter_1" letter="A" sourceString="DYNAMIC">
-      <expressionString>[Store Size in SQFT].[Store Sqft] in ([Store Size in SQFT].[All Store Size in SQFTs].[20319], [Store Size in SQFT].[All Store Size in SQFTs].[21215], [Store Size in SQFT].[All Store Size in SQFTs].[22478], [Store Size in SQFT].[All Store Size in SQFTs].[23112], [Store Size in SQFT].[All Store Size in SQFTs].[23593], [Store Size in SQFT].[All Store Size in SQFTs].[23598], [Store Size in SQFT].[All Store Size in SQFTs].[23688], [Store Size in SQFT].[All Store Size in SQFTs].[23759], [Store Size in SQFT].[All Store Size in SQFTs].[24597], [Store Size in SQFT].[All Store Size in SQFTs].[27694], [Store Size in SQFT].[All Store Size in SQFTs].[28206])</expressionString>
+      <expressionString>[Store Size in SQFT].[Store Sqft] in ([Store Size in SQFT].[All Store Size in SQFTs].[20319], [Store Size in SQFT].[All Store Size in SQFTs].[21215], [Store Size in SQFT].[All Store Size in SQFTs].[22478], [Store Size in SQFT].[All Store Size in SQFTs].[23112], [Store Size in SQFT].[All Store Size in SQFTs].[23593], [Store Size in SQFT].[All Store Size in SQFTs].[23598], [Store Size in SQFT].[All Store Size in SQFTs].[23688], [Store Size in SQFT].[All Store Size in SQFTs].[23759], [Store Size in SQFT].[All Store Size in SQFTs].[24597], [Store Size in SQFT].[All Store Size in SQFTs].[27694], [Store Size in SQFT].[All Store Size in SQFTs].[28206], [Store Size in SQFT].[All Store Size in SQFTs].[30268], [Store Size in SQFT].[All Store Size in SQFTs].[30584], [Store Size in SQFT].[All Store Size in SQFTs].[30797], [Store Size in SQFT].[All Store Size in SQFTs].[33858], [Store Size in SQFT].[All Store Size in SQFTs].[34452], [Store Size in SQFT].[All Store Size in SQFTs].[34791], [Store Size in SQFT].[All Store Size in SQFTs].[36509], [Store Size in SQFT].[All Store Size in SQFTs].[38382], [Store Size in SQFT].[All Store Size in SQFTs].[39696])</expressionString>
     </subFilter>
   </subFilterList>
   <title>Store Segment Performance</title>

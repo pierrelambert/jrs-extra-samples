@@ -5,7 +5,7 @@
     <version>0</version>
     <label>States Input Control</label>
     <description>Uses USWesternRegionStatesList. Maps to states parameter.</description>
-    <creationDate>2014-11-24T17:21:43.446+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:41.316+01:00</creationDate>
     <updateDate>2014-05-14T01:43:17.587+02:00</updateDate>
     <type>3</type>
     <mandatory>false</mandatory>

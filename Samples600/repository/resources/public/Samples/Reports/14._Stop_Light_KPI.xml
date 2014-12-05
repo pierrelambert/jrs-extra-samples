@@ -5,7 +5,7 @@
     <version>0</version>
     <label>14. Stop Light KPI</label>
     <description>Report used for Performance Summary Dashboard.</description>
-    <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
     <updateDate>2014-11-07T01:55:43.960+01:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-30T19:27:44.301+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -34,7 +34,7 @@
             <name>supermart_es.properties</name>
             <version>0</version>
             <label>supermart_es.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
@@ -47,7 +47,7 @@
             <name>Red</name>
             <version>0</version>
             <label>Red</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Red</referenceUri>
         </localResource>
@@ -60,7 +60,7 @@
             <name>supermart_zh_CN.properties</name>
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
@@ -73,7 +73,7 @@
             <name>supermart_ja.properties</name>
             <version>0</version>
             <label>supermart_ja.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
@@ -88,7 +88,7 @@
             <version>0</version>
             <label>TrafficLight.jrxml</label>
             <description></description>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-11-07T01:55:43.844+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -101,7 +101,7 @@
             <name>Green</name>
             <version>0</version>
             <label>Green</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Green</referenceUri>
         </localResource>
@@ -114,7 +114,7 @@
             <name>Yellow</name>
             <version>0</version>
             <label>Yellow</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Yellow</referenceUri>
         </localResource>
@@ -127,7 +127,7 @@
             <name>supermart_fr.properties</name>
             <version>0</version>
             <label>supermart_fr.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
@@ -140,7 +140,7 @@
             <name>supermart.properties</name>
             <version>0</version>
             <label>supermart.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
@@ -153,7 +153,7 @@
             <name>supermart_de.properties</name>
             <version>0</version>
             <label>supermart_de.properties</label>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
@@ -167,7 +167,7 @@
             <version>0</version>
             <label>supermart_en_US.properties</label>
             <description>supermart_en_US.properties</description>
-            <creationDate>2014-11-24T17:21:41.034+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.110+01:00</creationDate>
             <updateDate>2014-09-08T20:38:04.935+02:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>

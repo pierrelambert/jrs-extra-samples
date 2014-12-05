@@ -5,7 +5,7 @@
     <version>0</version>
     <label>05. Unit Sales Trend</label>
     <description>Sample HTML5 Time Series chart from Topic for Unit Sales data over relative 90 rolling day window with filtering by Country and Product Family </description>
-    <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
     <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
@@ -18,7 +18,7 @@
             <name>c_country_1</name>
             <version>0</version>
             <label>Customer Country</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -30,7 +30,7 @@
                     <name>c_country_1</name>
                     <version>0</version>
                     <label>Customer Country</label>
-                    <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
                     <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -562,7 +562,7 @@
             <name>product_family_1</name>
             <version>0</version>
             <label>Product Family</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -574,7 +574,7 @@
                     <name>product_family_1</name>
                     <version>0</version>
                     <label>Product Family</label>
-                    <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
                     <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1106,7 +1106,7 @@
             <name>the_date_1</name>
             <version>0</version>
             <label>Date between</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
@@ -1118,7 +1118,7 @@
                     <name>timestamp</name>
                     <version>0</version>
                     <label>Timestamp</label>
-                    <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
                     <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
                     <type>4</type>
                     <strictMin>false</strictMin>
@@ -1135,7 +1135,7 @@
             <name>the_date_2</name>
             <version>0</version>
             <label>and</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
@@ -1147,7 +1147,7 @@
                     <name>timestamp</name>
                     <version>0</version>
                     <label>Timestamp</label>
-                    <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
                     <updateDate>2014-04-25T17:56:09.048+02:00</updateDate>
                     <type>4</type>
                     <strictMin>false</strictMin>
@@ -1164,7 +1164,7 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:54:46.859+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -1177,7 +1177,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T17:21:39.710+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.585+01:00</creationDate>
             <updateDate>2014-04-25T17:54:46.859+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

@@ -1,0 +1,12 @@
+diff -uNr /root/jasperserver-pro.orig/WEB-INF/applicationContext-adhoc-dataStrategy.xml ./applicationContext-adhoc-dataStrategy.xml
+--- /root/jasperserver-pro.orig/WEB-INF/applicationContext-adhoc-dataStrategy.xml	2014-12-04 22:06:21.000000000 +0100
++++ ./applicationContext-adhoc-dataStrategy.xml	2014-12-04 23:04:04.000000000 +0100
+@@ -46,7 +46,7 @@
+      -->
+     <bean id="stagingService" class="com.jaspersoft.ji.adhoc.strategy.staging.DataDefinerStagingService">
+         <!-- set this to true to enable the staging service, and to enable staging fields in the data definer -->
+-        <property name="enabled" value="false"/>
++        <property name="enabled" value="true"/>
+         <property name="repositoryService" ref="mtRepositoryService"/>
+         <property name="securityContextProvider" ref="${bean.securityContextProvider}"/>
+         <property name="searchCriteriaFactory" ref="searchCriteriaFactory"/>

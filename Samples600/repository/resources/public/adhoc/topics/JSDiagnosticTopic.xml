@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/adhoc/topics</folder>
+    <name>JSDiagnosticTopic</name>
+    <version>1</version>
+    <label>Diagnostic Topic</label>
+    <description></description>
+    <creationDate>2014-12-01T20:56:34.457+01:00</creationDate>
+    <updateDate>2012-09-26T19:59:42.284+02:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="JSDiagnosticTopic_jrxml.data" xsi:type="fileResource">
+            <folder>/public/adhoc/topics/JSDiagnosticTopic_files</folder>
+            <name>JSDiagnosticTopic_jrxml</name>
+            <version>1</version>
+            <label>Main jrxml</label>
+            <description>Main jrxml</description>
+            <creationDate>2014-12-01T20:56:34.457+01:00</creationDate>
+            <updateDate>2012-09-26T20:00:33.598+02:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/diagnostic/JSDiagnosticDataSource</uri>
+    </dataSource>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

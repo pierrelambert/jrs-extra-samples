@@ -5,7 +5,7 @@
     <version>0</version>
     <label>08. Key Performance Metric Trend</label>
     <description>Sample HTML5 Dual-axis column-line chart showing Sales and Margin results</description>
-    <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
     <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
@@ -18,7 +18,7 @@
             <name>product_department_1</name>
             <version>0</version>
             <label>Product Department</label>
-            <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
             <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -30,7 +30,7 @@
                     <name>product_department_1</name>
                     <version>0</version>
                     <label>Product Department</label>
-                    <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
                     <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -562,7 +562,7 @@
             <name>store_country_1</name>
             <version>0</version>
             <label>Store Country</label>
-            <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
             <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
@@ -574,7 +574,7 @@
                     <name>store_country_1</name>
                     <version>0</version>
                     <label>Store Country</label>
-                    <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+                    <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
                     <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -1106,7 +1106,7 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
             <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -1119,7 +1119,7 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2014-11-24T17:21:39.907+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.824+01:00</creationDate>
             <updateDate>2014-04-25T17:52:50.379+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

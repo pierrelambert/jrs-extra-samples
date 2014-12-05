@@ -1,0 +1,12 @@
+diff -uNr /root/jasperserver-pro.orig/WEB-INF/applicationContext-data-snapshots.xml ./applicationContext-data-snapshots.xml
+--- /root/jasperserver-pro.orig/WEB-INF/applicationContext-data-snapshots.xml	2014-12-04 22:06:21.000000000 +0100
++++ ./applicationContext-data-snapshots.xml	2014-12-04 23:01:24.000000000 +0100
+@@ -14,7 +14,7 @@
+ 	
+ 	<bean id="dataSnapshotService" class="com.jaspersoft.jasperserver.api.engine.jasperreports.service.impl.StandardDataSnapshotService">
+ 		<property name="snapshotRecordingEnabled" value="true"/>
+-		<property name="snapshotPersistenceEnabled" value="false"/><!-- data snapshot persistence is off by default -->
++		<property name="snapshotPersistenceEnabled" value="true"/><!-- data snapshot persistence is off by default -->
+ 		<property name="persistenceService" ref="dataSnapshotPersistenceService"/>
+ 		<property name="cachingService" ref="dataSnapshotCachingService"/>
+ 		<property name="dataCacheProvider" ref="engineServiceDataCacheProvider"/>

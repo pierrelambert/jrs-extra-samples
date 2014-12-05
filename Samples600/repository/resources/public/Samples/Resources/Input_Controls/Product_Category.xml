@@ -4,7 +4,7 @@
     <name>Product_Category</name>
     <version>0</version>
     <label>Product Category</label>
-    <creationDate>2014-11-24T17:21:44.360+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.100+01:00</creationDate>
     <updateDate>2013-09-20T08:30:24.649+02:00</updateDate>
     <type>4</type>
     <mandatory>true</mandatory>
@@ -18,7 +18,7 @@
             <name>ProductCategory_Query</name>
             <version>0</version>
             <label>ProductCategory Query</label>
-            <creationDate>2014-11-24T17:21:44.360+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.100+01:00</creationDate>
             <updateDate>2013-09-20T08:30:24.649+02:00</updateDate>
             <language>sql</language>
             <queryString>select 

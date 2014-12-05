@@ -5,7 +5,7 @@
     <version>0</version>
     <label>05g. Accounts Report</label>
     <description>Basic interactive Table Component report with alternate color scheme.</description>
-    <creationDate>2014-11-24T17:21:44.675+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.351+01:00</creationDate>
     <updateDate>2013-10-04T01:17:06.339+02:00</updateDate>
     <mainReport>
         <localResource
@@ -15,7 +15,7 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2014-11-24T17:21:44.675+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.351+01:00</creationDate>
             <updateDate>2013-09-03T08:30:32.650+02:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="01. Geographic Results by Segment Report" pageWidth="842" pageHeight="595" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" resourceBundle="supermart_domain" uuid="2fc063bc-c58a-4679-94c8-2dd97078e20d">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="01. Geographic Results by Segment Report" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" resourceBundle="supermart_domain" uuid="28637bbe-5909-452f-92ca-fef6fcb90236">
 	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="false"/>
 	<property name="net.sf.jasperreports.export.html.border.collapse" value="separate"/>
 	<property name="net.sf.jasperreports.export.docx.frames.as.nested.tables" value="false"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.actual.size" value="true"/>
 	<property name="com.jaspersoft.jasperserver.adhoc.group.indent" value="0"/>
 	<property name="com.jaspersoft.jasperserver.adhoc.min.group.label.width" value="100"/>
 	<property name="com.jaspersoft.jasperserver.adhoc.detail.band.height" value="25"/>
@@ -250,13 +251,10 @@
 		<fieldDescription><![CDATA[sales_fact_ALL.sales_fact_ALL__store_cost_2013]]></fieldDescription>
 	</field>
 	<field name="$PerSqFoot" class="java.math.BigDecimal">
-		<property name="adhoc.expression" value="sales_fact_ALL.sales_fact_ALL__store_sales_2013 / sales_fact_ALL.sales__store.sales__store__store_features.sales__store__store_features__store_sqft * 1000"/>
+		<property name="adhoc.expression" value="(sales_fact_ALL.sales_fact_ALL__store_sales_2013 / sales_fact_ALL.sales__store.sales__store__store_features.sales__store__store_features__store_sqft) * 1000"/>
 		<fieldDescription><![CDATA[$PerSqFoot]]></fieldDescription>
 	</field>
-	<field name="store1.store_country" class="java.lang.String"/>
-	<field name="sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country" class="java.lang.String">
-		<fieldDescription><![CDATA[sales_fact_ALL.sales__store.sales__store__store_contact.sales__store__store_contact__store_country]]></fieldDescription>
-	</field>
+	<field name="region11.sales_country" class="java.lang.String"/>
 	<field name="sales_fact_ALL.sales__product.sales__product__low_fat" class="java.lang.Boolean">
 		<fieldDescription><![CDATA[sales_fact_ALL.sales__product.sales__product__low_fat]]></fieldDescription>
 	</field>
@@ -266,18 +264,21 @@
 	<field name="sales_fact_ALL.sales__product.sales__product__recyclable_package" class="java.lang.Boolean">
 		<fieldDescription><![CDATA[sales_fact_ALL.sales__product.sales__product__recyclable_package]]></fieldDescription>
 	</field>
+	<field name="sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country" class="java.lang.String">
+		<fieldDescription><![CDATA[sales_fact_ALL.sales__store.sales__store__region.sales__store__region__sales_country]]></fieldDescription>
+	</field>
 	<title>
-		<band height="468" splitType="Stretch">
+		<band height="335" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement key="staticText" style="ChartReportTitle" x="0" y="0" width="802" height="0" uuid="a4190fa7-6528-458d-b8ef-13a10a1ade21">
+				<reportElement key="staticText" style="ChartReportTitle" x="0" y="0" width="572" height="0" uuid="4578ca26-3aa7-4773-84ad-4169637a8dc1">
 					<printWhenExpression><![CDATA[$P{REPORT_TITLE} != null && $P{REPORT_TITLE}.length() > 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement key="chart" positionType="Float" mode="Opaque" x="5" y="5" width="802" height="463" uuid="228142e8-229d-45c5-99e5-b3688491bc67"/>
-				<jrhc:chart xmlns:jrhc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="MultiAxisColumn" preferredHeight="495">
+				<reportElement key="chart" positionType="Float" mode="Opaque" x="5" y="5" width="572" height="330" uuid="1409ce40-13d2-4776-b5d4-94a378f3dbb3"/>
+				<jrhc:chart xmlns:jrhc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="MultiAxisColumn" preferredHeight="353">
 					<jrhc:chartSetting name="_jrs_adhoc">
 						<jrhc:chartProperty name="_JRS_ADHOC_CHART_STATE">
 							<jrhc:propertyExpression><![CDATA[$P{_JRS_ADHOC_CHART_STATE}]]></jrhc:propertyExpression>

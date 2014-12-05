@@ -106,14 +106,6 @@
   </chartState>
   <crosstabState numberOfColumns="0" safeColumnMode="true" safeRowMode="true" showLabels="true">
     <columnGroups>
-      <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String">
-        <expandedLevels>
-          <string>Measures</string>
-        </expandedLevels>
-        <visibleLevels>
-          <string>Measures</string>
-        </visibleLevels>
-      </queryDimension>
       <queryDimension categorizerName="all" fieldName="c_gender" includeAll="true" name="c_gender" sortStatus="0" type="java.lang.String">
         <expandedLevels>
           <string>c_gender</string>
@@ -122,14 +114,19 @@
           <string>c_gender</string>
         </visibleLevels>
       </queryDimension>
+      <queryDimension fieldName="Measures" includeAll="true" name="Measures" sortStatus="0" type="java.lang.String">
+        <visibleLevels>
+          <string>Measures</string>
+        </visibleLevels>
+      </queryDimension>
     </columnGroups>
     <rowGroups>
-      <queryDimension categorizerName="all" fieldName="c_country" includeAll="true" name="c_country" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="store_country" includeAll="true" name="store_country" sortStatus="0" type="java.lang.String">
         <expandedLevels>
-          <string>c_country</string>
+          <string>store_country</string>
         </expandedLevels>
         <visibleLevels>
-          <string>c_country</string>
+          <string>store_country</string>
         </visibleLevels>
       </queryDimension>
       <queryDimension categorizerName="all" fieldName="product_family" includeAll="true" name="product_family" sortStatus="0" type="java.lang.String">
@@ -144,12 +141,12 @@
     <sortingState />
   </crosstabState>
   <groups>
-    <queryDimension categorizerName="all" fieldName="c_country" includeAll="true" name="c_country" sortStatus="0" type="java.lang.String">
+    <queryDimension categorizerName="all" fieldName="store_country" includeAll="true" name="store_country" sortStatus="0" type="java.lang.String">
       <expandedLevels>
-        <string>c_country</string>
+        <string>store_country</string>
       </expandedLevels>
       <visibleLevels>
-        <string>c_country</string>
+        <string>store_country</string>
       </visibleLevels>
     </queryDimension>
     <queryDimension categorizerName="all" fieldName="product_family" includeAll="true" name="product_family" sortStatus="0" type="java.lang.String">
@@ -161,9 +158,9 @@
       </visibleLevels>
     </queryDimension>
   </groups>
-  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="false" typeString="percent_bar" />
+  <intelligentChartState XAxisRotation="0" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" invertedAxis="false" labelOffset="0.0" legend="bottom" legendBorder="true" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="false" showSingleMeasuresLabels="false" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="percent_bar" />
   <measures>
-    <measure aggregateType="java.lang.Double" fieldName="store_sales" function="Sum" mask="#,##0.00" measure="true" name="store_sales" width="125" />
+    <measure aggregateType="java.lang.Double" fieldName="store_sales" function="Sum" mask="#,##0.00" measure="true" name="store_sales" showSummary="false" width="125" />
   </measures>
   <propertyMap>
     <entry key="hideEmptyRows">
@@ -187,6 +184,10 @@
     <subFilter id="filter_1" letter="A" sourceString="DYNAMIC">
       <expressionString>isAnyValue(quarter)</expressionString>
       <parameterizedExpressionString>quarter in quarter_1</parameterizedExpressionString>
+    </subFilter>
+    <subFilter id="filter_3" letter="B" sourceString="DYNAMIC">
+      <expressionString>isAnyValue(c_country)</expressionString>
+      <parameterizedExpressionString>c_country in c_country_1</parameterizedExpressionString>
     </subFilter>
   </subFilterList>
   <title>Sales Mix by Gender</title>

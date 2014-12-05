@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Supermart Domain</label>
     <description>Comprehensive example of Domain (pre-joined table sets for complex reporting, custom query based dataset, column and row security, I18n bundles)</description>
-    <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
     <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
     <schema>
         <localResource
@@ -16,7 +16,7 @@
             <version>0</version>
             <label>schema</label>
             <description>schema</description>
-            <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
             <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
@@ -31,7 +31,7 @@
             <version>0</version>
             <label>supermartDomain_domain_security</label>
             <description>supermartDomain_domain_security</description>
-            <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
             <updateDate>2012-10-15T19:12:06.740+02:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
@@ -54,7 +54,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -72,7 +72,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -90,7 +90,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -108,7 +108,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -126,7 +126,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -144,7 +144,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
@@ -162,7 +162,7 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2014-11-24T17:21:39.326+01:00</creationDate>
+                <creationDate>2014-12-01T20:56:37.202+01:00</creationDate>
                 <updateDate>2013-03-29T18:43:13.687+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Product Name</label>
     <description>Displays distinct "Product's Names" depending upon the "Product Category" is selected.</description>
-    <creationDate>2014-11-24T17:21:44.402+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:42.138+01:00</creationDate>
     <updateDate>2013-09-20T07:53:59.828+02:00</updateDate>
     <type>7</type>
     <mandatory>true</mandatory>
@@ -19,7 +19,7 @@
             <name>ProductName_Query</name>
             <version>0</version>
             <label>ProductName Query</label>
-            <creationDate>2014-11-24T17:21:44.402+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:42.138+01:00</creationDate>
             <updateDate>2013-09-20T07:53:59.828+02:00</updateDate>
             <language>sql</language>
             <queryString>select 

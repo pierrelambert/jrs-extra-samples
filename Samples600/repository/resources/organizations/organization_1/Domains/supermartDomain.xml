@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Supermart Domain</label>
     <description>Comprehensive example of Domain (pre-joined table sets for complex reporting, custom query based dataset, column and row security, I18n bundles)</description>
-    <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-    <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+    <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+    <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
     <schema>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>supermartDomain_schema</label>
             <description>supermartDomain_schema</description>
-            <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-            <updateDate>2014-11-21T15:17:20.968+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+            <updateDate>2014-11-29T00:50:09.111+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </schema>
@@ -32,8 +32,8 @@
             <version>0</version>
             <label>supermartDomain_domain_security</label>
             <description>supermartDomain_domain_security</description>
-            <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-            <updateDate>2014-11-21T15:17:20.968+01:00</updateDate>
+            <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+            <updateDate>2014-11-29T00:50:09.111+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </securityFile>
@@ -54,8 +54,8 @@
                 <name>supermart_domain.properties</name>
                 <version>0</version>
                 <label>supermart_domain.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -71,8 +71,8 @@
                 <name>supermart_domain_en_US.properties</name>
                 <version>0</version>
                 <label>supermart_domain_en_US.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -88,8 +88,8 @@
                 <name>supermart_domain_de.properties</name>
                 <version>0</version>
                 <label>supermart_domain_de.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -105,8 +105,8 @@
                 <name>supermart_domain_fr.properties</name>
                 <version>0</version>
                 <label>supermart_domain_fr.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -122,8 +122,8 @@
                 <name>supermart_domain_es.properties</name>
                 <version>0</version>
                 <label>supermart_domain_es.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -139,8 +139,8 @@
                 <name>supermart_domain_ja.properties</name>
                 <version>0</version>
                 <label>supermart_domain_ja.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -156,8 +156,8 @@
                 <name>supermart_domain_zh_CN.properties</name>
                 <version>0</version>
                 <label>supermart_domain_zh_CN.properties</label>
-                <creationDate>2014-11-24T17:21:35.654+01:00</creationDate>
-                <updateDate>2014-11-21T15:17:21.566+01:00</updateDate>
+                <creationDate>2014-12-01T20:56:34.244+01:00</creationDate>
+                <updateDate>2014-11-29T00:50:09.946+01:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>

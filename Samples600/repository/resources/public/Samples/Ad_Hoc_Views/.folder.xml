@@ -4,7 +4,7 @@
     <name>Ad_Hoc_Views</name>
     <label>Ad Hoc Views</label>
     <description>Ad Hoc Views</description>
-    <creationDate>2014-11-24T17:21:32.934+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:31.738+01:00</creationDate>
     <updateDate>2012-10-15T18:20:49.812+02:00</updateDate>
     <resource>01__Geographic_Results_by_Segment</resource>
     <resource>02__Sales_Mix_by_Demographic</resource>
@@ -16,5 +16,6 @@
     <resource>08__Key_Performance_Metric_Trend</resource>
     <resource>09__Store_Segment_Performance</resource>
     <resource>10__Calculated_Fields_and_Measures</resource>
+    <resource>11__Brand_Performance_by_Area_Code</resource>
     <resource>SalesPerCity</resource>
 </folder>

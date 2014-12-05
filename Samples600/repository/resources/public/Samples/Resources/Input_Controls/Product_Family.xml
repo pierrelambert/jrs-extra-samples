@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Family</label>
     <description></description>
-    <creationDate>2014-11-24T17:21:40.935+01:00</creationDate>
-    <updateDate>2014-05-14T01:40:42.465+02:00</updateDate>
+    <creationDate>2014-12-01T20:56:39.020+01:00</creationDate>
+    <updateDate>2014-09-24T23:19:27.436+02:00</updateDate>
     <type>4</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>
@@ -20,7 +20,7 @@
             <version>0</version>
             <label>Product_Family</label>
             <description></description>
-            <creationDate>2014-11-24T17:21:40.935+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:39.020+01:00</creationDate>
             <updateDate>2013-09-20T07:03:15.425+02:00</updateDate>
             <language>sql</language>
             <queryString>select 

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Yearly Income</label>
     <description></description>
-    <creationDate>2014-11-24T17:21:43.474+01:00</creationDate>
+    <creationDate>2014-12-01T20:56:41.342+01:00</creationDate>
     <updateDate>2014-05-14T01:45:16.709+02:00</updateDate>
     <type>7</type>
     <mandatory>true</mandatory>
@@ -20,7 +20,7 @@
             <version>0</version>
             <label>Yearly Income</label>
             <description></description>
-            <creationDate>2014-11-24T17:21:43.474+01:00</creationDate>
+            <creationDate>2014-12-01T20:56:41.342+01:00</creationDate>
             <updateDate>2012-11-05T13:15:06.194+01:00</updateDate>
             <language>sql</language>
             <queryString>select distinct yearly_income,(case  when yearly_income='$10K - $30K' then 1
