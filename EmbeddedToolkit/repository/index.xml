@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<export><property name="pathProcessorId" value="zip"/><property name="jsVersion" value="6.0.0 PRO"/><module id="repositoryResources"><folder>/public/Samples/MyExamples</folder></module><module id="reportJobs"/></export>
+<export><property name="pathProcessorId" value="zip"/><property name="jsVersion" value="6.0.0 PRO"/><module id="repositoryResources"><folder>/public/SESamples/EmbeddedToolkit</folder></module><module id="reportJobs"/></export>
