@@ -7,9 +7,9 @@ More details can be found here: http://community.jaspersoft.com/wiki/mongodb-cit
 author: Ernesto Ongaro
 
 ##Requirements
-* JRS >=5.0
+* JRS >=6.0
 * MongoDB >=2.4
 
 ##Instructions
-Import the database with `mongorestore --drop dump` and then import the repository contents. The repository contents are:
+Import the database with `mongorestore --drop dump` and then import the repository contents.
 
