@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securityDefinition xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0" itemGroupDefaultAccess="granted">
+   <resourceAccessGrants>
+      <!-- Row level security -->
+      <!-- What access do roles/users have to the rows in the resource? -->
+      <resourceAccessGrantList id="JoinTree_1_List" label="ListLabel" resourceId="JoinTree_1">
+         <resourceAccessGrants>
+            <!-- Row level for Cities -->
+            <resourceAccessGrant id="Jointree_1_row_access_grant_20">
+               <principalExpression><![CDATA[authentication.principal.attributes.any{it.attrName in ['Country'] }]]></principalExpression>
+               <filterExpression>testProfileAttribute(public_agency.agency_country,'Country')</filterExpression>
+            </resourceAccessGrant>
+            <!-- Row level for Product Dept --> <!--
+            <resourceAccessGrant id="Jointree_1_row_access_grant_30">
+               <principalExpression><![CDATA[authentication.getPrincipal().getAttributes().any{it.getAttrName() in ['ProductDepartment'] }]]></principalExpression>
+               <filterExpression>testProfileAttribute(product_class.product_department,'ProductDepartment')</filterExpression>
+            </resourceAccessGrant> -->
+         </resourceAccessGrants>
+      </resourceAccessGrantList>
+   </resourceAccessGrants>
+   <!-- Column level security -->
+   <!-- What access do roles/users have to the fields in an item group? -->
+   <itemGroupAccessGrants>
+      <itemGroupAccessGrantList id="restrict_Jointree_1_item_group_Sales" label="aLabel" itemGroupId="confidentialInfo" defaultAccess="denied">
+         <itemGroupAccessGrants>
+            <!-- Column level for managers and admin -->
+            <itemGroupAccessGrant id="Jointree1_item_group_access_grant_1" access="granted">
+               <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_HPC_ADMIN','ROLE_COUNTRY_MANAGER'] }</principalExpression>
+            </itemGroupAccessGrant>
+            <!-- Column level for sales reps -->
+            <itemGroupAccessGrant id="Jointree_1_item_group_access_grant_2" access="granted">
+               <principalExpression>authentication.getPrincipal().getRoles().any{ it.getRoleName() in ['ROLE_SALES_REP'] }</principalExpression>
+               <itemAccessGrantList id="Jointree_1_grant2_item_group_items" defaultAccess="denied">
+                  <itemAccessGrants>
+                     <itemAccessGrant id="Jointree_1_grant2_items_grant1" itemId="sales" access="granted" />
+                     <itemAccessGrant id="Jointree_1_grant2_items_grant2" itemId="sales_prediscount" access="granted" />
+                  </itemAccessGrants>
+               </itemAccessGrantList>
+            </itemGroupAccessGrant>
+         </itemGroupAccessGrants>
+      </itemGroupAccessGrantList>
+   </itemGroupAccessGrants>
+</securityDefinition>

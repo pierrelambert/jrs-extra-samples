@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC</parent><name>temp</name><label>Temp</label><description>Temp</description><creationDate>2014-12-15T11:36:24.135+01:00</creationDate><updateDate>2013-10-24T15:05:37.700+02:00</updateDate><permission><permissionMask>1</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

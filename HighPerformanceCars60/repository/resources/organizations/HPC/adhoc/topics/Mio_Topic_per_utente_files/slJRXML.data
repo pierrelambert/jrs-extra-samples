@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="slReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="16a73803-19f6-4ea7-bed5-cff3090890a1">
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="public_agency.agency_contract_type" />
+    <queryField id="public_agency.agency_country" />
+    <queryField id="public_agency.agency_id" />
+    <queryField id="public_agency.agency_name" />
+    <queryField id="public_agency.agency_region" />
+    <queryField id="public_agency.agency_sedad_id" />
+    <queryField id="public_agency.sales_rep_name" />
+    <queryField id="public_part.part_family" />
+    <queryField id="public_part.part_id1" />
+    <queryField id="public_part.part_number" />
+    <queryField id="public_part.part_price" />
+    <queryField id="public_part.part_ref" />
+  </queryFields>
+  <queryFilterString>public_agency.agency_country == 'Germany'</queryFilterString>
+</query>
+
+]]>
+	</queryString>
+	<field name="public_agency.agency_contract_type" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_contract_type"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_contract_type"/>
+		<property name="semantic.tree.sort.order" value="{&quot;sales_rep_name&quot;:8,&quot;agency_region&quot;:6,&quot;public_agency&quot;:1,&quot;public_part&quot;:9,&quot;part_family&quot;:10,&quot;part_id1&quot;:11,&quot;part_number&quot;:12,&quot;agency_name&quot;:5,&quot;agency_country&quot;:3,&quot;agency_id&quot;:4,&quot;part_price&quot;:13,&quot;part_ref&quot;:14,&quot;agency_contract_type&quot;:2,&quot;agency_sedad_id&quot;:7}"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_contract_type"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Contratto"/>
+		<property name="semantic.item.desc" value="agency_contract_type"/>
+		<property name="defaultMask"/>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="adhoc.tree.labels" value="[{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Agency&quot;,&quot;uri&quot;:&quot;/public_agency&quot;,&quot;labelId&quot;:&quot;&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Part&quot;,&quot;uri&quot;:&quot;/public_part&quot;,&quot;labelId&quot;:&quot;&quot;}]"/>
+	</field>
+	<field name="public_agency.agency_country" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_country"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_country"/>
+		<property name="qb.filters" value="[{&quot;isParameter&quot;:false,&quot;comparison&quot;:&quot;equals&quot;}]"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_country"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Country"/>
+		<property name="semantic.item.desc" value="agency_country"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_agency.agency_id" class="java.lang.Integer">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_id"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_id"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Agency Id"/>
+		<property name="semantic.item.desc" value="agency_id"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_agency.agency_name" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_name"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_name"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_name"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Agency Name"/>
+		<property name="semantic.item.desc" value="agency_name"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_agency.agency_region" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_region"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_region"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_region"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Region"/>
+		<property name="semantic.item.desc" value="agency_region"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_agency.agency_sedad_id" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/agency_sedad_id"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_sedad_id"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_sedad_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sedad Id"/>
+		<property name="semantic.item.desc" value="agency_sedad_id"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_agency.sales_rep_name" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_agency/sales_rep_name"/>
+		<property name="semantic.tree.uri" value="/public_agency/sales_rep_name"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.sales_rep_name"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sales Rep"/>
+		<property name="semantic.item.desc" value="sales_rep_name"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_part.part_family" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_part/part_family"/>
+		<property name="semantic.tree.uri" value="/public_part/part_family"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_family"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Family"/>
+		<property name="semantic.item.desc" value="part_family"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_part.part_id1" class="java.lang.Integer">
+		<property name="adhoc.tree.uri" value="/public_part/part_id1"/>
+		<property name="semantic.tree.uri" value="/public_part/part_id1"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Id"/>
+		<property name="semantic.item.desc" value="part_id1"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_part.part_number" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_part/part_number"/>
+		<property name="semantic.tree.uri" value="/public_part/part_number"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_number"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Number"/>
+		<property name="semantic.item.desc" value="part_number"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_part.part_price" class="java.math.BigDecimal">
+		<property name="adhoc.tree.uri" value="/public_part/part_price"/>
+		<property name="semantic.tree.uri" value="/public_part/part_price"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_price"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Price"/>
+		<property name="semantic.item.desc" value="part_price"/>
+		<property name="defaultMask"/>
+	</field>
+	<field name="public_part.part_ref" class="java.lang.String">
+		<property name="adhoc.tree.uri" value="/public_part/part_ref"/>
+		<property name="semantic.tree.uri" value="/public_part/part_ref"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_ref"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Ref."/>
+		<property name="semantic.item.desc" value="part_ref"/>
+		<property name="defaultMask"/>
+	</field>
+</jasperReport>

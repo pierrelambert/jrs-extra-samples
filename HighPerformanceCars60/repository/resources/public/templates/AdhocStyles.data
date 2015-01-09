@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperTemplate PUBLIC "-//JasperReports//DTD Template//EN" "http://jasperreports.sourceforge.net/dtds/jaspertemplate.dtd">
+
+<jasperTemplate>
+	<style name="ReportDefault" isDefault="true" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11"/>
+	<style name="TableBaseFrameStyle" mode="Transparent">
+		<box padding="0">
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableFrameStyle" style="TableBaseFrameStyle">
+		<box padding="1">
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableColumnHeaderFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableColumnFooterFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<topPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableColumnHeaderTextStyle" style="ReportDefault" mode="Opaque" forecolor="#FF8000" backcolor="#FFFF80" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<pen lineWidth="1.0" lineStyle="Solid"/>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableGroupHeaderFrameStyle" style="TableBaseFrameStyle" mode="Opaque">
+		<box>
+			<topPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableGroupHeaderTextStyle" style="ReportDefault" mode="Opaque" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableGroupFooterFrameStyle" style="TableBaseFrameStyle" mode="Opaque">
+		<box>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableGroupFooterTextStyle" style="ReportDefault" mode="Opaque" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableSummaryFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<leftPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableSummaryTextNoBorderStyle" style="ReportDefault" mode="Opaque" fontName="DejaVu Sans" isBold="true">
+		<box leftPadding="5" rightPadding="5"/>
+	</style>
+	<style name="TableSummaryTextStyle" style="TableSummaryTextNoBorderStyle">
+		<box>
+			<pen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableTitleFrameStyle" style="TableFrameStyle">
+		<box topPadding="0" bottomPadding="0">
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableTitleTextStyle" style="ReportDefault" mode="Opaque" hAlign="Center" fontSize="18" isBold="false">
+		<box bottomPadding="8">
+			<pen lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableDetailFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<leftPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableDetailTextStyle" style="ReportDefault" mode="Opaque" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="false">
+		<box leftPadding="5" rightPadding="5">
+			<pen lineWidth="1.0" lineStyle="Solid"/>
+			<topPen lineWidth="1.0"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="ChartReportTitle" style="ReportDefault" mode="Opaque" forecolor="#333333" backcolor="#FFFFFF" hAlign="Center" fontSize="18" isBold="false">
+		<box>
+			<pen lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid"/>
+		</box>
+	</style>
+	<style name="ChartTitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="12" isBold="true"/>
+	<style name="ChartSubtitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartLegend" forecolor="#000000" backcolor="#FFFFFF" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartSeriesColor0" backcolor="#87C4FE"/>
+	<style name="ChartSeriesColor1" backcolor="#E96270"/>
+	<style name="ChartSeriesColor2" backcolor="#D1D1D1"/>
+	<style name="ChartSeriesColor3" backcolor="#FFEE99"/>
+	<style name="ChartSeriesColor4" backcolor="#6164FF"/>
+	<style name="ChartSeriesColor5" backcolor="#B0E992"/>
+	<style name="ChartSeriesColor6" backcolor="#AE9CEA"/>
+	<style name="ChartSeriesColor7" backcolor="#F5B05E"/>
+	<style name="ChartSeriesColor8" backcolor="#589EE1"/>
+	<style name="ChartSeriesColor9" backcolor="#AE4E59"/>
+	<style name="ChartSeriesColor10" backcolor="#747474"/>
+	<style name="ChartSeriesColor11" backcolor="#E2DC77"/>
+	<style name="ChartSeriesColor12" backcolor="#4749A5"/>
+	<style name="ChartSeriesColor13" backcolor="#81B963"/>
+	<style name="ChartSeriesColor14" backcolor="#7764B4"/>
+	<style name="ChartSeriesColor15" backcolor="#F27B4C"/>
+	<style name="ChartCategoryAxisLabelFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="11" isBold="true"/>
+	<style name="ChartCategoryAxisTickFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartValueAxisLabelFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="11" isBold="true"/>
+	<style name="ChartValueAxisTickFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartContext" backcolor="#D1CA67"/>
+	<style name="CrosstabElementStyle" mode="Transparent" forecolor="#000033" backcolor="#FFFFFF" hAlign="Center" vAlign="Middle" fontName="DejaVu Sans" fontSize="11">
+		<box bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="CrosstabBaseCellStyle" mode="Transparent">
+		<box padding="0">
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabBaseTextStyle" mode="Opaque" forecolor="#666666" backcolor="#FFFFFF" hAlign="Left" vAlign="Top" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+			<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="1.0" lineColor="#B1B6BB"/>
+			<rightPen lineWidth="1.0" lineColor="#B1B6BB"/>
+		</box>
+	</style>
+	<style name="CrosstabTitleTextStyle" style="CrosstabBaseTextStyle" forecolor="#333333" fontSize="18" isBold="false">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="CrosstabHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#D5DEE8"/>
+	<style name="CrosstabHeaderLabelStyle" style="CrosstabHeaderTextStyle" mode="Transparent">
+		<box>
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabMeasureHeaderTextStyle" style="CrosstabBaseTextStyle" forecolor="#FF0000" backcolor="#D3C8EB"/>
+	<style name="CrosstabMeasureHeaderLabelStyle" style="CrosstabMeasureHeaderTextStyle" mode="Transparent">
+		<box>
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabColumnMeasureHeaderTextStyle" style="CrosstabMeasureHeaderTextStyle"/>
+	<style name="CrosstabRowMeasureHeaderTextStyle" style="CrosstabMeasureHeaderTextStyle" isBold="false"/>
+	<style name="CrosstabDimensionHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#E7ECF2" isBold="false"/>
+	<style name="CrosstabDetailTextStyle" style="CrosstabBaseTextStyle" backcolor="#FFFFFF" hAlign="Right" isBold="false">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+	</style>
+	<style name="CrosstabDummyHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#D4D4D4"/>
+</jasperTemplate>

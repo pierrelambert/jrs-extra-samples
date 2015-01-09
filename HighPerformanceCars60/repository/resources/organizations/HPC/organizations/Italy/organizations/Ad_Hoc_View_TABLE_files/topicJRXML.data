@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="53b88b08-92a9-445f-93ab-f192b5bc9bff">
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_e239ba3c-2c1e-4080-a07f-0ac55817afc2"/>
+	<parameter name="agency_region_1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Lazio"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="agency_country_1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Italy"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="domain">
+		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
+  <queryFields>
+    <queryField id="public_agency.agency_contract_type" />
+    <queryField id="public_agency.agency_country" />
+    <queryField id="public_agency.agency_id" />
+    <queryField id="public_agency.agency_name" />
+    <queryField id="public_agency.agency_region" />
+    <queryField id="public_agency.agency_sedad_id" />
+    <queryField id="public_agency.sales_rep_name" />
+    <queryField id="public_order_2012.discount" />
+    <queryField id="public_order_2012.discount_perc" />
+    <queryField id="public_order_2012.is_stressful_order" />
+    <queryField id="public_part.part_family" />
+    <queryField id="public_part.part_id1" />
+    <queryField id="public_part.part_number" />
+    <queryField id="public_part.part_price" />
+    <queryField id="public_part.part_ref" />
+    <queryField id="public_time.date" />
+    <queryField id="public_time.fiscal_period" />
+    <queryField id="public_time.month_of_year" />
+    <queryField id="public_time.quarter" />
+    <queryField id="public_time.year" />
+    <queryField id="confidentialInfo.agency_certified_2012" />
+    <queryField id="confidentialInfo.sales" />
+    <queryField id="confidentialInfo.sales_prediscount" />
+  </queryFields>
+</query>]]>
+	</queryString>
+	<field name="public_agency.agency_contract_type" class="java.lang.String">
+		<property name="semantic.tree.sort.order" value="{&quot;sales_rep_name&quot;:8,&quot;public_agency&quot;:1,&quot;public_order_2012&quot;:9,&quot;part_family&quot;:14,&quot;part_id1&quot;:15,&quot;part_number&quot;:16,&quot;date&quot;:20,&quot;month_of_year&quot;:22,&quot;is_stressful_order&quot;:12,&quot;agency_id&quot;:4,&quot;confidentialInfo&quot;:25,&quot;sales&quot;:27,&quot;agency_contract_type&quot;:2,&quot;year&quot;:24,&quot;agency_certified_2012&quot;:26,&quot;public_time&quot;:19,&quot;discount_perc&quot;:11,&quot;agency_region&quot;:6,&quot;fiscal_period&quot;:21,&quot;public_part&quot;:13,&quot;agency_name&quot;:5,&quot;discount&quot;:10,&quot;agency_country&quot;:3,&quot;sales_prediscount&quot;:28,&quot;part_price&quot;:17,&quot;part_ref&quot;:18,&quot;agency_sedad_id&quot;:7,&quot;quarter&quot;:23}"/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Contract Type"/>
+		<property name="semantic.item.desc" value="agency_contract_type"/>
+		<property name="defaultMask"/>
+		<property name="adhoc.tree.labels" value="[{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Agency&quot;,&quot;uri&quot;:&quot;/public_agency&quot;,&quot;labelId&quot;:&quot;&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Order&quot;,&quot;uri&quot;:&quot;/public_order_2012&quot;,&quot;labelId&quot;:&quot;&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Part&quot;,&quot;uri&quot;:&quot;/public_part&quot;,&quot;labelId&quot;:&quot;&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Time&quot;,&quot;uri&quot;:&quot;/public_time&quot;,&quot;labelId&quot;:&quot;&quot;},{&quot;resourceId&quot;:&quot;JoinTree_1&quot;,&quot;label&quot;:&quot;Confidential Info&quot;,&quot;uri&quot;:&quot;/confidentialInfo&quot;,&quot;labelId&quot;:&quot;&quot;}]"/>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_contract_type"/>
+		<property name="semantic.tree.uri" value="/public_agency/agency_contract_type"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_contract_type"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<fieldDescription><![CDATA[public_agency.agency_contract_type]]></fieldDescription>
+	</field>
+	<field name="public_agency.agency_country" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_agency/agency_country"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_country"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_country"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Country"/>
+		<property name="semantic.item.desc" value="agency_country"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.agency_country]]></fieldDescription>
+	</field>
+	<field name="public_agency.agency_id" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_agency/agency_id"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_id"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Agency Id"/>
+		<property name="semantic.item.desc" value="agency_id"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.agency_id]]></fieldDescription>
+	</field>
+	<field name="public_agency.agency_name" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_agency/agency_name"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_name"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_name"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Agency Name"/>
+		<property name="semantic.item.desc" value="agency_name"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.agency_name]]></fieldDescription>
+	</field>
+	<field name="public_agency.agency_region" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_agency/agency_region"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_region"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_region"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Region"/>
+		<property name="semantic.item.desc" value="agency_region"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.agency_region]]></fieldDescription>
+	</field>
+	<field name="public_agency.agency_sedad_id" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_agency/agency_sedad_id"/>
+		<property name="adhoc.tree.uri" value="/public_agency/agency_sedad_id"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_sedad_id"/>
+		<property name="semantic.tree.sort.order" value="5"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sedad Id"/>
+		<property name="semantic.item.desc" value="agency_sedad_id"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.agency_sedad_id]]></fieldDescription>
+	</field>
+	<field name="public_agency.sales_rep_name" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_agency/sales_rep_name"/>
+		<property name="adhoc.tree.uri" value="/public_agency/sales_rep_name"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.sales_rep_name"/>
+		<property name="semantic.tree.sort.order" value="6"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sales Rep"/>
+		<property name="semantic.item.desc" value="sales_rep_name"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_agency.sales_rep_name]]></fieldDescription>
+	</field>
+	<field name="public_order_2012.discount" class="java.math.BigDecimal">
+		<property name="semantic.tree.uri" value="/public_order_2012/discount"/>
+		<property name="adhoc.tree.uri" value="/public_order_2012/discount"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_order_2012.discount"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Discount"/>
+		<property name="semantic.item.desc" value="discount"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[public_order_2012.discount]]></fieldDescription>
+	</field>
+	<field name="public_order_2012.discount_perc" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_order_2012/discount_perc"/>
+		<property name="adhoc.tree.uri" value="/public_order_2012/discount_perc"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_order_2012.discount_perc"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Discount %"/>
+		<property name="semantic.item.desc" value="discount_perc"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[public_order_2012.discount_perc]]></fieldDescription>
+	</field>
+	<field name="public_order_2012.is_stressful_order" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_order_2012/is_stressful_order"/>
+		<property name="adhoc.tree.uri" value="/public_order_2012/is_stressful_order"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_order_2012.is_stressful_order"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg" value="Sum"/>
+		<property name="adhoc.display" value="Stressful Order"/>
+		<property name="semantic.item.desc" value="is_stressful_order"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[public_order_2012.is_stressful_order]]></fieldDescription>
+	</field>
+	<field name="public_part.part_family" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_part/part_family"/>
+		<property name="adhoc.tree.uri" value="/public_part/part_family"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_family"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Family"/>
+		<property name="semantic.item.desc" value="part_family"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_part.part_family]]></fieldDescription>
+	</field>
+	<field name="public_part.part_id1" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_part/part_id1"/>
+		<property name="adhoc.tree.uri" value="/public_part/part_id1"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_id"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Id"/>
+		<property name="semantic.item.desc" value="part_id1"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_part.part_id1]]></fieldDescription>
+	</field>
+	<field name="public_part.part_number" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_part/part_number"/>
+		<property name="adhoc.tree.uri" value="/public_part/part_number"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_number"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Number"/>
+		<property name="semantic.item.desc" value="part_number"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_part.part_number]]></fieldDescription>
+	</field>
+	<field name="public_part.part_price" class="java.math.BigDecimal">
+		<property name="semantic.tree.uri" value="/public_part/part_price"/>
+		<property name="adhoc.tree.uri" value="/public_part/part_price"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_price"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Price"/>
+		<property name="semantic.item.desc" value="part_price"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[public_part.part_price]]></fieldDescription>
+	</field>
+	<field name="public_part.part_ref" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_part/part_ref"/>
+		<property name="adhoc.tree.uri" value="/public_part/part_ref"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_part.part_ref"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Part Ref."/>
+		<property name="semantic.item.desc" value="part_ref"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_part.part_ref]]></fieldDescription>
+	</field>
+	<field name="public_time.date" class="java.sql.Timestamp">
+		<property name="semantic.tree.uri" value="/public_time/date"/>
+		<property name="adhoc.tree.uri" value="/public_time/date"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_time.date"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Date"/>
+		<property name="semantic.item.desc" value="date"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_time.date]]></fieldDescription>
+	</field>
+	<field name="public_time.fiscal_period" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_time/fiscal_period"/>
+		<property name="adhoc.tree.uri" value="/public_time/fiscal_period"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_time.fiscal_period"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Fiscal Period"/>
+		<property name="semantic.item.desc" value="fiscal_period"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_time.fiscal_period]]></fieldDescription>
+	</field>
+	<field name="public_time.month_of_year" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_time/month_of_year"/>
+		<property name="adhoc.tree.uri" value="/public_time/month_of_year"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_time.month_of_year"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Month"/>
+		<property name="semantic.item.desc" value="month_of_year"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_time.month_of_year]]></fieldDescription>
+	</field>
+	<field name="public_time.quarter" class="java.lang.String">
+		<property name="semantic.tree.uri" value="/public_time/quarter"/>
+		<property name="adhoc.tree.uri" value="/public_time/quarter"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_time.quarter"/>
+		<property name="semantic.tree.sort.order" value="3"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Quarter"/>
+		<property name="semantic.item.desc" value="quarter"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_time.quarter]]></fieldDescription>
+	</field>
+	<field name="public_time.year" class="java.lang.Integer">
+		<property name="semantic.tree.uri" value="/public_time/year"/>
+		<property name="adhoc.tree.uri" value="/public_time/year"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_time.year"/>
+		<property name="semantic.tree.sort.order" value="4"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Year"/>
+		<property name="semantic.item.desc" value="year"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[public_time.year]]></fieldDescription>
+	</field>
+	<field name="confidentialInfo.agency_certified_2012" class="java.lang.Boolean">
+		<property name="semantic.tree.uri" value="/confidentialInfo/agency_certified_2012"/>
+		<property name="adhoc.tree.uri" value="/confidentialInfo/agency_certified_2012"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="resourceId" value="JoinTree_1.public_agency.agency_certified_2012"/>
+		<property name="semantic.tree.sort.order" value="0"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Agency Certified"/>
+		<property name="semantic.item.desc" value="agency_certified_2012"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="DIMENSION"/>
+		<fieldDescription><![CDATA[confidentialInfo.agency_certified_2012]]></fieldDescription>
+	</field>
+	<field name="confidentialInfo.sales" class="java.math.BigDecimal">
+		<property name="semantic.tree.uri" value="/confidentialInfo/sales"/>
+		<property name="adhoc.tree.uri" value="/confidentialInfo/sales"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_order_2012.sales"/>
+		<property name="semantic.tree.sort.order" value="1"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sales"/>
+		<property name="semantic.item.desc" value="sales"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[confidentialInfo.sales]]></fieldDescription>
+	</field>
+	<field name="confidentialInfo.sales_prediscount" class="java.math.BigDecimal">
+		<property name="semantic.tree.uri" value="/confidentialInfo/sales_prediscount"/>
+		<property name="adhoc.tree.uri" value="/confidentialInfo/sales_prediscount"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="resourceId" value="JoinTree_1.public_order_2012.sales_prediscount"/>
+		<property name="semantic.tree.sort.order" value="2"/>
+		<property name="semantic.item.desc.id" value=""/>
+		<property name="defaultAgg"/>
+		<property name="adhoc.display" value="Sales Pre-Discount"/>
+		<property name="semantic.item.desc" value="sales_prediscount"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
+		<fieldDescription><![CDATA[confidentialInfo.sales_prediscount]]></fieldDescription>
+	</field>
+</jasperReport>

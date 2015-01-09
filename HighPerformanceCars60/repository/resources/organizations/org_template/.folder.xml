@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations</parent><name>org_template</name><label>Folder Template</label><description>Folder Template</description><creationDate>2014-12-02T21:39:45.620+01:00</creationDate><updateDate>2014-11-29T00:29:03.331+01:00</updateDate><folder>adhoc</folder><folder>temp</folder><folder>templates</folder><folder>themes</folder><permission><permissionMask>0</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

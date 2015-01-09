@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Jaspersoft Template" pageWidth="400" pageHeight="792" columnWidth="360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="3208165d-2318-466b-b493-894734e76eff">
+	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="false"/>
+	<property name="net.sf.jasperreports.export.html.border.collapse" value="separate"/>
+	<property name="net.sf.jasperreports.export.docx.frames.as.nested.tables" value="false"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.actual.size" value="true"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.group.indent" value="0"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.min.group.label.width" value="100"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.detail.band.height" value="25"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.header.band.height" value="25"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.row.header.width" value="125"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.cell.width" value="100"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.cell.height" value="20"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/templates/JaspersoftSampleTemplate"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<template><![CDATA["repo:/public/templates/AdhocStyles"]]></template>
+	<style name="TableFrameStyle" style="TableBaseFrameStyle">
+		<box padding="1">
+			<topPen lineWidth="1.1"/>
+			<leftPen lineWidth="1.0"/>
+			<bottomPen lineWidth="1.0"/>
+			<rightPen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="CrosstabDetailTextStyle" style="CrosstabBaseTextStyle" backcolor="#FFFFFF" hAlign="Right" isBold="false">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{CROSSTAB_TOTAL_DISCRIMINATOR}]]></conditionExpression>
+			<style backcolor="#F0F4F8" hAlign="Right" isBold="true">
+				<box>
+					<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<pageHeader>
+		<band height="50">
+			<image>
+				<reportElement x="0" y="0" width="161" height="50" uuid="e4e100f5-1dbc-410f-9665-0d55c0253c19"/>
+				<imageExpression><![CDATA["repo:/public/templates/hpcLogo"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="238" y="10" width="122" height="30" uuid="04e1f413-1da3-4e92-9418-6a41d2c5e4ad"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="100">
+			<rectangle>
+				<reportElement key="ADHOC_COMPONENT_KEY" x="0" y="0" width="360" height="90" uuid="699a1cf7-ea91-4e6e-9a4b-4d825a600ed9"/>
+			</rectangle>
+		</band>
+	</summary>
+</jasperReport>

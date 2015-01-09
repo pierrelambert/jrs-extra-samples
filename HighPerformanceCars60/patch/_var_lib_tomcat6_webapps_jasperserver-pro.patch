@@ -1,0 +1,264 @@
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_de.properties WEB-INF/bundles/jasperserver_messages_de.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_de.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_de.properties	2014-12-03 03:12:13.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=und
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_es.properties WEB-INF/bundles/jasperserver_messages_es.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_es.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_es.properties	2014-12-03 03:12:25.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=y
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_fr.properties WEB-INF/bundles/jasperserver_messages_fr.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_fr.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_fr.properties	2014-12-03 03:12:43.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=et
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_it.properties WEB-INF/bundles/jasperserver_messages_it.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_it.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_it.properties	2014-12-03 03:12:59.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=e
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_ja.properties WEB-INF/bundles/jasperserver_messages_ja.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_ja.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_ja.properties	2014-12-03 03:13:07.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=\u304a\u3088\u3073
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages.properties WEB-INF/bundles/jasperserver_messages.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages.properties	2014-11-12 06:10:44.000000000 +0100
++++ WEB-INF/bundles/jasperserver_messages.properties	2014-12-03 03:11:22.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=and
+ 
+@@ -1973,7 +1978,7 @@
+ LOGIN_HELP_AWS_INFO_CONFIRM_PASSWORD=[enter new password]
+ LOGIN_HELP_AWS_INFO_OTHERS_TITLE=Other users are available, but they are disabled. Login as superuser to enable them.
+ 
+-LOGIN_ROTATING_0_WHAT_IS_NEW=What's new in Jaspersoft Version 6?
++LOGIN_ROTATING_0_WHAT_IS_NEW=News
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_1=All New Dashboards
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_1_2=A single web environment for creating visualizations, with a mash-up of Reports, Ad Hoc Views, and web pages
+ LOGIN_ROTATING_0_WHAT_IS_NEW_ITEM_2_1=Expanded Visualizations
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_pt_BR.properties WEB-INF/bundles/jasperserver_messages_pt_BR.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_pt_BR.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_pt_BR.properties	2014-12-03 03:13:24.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=e
+ 
+diff -uNr WEB-INF-Orig/bundles/jasperserver_messages_zh_CN.properties WEB-INF/bundles/jasperserver_messages_zh_CN.properties
+--- WEB-INF-Orig/bundles/jasperserver_messages_zh_CN.properties	2014-08-24 11:35:06.000000000 +0200
++++ WEB-INF/bundles/jasperserver_messages_zh_CN.properties	2014-12-03 03:13:35.000000000 +0100
+@@ -1,3 +1,8 @@
++# search for CHANGED tag
++#Custom messages 
++#changed start
++LOGIN_WELCOME_MESSAGE_OS=Welcome to the High Performance Cars   POC for Jaspersoft Academy
++#changed end
+  # utility words
+ and=\u4e0e
+ 
+diff -uNr WEB-INF-Orig/jsp/modules/home/custom/homeForCM.jsp WEB-INF/jsp/modules/home/custom/homeForCM.jsp
+--- WEB-INF-Orig/jsp/modules/home/custom/homeForCM.jsp	1970-01-01 01:00:00.000000000 +0100
++++ WEB-INF/jsp/modules/home/custom/homeForCM.jsp	2014-12-03 02:46:37.000000000 +0100
+@@ -0,0 +1,43 @@
++<%--
++  ~ Copyright (C) 2005 - 2014 TIBCO Software Inc. All rights reserved.
++  ~ http://www.jaspersoft.com.
++  ~ Licensed under commercial Jaspersoft Subscription License Agreement
++  --%>
++<%@ page import="com.jaspersoft.ji.license.LicenseManager" %>
++<%@ page import="com.jaspersoft.jasperserver.api.common.util.spring.StaticApplicationContext" %>
++<%@ page import="com.jaspersoft.ji.license.LicenseReportCounter" %>
++
++<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
++<%@ taglib uri="/spring" prefix="spring"%>
++
++<%
++    request.setAttribute("homePage","true");
++    LicenseManager licenseManager = LicenseManager.getInstance();
++    LicenseReportCounter licenseReportCounter = StaticApplicationContext.getApplicationContext().getBean("licenseReportCounter", LicenseReportCounter.class);
++%>
++
++
++<%if (licenseReportCounter != null && licenseReportCounter.isReportRunsLimitReached()) {%>
++    <script>
++        window.location="${pageContext.request.contextPath}/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&reportUnit=%2Fpublic%2FHPC%2FReports%2FCMDashboard&viewAsDashboardFrame=true&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>";
++    </script>
++<% } else {%>
++    <t:insertTemplate template="/WEB-INF/jsp/templates/page.jsp">
++        <t:putAttribute name="pageTitle"><spring:message code='home.title'/></t:putAttribute>
++        <t:putAttribute name="bodyID">home_user</t:putAttribute>
++        <t:putAttribute name="bodyClass" value="oneColumn"/>
++        <t:putAttribute name="moduleName" value="commons.main"/>
++        <t:putAttribute name="bodyContent" >
++            <t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
++                <t:putAttribute name="containerClass" value="column decorated primary"/>
++                <t:putAttribute name="containerTitle"><spring:message code="home.header.title"/></t:putAttribute>
++                <t:putAttribute name="swipeScroll" value="${isIPad}"/>
++                <t:putAttribute name="bodyContent">
++                    <iframe id="outerFrame" class="outerDashboardFrame" name="Dashboard" allowtransparency="true" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" height="100%" width="100%" scrolling="no"
++                            src="${pageContext.request.contextPath}/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&reportUnit=%2Fpublic%2FHPC%2FReports%2FCMDashboard&viewAsDashboardFrame=true&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>">
++                    </iframe>
++                </t:putAttribute>
++            </t:insertTemplate>
++        </t:putAttribute>
++    </t:insertTemplate>
++<%}%>
+diff -uNr WEB-INF-Orig/jsp/modules/home/custom/homeForHpcAdmin.jsp WEB-INF/jsp/modules/home/custom/homeForHpcAdmin.jsp
+--- WEB-INF-Orig/jsp/modules/home/custom/homeForHpcAdmin.jsp	1970-01-01 01:00:00.000000000 +0100
++++ WEB-INF/jsp/modules/home/custom/homeForHpcAdmin.jsp	2014-12-03 02:46:54.000000000 +0100
+@@ -0,0 +1,42 @@
++<%--
++  ~ Copyright (C) 2005 - 2014 TIBCO Software Inc. All rights reserved.
++  ~ http://www.jaspersoft.com.
++  ~ Licensed under commercial Jaspersoft Subscription License Agreement
++  --%>
++<%@ page import="com.jaspersoft.ji.license.LicenseManager" %>
++<%@ page import="com.jaspersoft.jasperserver.api.common.util.spring.StaticApplicationContext" %>
++<%@ page import="com.jaspersoft.ji.license.LicenseReportCounter" %>
++
++<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
++<%@ taglib uri="/spring" prefix="spring"%>
++
++<%
++    request.setAttribute("homePage","true");
++    LicenseManager licenseManager = LicenseManager.getInstance();
++    LicenseReportCounter licenseReportCounter = StaticApplicationContext.getApplicationContext().getBean("licenseReportCounter", LicenseReportCounter.class);
++%>
++
++<%if (licenseReportCounter != null && licenseReportCounter.isReportRunsLimitReached()) {%>
++    <script>
++        window.location="${pageContext.request.contextPath}/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&reportUnit=%2Fpublic%2FHPC%2FReports%2FAdministratorsDashboard&viewAsDashboardFrame=true&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>";
++    </script>
++<% } else {%>
++    <t:insertTemplate template="/WEB-INF/jsp/templates/page.jsp">
++        <t:putAttribute name="pageTitle"><spring:message code='home.title'/></t:putAttribute>
++        <t:putAttribute name="bodyID">home_user</t:putAttribute>
++        <t:putAttribute name="bodyClass" value="oneColumn"/>
++        <t:putAttribute name="moduleName" value="commons.main"/>
++        <t:putAttribute name="bodyContent" >
++            <t:insertTemplate template="/WEB-INF/jsp/templates/container.jsp">
++                <t:putAttribute name="containerClass" value="column decorated primary"/>
++                <t:putAttribute name="containerTitle"><spring:message code="home.header.title"/></t:putAttribute>
++                <t:putAttribute name="swipeScroll" value="${isIPad}"/>
++                <t:putAttribute name="bodyContent">
++                    <iframe id="outerFrame" class="outerDashboardFrame" name="Dashboard" allowtransparency="true" align="center" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" height="100%" width="100%" scrolling="no"
++                            src="${pageContext.request.contextPath}/flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&reportUnit=%2Fpublic%2FHPC%2FReports%2FAdministratorsDashboard&viewAsDashboardFrame=true&hidden_isJasperAnalysis=<%=licenseManager.isAnalysisFeatureSupported()?"true":"false"%>">
++                    </iframe>
++                </t:putAttribute>
++            </t:insertTemplate>
++        </t:putAttribute>
++    </t:insertTemplate>
++<%}%>
+diff -uNr WEB-INF-Orig/jsp/modules/home/home.jsp WEB-INF/jsp/modules/home/home.jsp
+--- WEB-INF-Orig/jsp/modules/home/home.jsp	2014-08-24 11:36:56.000000000 +0200
++++ WEB-INF/jsp/modules/home/home.jsp	2014-12-03 02:50:38.000000000 +0100
+@@ -9,19 +9,24 @@
+ <%@ taglib uri="http://www.springframework.org/security/tags" prefix="authz"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
++<%-- Default Home page --%>
++<c:set  var="homePageRequested">homeForNonDemo.jsp</c:set>
+ <authz:authorize ifAllGranted="ROLE_DEMO">
+     <%--
+         We have special home page for demo user only on PostgreSQL db.
+         For other DB's it have same home page as other users.
+     --%>
+     <c:if test="${demoHomeResourceExists}">
+-        <jsp:include page="homeForDemo.jsp"/>
+-    </c:if>
+-    <c:if test="${not demoHomeResourceExists}">
+-        <jsp:include page="homeForNonDemo.jsp"/>
++        <c:set  var="homePageRequested">homeForDemo.jsp</c:set>
+     </c:if>
+ </authz:authorize>
+-<authz:authorize ifNotGranted="ROLE_DEMO">
+-    <jsp:include page="homeForNonDemo.jsp"/>
++<authz:authorize ifAllGranted="ROLE_COUNTRY_MANAGER">   
++	<c:set  var="homePageRequested">custom/homeForCM.jsp</c:set>	
++</authz:authorize>
++
++<authz:authorize ifAllGranted="ROLE_HPC_ADMIN">   
++	<c:set  var="homePageRequested">custom/homeForHpcAdmin.jsp</c:set>	
+ </authz:authorize>
+ 
++<jsp:include page="${homePageRequested}"/>
++
+diff -uNr WEB-INF-Orig/jsp/modules/home/home.jsp.orig WEB-INF/jsp/modules/home/home.jsp.orig
+--- WEB-INF-Orig/jsp/modules/home/home.jsp.orig	1970-01-01 01:00:00.000000000 +0100
++++ WEB-INF/jsp/modules/home/home.jsp.orig	2014-08-24 11:36:56.000000000 +0200
+@@ -0,0 +1,27 @@
++<%--
++  ~ Copyright (C) 2005 - 2014 TIBCO Software Inc. All rights reserved.
++  ~ http://www.jaspersoft.com.
++  ~ Licensed under commercial Jaspersoft Subscription License Agreement
++  --%>
++<%@ page contentType="text/html" %>
++
++<%@ taglib uri="/spring" prefix="spring"%>
++<%@ taglib uri="http://www.springframework.org/security/tags" prefix="authz"%>
++<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
++
++<authz:authorize ifAllGranted="ROLE_DEMO">
++    <%--
++        We have special home page for demo user only on PostgreSQL db.
++        For other DB's it have same home page as other users.
++    --%>
++    <c:if test="${demoHomeResourceExists}">
++        <jsp:include page="homeForDemo.jsp"/>
++    </c:if>
++    <c:if test="${not demoHomeResourceExists}">
++        <jsp:include page="homeForNonDemo.jsp"/>
++    </c:if>
++</authz:authorize>
++<authz:authorize ifNotGranted="ROLE_DEMO">
++    <jsp:include page="homeForNonDemo.jsp"/>
++</authz:authorize>
++
+\ No newline at end of file

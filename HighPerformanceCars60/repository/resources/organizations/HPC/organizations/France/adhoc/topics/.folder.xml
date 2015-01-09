@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/organizations/France/adhoc</parent><name>topics</name><label>Topics</label><description>Topics</description><creationDate>2014-12-15T11:36:25.910+01:00</creationDate><updateDate>2013-10-24T15:05:37.878+02:00</updateDate><permission><permissionMask>30</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

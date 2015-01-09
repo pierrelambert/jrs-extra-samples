@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="top5customers" pageWidth="190" pageHeight="210" orientation="Landscape" columnWidth="190" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" whenResourceMissingType="Key" uuid="ebb51791-0159-41f9-b4ac-83ce2737a960">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Dashboards/topItems_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Dashboards/topItems"/>
+	<template><![CDATA["repo:manStyle.jrtx"]]></template>
+	<style name="detail">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[($V{REPORT_COUNT} % 2) == 0]]></conditionExpression>
+			<style forecolor="#F1F1F2" backcolor="#E6E7E8"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[($V{REPORT_COUNT} % 2) != 0]]></conditionExpression>
+			<style backcolor="#F1F1F2"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="totalComponent" class="java.lang.String">
+		<defaultValueExpression><![CDATA["discount"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="itemType" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["agency.sales_rep_name"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="isTop" class="java.lang.Boolean">
+		<defaultValueExpression><![CDATA[true]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nrTopBottom" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[5]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectTopBottom" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[IF($P{isTop},"desc","asc")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectTotalComponent" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[GET_QUERY_FIELD_TOTAL($P{totalComponent})]]></defaultValueExpression>
+	</parameter>
+	<parameter name="selectItemType" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{itemType}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fiscalYearList" class="java.util.Collection" nestedType="java.lang.Integer"/>
+	<parameter name="quartersList" class="java.util.Collection" nestedType="java.lang.String"/>
+	<parameter name="currencySymbol" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[IF(EQUALS($P{totalComponent},"sales"),"€","")]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT $P!{selectTotalComponent} as total,
+ $P!{selectItemType} as item
+FROM 
+  public.order_2012, 
+  public.agency, 
+  public.part, 
+  public.time
+WHERE 
+  agency.agency_id = order_2012.agency_id AND
+  part.part_id = order_2012.part_id AND
+  time.time_id = order_2012.time_id AND
+  $X{IN, quarter, quartersList}  AND
+  $X{IN, year, fiscalYearList}
+GROUP BY   $P!{selectItemType} 
+ORDER BY  $P!{selectTotalComponent}  $P!{selectTopBottom} 
+ LIMIT  $P!{nrTopBottom}]]>
+	</queryString>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="item" class="java.lang.String"/>
+	<title>
+		<band height="35" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="190" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="4270bf65-3523-4723-84bb-aac5a6489568">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box leftPadding="8" bottomPadding="0">
+					<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Calibri" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[GET_TITLE_TEXT($P{totalComponent})]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement style="detail" stretchType="RelativeToBandHeight" mode="Opaque" x="25" y="0" width="105" height="34" forecolor="#0980BA" uuid="c9fe8bf7-50ee-4c67-82c6-aacfd8029205">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<box leftPadding="10" rightPadding="10">
+					<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement key="" style="detail" stretchType="RelativeToTallestObject" mode="Opaque" x="130" y="0" width="60" height="34" forecolor="#58595B" uuid="1ae3ca06-bba8-4c30-a745-9217bc30075d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<box rightPadding="10">
+					<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					<rightPen lineWidth="0.0" lineColor="#E4F1B6"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currencySymbol}
++ java.text.NumberFormat.getIntegerInstance($P{REPORT_LOCALE}).format( $F{total}.longValue() )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail" stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="25" height="34" forecolor="#58595B" uuid="ec93b61b-aabe-4200-917d-a75760c851ac">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="5" rightPadding="5">
+					<leftPen lineWidth="0.0" lineColor="#D7DAD9"/>
+					<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					<rightPen lineWidth="1.0" lineColor="#D7DAD9"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT} + " "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

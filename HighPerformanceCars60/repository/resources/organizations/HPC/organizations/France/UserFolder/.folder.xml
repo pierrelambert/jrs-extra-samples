@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/organizations/France</parent><name>UserFolder</name><label>UserFolder</label><description></description><creationDate>2015-01-05T18:12:47.569+01:00</creationDate><updateDate>2014-03-07T10:38:42.000+01:00</updateDate><resource>Ad_Hoc_View</resource><permission><permissionMask>30</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

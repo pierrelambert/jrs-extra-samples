@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/organizations/Germany</parent><name>templates</name><label>Templates</label><description>Templates</description><creationDate>2014-12-15T11:36:25.486+01:00</creationDate><updateDate>2013-10-24T15:05:37.966+02:00</updateDate><permission><permissionMask>2</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/organizations/France/organizations/org_template</parent><name>themes</name><label>Themes</label><description>themes</description><creationDate>2014-12-15T11:36:26.665+01:00</creationDate><updateDate>2013-10-24T15:05:38.055+02:00</updateDate><folder>default</folder><permission><permissionMask>32</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/</parent><name>themes</name><label>Themes</label><creationDate>2014-12-02T21:39:45.570+01:00</creationDate><updateDate>2014-11-29T00:25:05.318+01:00</updateDate><folder>default</folder><folder>hpc</folder><permission><permissionMask>32</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

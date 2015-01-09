@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/themes/default</parent><name>bi</name><label>bi</label><creationDate>2014-12-02T21:39:46.552+01:00</creationDate><updateDate>2014-11-29T00:25:08.611+01:00</updateDate><resource>base.css</resource><resource>controls.css</resource><resource>js_reset.css</resource><resource>layout.css</resource><resource>utility.css</resource></folder>

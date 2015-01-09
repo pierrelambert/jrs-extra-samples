@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/public/HPC</parent><name>OLAP</name><label>OLAP</label><description></description><creationDate>2014-12-15T11:36:24.512+01:00</creationDate><updateDate>2014-01-08T18:08:58.401+01:00</updateDate><resource>JRS_CubeGrants.xml</resource><resource>MAN_orders_cube.xml</resource><resource>OrdersCube</resource></folder>

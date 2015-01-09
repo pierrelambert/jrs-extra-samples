@@ -1,0 +1,24 @@
+<Roles>
+	<Role name="ROLE_SALES_REP">
+		<SchemaGrant access="all">
+			<CubeGrant cube="Orders" access="all">
+				<HierarchyGrant hierarchy="[Agency]" access="custom">
+					<MemberGrant member="[Agency].[%{Country}].[%{SalesRepName}]" access="all"/>
+				</HierarchyGrant>
+						
+			</CubeGrant>
+		</SchemaGrant>
+	</Role>
+	<Role name="ROLE_COUNTRY_MANAGER">
+		<SchemaGrant access="all">
+			<CubeGrant cube="Orders" access="all">
+				<HierarchyGrant hierarchy="[Agency]" access="custom">
+					<MemberGrant member="[Agency].[%{Country}]" access="all"/>
+				</HierarchyGrant>
+			</CubeGrant>
+		</SchemaGrant>
+	</Role>
+</Roles>
+
+
+

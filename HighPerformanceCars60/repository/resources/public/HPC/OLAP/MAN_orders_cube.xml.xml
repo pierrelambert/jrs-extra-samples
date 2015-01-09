@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="MAN_orders_cube.xml.data"><folder>/public/HPC/OLAP</folder><name>MAN_orders_cube.xml</name><version>0</version><label>MAN_orders_cube.xml</label><description>The OLAP xml schema for the Order Cube</description><creationDate>2014-12-15T11:36:28.938+01:00</creationDate><updateDate>2014-01-13T11:11:28.462+01:00</updateDate><fileType>olapMondrianSchema</fileType></fileResource>

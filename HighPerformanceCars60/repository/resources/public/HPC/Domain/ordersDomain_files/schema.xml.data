@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0">
+  <itemGroups>
+    <itemGroup description="public_agency" descriptionId="" id="public_agency" label="Agency" labelId="" resourceId="JoinTree_1">
+      <items>
+        <item description="agency_contract_type" descriptionId="" dimensionOrMeasure="Dimension" id="agency_contract_type" label="Contract Type" labelId="" resourceId="JoinTree_1.public_agency.agency_contract_type" />
+        <item description="agency_country" descriptionId="" dimensionOrMeasure="Dimension" id="agency_country" label="Country" labelId="" resourceId="JoinTree_1.public_agency.agency_country" />
+        <item description="agency_id" descriptionId="" dimensionOrMeasure="Dimension" id="agency_id" label="Agency Id" labelId="" resourceId="JoinTree_1.public_agency.agency_id" />
+        <item description="agency_name" descriptionId="" dimensionOrMeasure="Dimension" id="agency_name" label="Agency Name" labelId="" resourceId="JoinTree_1.public_agency.agency_name" />
+        <item description="agency_region" descriptionId="" dimensionOrMeasure="Dimension" id="agency_region" label="Region" labelId="" resourceId="JoinTree_1.public_agency.agency_region" />
+        <item description="agency_sedad_id" descriptionId="" dimensionOrMeasure="Dimension" id="agency_sedad_id" label="Sedad Id" labelId="" resourceId="JoinTree_1.public_agency.agency_sedad_id" />
+        <item description="sales_rep_name" descriptionId="" dimensionOrMeasure="Dimension" id="sales_rep_name" label="Sales Rep" labelId="" resourceId="JoinTree_1.public_agency.sales_rep_name" />
+      </items>
+    </itemGroup>
+    <itemGroup description="public_order_2012" descriptionId="" id="public_order_2012" label="Order" labelId="" resourceId="JoinTree_1">
+      <items>
+        <item description="discount" descriptionId="" dimensionOrMeasure="Measure" id="discount" label="Discount" labelId="" resourceId="JoinTree_1.public_order_2012.discount" />
+        <item description="discount_perc" descriptionId="" dimensionOrMeasure="Measure" id="discount_perc" label="Discount %" labelId="" resourceId="JoinTree_1.public_order_2012.discount_perc" />
+        <item defaultAgg="Sum" description="is_stressful_order" descriptionId="" dimensionOrMeasure="Measure" id="is_stressful_order" label="Stressful Order" labelId="" resourceId="JoinTree_1.public_order_2012.is_stressful_order" />
+      </items>
+    </itemGroup>
+    <itemGroup description="public_part" descriptionId="" id="public_part" label="Part" labelId="" resourceId="JoinTree_1">
+      <items>
+        <item description="part_family" descriptionId="" dimensionOrMeasure="Dimension" id="part_family" label="Part Family" labelId="" resourceId="JoinTree_1.public_part.part_family" />
+        <item description="part_id1" descriptionId="" dimensionOrMeasure="Dimension" id="part_id1" label="Part Id" labelId="" resourceId="JoinTree_1.public_part.part_id" />
+        <item description="part_number" descriptionId="" dimensionOrMeasure="Dimension" id="part_number" label="Part Number" labelId="" resourceId="JoinTree_1.public_part.part_number" />
+        <item description="part_price" descriptionId="" dimensionOrMeasure="Measure" id="part_price" label="Part Price" labelId="" resourceId="JoinTree_1.public_part.part_price" />
+        <item description="part_ref" descriptionId="" dimensionOrMeasure="Dimension" id="part_ref" label="Part Ref." labelId="" resourceId="JoinTree_1.public_part.part_ref" />
+      </items>
+    </itemGroup>
+    <itemGroup description="public_time" descriptionId="" id="public_time" label="Time" labelId="" resourceId="JoinTree_1">
+      <items>
+        <item description="date" descriptionId="" dimensionOrMeasure="Dimension" id="date" label="Date" labelId="" resourceId="JoinTree_1.public_time.date" />
+        <item description="fiscal_period" descriptionId="" dimensionOrMeasure="Dimension" id="fiscal_period" label="Fiscal Period" labelId="" resourceId="JoinTree_1.public_time.fiscal_period" />
+        <item description="month_of_year" descriptionId="" dimensionOrMeasure="Dimension" id="month_of_year" label="Month" labelId="" resourceId="JoinTree_1.public_time.month_of_year" />
+        <item description="quarter" descriptionId="" dimensionOrMeasure="Dimension" id="quarter" label="Quarter" labelId="" resourceId="JoinTree_1.public_time.quarter" />
+        <item description="year" descriptionId="" dimensionOrMeasure="Dimension" id="year" label="Year" labelId="" resourceId="JoinTree_1.public_time.year" />
+      </items>
+    </itemGroup>
+    <itemGroup description="newSet1" descriptionId="" id="confidentialInfo" label="Confidential Info" labelId="" resourceId="JoinTree_1">
+      <items>
+        <item description="agency_certified_2012" descriptionId="" dimensionOrMeasure="Dimension" id="agency_certified_2012" label="Agency Certified" labelId="" resourceId="JoinTree_1.public_agency.agency_certified_2012" />
+        <item description="sales" descriptionId="" dimensionOrMeasure="Measure" id="sales" label="Sales" labelId="" resourceId="JoinTree_1.public_order_2012.sales" />
+        <item description="sales_prediscount" descriptionId="" dimensionOrMeasure="Measure" id="sales_prediscount" label="Sales Pre-Discount" labelId="" resourceId="JoinTree_1.public_order_2012.sales_prediscount" />
+      </items>
+    </itemGroup>
+  </itemGroups>
+  <resources>
+    <jdbcTable id="public_agency" datasourceId="manDWH" tableName="public.agency">
+      <fieldList>
+        <field id="agency_certified_2012" type="java.lang.Boolean" />
+        <field id="agency_contract_type" type="java.lang.String" />
+        <field id="agency_country" type="java.lang.String" />
+        <field id="agency_id" type="java.lang.Integer" />
+        <field id="agency_name" type="java.lang.String" />
+        <field id="agency_region" type="java.lang.String" />
+        <field id="agency_sedad_id" type="java.lang.String" />
+        <field id="fusion_map_id" type="java.lang.String" />
+        <field id="sales_rep_name" type="java.lang.String" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="public_order_2012" datasourceId="manDWH" tableName="public.order_2012">
+      <fieldList>
+        <field id="agency_id" type="java.lang.Integer" />
+        <field id="discount" type="java.math.BigDecimal" />
+        <field id="discount_perc" type="java.lang.Integer" />
+        <field id="is_stressful_order" type="java.lang.Integer" />
+        <field id="part_id" type="java.lang.Integer" />
+        <field id="sales" type="java.math.BigDecimal" />
+        <field id="sales_prediscount" type="java.math.BigDecimal" />
+        <field id="time_id" type="java.lang.Integer" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="public_part" datasourceId="manDWH" tableName="public.part">
+      <fieldList>
+        <field id="part_family" type="java.lang.String" />
+        <field id="part_id" type="java.lang.Integer" />
+        <field id="part_number" type="java.lang.String" />
+        <field id="part_price" type="java.math.BigDecimal" />
+        <field id="part_ref" type="java.lang.String" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="public_time" datasourceId="manDWH" tableName="public.time">
+      <fieldList>
+        <field id="date" type="java.sql.Timestamp" />
+        <field id="fiscal_period" type="java.lang.Integer" />
+        <field id="month_of_year" type="java.lang.Integer" />
+        <field id="quarter" type="java.lang.String" />
+        <field id="time_id" type="java.lang.Integer" />
+        <field id="year" type="java.lang.Integer" />
+      </fieldList>
+    </jdbcTable>
+    <jdbcTable id="JoinTree_1" datasourceId="manDWH" tableName="public.order_2012">
+      <fieldList>
+        <field id="public_time.date" type="java.sql.Timestamp" />
+        <field id="public_time.fiscal_period" type="java.lang.Integer" />
+        <field id="public_time.month_of_year" type="java.lang.Integer" />
+        <field id="public_time.quarter" type="java.lang.String" />
+        <field id="public_time.time_id" type="java.lang.Integer" />
+        <field id="public_time.year" type="java.lang.Integer" />
+        <field id="public_agency.agency_certified_2012" type="java.lang.Boolean" />
+        <field id="public_agency.agency_contract_type" type="java.lang.String" />
+        <field id="public_agency.agency_country" type="java.lang.String" />
+        <field id="public_agency.agency_id" type="java.lang.Integer" />
+        <field id="public_agency.agency_name" type="java.lang.String" />
+        <field id="public_agency.agency_region" type="java.lang.String" />
+        <field id="public_agency.agency_sedad_id" type="java.lang.String" />
+        <field id="public_agency.fusion_map_id" type="java.lang.String" />
+        <field id="public_agency.sales_rep_name" type="java.lang.String" />
+        <field id="public_order_2012.agency_id" type="java.lang.Integer" />
+        <field id="public_order_2012.discount" type="java.math.BigDecimal" />
+        <field id="public_order_2012.discount_perc" type="java.lang.Integer" />
+        <field id="public_order_2012.is_stressful_order" type="java.lang.Integer" />
+        <field id="public_order_2012.part_id" type="java.lang.Integer" />
+        <field id="public_order_2012.sales" type="java.math.BigDecimal" />
+        <field id="public_order_2012.sales_prediscount" type="java.math.BigDecimal" />
+        <field id="public_order_2012.time_id" type="java.lang.Integer" />
+        <field id="public_part.part_family" type="java.lang.String" />
+        <field id="public_part.part_id" type="java.lang.Integer" />
+        <field id="public_part.part_number" type="java.lang.String" />
+        <field id="public_part.part_price" type="java.math.BigDecimal" />
+        <field id="public_part.part_ref" type="java.lang.String" />
+      </fieldList>
+      <joinInfo alias="public_order_2012" referenceId="public_order_2012" />
+      <joinedDataSetList>
+        <joinedDataSetRef>
+          <joinString>join public_agency public_agency on (public_order_2012.agency_id == public_agency.agency_id)</joinString>
+        </joinedDataSetRef>
+        <joinedDataSetRef>
+          <joinString>join public_part public_part on (public_order_2012.part_id == public_part.part_id)</joinString>
+        </joinedDataSetRef>
+        <joinedDataSetRef>
+          <joinString>join public_time public_time on (public_order_2012.time_id == public_time.time_id)</joinString>
+        </joinedDataSetRef>
+      </joinedDataSetList>
+    </jdbcTable>
+  </resources>
+</schema>
+

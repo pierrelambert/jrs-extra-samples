@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CM Dashboard" language="groovy" pageWidth="980" pageHeight="700" orientation="Landscape" columnWidth="980" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Key" uuid="47c7cdbc-0dc4-49a4-9257-8063861d15fc">
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/MAN/Reports/CMDashboard_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/MAN/Reports/CMDashboard"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+	<subDataset name="mapStressfulOrder" uuid="62db0bc1-2499-4332-bbbf-df9587681b9b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="countryFilter" class="java.lang.String"/>
+		<parameter name="quarterListSub" class="java.util.Collection" nestedType="java.lang.String"/>
+		<parameter name="yearListSub" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 	sum(is_stressful_order), sum(is_stressful_order)*100/count(*) as stress_perc,
+	agency.agency_country, agency.agency_region,agency.fusion_map_id
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+	where agency.agency_country=$P{countryFilter} 
+	and $X{IN,time.year,yearListSub}
+AND $X{IN,time.quarter,quarterListSub}
+GROUP BY agency.agency_country, agency.agency_region,agency.fusion_map_id
+ORDER BY agency.agency_country, agency.agency_region]]>
+		</queryString>
+		<field name="sum" class="java.lang.Long"/>
+		<field name="agency_country" class="java.lang.String"/>
+		<field name="agency_region" class="java.lang.String"/>
+		<field name="fusion_map_id" class="java.lang.String"/>
+		<field name="stress_perc" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="mapDiscount" uuid="270cbd0b-3e4f-469d-87b0-c905486cc12b">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ManDB"/>
+		<parameter name="countryFilter" class="java.lang.String"/>
+		<parameter name="quarterListSub" class="java.util.Collection" nestedType="java.lang.String"/>
+		<parameter name="yearListSub" class="java.util.Collection" nestedType="java.lang.Integer"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 	(sum(discount)*100/sum(sales_prediscount)) as discount_perc,count(*) as total_order,
+	agency.agency_country, agency.agency_region,agency.fusion_map_id
+FROM order_2012 
+	 INNER JOIN time ON 
+	 order_2012.time_id = time.time_id  
+	 INNER JOIN agency ON 
+	 agency.agency_id = order_2012.agency_id 
+	where agency.agency_country=$P{countryFilter}
+	and $X{IN,time.year,yearListSub}
+	AND $X{IN,time.quarter,quarterListSub}
+GROUP BY agency.agency_country, agency.agency_region,agency.fusion_map_id
+ORDER BY agency.agency_country, agency.agency_region]]>
+		</queryString>
+		<field name="discount_perc" class="java.math.BigDecimal"/>
+		<field name="agency_country" class="java.lang.String"/>
+		<field name="agency_region" class="java.lang.String"/>
+		<field name="fusion_map_id" class="java.lang.String"/>
+		<field name="total_order" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="fiscalYearList" class="java.util.Collection" nestedType="java.lang.Integer">
+		<defaultValueExpression><![CDATA[[2012]]]></defaultValueExpression>
+	</parameter>
+	<parameter name="quartersList" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[["Q2","Q3"]]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsDiscount" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["discount"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsSales" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["sales"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="topItemsStressfulOrder" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["is_stressful_order"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LoggedInUserAttribute_Country" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_DIR" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["repo:"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select 1 as dummy]]>
+	</queryString>
+	<field name="dummy" class="java.lang.Integer"/>
+	<summary>
+		<band height="699" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement mode="Opaque" x="3" y="1" width="977" height="47" backcolor="#F1F1F2" uuid="c65e80cb-e498-4bc6-8c45-be220048dce3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</frame>
+			<textField>
+				<reportElement x="12" y="0" width="403" height="48" forecolor="#004667" uuid="d8ccd601-fb69-40af-9e92-dab4607bdaf5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+				<box topPadding="10" leftPadding="0" bottomPadding="0"/>
+				<textElement verticalAlignment="Top" markup="none">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Country Manager Dashboard"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="12" y="59" width="598" height="631" backcolor="#F7F7F8" uuid="285dde2a-011b-4c66-a498-41dc78282e0e">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="10" y="50" width="570" height="180" forecolor="#F1F1F2" backcolor="#F1F1F2" uuid="a1250c78-1eaa-4455-be38-6575378074c2">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="10" y="50" width="570" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="98562683-c550-4916-a8e9-a1fc2d938df9">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="10" rightPadding="0">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Sales"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="15" y="10" width="260" height="30" forecolor="#0980BA" uuid="92353a07-048d-4711-987b-3e0c4f8e4933">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Performance Per Month"]]></textFieldExpression>
+				</textField>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="10" y="240" width="568" height="180" backcolor="#F1F1F2" uuid="ac28451b-699e-4470-947b-91119b68ef0e">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="10" y="240" width="568" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="c61ad24b-56bf-4e91-bfe8-2fe5f9a80671">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+					</reportElement>
+					<box leftPadding="10">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Discount"]]></textFieldExpression>
+				</textField>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="10" y="440" width="567" height="180" backcolor="#F1F1F2" uuid="0bf1ccb3-5071-46b9-8d6a-f979741adff4">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="10" y="440" width="566" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="b7f94067-8d46-46c1-bd81-5434828167d8">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+					</reportElement>
+					<box leftPadding="10">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Stressful Orders"]]></textFieldExpression>
+				</textField>
+				<subreport>
+					<reportElement x="10" y="85" width="569" height="144" uuid="6de8ec60-c464-486e-8b38-1c5b3e1d9b9d"/>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsSales}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="YearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="QuarterList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="countryFilter">
+						<subreportParameterExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{SUB_REPORT_DIR}+"evolutionInTime"+IF(EQUALS($P{SUB_REPORT_DIR},"repo:"),"",".jasper")]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement x="10" y="275" width="566" height="144" uuid="dd5ce1c7-82a0-4284-a551-26c8e71eeaf3"/>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsDiscount}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="YearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="QuarterList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="countryFilter">
+						<subreportParameterExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{SUB_REPORT_DIR}+"evolutionInTime"+IF(EQUALS($P{SUB_REPORT_DIR},"repo:"),"",".jasper")]]></subreportExpression>
+				</subreport>
+				<subreport>
+					<reportElement x="11" y="475" width="565" height="144" uuid="b6cd9734-dbe8-4237-9554-c371274132ab"/>
+					<subreportParameter name="totalComponent">
+						<subreportParameterExpression><![CDATA[$P{topItemsStressfulOrder}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="YearList">
+						<subreportParameterExpression><![CDATA[$P{fiscalYearList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="QuarterList">
+						<subreportParameterExpression><![CDATA[$P{quartersList}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="countryFilter">
+						<subreportParameterExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression><![CDATA[$P{SUB_REPORT_DIR}+"evolutionInTime"+IF(EQUALS($P{SUB_REPORT_DIR},"repo:"),"",".jasper")]]></subreportExpression>
+				</subreport>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="630" y="59" width="338" height="630" backcolor="#F7F7F8" uuid="6daa75ff-f443-44f5-a2f3-927290f4a71f">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="19" y="20" width="303" height="275" forecolor="#F1F1F2" backcolor="#F1F1F2" uuid="ccc73845-4559-4545-8273-ba7b549c2ebe">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="19" y="20" width="303" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="1cd441e4-62d8-40a3-aafd-b2efcd64ad71">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="10" rightPadding="0">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Stressful Orders Per Region"]]></textFieldExpression>
+				</textField>
+				<rectangle radius="10">
+					<reportElement mode="Opaque" x="20" y="325" width="292" height="274" backcolor="#F1F1F2" uuid="0819e599-0b28-4109-b0c9-4dcc3c46bdd0">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineColor="#D7DAD9"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement mode="Opaque" x="20" y="325" width="302" height="35" forecolor="#58595B" backcolor="#E9E9E8" uuid="d6b6b7ae-1ef3-41c1-b1b4-978515396c69">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="local_mesure_unitwidth" value="pixel"/>
+					</reportElement>
+					<box leftPadding="10">
+						<bottomPen lineWidth="1.0" lineColor="#D7DAD9"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Discount(%) Per Region"]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement x="19" y="55" width="301" height="240" uuid="5cf6ded0-fbf4-4283-a45e-a758dd4624a6">
+						<property name="local_mesure_unitheight" value="pixel"/>
+					</reportElement>
+					<fm:map xmlns:fm="http://jaspersoft.com/fusion" xsi:schemaLocation="http://jaspersoft.com/fusion http://jaspersoft.com/schema/fusion.xsd">
+						<fm:mapNameExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></fm:mapNameExpression>
+						<fm:colorRange color="#80FF80">
+							<fm:minValueExpression><![CDATA[0]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[39]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["Low"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:colorRange color="#FFFF80">
+							<fm:minValueExpression><![CDATA[40]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[44]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["Normal"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:colorRange color="#FF8000">
+							<fm:minValueExpression><![CDATA[44]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[52]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["High"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:colorRange color="#FF0000">
+							<fm:minValueExpression><![CDATA[52]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[80]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["Stressed"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:mapDataset>
+							<dataset>
+								<datasetRun subDataset="mapStressfulOrder" uuid="419d523d-bf9f-4f7f-9449-12815685315a">
+									<datasetParameter name="countryFilter">
+										<datasetParameterExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="quarterListSub">
+										<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="yearListSub">
+										<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+									</datasetParameter>
+								</datasetRun>
+							</dataset>
+							<fm:entity>
+								<fm:idExpression><![CDATA[$F{fusion_map_id}]]></fm:idExpression>
+								<fm:valueExpression><![CDATA[$F{stress_perc}]]></fm:valueExpression>
+								<fm:labelExpression><![CDATA[$F{sum}+""]]></fm:labelExpression>
+							</fm:entity>
+						</fm:mapDataset>
+						<fm:shapeData/>
+						<c:markerData xmlns:c="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd"/>
+					</fm:map>
+				</componentElement>
+				<componentElement>
+					<reportElement x="20" y="360" width="300" height="240" uuid="d84df2f9-439b-4763-91ea-9eae36b63dbc">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<fm:map xmlns:fm="http://jaspersoft.com/fusion" xsi:schemaLocation="http://jaspersoft.com/fusion http://jaspersoft.com/schema/fusion.xsd">
+						<fm:mapNameExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></fm:mapNameExpression>
+						<fm:colorRange color="#80FF80">
+							<fm:minValueExpression><![CDATA[0]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[7.3]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["Low"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:colorRange color="#FFFF80">
+							<fm:minValueExpression><![CDATA[7.3]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[7.7]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["Normal"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:colorRange color="#FF8000">
+							<fm:minValueExpression><![CDATA[7.7]]></fm:minValueExpression>
+							<fm:maxValueExpression><![CDATA[10]]></fm:maxValueExpression>
+							<fm:labelExpression><![CDATA["High"]]></fm:labelExpression>
+						</fm:colorRange>
+						<fm:mapDataset>
+							<dataset>
+								<datasetRun subDataset="mapDiscount" uuid="3a2c5106-f3af-44e4-be4e-8a8d467f158c">
+									<datasetParameter name="countryFilter">
+										<datasetParameterExpression><![CDATA[$P{LoggedInUserAttribute_Country}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="quarterListSub">
+										<datasetParameterExpression><![CDATA[$P{quartersList}]]></datasetParameterExpression>
+									</datasetParameter>
+									<datasetParameter name="yearListSub">
+										<datasetParameterExpression><![CDATA[$P{fiscalYearList}]]></datasetParameterExpression>
+									</datasetParameter>
+								</datasetRun>
+							</dataset>
+							<fm:entity>
+								<fm:idExpression><![CDATA[$F{fusion_map_id}]]></fm:idExpression>
+								<fm:valueExpression><![CDATA[$F{discount_perc}]]></fm:valueExpression>
+								<fm:labelExpression><![CDATA[new DecimalFormat("#0.##").format($F{discount_perc})]]></fm:labelExpression>
+							</fm:entity>
+						</fm:mapDataset>
+						<fm:shapeData/>
+						<c:markerData xmlns:c="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd"/>
+					</fm:map>
+				</componentElement>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

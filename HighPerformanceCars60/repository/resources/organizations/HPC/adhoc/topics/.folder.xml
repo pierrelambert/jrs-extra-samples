@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true"><parent>/organizations/HPC/adhoc</parent><name>topics</name><label>Topics</label><description>Topics</description><creationDate>2014-12-15T11:36:24.789+01:00</creationDate><updateDate>2013-10-24T15:05:37.878+02:00</updateDate><resource>Mio_Topic_per_utente</resource><permission><permissionMask>30</permissionMask><recipient recipientType="role">ROLE_USER</recipient></permission></folder>

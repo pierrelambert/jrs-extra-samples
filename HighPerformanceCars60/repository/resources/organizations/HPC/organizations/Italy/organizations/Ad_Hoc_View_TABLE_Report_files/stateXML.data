@@ -1,0 +1,146 @@
+<unifiedState filterPanelShowing="true" hasMargins="true" ignoreMaxRows="true" initedSubFilterList="true" launchType="ADH_045a_DOMAIN" maxDisplayColumns="0" maxDisplayRows="0" maxRowChoices="0" maxRows="15" mode="table" pageOrientation="Landscape" paperSize="content" showTableDetails="true" showTableTotals="true" summaryRowTitle="Totals" theme="default" titleBarShowing="true" titleHeight="0" topicName="ordersDomain">
+  <chartState availableChartHeight="0" availableChartWidth="0" backgroundFilled="false" chartHeight="0" chartIsVertical="true" chartWidth="0" displayXAxisLabel="true" displayYAxisLabel="false" offsetX="0" offsetY="0">
+    <chartTitle />
+    <chartType>1_bar</chartType>
+    <displayLegendMap>
+      <entry key="2_pie">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="5_scatter">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="6_timeSeries">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="1_bar">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="3_line">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="4_area">
+        <boolean>true</boolean>
+      </entry>
+    </displayLegendMap>
+    <gradient>topDown</gradient>
+    <hasLinesMap>
+      <entry key="2_pie">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="5_scatter">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="6_timeSeries">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="1_bar">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="3_line">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="4_area">
+        <boolean>false</boolean>
+      </entry>
+    </hasLinesMap>
+    <hasPointsMap>
+      <entry key="2_pie">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="5_scatter">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="6_timeSeries">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="1_bar">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="3_line">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="4_area">
+        <boolean>false</boolean>
+      </entry>
+    </hasPointsMap>
+    <stackedMap>
+      <entry key="2_pie">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="5_scatter">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="6_timeSeries">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="1_bar">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="3_line">
+        <boolean>false</boolean>
+      </entry>
+      <entry key="4_area">
+        <boolean>false</boolean>
+      </entry>
+    </stackedMap>
+    <threeDMap>
+      <entry key="2_pie">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="5_scatter">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="6_timeSeries">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="1_bar">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="3_line">
+        <boolean>true</boolean>
+      </entry>
+      <entry key="4_area">
+        <boolean>true</boolean>
+      </entry>
+    </threeDMap>
+  </chartState>
+  <crosstabState numberOfColumns="0" safeColumnMode="true" safeRowMode="true" showLabels="true">
+    <sortingState />
+  </crosstabState>
+  <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" showDataPoints="true" showMeasureOnValueAxis="true" typeString="column" />
+  <measures>
+    <measure function="Count" name="public_agency.agency_country" type="java.lang.String" width="125" />
+    <measure function="Count" name="public_agency.agency_region" type="java.lang.String" width="125" />
+    <measure function="Count" name="public_agency.sales_rep_name" type="java.lang.String" width="125" />
+    <measure function="Sum" functionMask="#,##0.00" mask="#,##0.00" measure="true" name="public_order_2012.discount" type="java.math.BigDecimal" width="125" />
+    <measure function="Sum" functionMask="#,##0" mask="#,##0" measure="true" name="public_order_2012.discount_perc" type="java.lang.Integer" width="125" />
+    <measure function="Sum" functionMask="#,##0" mask="#,##0" measure="true" name="public_order_2012.is_stressful_order" type="java.lang.Integer" width="125" />
+  </measures>
+  <propertyMap>
+    <entry key="hideEmptyRows">
+      <string>false</string>
+    </entry>
+    <entry key="crosstabRows">
+      <int>17</int>
+    </entry>
+    <entry key="modFlags">
+      <string />
+    </entry>
+    <entry key="typeOfViewChange">
+      <string>wontReflectChanges</string>
+    </entry>
+    <entry key="crosstabColumns">
+      <int>3</int>
+    </entry>
+  </propertyMap>
+  <subFilterList>
+    <subFilter id="filter_1" letter="A" sourceString="DRILL_THROUGH">
+      <expressionString>public_agency.agency_region == 'Lazio'</expressionString>
+      <parameterizedExpressionString>public_agency.agency_region == agency_region_1</parameterizedExpressionString>
+    </subFilter>
+    <subFilter id="filter_2" letter="B" sourceString="DRILL_THROUGH">
+      <expressionString>public_agency.agency_country == 'Italy'</expressionString>
+      <parameterizedExpressionString>public_agency.agency_country == agency_country_1</parameterizedExpressionString>
+    </subFilter>
+  </subFilterList>
+</unifiedState>
