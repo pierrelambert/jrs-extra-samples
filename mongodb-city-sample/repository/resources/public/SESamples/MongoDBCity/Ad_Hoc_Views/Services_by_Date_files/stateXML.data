@@ -106,7 +106,7 @@
   </chartState>
   <crosstabState numberOfColumns="2" safeColumnMode="true" safeRowMode="true" showLabels="true">
     <columnGroups>
-      <queryDimension fieldName="ServiceName" includeAll="true" name="ServiceName" sortStatus="0" type="java.lang.String">
+      <queryDimension categorizerName="all" fieldName="ServiceName" includeAll="true" name="ServiceName" sortStatus="0" type="java.lang.String">
         <expandedLevels>
           <string>ServiceName</string>
         </expandedLevels>
@@ -144,7 +144,7 @@
   </groups>
   <intelligentChartState XAxisRotation="-45" XAxisStep="1" YAxisRotation="0" YAxisStep="1" alignment="bottom" autoScaleFonts="true" color1Stop="0.1" color2Stop="0.5" color3Stop="0.9" decimalPoint="." donnutInnerSize="40" gaugesMaxValue="200.0" gaugesMinValue="0.0" invertedAxis="false" labelOffset="0.0" legend="bottom" legendBorder="true" rotateAllLevels="false" rotation="0.0" showDataPoints="true" showLabels="false" showMeasureOnValueAxis="true" showSingleMeasuresLabels="true" showXAxisLabels="true" showYAxisLabels="true" singleAxisComboChart="false" thousandSeparator="None" typeString="heat_map" />
   <measures>
-    <measure aggregateType="java.lang.Long" fieldName="CaseID" function="CountAll" measure="true" name="CaseID" showSummary="false" type="java.lang.String" width="125" />
+    <measure aggregateType="java.lang.Long" fieldName="CaseCountHigherWorse" function="Custom" measure="true" name="CaseCountHigherWorse" showSummary="false" type="java.lang.String" width="125" />
   </measures>
   <propertyMap>
     <entry key="hideEmptyRows">
@@ -154,8 +154,14 @@
       <string />
     </entry>
     <entry key="typeOfViewChange">
-      <string>unexpectedBehavior</string>
+      <string>wontReflectChanges</string>
     </entry>
   </propertyMap>
+  <subFilterList>
+    <subFilter id="filter_1" letter="A" sourceString="DYNAMIC">
+      <expressionString>not (ServiceName in (null, 'Other', 'Missing Sign'))</expressionString>
+      <parameterizedExpressionString>not (ServiceName in ServiceName_1)</parameterizedExpressionString>
+    </subFilter>
+  </subFilterList>
   <title>Services By Date</title>
 </unifiedState>

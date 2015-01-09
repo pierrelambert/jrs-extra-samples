@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="6dcc6ea6-b1f8-4e9a-a91d-43e16b4cc5fe">
-	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_d40395f4-deca-425c-89c7-bc1619195c5f"/>
-	<property name="adhoc.metadata.version" value="6"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adhocReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="f7eeb1cf-c911-43f6-b7bf-755c153e0ef9">
+	<property name="adhoc.metadata.version" value="7"/>
 	<property name="adhoc.topic.escape.variable.chars"/>
+	<property name="com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.TopicReportUnit" value="/temp/sl_topic_d40395f4-deca-425c-89c7-bc1619195c5f"/>
+	<parameter name="ServiceName_1" class="java.util.Collection" nestedType="java.lang.String">
+		<defaultValueExpression><![CDATA[java.util.Arrays.asList(new Object[]{null,"Other","Missing Sign"})]]></defaultValueExpression>
+	</parameter>
 	<queryString language="domain">
 		<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema">
@@ -23,11 +26,11 @@
 		<property name="adhoc.display" value="Case Current Status"/>
 		<property name="semantic.item.desc" value="CaseCurrentStatus"/>
 		<property name="defaultMask"/>
-		<property name="kind" value="DIMENSION"/>
-		<property name="slIsTableAsList" value="false"/>
 		<property name="adhoc.tree.labels" value="[]"/>
-		<property name="adhoc.tree.uri" value="/CaseCurrentStatus"/>
+		<property name="slIsTableAsList" value="false"/>
+		<property name="kind" value="DIMENSION"/>
 		<property name="semantic.tree.uri" value="/CaseCurrentStatus"/>
+		<property name="adhoc.tree.uri" value="/CaseCurrentStatus"/>
 		<property name="aggregateExpression" value="CountAll()"/>
 		<property name="resourceId" value="cases.CaseCurrentStatus"/>
 		<property name="dimensionOrMeasure" value="Dimension"/>
@@ -35,83 +38,93 @@
 		<fieldDescription><![CDATA[CaseCurrentStatus]]></fieldDescription>
 	</field>
 	<field name="age" class="java.lang.Integer">
-		<property name="semantic.tree.uri" value="/age"/>
-		<property name="adhoc.tree.uri" value="/age"/>
-		<property name="aggregateExpression" value="Sum(age)"/>
 		<property name="semantic.tree.sort.order" value="1"/>
-		<property name="dimensionOrMeasure" value="Measure"/>
-		<property name="resourceId" value="cases.age"/>
-		<property name="semantic.item.desc.id" value=""/>
 		<property name="defaultAgg" value="Sum"/>
 		<property name="aggregateType" value="java.lang.Long"/>
 		<property name="adhoc.display" value="Reporter Age"/>
 		<property name="semantic.item.desc" value="Age of person reporting the case"/>
 		<property name="defaultMask" value="#,##0"/>
 		<property name="kind" value="MEASURE"/>
+		<property name="semantic.tree.uri" value="/age"/>
+		<property name="adhoc.tree.uri" value="/age"/>
+		<property name="aggregateExpression" value="Sum(age)"/>
+		<property name="resourceId" value="cases.age"/>
+		<property name="dimensionOrMeasure" value="Measure"/>
+		<property name="semantic.item.desc.id" value=""/>
 		<fieldDescription><![CDATA[age]]></fieldDescription>
 	</field>
 	<field name="CaseID" class="java.lang.String">
-		<property name="semantic.tree.uri" value="/CaseID"/>
-		<property name="adhoc.tree.uri" value="/CaseID"/>
-		<property name="aggregateExpression" value="CountAll()"/>
 		<property name="semantic.tree.sort.order" value="2"/>
-		<property name="dimensionOrMeasure" value="Dimension"/>
-		<property name="resourceId" value="cases.CaseID"/>
-		<property name="semantic.item.desc.id" value=""/>
 		<property name="defaultAgg" value="CountAll"/>
 		<property name="aggregateType" value="java.lang.Long"/>
 		<property name="adhoc.display" value="Case ID"/>
 		<property name="semantic.item.desc" value="CaseID"/>
 		<property name="defaultMask"/>
 		<property name="kind" value="MEASURE"/>
+		<property name="semantic.tree.uri" value="/CaseID"/>
+		<property name="adhoc.tree.uri" value="/CaseID"/>
+		<property name="aggregateExpression" value="CountAll()"/>
+		<property name="resourceId" value="cases.CaseID"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
 		<fieldDescription><![CDATA[CaseID]]></fieldDescription>
 	</field>
 	<field name="CaseOpenDatetime" class="java.util.Date">
-		<property name="semantic.tree.uri" value="/CaseOpenDatetime"/>
-		<property name="adhoc.tree.uri" value="/CaseOpenDatetime"/>
-		<property name="aggregateExpression" value="CountAll()"/>
 		<property name="semantic.tree.sort.order" value="3"/>
-		<property name="dimensionOrMeasure" value="Dimension"/>
-		<property name="resourceId" value="cases.CaseOpenDatetime"/>
-		<property name="semantic.item.desc.id" value=""/>
 		<property name="defaultAgg" value="CountAll"/>
 		<property name="aggregateType" value="java.lang.Long"/>
 		<property name="adhoc.display" value="Date Case Opened"/>
 		<property name="semantic.item.desc" value="CaseOpenDatetime"/>
 		<property name="defaultMask" value="medium,hide"/>
 		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.tree.uri" value="/CaseOpenDatetime"/>
+		<property name="adhoc.tree.uri" value="/CaseOpenDatetime"/>
+		<property name="aggregateExpression" value="CountAll()"/>
+		<property name="resourceId" value="cases.CaseOpenDatetime"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
 		<fieldDescription><![CDATA[CaseOpenDatetime]]></fieldDescription>
 	</field>
 	<field name="gender" class="java.lang.String">
-		<property name="semantic.tree.uri" value="/gender"/>
-		<property name="adhoc.tree.uri" value="/gender"/>
-		<property name="aggregateExpression" value="CountAll()"/>
 		<property name="semantic.tree.sort.order" value="4"/>
-		<property name="dimensionOrMeasure" value="Dimension"/>
-		<property name="resourceId" value="cases.gender"/>
-		<property name="semantic.item.desc.id" value=""/>
 		<property name="defaultAgg" value="CountAll"/>
 		<property name="aggregateType" value="java.lang.Long"/>
 		<property name="adhoc.display" value="Reporter Gender"/>
 		<property name="semantic.item.desc" value="gender"/>
 		<property name="defaultMask"/>
 		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.tree.uri" value="/gender"/>
+		<property name="adhoc.tree.uri" value="/gender"/>
+		<property name="aggregateExpression" value="CountAll()"/>
+		<property name="resourceId" value="cases.gender"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
 		<fieldDescription><![CDATA[gender]]></fieldDescription>
 	</field>
 	<field name="ServiceName" class="java.lang.String">
-		<property name="semantic.tree.uri" value="/ServiceName"/>
-		<property name="adhoc.tree.uri" value="/ServiceName"/>
-		<property name="aggregateExpression" value="CountAll()"/>
 		<property name="semantic.tree.sort.order" value="5"/>
-		<property name="dimensionOrMeasure" value="Dimension"/>
-		<property name="resourceId" value="cases.ServiceName"/>
-		<property name="semantic.item.desc.id" value=""/>
 		<property name="defaultAgg" value="CountAll"/>
 		<property name="aggregateType" value="java.lang.Long"/>
 		<property name="adhoc.display" value="Service Name"/>
 		<property name="semantic.item.desc" value="ServiceName"/>
 		<property name="defaultMask"/>
 		<property name="kind" value="DIMENSION"/>
+		<property name="semantic.tree.uri" value="/ServiceName"/>
+		<property name="adhoc.tree.uri" value="/ServiceName"/>
+		<property name="aggregateExpression" value="CountAll()"/>
+		<property name="resourceId" value="cases.ServiceName"/>
+		<property name="dimensionOrMeasure" value="Dimension"/>
+		<property name="semantic.item.desc.id" value=""/>
 		<fieldDescription><![CDATA[ServiceName]]></fieldDescription>
+	</field>
+	<field name="CaseCountHigherWorse" class="java.lang.String">
+		<property name="aggregateExpression" value="CountAll(CaseID) * -1"/>
+		<property name="aggregate" value="false"/>
+		<property name="defaultAgg" value="Custom"/>
+		<property name="aggregateType" value="java.lang.Long"/>
+		<property name="adhoc.expression" value="CaseID"/>
+		<property name="adhoc.display" value="Case Count (higher worse)"/>
+		<property name="defaultMask"/>
+		<property name="kind" value="MEASURE"/>
 	</field>
 </jasperReport>
