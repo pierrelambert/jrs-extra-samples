@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Reports</folder>
+    <name>CasesMap</name>
+    <version>0</version>
+    <label>Cases Map</label>
+    <description></description>
+    <creationDate>2015-01-01T13:01:56.944Z</creationDate>
+    <updateDate>2014-12-05T13:41:04.567Z</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Reports/CasesMap_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2015-01-01T13:01:56.944Z</creationDate>
+            <updateDate>2014-12-05T13:41:04.340Z</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDBCityData_Datasource</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/MongoDBCity/Resources/InputControls/services</uri>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

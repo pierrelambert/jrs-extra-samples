@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<virtualDataSource exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Resources/DataSources</folder>
+    <name>MongoDB_VDS</name>
+    <version>0</version>
+    <label>MongoDB VDS</label>
+    <creationDate>2015-01-09T12:05:32.275Z</creationDate>
+    <updateDate>2015-01-09T12:05:32.275Z</updateDate>
+    <dataSource>
+        <alias>MongoDBCityData_Datasource</alias>
+        <dataSourceReference>
+            <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDBCityData_Datasource</uri>
+        </dataSourceReference>
+    </dataSource>
+</virtualDataSource>

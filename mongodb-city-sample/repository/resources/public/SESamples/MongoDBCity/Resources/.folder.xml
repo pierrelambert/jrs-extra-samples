@@ -4,9 +4,10 @@
     <name>Resources</name>
     <label>Resources</label>
     <description></description>
-    <creationDate>2014-06-19T18:32:30.803+02:00</creationDate>
-    <updateDate>2013-04-04T09:58:23.000+02:00</updateDate>
+    <creationDate>2015-01-01T13:01:41.822Z</creationDate>
+    <updateDate>2013-04-04T00:58:23.000+01:00</updateDate>
     <folder>DataSources</folder>
     <folder>Images</folder>
     <folder>InputControls</folder>
+    <folder>Styles</folder>
 </folder>

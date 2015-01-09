@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="CommonReportStyles.jrtx.data">
+    <folder>/public/SESamples/MongoDBCity/Resources/Styles</folder>
+    <name>CommonReportStyles.jrtx</name>
+    <version>0</version>
+    <label>CommonReportStyles.jrtx</label>
+    <description>Styles used by many sample reports</description>
+    <creationDate>2015-01-01T13:02:01.908Z</creationDate>
+    <updateDate>2012-11-08T21:16:48.509Z</updateDate>
+    <fileType>jrtx</fileType>
+</fileResource>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-05T13:08:26 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report112" language="groovy" pageWidth="560" pageHeight="40" whenNoDataType="AllSectionsNoDetail" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fb80861f-a68a-42e3-a147-240c7111a081">
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/MongoDBCity/Reports/Cases_Snapshot_files/Cases_Snapshot_"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SESamples/MongoDBCity/Reports/Cases_Snapshot"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin|organization_1"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<style name="default" isDefault="true" forecolor="#58595B" hAlign="Center" vAlign="Middle" fontName="Calibri" fontSize="10"/>
+	<style name="labels" hAlign="Center" vAlign="Middle" fontSize="12" isBold="false"/>
+	<parameter name="services" class="java.util.Collection"/>
+	<queryString language="MongoDbQuery">
+		<![CDATA[{ 'collectionName' : 'cases' ,
+findQuery :{ 'ServiceName': { $in : $P{services} }} 
+}}]]>
+	</queryString>
+	<field name="CaseAddressString" class="java.lang.String"/>
+	<field name="CaseBeginDatetime" class="java.util.Date"/>
+	<field name="CaseCurrentStatus" class="java.lang.String"/>
+	<field name="CaseCurrentStatusDatetime" class="java.util.Date"/>
+	<field name="CaseDescription" class="java.lang.String"/>
+	<field name="CaseId" class="java.lang.String"/>
+	<field name="CaseLat" class="java.lang.Double"/>
+	<field name="CaseLong" class="java.lang.Double"/>
+	<field name="RequestorFirstName" class="java.lang.String"/>
+	<field name="RequestorLastName" class="java.lang.String"/>
+	<field name="ServiceName" class="java.lang.String"/>
+	<field name="_id" class="org.bson.types.ObjectId"/>
+	<field name="CaseOpenDatetime" class="java.util.Date"/>
+	<field name="CasePhoneNumbers" class="java.util.List"/>
+	<field name="age" class="java.lang.Integer"/>
+	<field name="gender" class="java.lang.String"/>
+	<variable name="open_count" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[( $F{CaseCurrentStatus}.contains("open") ? 1 : null )]]></variableExpression>
+	</variable>
+	<variable name="closed_count" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[( $F{CaseCurrentStatus}.contains("closed") ? 1 : null )]]></variableExpression>
+	</variable>
+	<variable name="pending_count" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[( $F{CaseCurrentStatus}.contains("pending") ? 1 : null )]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="54" height="40" uuid="ad0fd9fd-c007-49ad-ba92-be4ffb299fc2"/>
+				<textFieldExpression><![CDATA[$V{open_count}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="280" y="0" width="54" height="40" uuid="1083b8bb-cfd4-4990-998b-1d750f1bda23"/>
+				<textFieldExpression><![CDATA[$V{closed_count}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="labels" x="0" y="0" width="100" height="40" uuid="bd187735-5858-4b4c-9135-94d2484eff9f"/>
+				<text><![CDATA[Open Cases]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="labels" x="180" y="0" width="100" height="40" uuid="5a421812-ac64-40c5-a174-ff6b6e777478"/>
+				<text><![CDATA[Closed Cases]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="labels" x="360" y="0" width="100" height="40" uuid="4adffab3-aece-4019-83d2-8e602f00ceab"/>
+				<text><![CDATA[Pending]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="0" width="54" height="40" uuid="0a8d1eab-df63-4038-941e-4ddd9b63fa04"/>
+				<textFieldExpression><![CDATA[$V{pending_count}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="160" y="10" width="20" height="20" uuid="22f3f913-2a92-4eec-8708-c62ee243d5cf">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:decrease.svg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="520" y="10" width="20" height="20" uuid="2ad033ae-8960-4f1c-87be-2c3fbd461b71">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:decrease.svg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="340" y="10" width="20" height="20" uuid="f7690940-cf4c-44c2-b10a-a7b8cac3c0ae">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["repo:increase.svg"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

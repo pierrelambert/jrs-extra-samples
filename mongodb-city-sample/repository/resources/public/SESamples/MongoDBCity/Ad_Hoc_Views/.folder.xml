@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/MongoDBCity</parent>
+    <name>Ad_Hoc_Views</name>
+    <label>Ad Hoc Views</label>
+    <description></description>
+    <creationDate>2015-01-09T12:13:19.758Z</creationDate>
+    <updateDate>2015-01-09T12:13:19.758Z</updateDate>
+    <resource>Services_by_Date</resource>
+</folder>

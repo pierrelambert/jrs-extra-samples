@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semanticLayerDataSource exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Domains</folder>
+    <name>MongoDB_City_Cases_Domain</name>
+    <version>0</version>
+    <label>MongoDB City Cases Domain</label>
+    <description></description>
+    <creationDate>2015-01-09T12:09:58.448Z</creationDate>
+    <updateDate>2015-01-09T12:09:58.448Z</updateDate>
+    <schema>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="schema.xml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Domains/MongoDB_City_Cases_Domain_files</folder>
+            <name>schema.xml</name>
+            <version>0</version>
+            <label>schema</label>
+            <description>schema</description>
+            <creationDate>2015-01-09T12:09:58.448Z</creationDate>
+            <updateDate>2015-01-09T12:09:58.448Z</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </schema>
+    <dataSource>
+        <alias>MongoDB_VDS</alias>
+        <dataSourceReference>
+            <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDB_VDS</uri>
+        </dataSourceReference>
+    </dataSource>
+</semanticLayerDataSource>

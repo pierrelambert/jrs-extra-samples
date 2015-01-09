@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema" version="1.0">
+  <items>
+    <item defaultAgg="CountAll" description="CaseCurrentStatus" descriptionId="" dimensionOrMeasure="Dimension" id="CaseCurrentStatus" label="Case Current Status" labelId="" resourceId="cases.CaseCurrentStatus" />
+    <item defaultAgg="Sum" description="Age of person reporting the case" descriptionId="" dimensionOrMeasure="Measure" id="age" label="Reporter Age" labelId="" resourceId="cases.age" />
+    <item defaultAgg="CountAll" description="CaseID" descriptionId="" dimensionOrMeasure="Dimension" id="CaseID" label="Case ID" labelId="" resourceId="cases.CaseID" />
+    <item defaultAgg="CountAll" description="CaseOpenDatetime" descriptionId="" dimensionOrMeasure="Dimension" id="CaseOpenDatetime" label="Date Case Opened" labelId="" resourceId="cases.CaseOpenDatetime" />
+    <item defaultAgg="CountAll" description="gender" descriptionId="" dimensionOrMeasure="Dimension" id="gender" label="Reporter Gender" labelId="" resourceId="cases.gender" />
+    <item defaultAgg="CountAll" description="ServiceName" descriptionId="" dimensionOrMeasure="Dimension" id="ServiceName" label="Service Name" labelId="" resourceId="cases.ServiceName" />
+  </items>
+  <resources>
+    <jdbcTable id="cases" datasourceId="MongoDB_VDS" tableName="cases">
+      <fieldList>
+        <field id="age" fieldDBName="age" type="java.lang.Integer" />
+        <field id="CaseCurrentStatus" fieldDBName="CaseCurrentStatus" type="java.lang.String" />
+        <field id="CaseID" fieldDBName="CaseID" type="java.lang.String" />
+        <field id="CaseLat" fieldDBName="CaseLat" type="java.lang.Double" />
+        <field id="CaseLong" fieldDBName="CaseLong" type="java.lang.Double" />
+        <field id="CaseOpenDatetime" fieldDBName="CaseOpenDatetime" type="java.util.Date" />
+        <field id="gender" fieldDBName="gender" type="java.lang.String" />
+        <field id="ServiceName" fieldDBName="ServiceName" type="java.lang.String" />
+      </fieldList>
+    </jdbcTable>
+  </resources>
+</schema>
+

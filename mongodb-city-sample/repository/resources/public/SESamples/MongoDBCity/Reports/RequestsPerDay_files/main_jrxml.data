@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2014-11-21T12:28:46 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RequestsPerDayReport" language="groovy" pageWidth="540" pageHeight="250" orientation="Landscape" columnWidth="540" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9927b3ee-91f0-4053-9309-41951ceb45e6">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+	<style name="default" isDefault="true" forecolor="#58595B" fontName="Calibri" fontSize="10"/>
+	<parameter name="services" class="java.util.Collection">
+		<defaultValueExpression><![CDATA[["Other"]]]></defaultValueExpression>
+	</parameter>
+	<queryString language="MongoDbQuery">
+		<![CDATA[{'collectionName' : 'cases' ,
+findQuery : { 'ServiceName' : { $in : $P{services}}},
+sort : { 'CaseBeginDatetime' : 1 }
+}]]>
+	</queryString>
+	<field name="CaseAddressString" class="java.lang.String"/>
+	<field name="CaseBeginDatetime" class="java.util.Date"/>
+	<field name="CaseCurrentStatus" class="java.lang.String"/>
+	<field name="CaseCurrentStatusDatetime" class="java.util.Date"/>
+	<field name="CaseDescription" class="java.lang.String"/>
+	<field name="CaseId" class="java.lang.String"/>
+	<field name="CaseLat" class="java.lang.Double"/>
+	<field name="CaseLong" class="java.lang.Double"/>
+	<field name="CaseOpenDatetime" class="java.util.Date"/>
+	<field name="CasePhoneNumbers" class="java.util.List"/>
+	<field name="RequestorFirstName" class="java.lang.String"/>
+	<field name="RequestorLastName" class="java.lang.String"/>
+	<field name="ServiceName" class="java.lang.String"/>
+	<field name="_id" class="org.bson.types.ObjectId"/>
+	<field name="age" class="java.lang.Integer"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="location" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="220" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement mode="Transparent" x="0" y="0" width="540" height="220" uuid="5ad1b929-5281-40a2-ad04-30d5cb73da03"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Spline">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="chart.backgroundColor">
+							<hc:propertyExpression><![CDATA["transparent"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.plotBackgroundColor">
+							<hc:propertyExpression><![CDATA["transparent"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.zoomType">
+							<hc:propertyExpression><![CDATA["xy"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="Day">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.util.Date">
+									<bucketExpression><![CDATA[MONTH( $F{CaseBeginDatetime}) + "/" + DAY($F{CaseBeginDatetime} )]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="Status">
+								<labelExpression><![CDATA[]]></labelExpression>
+								<axisLevelBucket order="None" class="java.lang.String">
+									<bucketExpression><![CDATA[$F{CaseCurrentStatus}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="# Cases" class="java.lang.Integer" calculation="Count">
+							<labelExpression><![CDATA["# Cases"]]></labelExpression>
+							<valueExpression><![CDATA[$F{CaseId}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="# Cases"/>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

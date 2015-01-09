@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Reports</folder>
+    <name>Cases_Snapshot</name>
+    <version>0</version>
+    <label>Cases Snapshot</label>
+    <description></description>
+    <creationDate>2015-01-01T13:01:57.419Z</creationDate>
+    <updateDate>2014-12-05T13:29:53.170Z</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Cases_Snapshot_.data" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Reports/Cases_Snapshot_files</folder>
+            <name>Cases_Snapshot_</name>
+            <version>0</version>
+            <label>Cases Snapshot</label>
+            <creationDate>2015-01-01T13:01:57.419Z</creationDate>
+            <updateDate>2014-12-05T13:08:26.630Z</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDBCityData_Datasource</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/MongoDBCity/Resources/InputControls/services</uri>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Reports/Cases_Snapshot_files</folder>
+            <name>decrease.svg</name>
+            <version>0</version>
+            <label>decrease.svg</label>
+            <description>decrease.svg</description>
+            <creationDate>2015-01-01T13:01:57.419Z</creationDate>
+            <updateDate>2014-11-21T03:53:37.620Z</updateDate>
+            <referenceUri>/public/SESamples/MongoDBCity/Resources/Images/decrease.svg</referenceUri>
+        </localResource>
+    </resource>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Reports/Cases_Snapshot_files</folder>
+            <name>increase.svg</name>
+            <version>0</version>
+            <label>increase.svg</label>
+            <description>increase.svg</description>
+            <creationDate>2015-01-01T13:01:57.419Z</creationDate>
+            <updateDate>2014-11-21T03:53:37.620Z</updateDate>
+            <referenceUri>/public/SESamples/MongoDBCity/Resources/Images/increase.svg</referenceUri>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-05T13:41:04 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cases Map" language="groovy" pageWidth="540" pageHeight="250" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="540" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9927b3ee-91f0-4053-9309-41951ceb45e6">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin|organization_1"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/MongoDBCity/Reports/CasesMap_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SESamples/MongoDBCity/Reports/CasesMap"/>
+	<style name="default" isDefault="true" forecolor="#58595B" fontName="Calibri" fontSize="10"/>
+	<subDataset name="req_per_day" uuid="cb55db12-c46a-4892-8726-5a4cff0e0c31">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+		<parameter name="services" class="java.util.Collection">
+			<defaultValueExpression><![CDATA[$P{services}]]></defaultValueExpression>
+		</parameter>
+		<queryString language="MongoDbQuery">
+			<![CDATA[{'collectionName' : 'cases' ,
+findQuery : { 'ServiceName' : { $in : $P{services}}},
+sort : { 'CaseBeginDatetime' : 1 }
+}]]>
+		</queryString>
+		<field name="CaseAddressString" class="java.lang.String"/>
+		<field name="CaseBeginDatetime" class="java.util.Date"/>
+		<field name="CaseCurrentStatus" class="java.lang.String"/>
+		<field name="CaseDescription" class="java.lang.String"/>
+		<field name="CaseId" class="java.lang.String"/>
+		<field name="CaseLat" class="java.lang.Double"/>
+		<field name="CaseLong" class="java.lang.Double"/>
+		<field name="RequestorFirstName" class="java.lang.String"/>
+		<field name="RequestorLastName" class="java.lang.String"/>
+		<field name="ServiceName" class="java.lang.String"/>
+		<field name="_id" class="org.bson.types.ObjectId"/>
+		<field name="CaseOpenDatetime" class="java.util.Date"/>
+		<field name="CasePhoneNumbers" class="java.util.List"/>
+		<field name="age" class="java.lang.Integer"/>
+		<field name="gender" class="java.lang.String"/>
+		<field name="CaseCurrentStatusDatetime" class="java.util.Date"/>
+		<field name="location" class="java.util.List"/>
+		<variable name="open_count" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{CaseCurrentStatus} == "open"]]></variableExpression>
+		</variable>
+		<variable name="case_age" class="java.lang.Integer">
+			<variableExpression><![CDATA[new Date() - $F{CaseBeginDatetime}]]></variableExpression>
+		</variable>
+		<group name="date">
+			<groupExpression><![CDATA[new SimpleDateFormat("MMM d").format($F{CaseCurrentStatusDatetime})]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="services" class="java.util.Collection">
+		<defaultValueExpression><![CDATA[["Uncollected Garbage", "Other", "Open Man Hole Cover", "Obstructed Parking", "Missing Sign", "Fallen Tree", "Dead Animal", "Open Fire Hydrant", "Broken Street Lamp"]]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="249" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement mode="Transparent" x="0" y="0" width="540" height="249" uuid="5b73dab4-1545-4044-8397-04b0afbd8981"/>
+				<mp:map xmlns:mp="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" evaluationTime="Report">
+					<mp:latitudeExpression><![CDATA[37.7749300f]]></mp:latitudeExpression>
+					<mp:longitudeExpression><![CDATA[-122.4194200f]]></mp:longitudeExpression>
+					<mp:zoomExpression><![CDATA[15]]></mp:zoomExpression>
+					<mp:markerData>
+						<dataset>
+							<datasetRun subDataset="req_per_day" uuid="65607154-97b7-43b2-8b8b-6a9406b0ba76">
+								<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+								<datasetParameter name="services">
+									<datasetParameterExpression><![CDATA[$P{services}]]></datasetParameterExpression>
+								</datasetParameter>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+							</datasetRun>
+						</dataset>
+						<mp:item>
+							<mp:itemProperty name="latitude">
+								<valueExpression><![CDATA[$F{location}.get( 1 ).toFloat()]]></valueExpression>
+							</mp:itemProperty>
+							<mp:itemProperty name="longitude">
+								<valueExpression><![CDATA[$F{location}.get( 0 ).toFloat()]]></valueExpression>
+							</mp:itemProperty>
+							<mp:itemProperty name="url">
+								<valueExpression><![CDATA["flow.html?_flowId=viewReportFlow&standAlone=true&_flowId=viewReportFlow&reportUnit=/public/SESamples/MongoDBCity/Reports/CaseDetailReport&CaseId=" + $F{CaseId}]]></valueExpression>
+							</mp:itemProperty>
+							<mp:itemProperty name="target">
+								<valueExpression><![CDATA["_blank"]]></valueExpression>
+							</mp:itemProperty>
+							<mp:itemProperty name="title" value="value">
+								<valueExpression><![CDATA["\n Latitude: " + $F{location}.get( 1 ) + "\n Longitude:" + $F{location}.get( 0 ) + "\n Service: " + $F{ServiceName}]]></valueExpression>
+							</mp:itemProperty>
+							<mp:itemProperty name="color" value="value">
+								<valueExpression><![CDATA[($F{ServiceName} == "Other" ? "yellow" :
+	($F{ServiceName} == "Open Man Hole Cover" ? "magenta" :
+		($F{ServiceName} == "Broken Street Lamp" ? "green" :
+			($F{ServiceName} == "Open Fire Hydrant" ? "gray" :
+				($F{ServiceName} == "Missing Sign" ? "darkGray" :
+					($F{ServiceName} == "Uncollected Garbage" ? "cyan" :
+						($F{ServiceName} == "Obstructed Parking" ? "blue" :
+							($F{ServiceName} == "Dead Animal" ? "black" :
+								($F{ServiceName} == "Fallen Tree" ? "red" : "red" )))))))))]]></valueExpression>
+							</mp:itemProperty>
+						</mp:item>
+					</mp:markerData>
+				</mp:map>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

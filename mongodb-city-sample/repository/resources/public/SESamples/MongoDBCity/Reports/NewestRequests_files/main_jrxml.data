@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.1.final using JasperReports Library version 5.6.1  -->
+<!-- 2014-11-22T18:01:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Oldest Requests" language="groovy" pageWidth="360" pageHeight="250" orientation="Landscape" columnWidth="360" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9927b3ee-91f0-4053-9309-41951ceb45e6">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro60/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/MongoDBCity/Reports/NewestRequests_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SESamples/MongoDBCity/Reports/NewestRequests"/>
+	<template><![CDATA[]]></template>
+	<style name="default" forecolor="#58595B" fontName="Calibri" fontSize="10"/>
+	<subDataset name="top_5_requests" uuid="b8dead6d-d202-4ac4-b53b-44d5bfc7d050">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+		<parameter name="services" class="java.util.Collection">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+		</parameter>
+		<queryString language="MongoDbQuery">
+			<![CDATA[{ 'collectionName' : 'cases' ,
+	findQuery : { 'ServiceName' : { $in : $P{services}}},
+	'sort' : { 'CaseBeginDatetime' : -1 },
+	'limit' : 5
+
+}]]>
+		</queryString>
+		<field name="CaseAddressString" class="java.lang.String"/>
+		<field name="CaseBeginDatetime" class="java.util.Date"/>
+		<field name="CaseCurrentStatus" class="java.lang.String"/>
+		<field name="CaseCurrentStatusDatetime" class="java.util.Date"/>
+		<field name="CaseDescription" class="java.lang.String"/>
+		<field name="CaseId" class="java.lang.String"/>
+		<field name="CaseLat" class="java.lang.Double"/>
+		<field name="CaseLong" class="java.lang.Double"/>
+		<field name="RequestorFirstName" class="java.lang.String"/>
+		<field name="RequestorLastName" class="java.lang.String"/>
+		<field name="ServiceName" class="java.lang.String"/>
+		<field name="_id" class="org.bson.types.ObjectId"/>
+		<field name="CaseOpenDatetime" class="java.lang.Long"/>
+		<field name="CasePhoneNumbers" class="java.util.List"/>
+		<field name="age" class="java.lang.Integer"/>
+		<field name="gender" class="java.lang.String"/>
+		<variable name="open_count" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$F{CaseCurrentStatus} == "open"]]></variableExpression>
+		</variable>
+		<variable name="case_age" class="java.lang.Integer">
+			<variableExpression><![CDATA[DAYS(TODAY( ),$F{CaseBeginDatetime})]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="services" class="java.util.Collection"/>
+	<queryString language="MongoDbQuery">
+		<![CDATA[{ 'collectionName' : 'cases' ,
+	limit : 1 }]]>
+	</queryString>
+	<field name="CaseAddressString" class="java.lang.String"/>
+	<field name="CaseBeginDatetime" class="java.util.Date"/>
+	<field name="CaseCurrentStatus" class="java.lang.String"/>
+	<field name="CaseCurrentStatusDatetime" class="java.util.Date"/>
+	<field name="CaseDescription" class="java.lang.String"/>
+	<field name="CaseId" class="java.lang.String"/>
+	<field name="CaseLat" class="java.lang.Double"/>
+	<field name="CaseLong" class="java.lang.Double"/>
+	<field name="CaseOpenDatetime" class="java.util.Date"/>
+	<field name="CasePhoneNumbers" class="java.util.List"/>
+	<field name="RequestorFirstName" class="java.lang.String"/>
+	<field name="RequestorLastName" class="java.lang.String"/>
+	<field name="ServiceName" class="java.lang.String"/>
+	<field name="_id" class="org.bson.types.ObjectId"/>
+	<field name="age" class="java.lang.Integer"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="location" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="50" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement key="table" mode="Transparent" x="0" y="0" width="360" height="50" uuid="4bdd1e23-491c-4f56-9520-8e32600190ff"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="top_5_requests" uuid="9b8394ae-aa07-45e8-8834-bfc1b7fad19d">
+						<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+						<datasetParameter name="services">
+							<datasetParameterExpression><![CDATA[$P{services}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="77a09c4d-2d1a-4fb4-b83e-124fbabfb3d2">
+						<jr:columnHeader height="30">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="90" height="30" uuid="f3457237-b39d-4c43-b23c-26eccbb20f65"/>
+								<text><![CDATA[Case ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20">
+							<textField hyperlinkType="ReportExecution" hyperlinkTarget="Blank">
+								<reportElement style="table_TD" x="0" y="0" width="90" height="20" uuid="fcb0cf34-e542-40ce-aa32-b44aa4ca84cb"/>
+								<textFieldExpression><![CDATA[$F{CaseId}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["repo:/public/SESamples/MongoDBCity/Reports/CaseDetailReport"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="CaseId">
+									<hyperlinkParameterExpression><![CDATA[$F{CaseId}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="5b487084-189a-4f03-8baa-ed8ae78e531d">
+						<jr:columnHeader style="table_CH" height="30">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="90" height="30" uuid="077c4915-8f22-48f9-86e9-f5c98e09815d"/>
+								<text><![CDATA[Status]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20">
+							<textField hyperlinkType="ReportExecution" hyperlinkTarget="Blank">
+								<reportElement style="table_TD" x="0" y="0" width="90" height="20" uuid="775bf45f-3774-4209-b112-6353dbd8fc01"/>
+								<textFieldExpression><![CDATA[$F{CaseCurrentStatus}]]></textFieldExpression>
+								<hyperlinkParameter name="_report">
+									<hyperlinkParameterExpression><![CDATA["repo:/public/SESamples/MongoDBCity/Reports/CaseDetailReport"]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+								<hyperlinkParameter name="CaseId">
+									<hyperlinkParameterExpression><![CDATA[$F{CaseId}]]></hyperlinkParameterExpression>
+								</hyperlinkParameter>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="bcd2a58a-46ad-4e72-b19d-81ef01b35911">
+						<jr:columnHeader style="table_CH" height="30">
+							<staticText>
+								<reportElement style="table_CH" mode="Opaque" x="0" y="0" width="90" height="30" uuid="e21da903-6b4f-4550-a1b8-129189bfe1a0"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Last Status]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20">
+							<textField pattern="M/d/yy h:mm a" isBlankWhenNull="false">
+								<reportElement style="table_TD" mode="Transparent" x="0" y="0" width="90" height="20" forecolor="#424242" backcolor="#FFFFFF" uuid="9dc60299-db6f-4291-af35-6a75b0d20876"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none"/>
+								<textFieldExpression><![CDATA[$F{CaseCurrentStatusDatetime}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1bdeb9ef-9567-4f9e-9ead-27443a4bfaf9">
+						<jr:columnHeader style="table_CH" height="30">
+							<staticText>
+								<reportElement style="table_CH" x="0" y="0" width="90" height="30" uuid="692a70fd-5508-4f5f-8c60-f281f9fedef3"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Case Age (Days)]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" forecolor="#FF3333" uuid="e5771a87-22d6-44eb-90cd-be2d285b390a"/>
+								<textFieldExpression><![CDATA[$V{case_age} * -1]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

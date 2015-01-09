@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/MongoDBCity/Resources</parent>
+    <name>Styles</name>
+    <label>Styles</label>
+    <creationDate>2015-01-01T13:01:42.261Z</creationDate>
+    <updateDate>2014-11-22T09:04:20.101Z</updateDate>
+    <resource>CommonReportStyles.jrtx</resource>
+</folder>

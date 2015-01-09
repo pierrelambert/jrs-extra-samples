@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2015-01-09T11:48:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Requests by Service" language="groovy" pageWidth="540" pageHeight="250" orientation="Landscape" columnWidth="540" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9927b3ee-91f0-4053-9309-41951ceb45e6">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
+	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
+	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/MongoDBCity/Reports/RequestsbyService_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/public/SESamples/MongoDBCity/Reports/RequestsbyService"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin|organization_1"/>
+	<style name="default" isDefault="true" forecolor="#58595B" fontName="Calibri" fontSize="10"/>
+	<parameter name="services" class="java.util.Collection"/>
+	<queryString language="MongoDbQuery">
+		<![CDATA[{
+ runCommand: {
+	aggregate : 'cases',
+			$sort : { 'ServiceName' : 1 },
+	pipeline : [{
+		$match : { 'ServiceName' : {$in : $P{services} } }},
+
+		 {$group : { _id : '$ServiceName', casecount : { $sum : 1 }},
+		}]
+
+
+	   }
+}]]>
+	</queryString>
+	<field name="_id" class="java.lang.String"/>
+	<field name="casecount" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="220" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement mode="Transparent" x="0" y="0" width="540" height="220" uuid="27a91313-ae5a-488c-a072-6e9ef169e1fc">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Column">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="_showMeasureNameOnValueAxis">
+							<hc:propertyExpression><![CDATA[Boolean.FALSE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.backgroundColor">
+							<hc:propertyExpression><![CDATA["transparent"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.marginBottom">
+							<hc:propertyExpression><![CDATA[new Integer(65)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.plotBackgroundColor">
+							<hc:propertyExpression><![CDATA["transparent"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.spacingBottom">
+							<hc:propertyExpression><![CDATA[new Integer(65)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="colors">
+							<hc:propertyExpression><![CDATA[java.util.Arrays.asList("#92A8CD","#AA4643","#4572A7","#89A54E","#80699B","#3D96AE","#DB843D","#A47D7C","#B5CA92")]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.href">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="legend.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.FALSE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.column.colorByPoint" value="true"/>
+						<hc:chartProperty name="plotOptions.column.dataLabels.color" value="white"/>
+						<hc:chartProperty name="plotOptions.column.dataLabels.enabled">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.column.dataLabels.inside">
+							<hc:propertyExpression><![CDATA[Boolean.TRUE]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.column.dataLabels.verticalAlign" value="top"/>
+						<hc:chartProperty name="plotOptions.series.pointWidth" value="40"/>
+						<hc:chartProperty name="title.style.color">
+							<hc:propertyExpression><![CDATA[new java.awt.Color(-6052957)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="xAxis.labels.rotation">
+							<hc:propertyExpression><![CDATA[new Integer(-45)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="xAxis.labels.staggerLines" value="1"/>
+						<hc:chartProperty name="xAxis.labels.step">
+							<hc:propertyExpression><![CDATA[new Integer(0)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="xAxis.tickWidth" value="0"/>
+						<hc:chartProperty name="yAxis.gridLineWidth" value="0"/>
+						<hc:chartProperty name="yAxis.labels.rotation">
+							<hc:propertyExpression><![CDATA[new Integer(0)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.labels.step">
+							<hc:propertyExpression><![CDATA[new Integer(0)]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.minorGridLineWidth" value="0"/>
+						<hc:chartProperty name="yAxis.title.text" value=""/>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset/>
+						<dataAxis axis="Rows">
+							<axisLevel name="Service Types">
+								<labelExpression><![CDATA["Level Label expression"]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{_id}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns"/>
+						<multiAxisMeasure name="Case Count" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA["case count"]]></labelExpression>
+							<valueExpression><![CDATA[$F{casecount}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="Case Count"/>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

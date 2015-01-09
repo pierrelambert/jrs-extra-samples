@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="false">
+    <folder>/public/SESamples/MongoDBCity/Reports</folder>
+    <name>RequestsbyService</name>
+    <version>11</version>
+    <label>Requests by Service</label>
+    <description></description>
+    <creationDate>2015-01-01T13:01:57.272Z</creationDate>
+    <updateDate>2015-01-09T11:48:50.326Z</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/SESamples/MongoDBCity/Reports/RequestsbyService_files</folder>
+            <name>main_jrxml</name>
+            <version>22</version>
+            <label>Main jrxml</label>
+            <creationDate>2015-01-01T13:01:57.272Z</creationDate>
+            <updateDate>2015-01-09T11:48:50.249Z</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/SESamples/MongoDBCity/Resources/DataSources/MongoDBCityData_Datasource</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/SESamples/MongoDBCity/Resources/InputControls/services</uri>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>true</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

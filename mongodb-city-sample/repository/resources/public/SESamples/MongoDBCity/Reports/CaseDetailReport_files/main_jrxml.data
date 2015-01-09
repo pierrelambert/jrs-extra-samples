@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 5.5.0-->
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
+<!-- 2014-12-02T16:26:06 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report20" language="groovy" pageWidth="720" pageHeight="600" orientation="Landscape" columnWidth="680" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2fe0d0c6-8a8a-49fa-b2e5-aa0907612d43">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
@@ -8,6 +9,7 @@
 	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver-pro/"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Local MongoDB"/>
 	<property name="ireport.jasperserver.report.resource" value="/public/SESamples/MongoDBCity/Reports/CaseDetailReport_files/main_jrxml"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin|organization_1"/>
 	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
 	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -33,8 +35,8 @@
  findQuery : { location : { $near : 
                       { $geometry :
                          { type : "Point" ,
-                            coordinates : $P{location} }}, 
-                       $maxDistance : 500},
+                            coordinates : $P{location},  $maxDistance : 500} }}, 
+                     
 				'ServiceName' : $P{service}
 				}
 }]]>

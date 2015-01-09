@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/SESamples/MongoDBCity</parent>
+    <name>Domains</name>
+    <label>Domains</label>
+    <description></description>
+    <creationDate>2015-01-09T12:04:40.774Z</creationDate>
+    <updateDate>2015-01-09T12:04:40.774Z</updateDate>
+    <resource>MongoDB_City_Cases_Domain</resource>
+</folder>
