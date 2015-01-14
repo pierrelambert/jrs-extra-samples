@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/performance</parent>
+    <name>datasources</name>
+    <label>Data Sources</label>
+    <description>Data sources used by Performance</description>
+    <creationDate>2015-01-14T16:20:07.389+01:00</creationDate>
+    <updateDate>2014-12-18T10:59:43.779+01:00</updateDate>
+    <resource>ProfileDataSourceJNDI</resource>
+</folder>

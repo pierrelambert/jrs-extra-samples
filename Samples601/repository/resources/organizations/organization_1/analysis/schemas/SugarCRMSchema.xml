@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="false" dataFile="SugarCRMSchema.data">
+    <folder>/organizations/organization_1/analysis/schemas</folder>
+    <name>SugarCRMSchema</name>
+    <version>0</version>
+    <label>SugarCRM Schema</label>
+    <description>SugarCRM Analysis Schema</description>
+    <creationDate>2015-01-14T16:21:04.778+01:00</creationDate>
+    <updateDate>2014-12-18T11:01:08.946+01:00</updateDate>
+    <fileType>olapMondrianSchema</fileType>
+</fileResource>

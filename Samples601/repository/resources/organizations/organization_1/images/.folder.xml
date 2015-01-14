@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1</parent>
+    <name>images</name>
+    <label>Images</label>
+    <description>Folder containing reusable images</description>
+    <creationDate>2015-01-14T16:20:43.254+01:00</creationDate>
+    <updateDate>2014-12-18T11:01:08.714+01:00</updateDate>
+    <resource>JRLogo</resource>
+</folder>

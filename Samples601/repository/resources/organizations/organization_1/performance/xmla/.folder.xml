@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/organizations/organization_1/performance</parent>
+    <name>xmla</name>
+    <label>xmla</label>
+    <description>xmla folder</description>
+    <creationDate>2015-01-14T16:20:44.775+01:00</creationDate>
+    <updateDate>2014-12-18T11:01:23.532+01:00</updateDate>
+    <folder>definitions</folder>
+</folder>
