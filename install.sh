@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-BUILDOMATIC="/root/jasperreports-server-6.0-bin/buildomatic/"
+BUILDOMATIC="/root/jasperreports-server-6.0.1-bin/buildomatic/"
 TOMCATROOT="/var/lib/tomcat6/"
 HTTPDROOT="/var/www/"
 

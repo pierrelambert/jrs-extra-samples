@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Foodmart Data Source JNDI</label>
     <description>Foodmart Data Source JNDI</description>
-    <creationDate>2015-01-14T16:20:47.352+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.559+01:00</creationDate>
     <updateDate>2014-12-18T11:01:09.005+01:00</updateDate>
     <jndiName>jdbc/foodmart</jndiName>
 </jndiJdbcDataSource>

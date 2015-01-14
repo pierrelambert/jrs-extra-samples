@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Foodmart Sample Analysis View</label>
     <description>Sample Analysis View: Foodmart Unit Sales</description>
-    <creationDate>2015-01-14T16:21:05.187+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:47.422+01:00</creationDate>
     <updateDate>2014-12-18T11:01:09.326+01:00</updateDate>
     <olapClientConnection>
         <uri>/organizations/organization_1/analysis/connections/Foodmart</uri>

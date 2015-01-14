@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Customers Report</label>
     <description>Parameterized Report with no default values for parameters</description>
-    <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
     <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
     <mainReport>
         <localResource
@@ -17,7 +17,7 @@
             <version>0</version>
             <label>CustomersReport_label</label>
             <description>CustomersReport description</description>
-            <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+            <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
             <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
@@ -34,7 +34,7 @@
             <version>0</version>
             <label>DateFrom</label>
             <description>DateFrom</description>
-            <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+            <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
             <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
@@ -47,7 +47,7 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+                    <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
                     <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
@@ -65,7 +65,7 @@
             <version>0</version>
             <label>DateTo</label>
             <description>DateTo</description>
-            <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+            <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
             <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
@@ -78,7 +78,7 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2015-01-14T16:21:03.925+01:00</creationDate>
+                    <creationDate>2015-01-14T17:45:46.091+01:00</creationDate>
                     <updateDate>2014-12-18T11:01:22.699+01:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>

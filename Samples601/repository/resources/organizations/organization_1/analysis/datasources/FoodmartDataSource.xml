@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Foodmart Data Source</label>
     <description>Foodmart Data Source</description>
-    <creationDate>2015-01-14T16:21:04.861+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:47.088+01:00</creationDate>
     <updateDate>2014-12-18T11:01:08.984+01:00</updateDate>
     <driver>org.postgresql.Driver</driver>
     <connectionUrl>jdbc:postgresql://localhost:5432/foodmart</connectionUrl>

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Simple Domain</label>
     <description>Simple example of Domain</description>
-    <creationDate>2015-01-14T16:20:47.431+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.656+01:00</creationDate>
     <updateDate>2014-12-18T11:01:24.782+01:00</updateDate>
     <schema>
         <localResource
@@ -17,7 +17,7 @@
             <version>0</version>
             <label>Simple_Domain_schema</label>
             <description>Simple_Domain_schema</description>
-            <creationDate>2015-01-14T16:20:47.431+01:00</creationDate>
+            <creationDate>2015-01-14T17:45:29.656+01:00</creationDate>
             <updateDate>2014-12-18T11:01:24.782+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

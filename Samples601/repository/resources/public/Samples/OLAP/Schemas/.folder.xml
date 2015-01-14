@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="false">
+    <parent>/public/Samples/OLAP</parent>
+    <name>Schemas</name>
+    <label>Schemas</label>
+    <description>Schemas</description>
+    <creationDate>2015-01-14T17:45:27.180+01:00</creationDate>
+    <updateDate>2012-10-11T13:11:36.041+02:00</updateDate>
+    <resource>FoodmartNoTopGrant</resource>
+    <resource>FoodmartSchema2013.xml</resource>
+</folder>

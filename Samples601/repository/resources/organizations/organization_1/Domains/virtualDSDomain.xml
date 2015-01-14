@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Virtual DS Domain</label>
     <description>Example of combining SugarCRM and Foodmart in Domain</description>
-    <creationDate>2015-01-14T16:20:47.619+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.855+01:00</creationDate>
     <updateDate>2014-12-18T11:01:24.477+01:00</updateDate>
     <schema>
         <localResource
@@ -17,7 +17,7 @@
             <version>0</version>
             <label>virtualDSDomain_schema</label>
             <description>virtualDSDomain_schema</description>
-            <creationDate>2015-01-14T16:20:47.619+01:00</creationDate>
+            <creationDate>2015-01-14T17:45:29.855+01:00</creationDate>
             <updateDate>2014-12-18T11:01:24.365+01:00</updateDate>
             <fileType>xml</fileType>
         </localResource>

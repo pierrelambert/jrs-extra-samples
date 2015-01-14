@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Jasperserver Repository SQL data source</label>
     <description>Jasperserver Repository SQL data source for reporting</description>
-    <creationDate>2015-01-14T16:20:47.248+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.451+01:00</creationDate>
     <updateDate>2014-12-18T11:01:08.691+01:00</updateDate>
     <jndiName>jdbc/jasperserver</jndiName>
 </jndiJdbcDataSource>

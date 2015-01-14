@@ -5,7 +5,7 @@
     <version>0</version>
     <label>SugarCRM Data Source JNDI</label>
     <description>SugarCRM Data Source JNDI</description>
-    <creationDate>2015-01-14T16:20:47.318+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.521+01:00</creationDate>
     <updateDate>2014-12-18T11:01:09.047+01:00</updateDate>
     <jndiName>jdbc/sugarcrm</jndiName>
 </jndiJdbcDataSource>

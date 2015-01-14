@@ -5,7 +5,7 @@
     <version>0</version>
     <label>JServer Jdbc Data Source</label>
     <description>JServer Jdbc Data Source</description>
-    <creationDate>2015-01-14T16:20:47.174+01:00</creationDate>
+    <creationDate>2015-01-14T17:45:29.369+01:00</creationDate>
     <updateDate>2014-12-18T11:01:08.703+01:00</updateDate>
     <driver>org.postgresql.Driver</driver>
     <connectionUrl>jdbc:postgresql://localhost:5432/sugarcrm</connectionUrl>
