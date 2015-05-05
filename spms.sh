@@ -7,7 +7,7 @@ echo
 
 SPMSREPO="${HOME}/spms"
 BUILDOMATIC="/root/jasperreports-server-5.6-bin/buildomatic/"
-TOMCATROOT="/var/lib/tomcat6/"
+TOMCATROOT="/var/lib/tomcat7/"
 HTTPDROOT="/var/www/"
 SVNROOT="/var/lib/svn"
 AUTHOREMAIL="fcerbell@tibco.com"

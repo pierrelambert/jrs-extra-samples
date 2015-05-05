@@ -1,4 +1,4 @@
-The install script expects a folder tree with binary files to be copied (overwriting) in Tomcat's home folder (example : /var/lib/tomcat6)
+The install script expects a folder tree with binary files to be copied (overwriting) in Tomcat's home folder (example : /var/lib/tomcat7)
 For example, if you want to add a new jar file in JRS classpath, you could create the appropriate folder structure and add the jar file there :
 mkdir -p webapps/jasperserver-pro/WEB-INF/libs
 cp /path/to/original/jar/file.jar webapps/jasperserver-pro/WEB-INF/libs/

@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 BUILDOMATIC="/root/jasperreports-server-6.0.1-bin/buildomatic/"
-TOMCATROOT="/var/lib/tomcat6/"
+TOMCATROOT="/var/lib/tomcat7/"
 HTTPDROOT="/var/www/"
 
 function Init(){ # Initializes the samples repository
@@ -156,7 +156,7 @@ if [ -d /jrs-extra-samples/${1}/filesystem/TOMCATROOT ]; then
         mkdir -p ${TOMCATROOT}/${file}
         rm -Rf ${TOMCATROOT}/${file}
         cp ${file} ${TOMCATROOT}/${file}
-        chown tomcat6.tomcat6 ${TOMCATROOT}/${file}
+        chown tomcat7.tomcat7 ${TOMCATROOT}/${file}
     done
 fi
 if [ -d /jrs-extra-samples/${1}/filesystem/HTTPDROOT ]; then
@@ -213,13 +213,13 @@ if [ $REBOOT = 1 ]; then
 fi
 if [ $TOMCATRESTART = 1 ]; then
     echo '!!! Need to restart tomcat !!!'
-    /etc/init.d/tomcat6 stop
+    /etc/init.d/tomcat7 stop
     sleep 1
     sync
-    rm -Rf /etc/tomcat6/Catalina/localhost/*
+    rm -Rf /etc/tomcat7/Catalina/localhost/*
     sync
     sleep 1
-    /etc/init.d/tomcat6 start
+    /etc/init.d/tomcat7 start
 fi
 }
 

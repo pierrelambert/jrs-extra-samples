@@ -3,21 +3,21 @@ The filename must be named with the absolute folder path of the patch file, and 
 
 Example to create a patch file for the web.xml file in WEB-INF :
 - go to the folder
-  cd /var/lib/tomcat6/webapps/jasperserver-pro/WEB-INF
+  cd /var/lib/tomcat7/webapps/jasperserver-pro/WEB-INF
 - create a backup of the file
   cp web.xml web.xml.orig
 - make changes in the file
   vi web.xml
 - create the diff/patch file
-  diff -uNr web.xml{.orig,} > _var_lib_tomcat6_webapps_jasperserver-pro_WEB-INF.patch
+  diff -uNr web.xml{.orig,} > _var_lib_tomcat7_webapps_jasperserver-pro_WEB-INF.patch
 
 Example to create a recursive patch for the WEB-INF folder :
 - go to the folder
-  cd /var/lib/tomcat6/webapps/jasperserver-pro
+  cd /var/lib/tomcat7/webapps/jasperserver-pro
 - create a backup of the folder
   cp WEB-INF WEB-INF.orig
 - make changes in the folder files
   vi WEB-INF/web.xml
   vi WEB-INF/applicationContext-semanticLayer.xml
 - create the recursive diff/patch file
-  diff -uNr WEB-INF{.orig,} > _var_lib_tomcat6_webapps_jasperserver-pro_WEB-INF.patch
+  diff -uNr WEB-INF{.orig,} > _var_lib_tomcat7_webapps_jasperserver-pro_WEB-INF.patch
