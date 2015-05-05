@@ -1,6 +1,5 @@
-diff -uNr WEB-INF.orig/jsp/modules/visualize.jsp WEB-INF/jsp/modules/visualize.jsp
---- WEB-INF.orig/jsp/modules/visualize.jsp	2014-11-13 09:09:28.000000000 +0100
-+++ WEB-INF/jsp/modules/visualize.jsp	2015-01-07 11:16:32.000000000 +0100
+--- WEB-INF/jsp/modules/visualize.jsp.orig	2014-11-13 09:09:28.000000000 -0500
++++ WEB-INF/jsp/modules/visualize.jsp	2015-05-05 06:57:36.226250361 -0400
 @@ -16,7 +16,8 @@
  
  <c:choose>
