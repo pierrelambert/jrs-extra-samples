@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Samples</parent>
+    <name>Data_Sources</name>
+    <label>Data Sources</label>
+    <description>Data Sources</description>
+    <creationDate>2015-05-07T08:57:14.197-04:00</creationDate>
+    <updateDate>2012-10-15T12:24:17.736-04:00</updateDate>
+    <folder>connections</folder>
+    <resource>ExmapleVDS</resource>
+    <resource>FoodmartDataSource</resource>
+    <resource>FoodmartDataSourceJNDI</resource>
+    <resource>JServerJNDIDS</resource>
+</folder>

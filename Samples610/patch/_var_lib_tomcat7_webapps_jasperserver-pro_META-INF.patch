@@ -1,0 +1,41 @@
+--- context.xml.orig	2015-05-05 06:16:24.572881000 -0400
++++ context.xml	2015-05-05 06:30:14.391013000 -0400
+@@ -23,12 +23,34 @@
+         
+         
+ 
+-    <Resource accessToUnderlyingConnectionAllowed="true" auth="Container" driverClassName="org.postgresql.Driver" factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/jasperserver" password="postgres" testOnBorrow="true" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/jasperserver" username="postgres"/>
++    <Resource name="jdbc/jasperserver" auth="Container" type="javax.sql.DataSource"
++        maxActive="100" maxIdle="30" maxWait="10000"
++        username="postgres" password="postgres"
++        driverClassName="org.postgresql.Driver"
++        accessToUnderlyingConnectionAllowed = "true"
++        testOnBorrow="true"
++        url="jdbc:postgresql://localhost:5432/jasperserver"
++        factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"
++         />
+ 
+-    
++    <Resource name="jdbc/sugarcrm" auth="Container" type="javax.sql.DataSource"
++        maxActive="100" maxIdle="30" maxWait="10000"
++        username="postgres" password="postgres"
++        driverClassName="org.postgresql.Driver"
++        accessToUnderlyingConnectionAllowed = "true"
++        testOnBorrow="true"
++        url="jdbc:postgresql://localhost:5432/sugarcrm"
++        factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"/>
+ 
+-    
++    <Resource name="jdbc/foodmart" auth="Container" type="javax.sql.DataSource"
++        maxActive="100" maxIdle="30" maxWait="10000"
++        username="postgres" password="postgres"
++        driverClassName="org.postgresql.Driver"
++        accessToUnderlyingConnectionAllowed = "true"
++        testOnBorrow="true"
++        url="jdbc:postgresql://localhost:5432/foodmart"
++        factory="com.jaspersoft.jasperserver.tomcat.jndi.JSCommonsBasicDataSourceFactory"/>
+ 
+     <!-- Comment this line to enable session persistence across Tomcat restarts -->
+-    <Manager pathname=""/>
++    <Manager pathname="" />
+ </Context>

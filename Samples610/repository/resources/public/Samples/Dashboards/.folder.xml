@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/Samples</parent>
+    <name>Dashboards</name>
+    <label>Dashboards</label>
+    <description>Dashboards</description>
+    <creationDate>2015-05-07T08:57:14.164-04:00</creationDate>
+    <updateDate>2012-10-15T12:21:02.359-04:00</updateDate>
+    <resource>1g__Supermart_Dashboard</resource>
+    <resource>2g__Performance_Summary_Dashboard</resource>
+    <resource>Performance_Summary_Dashboard</resource>
+    <resource>Supermart_Dashboard</resource>
+</folder>

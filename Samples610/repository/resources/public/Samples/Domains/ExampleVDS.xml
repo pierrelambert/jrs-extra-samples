@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semanticLayerDataSource exportedWithPermissions="true">
+    <folder>/public/Samples/Domains</folder>
+    <name>ExampleVDS</name>
+    <version>0</version>
+    <label>ExampleVDSDomain</label>
+    <description></description>
+    <creationDate>2015-05-07T08:57:24.855-04:00</creationDate>
+    <updateDate>2013-01-03T09:36:04.457-05:00</updateDate>
+    <schema>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="schema.xml.data" xsi:type="fileResource">
+            <folder>/public/Samples/Domains/ExampleVDS_files</folder>
+            <name>schema.xml</name>
+            <version>0</version>
+            <label>schema</label>
+            <description>schema</description>
+            <creationDate>2015-05-07T08:57:24.855-04:00</creationDate>
+            <updateDate>2013-01-03T09:36:00.245-05:00</updateDate>
+            <fileType>xml</fileType>
+        </localResource>
+    </schema>
+    <dataSource>
+        <alias>ExmapleVDS</alias>
+        <dataSourceReference>
+            <uri>/public/Samples/Data_Sources/ExmapleVDS</uri>
+        </dataSourceReference>
+    </dataSource>
+</semanticLayerDataSource>

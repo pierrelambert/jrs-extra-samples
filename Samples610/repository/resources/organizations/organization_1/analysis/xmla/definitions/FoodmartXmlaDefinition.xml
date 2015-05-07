@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mondrianXmlaDefinition exportedWithPermissions="true">
+    <folder>/organizations/organization_1/analysis/xmla/definitions</folder>
+    <name>FoodmartXmlaDefinition</name>
+    <version>0</version>
+    <label>Foodmart Mondrian XMLA definition</label>
+    <description>Foodmart Mondrian XMLA definition</description>
+    <creationDate>2015-05-07T08:57:37.208-04:00</creationDate>
+    <updateDate>2015-04-30T16:33:10.615-04:00</updateDate>
+    <catalog>Foodmart</catalog>
+    <mondrianConnection>
+        <uri>/organizations/organization_1/analysis/connections/Foodmart</uri>
+    </mondrianConnection>
+</mondrianXmlaDefinition>

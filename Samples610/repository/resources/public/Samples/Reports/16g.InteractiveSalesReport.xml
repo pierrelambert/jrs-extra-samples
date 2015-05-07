@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/public/Samples/Reports</folder>
+    <name>16g.InteractiveSalesReport</name>
+    <version>0</version>
+    <label>16g. Interactive Sales Report</label>
+    <description>Interactive table and chart with alternate color scheme.</description>
+    <creationDate>2015-05-07T08:57:26.101-04:00</creationDate>
+    <updateDate>2014-05-13T19:34:06.578-04:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" dataFile="main_jrxml.data" xsi:type="fileResource">
+            <folder>/public/Samples/Reports/16g.InteractiveSalesReport_files</folder>
+            <name>main_jrxml</name>
+            <version>0</version>
+            <label>Main jrxml</label>
+            <creationDate>2015-05-07T08:57:26.101-04:00</creationDate>
+            <updateDate>2013-09-03T03:37:48.150-04:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <dataSource>
+        <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
+    </dataSource>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Product_Family</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Product_Department</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Product_Category</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Product_Name</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Country</uri>
+    </inputControl>
+    <inputControl>
+        <uri>/public/Samples/Resources/Input_Controls/Gender</uri>
+    </inputControl>
+    <resource>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="fileResource">
+            <folder>/public/Samples/Reports/16g.InteractiveSalesReport_files</folder>
+            <name>SampleReportStylesG</name>
+            <version>0</version>
+            <label>SampleReportStylesG</label>
+            <creationDate>2015-05-07T08:57:26.101-04:00</creationDate>
+            <updateDate>2013-09-25T07:28:57.587-04:00</updateDate>
+            <referenceUri>/public/Samples/Resources/Extras/SampleReportStylesG</referenceUri>
+        </localResource>
+    </resource>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>4</controlsLayout>
+</reportUnit>

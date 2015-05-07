@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="FoodmartMultiVariableNoTopGrant.data">
+    <folder>/organizations/organization_1/analysis/schemas</folder>
+    <name>FoodmartMultiVariableNoTopGrant</name>
+    <version>0</version>
+    <label>Foodmart Multi Variable Grant with no top level</label>
+    <description>ANALYSIS Foodmart Multi Variable Grant. Has no top</description>
+    <creationDate>2015-05-07T08:57:33.483-04:00</creationDate>
+    <updateDate>2015-04-30T16:33:24.821-04:00</updateDate>
+    <fileType>accessGrantSchema</fileType>
+</fileResource>

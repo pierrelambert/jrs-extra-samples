@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="JRLogo.data">
+    <folder>/organizations/organization_1/images</folder>
+    <name>JRLogo</name>
+    <version>0</version>
+    <label>JR logo</label>
+    <description>JR logo</description>
+    <creationDate>2015-05-07T08:57:18.297-04:00</creationDate>
+    <updateDate>2015-04-30T16:33:10.224-04:00</updateDate>
+    <fileType>img</fileType>
+</fileResource>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="supermart_fr.properties.data">
+    <folder>/organizations/organization_1/supermart/Common</folder>
+    <name>supermart_fr.properties</name>
+    <version>0</version>
+    <label>supermart_fr.properties</label>
+    <description>French resource bundle</description>
+    <creationDate>2015-05-07T08:57:32.911-04:00</creationDate>
+    <updateDate>2015-04-30T16:33:24.453-04:00</updateDate>
+    <fileType>prop</fileType>
+</fileResource>

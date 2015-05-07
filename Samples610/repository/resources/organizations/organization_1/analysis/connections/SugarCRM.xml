@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<secureMondrianConnection exportedWithPermissions="true">
+    <folder>/organizations/organization_1/analysis/connections</folder>
+    <name>SugarCRM</name>
+    <version>0</version>
+    <label>SugarCRM</label>
+    <description>SugarCRM Mondrian Analysis Connection: only opportunities</description>
+    <creationDate>2015-05-07T08:57:33.239-04:00</creationDate>
+    <updateDate>2015-04-30T16:33:10.528-04:00</updateDate>
+    <schema>
+        <uri>/organizations/organization_1/analysis/schemas/SugarCRMSchema</uri>
+    </schema>
+    <dataSource>
+        <uri>/organizations/organization_1/analysis/datasources/SugarCRMDataSourceJNDI</uri>
+    </dataSource>
+</secureMondrianConnection>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listOfValues exportedWithPermissions="true">
+    <folder>/public/Samples/Resources/Data_Types</folder>
+    <name>USWesternStatesList</name>
+    <version>0</version>
+    <label>US Western States List</label>
+    <description>State Name, 2 character abbreviation</description>
+    <creationDate>2015-05-07T08:57:23.347-04:00</creationDate>
+    <updateDate>2012-07-03T15:59:32.551-04:00</updateDate>
+    <item>
+        <itemLabel>Washington</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">WA</itemValue>
+    </item>
+    <item>
+        <itemLabel>Oregon</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">OR</itemValue>
+    </item>
+    <item>
+        <itemLabel>California</itemLabel>
+        <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:java="http://java.sun.com" xsi:type="java:java.lang.String">CA</itemValue>
+    </item>
+</listOfValues>
