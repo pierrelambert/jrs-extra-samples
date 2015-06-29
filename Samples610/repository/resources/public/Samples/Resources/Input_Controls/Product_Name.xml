@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Name</label>
     <description>Displays distinct "Product's Names" depending upon the "Product Category" is selected.</description>
-    <creationDate>2015-05-07T08:57:26.002-04:00</creationDate>
-    <updateDate>2013-09-20T01:53:59.828-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:55.392-07:00</creationDate>
+    <updateDate>2013-09-19T22:53:59.828-07:00</updateDate>
     <type>7</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>
@@ -19,8 +19,8 @@
             <name>ProductName_Query</name>
             <version>0</version>
             <label>ProductName Query</label>
-            <creationDate>2015-05-07T08:57:26.002-04:00</creationDate>
-            <updateDate>2013-09-20T01:53:59.828-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:55.392-07:00</creationDate>
+            <updateDate>2013-09-19T22:53:59.828-07:00</updateDate>
             <language>sql</language>
             <queryString>select 
 	p.product_name

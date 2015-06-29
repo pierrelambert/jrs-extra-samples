@@ -4,8 +4,8 @@
     <name>Country</name>
     <version>0</version>
     <label>Country</label>
-    <creationDate>2015-05-07T08:57:26.047-04:00</creationDate>
-    <updateDate>2013-09-16T02:21:55.920-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:55.514-07:00</creationDate>
+    <updateDate>2013-09-15T23:21:55.920-07:00</updateDate>
     <type>7</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>
@@ -18,8 +18,8 @@
             <name>Query</name>
             <version>0</version>
             <label>Query</label>
-            <creationDate>2015-05-07T08:57:26.047-04:00</creationDate>
-            <updateDate>2013-09-16T02:21:55.920-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:55.514-07:00</creationDate>
+            <updateDate>2013-09-15T23:21:55.920-07:00</updateDate>
             <language>sql</language>
             <queryString>SELECT distinct sales_country as "country"
 FROM region

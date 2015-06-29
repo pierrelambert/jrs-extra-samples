@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Foodmart</label>
     <description>Foodmart Mondrian Analysis Connection</description>
-    <creationDate>2015-05-07T08:57:37.027-04:00</creationDate>
-    <updateDate>2013-04-10T17:37:55.969-04:00</updateDate>
+    <creationDate>2015-05-27T15:06:00.585-07:00</creationDate>
+    <updateDate>2013-04-10T14:37:55.969-07:00</updateDate>
     <schema>
         <uri>/public/Samples/OLAP/Schemas/FoodmartSchema2013.xml</uri>
     </schema>

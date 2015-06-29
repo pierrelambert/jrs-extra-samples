@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Foodmart</label>
     <description></description>
-    <creationDate>2015-05-07T08:57:21.689-04:00</creationDate>
-    <updateDate>2013-04-10T17:26:11.954-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:39.239-07:00</creationDate>
+    <updateDate>2013-04-10T14:26:11.954-07:00</updateDate>
     <schema>
         <uri>/public/Samples/OLAP/Schemas/FoodmartSchema2013.xml</uri>
     </schema>

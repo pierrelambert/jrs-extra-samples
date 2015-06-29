@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Customer Name Id Query</label>
     <description>Retrieves Lname | Fname | Id. Note inner join, hard coded table names.</description>
-    <creationDate>2015-05-07T08:57:26.313-04:00</creationDate>
-    <updateDate>2012-07-03T15:59:35.224-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:56.665-07:00</creationDate>
+    <updateDate>2012-07-03T12:59:35.224-07:00</updateDate>
     <language>sql</language>
     <queryString>SELECT DISTINCT customer.lname, customer.fname, customer.customer_id FROM sales_fact_1997 sales_fact_1997 INNER JOIN customer customer ON sales_fact_1997.customer_id = customer.customer_id ORDER BY customer.lname ASC, customer.fname ASC</queryString>
 </query>

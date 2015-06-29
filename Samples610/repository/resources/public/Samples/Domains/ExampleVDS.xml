@@ -5,8 +5,8 @@
     <version>0</version>
     <label>ExampleVDSDomain</label>
     <description></description>
-    <creationDate>2015-05-07T08:57:24.855-04:00</creationDate>
-    <updateDate>2013-01-03T09:36:04.457-05:00</updateDate>
+    <creationDate>2015-05-27T15:05:48.912-07:00</creationDate>
+    <updateDate>2013-01-03T06:36:04.457-08:00</updateDate>
     <schema>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <version>0</version>
             <label>schema</label>
             <description>schema</description>
-            <creationDate>2015-05-07T08:57:24.855-04:00</creationDate>
-            <updateDate>2013-01-03T09:36:00.245-05:00</updateDate>
+            <creationDate>2015-05-27T15:05:48.912-07:00</creationDate>
+            <updateDate>2013-01-03T06:36:00.245-08:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </schema>

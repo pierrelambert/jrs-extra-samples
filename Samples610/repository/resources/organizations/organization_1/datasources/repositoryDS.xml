@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Jasperserver Repository SQL data source</label>
     <description>Jasperserver Repository SQL data source for reporting</description>
-    <creationDate>2015-05-07T08:57:17.820-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.199-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.505-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.505-07:00</updateDate>
     <permission>
         <permissionMask>0</permissionMask>
         <recipient recipientType="role">ROLE_USER</recipient>

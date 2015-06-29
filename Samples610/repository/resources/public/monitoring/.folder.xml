@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>monitoring</name>
+    <label>Monitoring</label>
+    <description>Monitoring Components</description>
+    <creationDate>2015-05-27T15:05:30.553-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:30.553-07:00</updateDate>
+    <folder>datasources</folder>
+    <folder>domains</folder>
+    <folder>reports</folder>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+</folder>

@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Foodmart Mondrian XMLA definition</label>
     <description>Foodmart Mondrian XMLA definition</description>
-    <creationDate>2015-05-07T08:57:37.208-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.615-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:11.136-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.136-07:00</updateDate>
     <catalog>Foodmart</catalog>
     <mondrianConnection>
         <uri>/organizations/organization_1/analysis/connections/Foodmart</uri>

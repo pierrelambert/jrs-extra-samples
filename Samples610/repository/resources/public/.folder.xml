@@ -4,8 +4,14 @@
     <name>public</name>
     <label>Public</label>
     <description></description>
-    <creationDate>2015-05-07T08:56:32.689-04:00</creationDate>
-    <updateDate>2015-04-30T16:32:07.465-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:14.926-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:14.926-07:00</updateDate>
+    <folder>adhoc</folder>
+    <folder>audit</folder>
+    <folder>diagnostic</folder>
+    <folder>monitoring</folder>
+    <folder>Samples</folder>
+    <folder>templates</folder>
     <permission>
         <permissionMask>2</permissionMask>
         <recipient recipientType="role">ROLE_USER</recipient>

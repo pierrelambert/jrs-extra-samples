@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Analysis of Product Sales by City Report" pageWidth="612" pageHeight="792" orientation="Landscape" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" isIgnorePagination="true" uuid="1e505770-e45e-4a78-b553-60f35f9d6b10">
+	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="false"/>
+	<property name="net.sf.jasperreports.export.html.border.collapse" value="separate"/>
+	<property name="net.sf.jasperreports.export.docx.frames.as.nested.tables" value="false"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.actual.size" value="true"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.group.indent" value="0"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.min.group.label.width" value="100"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.detail.band.height" value="25"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.header.band.height" value="25"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.row.header.width" value="125"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.cell.width" value="100"/>
+	<property name="com.jaspersoft.jasperserver.adhoc.crosstab.cell.height" value="20"/>
+	<property name="com.jaspersoft.ji.adhoc" value="1"/>
+	<property name="com.jaspersoft.ji.adhoc.preferredDataStrategy" value="newClassicDataStrategy"/>
+	<property name="net.sf.jasperreports.export.pdf.tagged" value="true"/>
+	<property name="net.sf.jasperreports.export.pdf.tag.language" value="EN-US"/>
+	<property name="net.sf.jasperreports.text.truncate.suffix" value="..."/>
+	<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+	<property name="net.sf.jasperreports.export.pdf.size.page.to.content" value="true"/>
+	<import value="com.jaspersoft.ji.adhoc.service.AdhocEngineServiceImpl"/>
+	<import value="com.jaspersoft.ji.adhoc.jr.AdhocReportUtils"/>
+	<style name="ReportDefault" isDefault="true" mode="Transparent" forecolor="#666666" backcolor="#FFFFFF" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11">
+		<box>
+			<pen lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableBaseFrameStyle" mode="Transparent">
+		<box padding="0">
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableFrameStyle" style="TableBaseFrameStyle">
+		<box padding="1">
+			<topPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableColumnHeaderFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableColumnFooterFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableColumnHeaderTextStyle" style="ReportDefault" mode="Opaque" forecolor="#666666" backcolor="#D5DEE8" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<pen lineWidth="1.0" lineStyle="Solid"/>
+			<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="1.0" lineColor="#B1B6BB"/>
+			<rightPen lineWidth="1.0" lineColor="#B1B6BB"/>
+		</box>
+	</style>
+	<style name="TableGroupHeaderFrameStyle" style="TableBaseFrameStyle" mode="Opaque" backcolor="#E3E9EF">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#B1B6BB"/>
+		</box>
+	</style>
+	<style name="TableGroupHeaderTextStyle" style="ReportDefault" mode="Opaque" forecolor="#666666" backcolor="#E3E9EF" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<topPen lineWidth="1.0" lineColor="#B1B6BB"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableGroupFooterFrameStyle" style="TableBaseFrameStyle" mode="Opaque" backcolor="#E7ECF2">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+	</style>
+	<style name="TableGroupFooterTextStyle" style="ReportDefault" mode="Opaque" forecolor="#666666" backcolor="#E7ECF2" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box leftPadding="5" rightPadding="5">
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+	</style>
+	<style name="TableSummaryFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<leftPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableSummaryTextNoBorderStyle" style="ReportDefault" mode="Opaque" forecolor="#666666" fontName="DejaVu Sans" isBold="true">
+		<box leftPadding="5" rightPadding="5"/>
+	</style>
+	<style name="TableSummaryTextStyle" style="TableSummaryTextNoBorderStyle">
+		<box>
+			<pen lineWidth="1.0"/>
+		</box>
+	</style>
+	<style name="TableTitleFrameStyle" style="TableFrameStyle">
+		<box topPadding="0" bottomPadding="0">
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableTitleTextStyle" style="ReportDefault" mode="Opaque" forecolor="#333333" backcolor="#FFFFFF" hAlign="Center" fontSize="18" isBold="false">
+		<box bottomPadding="8">
+			<pen lineColor="#000000"/>
+			<topPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="TableDetailFrameStyle" style="TableBaseFrameStyle">
+		<box>
+			<leftPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="TableDetailTextStyle" style="ReportDefault" mode="Opaque" forecolor="#666666" backcolor="#FFFFFF" hAlign="Left" vAlign="Middle" fontName="DejaVu Sans" fontSize="11" isBold="false">
+		<box leftPadding="5" rightPadding="5">
+			<pen lineWidth="1.0" lineStyle="Solid"/>
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+	</style>
+	<style name="ChartReportTitle" style="ReportDefault" mode="Opaque" forecolor="#333333" backcolor="#FFFFFF" hAlign="Center" fontSize="18" isBold="false">
+		<box>
+			<pen lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineStyle="Solid"/>
+		</box>
+	</style>
+	<style name="ChartTitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="12" isBold="true"/>
+	<style name="ChartSubtitle" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartLegend" forecolor="#000000" backcolor="#FFFFFF" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartSeriesColor0" backcolor="#87C4FE"/>
+	<style name="ChartSeriesColor1" backcolor="#E96270"/>
+	<style name="ChartSeriesColor2" backcolor="#D1D1D1"/>
+	<style name="ChartSeriesColor3" backcolor="#FFEE99"/>
+	<style name="ChartSeriesColor4" backcolor="#6164FF"/>
+	<style name="ChartSeriesColor5" backcolor="#B0E992"/>
+	<style name="ChartSeriesColor6" backcolor="#AE9CEA"/>
+	<style name="ChartSeriesColor7" backcolor="#F5B05E"/>
+	<style name="ChartSeriesColor8" backcolor="#589EE1"/>
+	<style name="ChartSeriesColor9" backcolor="#AE4E59"/>
+	<style name="ChartSeriesColor10" backcolor="#747474"/>
+	<style name="ChartSeriesColor11" backcolor="#E2DC77"/>
+	<style name="ChartSeriesColor12" backcolor="#4749A5"/>
+	<style name="ChartSeriesColor13" backcolor="#81B963"/>
+	<style name="ChartSeriesColor14" backcolor="#7764B4"/>
+	<style name="ChartSeriesColor15" backcolor="#F27B4C"/>
+	<style name="ChartCategoryAxisLabelFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="11" isBold="true"/>
+	<style name="ChartCategoryAxisTickFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartValueAxisLabelFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="11" isBold="true"/>
+	<style name="ChartValueAxisTickFormat" forecolor="#000000" fontName="DejaVu Sans" fontSize="9" isBold="false"/>
+	<style name="ChartContext" backcolor="#D1CA67"/>
+	<style name="CrosstabElementStyle" mode="Transparent" forecolor="#000033" backcolor="#FFFFFF" hAlign="Center" vAlign="Middle" fontName="DejaVu Sans" fontSize="11">
+		<box bottomPadding="1" rightPadding="1">
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="1.0" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="1.0" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="CrosstabBaseCellStyle" mode="Transparent">
+		<box padding="0">
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabBaseTextStyle" mode="Opaque" forecolor="#666666" backcolor="#FFFFFF" hAlign="Left" vAlign="Top" fontName="DejaVu Sans" fontSize="11" isBold="true">
+		<box topPadding="3" leftPadding="5" bottomPadding="3" rightPadding="5">
+			<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+			<bottomPen lineWidth="1.0" lineColor="#B1B6BB"/>
+			<rightPen lineWidth="1.0" lineColor="#B1B6BB"/>
+		</box>
+	</style>
+	<style name="CrosstabTitleTextStyle" style="CrosstabBaseTextStyle" forecolor="#333333" fontSize="18" isBold="false">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="CrosstabHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#D5DEE8"/>
+	<style name="CrosstabHeaderLabelStyle" style="CrosstabHeaderTextStyle" mode="Transparent">
+		<box>
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabMeasureHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#D3C8EB"/>
+	<style name="CrosstabMeasureHeaderLabelStyle" style="CrosstabMeasureHeaderTextStyle" mode="Transparent">
+		<box>
+			<pen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="CrosstabColumnMeasureHeaderTextStyle" style="CrosstabMeasureHeaderTextStyle"/>
+	<style name="CrosstabRowMeasureHeaderTextStyle" style="CrosstabMeasureHeaderTextStyle" isBold="false"/>
+	<style name="CrosstabDimensionHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#E7ECF2" isBold="false"/>
+	<style name="CrosstabDetailTextStyle" style="CrosstabBaseTextStyle" backcolor="#FFFFFF" hAlign="Right" isBold="false">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+			<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{store_city__DISCRIMINATOR} || $V{product_family__DISCRIMINATOR}]]></conditionExpression>
+			<style backcolor="#F0F4F8" hAlign="Right" isBold="true">
+				<box>
+					<topPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<leftPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<bottomPen lineWidth="1.0" lineColor="#E3E9EF"/>
+					<rightPen lineWidth="1.0" lineColor="#E3E9EF"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="CrosstabDummyHeaderTextStyle" style="CrosstabBaseTextStyle" backcolor="#D4D4D4"/>
+	<parameter name="REPORT_TITLE" class="java.lang.String" isForPrompting="false">
+		<property name="net.sf.jasperreports.data.cache.included" value="true"/>
+		<defaultValueExpression><![CDATA[null]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Collator" class="java.text.Collator" isForPrompting="false">
+		<defaultValueExpression><![CDATA[java.text.Collator.getInstance($P{REPORT_LOCALE})]]></defaultValueExpression>
+	</parameter>
+	<field name="c_gender" class="java.lang.String">
+		<fieldDescription><![CDATA[c_gender]]></fieldDescription>
+	</field>
+	<field name="store_sales" class="java.lang.Double">
+		<fieldDescription><![CDATA[store_sales]]></fieldDescription>
+	</field>
+	<field name="store_city" class="java.lang.String">
+		<property name="udds_mapping" value="ROW_LEVEL"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<field name="the_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[the_date]]></fieldDescription>
+	</field>
+	<field name="product_family" class="java.lang.String">
+		<property name="udds_mapping" value="COLUMN_LEVEL"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<field name="product_name" class="java.lang.String">
+		<fieldDescription><![CDATA[product_name]]></fieldDescription>
+	</field>
+	<field name="c_country" class="java.lang.String">
+		<fieldDescription><![CDATA[c_country]]></fieldDescription>
+	</field>
+	<field name="c_city" class="java.lang.String">
+		<fieldDescription><![CDATA[c_city]]></fieldDescription>
+	</field>
+	<field name="store_country" class="java.lang.String">
+		<fieldDescription><![CDATA[store_country]]></fieldDescription>
+	</field>
+	<field name="c_state_province" class="java.lang.String">
+		<fieldDescription><![CDATA[c_state_province]]></fieldDescription>
+	</field>
+	<field name="product_subcategory" class="java.lang.String">
+		<fieldDescription><![CDATA[product_subcategory]]></fieldDescription>
+	</field>
+	<field name="month_of_year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[month_of_year]]></fieldDescription>
+	</field>
+	<field name="store_cost" class="java.lang.Double">
+		<fieldDescription><![CDATA[store_cost]]></fieldDescription>
+	</field>
+	<field name="store_state" class="java.lang.String">
+		<fieldDescription><![CDATA[store_state]]></fieldDescription>
+	</field>
+	<field name="product_category" class="java.lang.String">
+		<fieldDescription><![CDATA[product_category]]></fieldDescription>
+	</field>
+	<field name="unit_sales" class="java.lang.Double">
+		<fieldDescription><![CDATA[unit_sales]]></fieldDescription>
+	</field>
+	<field name="product_department" class="java.lang.String">
+		<fieldDescription><![CDATA[product_department]]></fieldDescription>
+	</field>
+	<field name="the_year" class="java.lang.Integer">
+		<fieldDescription><![CDATA[the_year]]></fieldDescription>
+	</field>
+	<field name="day_of_month" class="java.lang.Integer">
+		<fieldDescription><![CDATA[day_of_month]]></fieldDescription>
+	</field>
+	<field name="store_name" class="java.lang.String">
+		<fieldDescription><![CDATA[store_name]]></fieldDescription>
+	</field>
+	<field name="quarter" class="java.lang.String">
+		<fieldDescription><![CDATA[quarter]]></fieldDescription>
+	</field>
+	<field name="Measures" class="java.lang.String">
+		<property name="udds_mapping" value="COLUMN_LEVEL"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<field name="Measures__IDENTIFIER" class="java.lang.String">
+		<property name="udds_mapping" value="COLUMN_MEASURE_ID"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<field name="store_sales_m0" class="java.lang.Double">
+		<property name="udds_mapping" value="MEASURE"/>
+		<property name="adhoc.display" value="Store Sales"/>
+		<property name="format" value="#,##0.00"/>
+	</field>
+	<field name="store_city__DISCRIMINATOR" class="java.lang.Boolean">
+		<property name="udds_mapping" value="ROW_DISCRIMINATOR"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<field name="product_family__DISCRIMINATOR" class="java.lang.Boolean">
+		<property name="udds_mapping" value="COLUMN_DISCRIMINATOR"/>
+		<property name="adhoc.display"/>
+		<property name="format"/>
+	</field>
+	<title>
+		<band splitType="Stretch" height="20">
+			<textField isStretchWithOverflow="true">
+				<reportElement key="staticText" style="CrosstabTitleTextStyle" x="0" y="0" width="572" height="0" uuid="d94e4863-b33b-49d0-8465-e540af097d1b">
+					<printWhenExpression><![CDATA[$P{REPORT_TITLE} != null && $P{REPORT_TITLE}.length() > 0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="MMM yyyy">
+				<reportElement key="staticText" style="CrosstabTitleTextStyle" x="0" y="1" width="572" height="19" positionType="Float" uuid="0f0747e2-bae2-4285-a8b7-d3812d693565">
+							  <property name="net.sf.jasperreports.export.json.path" value="entries.date"/>
+							  <property name="net.sf.jasperreports.export.json.repeat.value" value="true"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[((net.sf.jasperreports.types.date.DateRange) $P{REPORT_PARAMETERS_MAP}.get("the_date_1")).getStart()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="25" splitType="Stretch">
+			<crosstab>
+				<reportElement style="CrosstabElementStyle" x="0" y="0" width="572" height="25" uuid="a3677052-e6ad-4a1a-9c33-7f5733ec56d7">
+                                    <property name="net.sf.jasperreports.crosstab.interactive" value="false"/>
+                                </reportElement>
+				<crosstabParameter name="CrosstabRowGroupsCount" class="java.lang.Integer">
+					<parameterValueExpression><![CDATA[new Integer(1)]]></parameterValueExpression>
+				</crosstabParameter>
+				<crosstabParameter name="CrosstabColumnGroupsCount" class="java.lang.Integer">
+					<parameterValueExpression><![CDATA[new Integer(2)]]></parameterValueExpression>
+				</crosstabParameter>
+				<crosstabDataset isDataPreSorted="true"/>
+				<rowGroup name="store_city" width="125" headerPosition="Stretch">
+					<bucket class="java.lang.Comparable">
+						<bucketExpression><![CDATA[net.sf.jasperreports.crosstabs.fill.calculation.DefaultBucketValueOrderDecorator.wrap(($F{store_city}), $F{store_city__DISCRIMINATOR} ? net.sf.jasperreports.crosstabs.fill.calculation.BucketValueOrderDecorator.OrderPosition.LAST : null)]]></bucketExpression>
+						<comparatorExpression><![CDATA[$P{Collator}]]></comparatorExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents style="CrosstabBaseCellStyle">
+							<box padding="0"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="CrosstabDimensionHeaderTextStyle" stretchType="RelativeToBandHeight" x="0" y="0" width="125" height="20" uuid="bca0ba39-5e58-4c04-b523-f0be7bcc2b48"/>
+								<textFieldExpression><![CDATA[$V{store_city}]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA[$V{store_city}]]></hyperlinkTooltipExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="product_family" height="20" headerPosition="Stretch">
+					<bucket class="java.lang.Comparable">
+						<bucketExpression><![CDATA[net.sf.jasperreports.crosstabs.fill.calculation.DefaultBucketValueOrderDecorator.wrap(($F{product_family}), $F{product_family__DISCRIMINATOR} ? net.sf.jasperreports.crosstabs.fill.calculation.BucketValueOrderDecorator.OrderPosition.LAST : null)]]></bucketExpression>
+						<comparatorExpression><![CDATA[$P{Collator}]]></comparatorExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents style="CrosstabBaseCellStyle">
+							<box padding="0"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="CrosstabDimensionHeaderTextStyle" stretchType="RelativeToBandHeight" x="0" y="0" width="100" height="20" uuid="6b44f07a-18bb-4eb3-a74e-5f7e7e788cb4"/>
+								<textFieldExpression><![CDATA[$V{product_family}]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA[$V{product_family}]]></hyperlinkTooltipExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="Measures" height="20" headerPosition="Stretch">
+					<bucket class="net.sf.jasperreports.engine.util.DisplayComparableValue">
+						<bucketExpression><![CDATA[new net.sf.jasperreports.engine.util.DisplayComparableValue($F{Measures__IDENTIFIER}, $F{Measures})]]></bucketExpression>
+						<comparatorExpression><![CDATA[new net.sf.jasperreports.engine.util.DisplayValueLabelComparator($P{Collator})]]></comparatorExpression>
+					</bucket>
+					<crosstabHeader>
+						<cellContents style="CrosstabBaseCellStyle">
+							<textField isStretchWithOverflow="true">
+								<reportElement style="CrosstabHeaderTextStyle" stretchType="RelativeToBandHeight" x="0" y="0" width="125" height="20" uuid="da288d81-de80-4db2-a52a-823e210b608f">
+									<property name="net.sf.jasperreports.text.truncate.at.char" value="true"/>
+									<property name="net.sf.jasperreports.crosstab.row.group.column.header" value="0"/>
+								</reportElement>
+								<textFieldExpression><![CDATA["Store City"]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA["Store City"]]></hyperlinkTooltipExpression>
+							</textField>
+						</cellContents>
+					</crosstabHeader>
+					<crosstabColumnHeader>
+						<cellContents style="CrosstabBaseCellStyle">
+							<box padding="0"/>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="CrosstabColumnMeasureHeaderTextStyle" stretchType="RelativeToBandHeight" x="0" y="0" width="100" height="20" uuid="54ae4b08-0b3d-4a2e-a51c-a6bf77afc6e2">
+									<property name="net.sf.jasperreports.crosstab.column.header.sort.measure.index" value="0"/>
+								</reportElement>
+								<textFieldExpression><![CDATA[$V{Measures}.label()]]></textFieldExpression>
+								<hyperlinkTooltipExpression><![CDATA[$V{Measures}.label()]]></hyperlinkTooltipExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="store_sales_m0" class="java.lang.Double">
+					<measureExpression><![CDATA[$F{store_sales_m0}]]></measureExpression>
+				</measure>
+				<measure name="store_city__DISCRIMINATOR" class="java.lang.Boolean">
+					<measureExpression><![CDATA[$F{store_city__DISCRIMINATOR}]]></measureExpression>
+				</measure>
+				<measure name="product_family__DISCRIMINATOR" class="java.lang.Boolean">
+					<measureExpression><![CDATA[$F{product_family__DISCRIMINATOR}]]></measureExpression>
+				</measure>
+				<crosstabCell width="100" height="20">
+					<cellContents style="CrosstabBaseCellStyle">
+						<box padding="0"/>
+						<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true" hyperlinkType="ReportDataSeries">
+							<reportElement style="CrosstabDetailTextStyle" stretchType="RelativeToBandHeight" x="0" y="0" width="100" height="20" uuid="8ef67e75-b6d1-4ed6-8d3a-b7c7f5757961">
+								<propertyExpression name="net.sf.jasperreports.export.json.string.entries.city"><![CDATA[$V{store_city}]]></propertyExpression>
+								<propertyExpression name="net.sf.jasperreports.export.json.string.entries.product"><![CDATA[$V{product_family}]]></propertyExpression>
+								<propertyExpression name="net.sf.jasperreports.export.json.path"><![CDATA["entries.sales"]]></propertyExpression>
+								<printWhenExpression><![CDATA[$V{Measures}.key().equals("store_sales_m0")]]></printWhenExpression>
+							</reportElement>
+							<textFieldExpression><![CDATA[$V{store_sales_m0}]]></textFieldExpression>
+							<hyperlinkParameter name="_report">
+							  <hyperlinkParameterExpression>"/reports/interactive/Analysis/Product_Sales_Trend"</hyperlinkParameterExpression>
+							</hyperlinkParameter>
+							<hyperlinkParameter name="_width">
+							  <hyperlinkParameterExpression>570</hyperlinkParameterExpression>
+							</hyperlinkParameter>
+							<hyperlinkParameter name="param_city">
+							  <hyperlinkParameterExpression>$V{store_city__DISCRIMINATOR} ? "Totals" : $V{store_city}</hyperlinkParameterExpression>
+							</hyperlinkParameter>
+							<hyperlinkParameter name="param_product">
+							  <hyperlinkParameterExpression>$V{product_family__DISCRIMINATOR} ? "Totals" : $V{product_family}</hyperlinkParameterExpression>
+							</hyperlinkParameter>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</summary>
+</jasperReport>

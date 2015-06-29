@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Supermart Domain</label>
     <description>Comprehensive example of Domain (pre-joined table sets for complex reporting, custom query based dataset, column and row security, I18n bundles)</description>
-    <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-    <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+    <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
     <schema>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <version>0</version>
             <label>schema</label>
             <description>schema</description>
-            <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-            <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+            <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </schema>
@@ -31,8 +31,8 @@
             <version>0</version>
             <label>supermartDomain_domain_security</label>
             <description>supermartDomain_domain_security</description>
-            <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-            <updateDate>2012-10-15T13:12:06.740-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+            <updateDate>2012-10-15T10:12:06.740-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </securityFile>
@@ -54,8 +54,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -72,8 +72,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -90,8 +90,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -108,8 +108,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -126,8 +126,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -144,8 +144,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>
@@ -162,8 +162,8 @@
                 <version>0</version>
                 <label>bundle</label>
                 <description>bundle</description>
-                <creationDate>2015-05-07T08:57:21.461-04:00</creationDate>
-                <updateDate>2013-03-29T13:43:13.687-04:00</updateDate>
+                <creationDate>2015-05-27T15:05:38.763-07:00</creationDate>
+                <updateDate>2013-03-29T10:43:13.687-07:00</updateDate>
                 <fileType>prop</fileType>
             </localResource>
         </bundle>

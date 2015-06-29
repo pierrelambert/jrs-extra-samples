@@ -5,7 +5,7 @@
     <version>0</version>
     <label>FoodmartSchema</label>
     <description>Foodmart Analysis Schema</description>
-    <creationDate>2015-05-07T08:57:33.126-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.360-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.717-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.717-07:00</updateDate>
     <fileType>olapMondrianSchema</fileType>
 </fileResource>

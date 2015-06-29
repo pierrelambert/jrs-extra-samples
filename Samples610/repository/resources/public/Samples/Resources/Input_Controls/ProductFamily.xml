@@ -5,8 +5,8 @@
     <version>0</version>
     <label>ProductFamily</label>
     <description>Product Family Multi-Select</description>
-    <creationDate>2015-05-07T08:57:25.211-04:00</creationDate>
-    <updateDate>2012-10-22T09:13:32.503-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:49.984-07:00</creationDate>
+    <updateDate>2012-10-22T06:13:32.503-07:00</updateDate>
     <type>6</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>

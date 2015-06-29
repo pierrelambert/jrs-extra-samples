@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/</parent>
+    <name>temp</name>
+    <label>Temp</label>
+    <description>Temp</description>
+    <creationDate>2015-05-27T15:05:14.960-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:14.960-07:00</updateDate>
+    <permission>
+        <permissionMask>30</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

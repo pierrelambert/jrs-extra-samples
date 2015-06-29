@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public/monitoring</parent>
+    <name>datasources</name>
+    <label>Monitoring Data Sources</label>
+    <description>Monitoring Data Sources</description>
+    <creationDate>2015-05-27T15:05:30.580-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:30.580-07:00</updateDate>
+    <resource>ReportMonitoringDataSource</resource>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_ADMINISTRATOR</recipient>
+    </permission>
+</folder>

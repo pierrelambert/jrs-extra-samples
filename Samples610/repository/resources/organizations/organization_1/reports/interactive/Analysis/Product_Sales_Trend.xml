@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportUnit exportedWithPermissions="true">
+    <folder>/organizations/organization_1/reports/interactive/Analysis</folder>
+    <name>Product_Sales_Trend</name>
+    <version>0</version>
+    <label>Product Sales Trend</label>
+    <description></description>
+    <creationDate>2015-05-27T15:06:01.727-07:00</creationDate>
+    <updateDate>2015-04-30T02:26:12.097-07:00</updateDate>
+    <mainReport>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false"
+            dataFile="Product_Sales_Trend_.data" xsi:type="fileResource">
+            <folder>/organizations/organization_1/reports/interactive/Analysis/Product_Sales_Trend_files</folder>
+            <name>Product_Sales_Trend_</name>
+            <version>0</version>
+            <label>Product Sales Trend</label>
+            <creationDate>2015-05-27T15:06:01.727-07:00</creationDate>
+            <updateDate>2015-04-28T06:18:31.981-07:00</updateDate>
+            <fileType>jrxml</fileType>
+        </localResource>
+    </mainReport>
+    <inputControl>
+        <localResource
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            exportedWithPermissions="false" xsi:type="inputControl">
+            <folder>/organizations/organization_1/reports/interactive/Analysis/Product_Sales_Trend_files</folder>
+            <name>selectedEntries</name>
+            <version>0</version>
+            <label>Selected entries</label>
+            <description></description>
+            <creationDate>2015-05-27T15:06:01.727-07:00</creationDate>
+            <updateDate>2015-04-28T06:39:58.133-07:00</updateDate>
+            <type>2</type>
+            <mandatory>true</mandatory>
+            <readOnly>false</readOnly>
+            <visible>true</visible>
+            <dataType>
+                <localResource exportedWithPermissions="false" xsi:type="dataType">
+                    <folder>/organizations/organization_1/reports/interactive/Analysis/Product_Sales_Trend_files/selectedEntries_files</folder>
+                    <name>text</name>
+                    <version>0</version>
+                    <label>text</label>
+                    <description></description>
+                    <creationDate>2015-05-27T15:06:01.727-07:00</creationDate>
+                    <updateDate>2015-04-28T06:39:58.133-07:00</updateDate>
+                    <type>1</type>
+                    <regularExpr></regularExpr>
+                    <strictMin>false</strictMin>
+                    <strictMax>false</strictMax>
+                </localResource>
+            </dataType>
+        </localResource>
+    </inputControl>
+    <inputControlRenderingView></inputControlRenderingView>
+    <alwaysPromptControls>false</alwaysPromptControls>
+    <controlsLayout>1</controlsLayout>
+</reportUnit>

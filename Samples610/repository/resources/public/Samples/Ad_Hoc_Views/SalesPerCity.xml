@@ -5,8 +5,8 @@
     <version>0</version>
     <label>20.3 SalesPerCity</label>
     <description>Sample Ad Hoc View used to Create Report for basic Visualize.js demo</description>
-    <creationDate>2015-05-07T08:57:22.546-04:00</creationDate>
-    <updateDate>2014-04-24T17:21:44.932-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:41.152-07:00</creationDate>
+    <updateDate>2014-04-24T14:21:44.932-07:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
     </dataSource>
@@ -18,8 +18,8 @@
             <name>store_city_1</name>
             <version>0</version>
             <label>Store City</label>
-            <creationDate>2015-05-07T08:57:22.546-04:00</creationDate>
-            <updateDate>2014-04-24T17:21:44.932-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:41.152-07:00</creationDate>
+            <updateDate>2014-04-24T14:21:44.932-07:00</updateDate>
             <type>4</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -30,8 +30,8 @@
                     <name>store_city_1</name>
                     <version>0</version>
                     <label>Store City</label>
-                    <creationDate>2015-05-07T08:57:22.546-04:00</creationDate>
-                    <updateDate>2014-04-24T17:21:44.932-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:41.152-07:00</creationDate>
+                    <updateDate>2014-04-24T14:21:44.932-07:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
@@ -339,8 +339,8 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2015-05-07T08:57:22.546-04:00</creationDate>
-            <updateDate>2014-04-24T17:20:57.751-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:41.152-07:00</creationDate>
+            <updateDate>2014-04-24T14:20:57.751-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -352,8 +352,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:22.546-04:00</creationDate>
-            <updateDate>2014-04-24T17:20:57.751-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:41.152-07:00</creationDate>
+            <updateDate>2014-04-24T14:20:57.751-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

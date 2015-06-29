@@ -5,7 +5,7 @@
     <version>0</version>
     <label>JServer JNDI Data Source</label>
     <description>JServer JNDI Data Source</description>
-    <creationDate>2015-05-07T08:57:17.772-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.191-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.492-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.492-07:00</updateDate>
     <jndiName>jdbc/sugarcrm</jndiName>
 </jndiJdbcDataSource>

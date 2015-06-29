@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/reports/interactive</parent>
+    <name>Analysis</name>
+    <label>Analysis</label>
+    <description></description>
+    <creationDate>2015-05-27T15:06:01.313-07:00</creationDate>
+    <updateDate>2015-04-28T06:17:31.060-07:00</updateDate>
+    <resource>Product_Sales_Trend</resource>
+    <resource>sales_2013_01.json</resource>
+    <resource>sales_2013_02.json</resource>
+    <resource>sales_2013_03.json</resource>
+    <resource>sales_2013_04.json</resource>
+    <resource>sales_2013_05.json</resource>
+    <resource>sales_2013_06.json</resource>
+    <resource>sales_2013_07.json</resource>
+    <resource>sales_2013_08.json</resource>
+    <resource>sales_2013_09.json</resource>
+    <resource>sales_2013_10.json</resource>
+    <resource>sales_2013_11.json</resource>
+</folder>

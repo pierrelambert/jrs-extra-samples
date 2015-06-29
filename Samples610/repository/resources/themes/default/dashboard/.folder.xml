@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes/default</parent>
+    <name>dashboard</name>
+    <label>dashboard</label>
+    <creationDate>2015-05-27T15:05:15.210-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:00.371-07:00</updateDate>
+    <resource>canvas.css</resource>
+    <resource>designer.css</resource>
+    <resource>toolbar.css</resource>
+    <resource>viewer.css</resource>
+</folder>

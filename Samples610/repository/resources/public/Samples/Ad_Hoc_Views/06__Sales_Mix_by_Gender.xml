@@ -5,8 +5,8 @@
     <version>0</version>
     <label>06. Sales Mix by Gender</label>
     <description>Sample HTML5 stacked bar chart from a Topic showing Sales Mix by Gender across Countries and Product Families </description>
-    <creationDate>2015-05-07T08:57:22.060-04:00</creationDate>
-    <updateDate>2014-04-25T11:54:21.634-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:40.049-07:00</creationDate>
+    <updateDate>2014-04-25T08:54:21.634-07:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
     </dataSource>
@@ -18,8 +18,8 @@
             <name>quarter_1</name>
             <version>0</version>
             <label>Quarter</label>
-            <creationDate>2015-05-07T08:57:22.060-04:00</creationDate>
-            <updateDate>2014-04-25T11:54:21.634-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:40.049-07:00</creationDate>
+            <updateDate>2014-04-25T08:54:21.634-07:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -30,8 +30,8 @@
                     <name>quarter_1</name>
                     <version>0</version>
                     <label>Quarter</label>
-                    <creationDate>2015-05-07T08:57:22.060-04:00</creationDate>
-                    <updateDate>2014-04-25T11:54:21.634-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:40.049-07:00</creationDate>
+                    <updateDate>2014-04-25T08:54:21.634-07:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
@@ -562,8 +562,8 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2015-05-07T08:57:22.060-04:00</creationDate>
-            <updateDate>2014-04-25T11:54:21.634-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:40.049-07:00</creationDate>
+            <updateDate>2014-04-25T08:54:21.634-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -575,8 +575,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:22.060-04:00</creationDate>
-            <updateDate>2014-04-25T11:54:21.634-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:40.049-07:00</creationDate>
+            <updateDate>2014-04-25T08:54:21.634-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

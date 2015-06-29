@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes/default</parent>
+    <name>fonts</name>
+    <label>fonts</label>
+    <creationDate>2015-05-27T15:05:15.210-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:00.670-07:00</updateDate>
+    <resource>operators.eot</resource>
+    <resource>operators.svg</resource>
+    <resource>operators.ttf</resource>
+    <resource>operators.woff</resource>
+</folder>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/reports</parent>
+    <name>interactive</name>
+    <label>Interactive</label>
+    <description>Interactive</description>
+    <creationDate>2015-05-27T15:05:11.257-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.257-07:00</updateDate>
+    <folder>Analysis</folder>
+    <resource>Analysis_of_Product_Sales_by_City_Report</resource>
+    <resource>Analysis_of_Product_Sales_by_City_View</resource>
+    <resource>CsvData</resource>
+    <resource>CsvDataAdapter</resource>
+    <resource>CustomersData</resource>
+    <resource>CustomersDataAdapter</resource>
+    <resource>CustomersReport</resource>
+    <resource>MapReport</resource>
+    <resource>TableReport</resource>
+</folder>

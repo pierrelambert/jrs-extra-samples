@@ -5,8 +5,8 @@
     <version>0</version>
     <label>01. Geographic Results by Segment</label>
     <description>Sample HTML5 multi-axis column chart from Domain showing Sales, Units, and $ Per Square Foot by Country and Store Type with various filters</description>
-    <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-    <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+    <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Domains/supermartDomain</uri>
     </dataSource>
@@ -18,8 +18,8 @@
             <name>sales_fact_ALL__store_sales_2013_1</name>
             <version>0</version>
             <label>$R{supermart.sales_fact_2013.store_sales.label} is greater than</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -30,8 +30,8 @@
                     <name>number</name>
                     <version>0</version>
                     <label>Number</label>
-                    <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-                    <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+                    <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
                     <type>2</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -47,8 +47,8 @@
             <name>sales__product__low_fat_1</name>
             <version>0</version>
             <label>$R{supermart.product.low_fat.label}</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <type>10</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -59,8 +59,8 @@
                     <name>sales__product__low_fat_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.low_fat.label}</label>
-                    <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-                    <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+                    <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
                     <item>
                         <itemLabel>true</itemLabel>
                         <itemValue xmlns:java="http://java.sun.com" xsi:type="java:java.lang.Boolean">true</itemValue>
@@ -81,8 +81,8 @@
             <name>sales__product__recyclable_package_1</name>
             <version>0</version>
             <label>$R{supermart.product.recyclable_package.label}</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <type>10</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -93,8 +93,8 @@
                     <name>sales__product__recyclable_package_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.recyclable_package.label}</label>
-                    <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-                    <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+                    <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
                     <item>
                         <itemLabel>true</itemLabel>
                         <itemValue xmlns:java="http://java.sun.com" xsi:type="java:java.lang.Boolean">true</itemValue>
@@ -115,8 +115,8 @@
             <name>sales__product__product_name_1</name>
             <version>0</version>
             <label>$R{supermart.product.product_name.label}</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -127,8 +127,8 @@
                     <name>sales__product__product_name_1</name>
                     <version>0</version>
                     <label>$R{supermart.product.product_name.label}</label>
-                    <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-                    <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+                    <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
@@ -161,8 +161,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -176,8 +176,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -191,8 +191,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -206,8 +206,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -221,8 +221,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -236,8 +236,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -251,8 +251,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -264,8 +264,8 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -277,8 +277,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:21.529-04:00</creationDate>
-            <updateDate>2014-05-14T13:38:49.174-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:38.854-07:00</creationDate>
+            <updateDate>2014-05-14T10:38:49.174-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Department</label>
     <description>Displays all the "Product Departments" depending upon the "Product Family" selected.</description>
-    <creationDate>2015-05-07T08:57:25.914-04:00</creationDate>
-    <updateDate>2013-09-20T02:30:11.241-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:55.180-07:00</creationDate>
+    <updateDate>2013-09-19T23:30:11.241-07:00</updateDate>
     <type>4</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>
@@ -19,8 +19,8 @@
             <name>ProductDepartment_Query</name>
             <version>0</version>
             <label>ProductDepartment Query</label>
-            <creationDate>2015-05-07T08:57:25.914-04:00</creationDate>
-            <updateDate>2013-09-20T02:30:11.241-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:55.180-07:00</creationDate>
+            <updateDate>2013-09-19T23:30:11.241-07:00</updateDate>
             <language>sql</language>
             <queryString>select 
 	2 as "seq",

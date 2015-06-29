@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="trend" language="groovy" pageWidth="540" columnWidth="500" pageHeight="350" topMargin="20" bottomMargin="20" leftMargin="20" rightMargin="20" uuid="86b6b94f-ee9e-4708-a4b0-0b8f5ebff097">
+	<property name="com.jaspersoft.jasperserver.json.series.folder" value="/reports/interactive/Analysis"/>
+	<property name="com.jaspersoft.jasperserver.json.series.resource.pattern" value="sales_%.json"/>
+	<property name="net.sf.jasperreports.json.date.pattern" value="yyyy-MM-dd'T'HH:mm:ss"/>
+	<parameter name="selectedEntries" class="java.lang.String">
+	  <defaultValueExpression>'[{"params":{"city":"Totals","product":"Totals"},"color":"#0d233a"}]'</defaultValueExpression>
+	</parameter>
+	<parameter name="selectedEntriesNode" class="com.fasterxml.jackson.databind.node.ArrayNode" isForPrompting="false">
+	  <defaultValueExpression>(com.fasterxml.jackson.databind.node.ArrayNode) net.sf.jasperreports.engine.util.JsonUtil.parseJson(new ByteArrayInputStream($P{selectedEntries}.getBytes()))</defaultValueExpression>
+	</parameter>
+	<queryString language="json">entries</queryString>
+	<field name="date" class="java.util.Date"></field>
+	<field name="city"></field>
+	<field name="product"></field>
+	<field name="sales" class="java.math.BigDecimal"></field>
+	<variable name="entryIndex" class="java.lang.Integer">
+		<variableExpression>com.jaspersoft.jasperserver.api.engine.jasperreports.json.JsonSeriesUtil.matchingEntryIndex($P{selectedEntriesNode}, [city: $F{city}, product: $F{product}])</variableExpression>
+	</variable>
+	<filterExpression><![CDATA[$V{entryIndex} >= 0]]></filterExpression>
+	<summary>
+	  <band height="300">
+			<componentElement>
+				<reportElement x="0" y="0" width="500" height="300"/>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="TimeSeriesLine">
+					<hc:chartSetting name="default">
+						<hc:chartProperty name="title.text" value="Freight" />
+						<hc:chartProperty name="yAxis.min">
+							<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="credits.enabled">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.title.text">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset />
+						<dataAxis axis="Rows">
+							<axisLevel name="date">
+								<labelExpression><![CDATA["Date"]]></labelExpression>
+								<axisLevelBucket class="java.util.Date">
+									<bucketExpression><![CDATA[$F{date}]]></bucketExpression>
+									<bucketProperty name="pattern">"MMM yyyy"</bucketProperty>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="country">
+								<labelExpression><![CDATA["City"]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{city}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+							<axisLevel name="product">
+								<labelExpression><![CDATA["Product"]]></labelExpression>
+								<axisLevelBucket class="java.lang.String">
+									<bucketExpression><![CDATA[$F{product}]]></bucketExpression>
+									<bucketProperty name="seriesIndex">$V{entryIndex}</bucketProperty>
+									<bucketProperty name="seriesColor">$P{selectedEntriesNode}.get($V{entryIndex}).get("color").asText()</bucketProperty>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="Sales" class="java.math.BigDecimal" calculation="Sum">
+							<labelExpression><![CDATA["Sales"]]></labelExpression>
+							<valueExpression><![CDATA[$F{sales}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="Sales">
+						<hc:contributor name="SeriesProperty">
+							<hc:contributorProperty name="index" valueType="Bucket" value="product.seriesIndex"/>
+							<hc:contributorProperty name="color" valueType="Bucket" value="product.seriesColor"/>
+						</hc:contributor>
+					</hc:series>
+				</hc:chart>
+			      </componentElement>
+	    
+	  </band>
+	</summary>
+</jasperReport>

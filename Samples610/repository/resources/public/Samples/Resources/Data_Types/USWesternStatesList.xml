@@ -5,8 +5,8 @@
     <version>0</version>
     <label>US Western States List</label>
     <description>State Name, 2 character abbreviation</description>
-    <creationDate>2015-05-07T08:57:23.347-04:00</creationDate>
-    <updateDate>2012-07-03T15:59:32.551-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:52.699-07:00</creationDate>
+    <updateDate>2012-07-03T12:59:32.551-07:00</updateDate>
     <item>
         <itemLabel>Washington</itemLabel>
         <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

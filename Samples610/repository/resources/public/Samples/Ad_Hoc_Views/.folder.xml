@@ -4,8 +4,8 @@
     <name>Ad_Hoc_Views</name>
     <label>Ad Hoc Views</label>
     <description>Ad Hoc Views</description>
-    <creationDate>2015-05-07T08:57:14.129-04:00</creationDate>
-    <updateDate>2012-10-15T12:20:49.812-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:35.762-07:00</creationDate>
+    <updateDate>2012-10-15T09:20:49.812-07:00</updateDate>
     <resource>01__Geographic_Results_by_Segment</resource>
     <resource>02__Sales_Mix_by_Demographic</resource>
     <resource>03__Store_Segment_Performance</resource>

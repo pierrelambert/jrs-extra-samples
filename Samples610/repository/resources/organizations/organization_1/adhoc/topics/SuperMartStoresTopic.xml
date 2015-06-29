@@ -5,8 +5,8 @@
     <version>0</version>
     <label>SuperMart Stores</label>
     <description>Simple Topic. Good for trying calculations (sales - cost = profit). Add summaries for sales and profit. Group by State, then show Chart.</description>
-    <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>SuperMartStoresTopic.jrxml file</label>
             <description>SuperMartStoresTopic.jrxml file used by the SuperMartStoresTopic report unit</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>supermart.properties</label>
             <description>Base resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart.properties</referenceUri>
         </localResource>
     </resource>
@@ -48,8 +48,8 @@
             <version>0</version>
             <label>supermart_de.properties</label>
             <description>German resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_de.properties</referenceUri>
         </localResource>
     </resource>
@@ -62,8 +62,8 @@
             <version>0</version>
             <label>supermart_en_US.properties</label>
             <description>US English resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_en_US.properties</referenceUri>
         </localResource>
     </resource>
@@ -76,8 +76,8 @@
             <version>0</version>
             <label>supermart_es.properties</label>
             <description>Spanish resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_es.properties</referenceUri>
         </localResource>
     </resource>
@@ -90,8 +90,8 @@
             <version>0</version>
             <label>supermart_fr.properties</label>
             <description>French resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_fr.properties</referenceUri>
         </localResource>
     </resource>
@@ -104,8 +104,8 @@
             <version>0</version>
             <label>supermart_ja.properties</label>
             <description>Japanese resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_ja.properties</referenceUri>
         </localResource>
     </resource>
@@ -118,8 +118,8 @@
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
             <description>Chinese resource bundle</description>
-            <creationDate>2015-05-07T08:57:33.042-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.564-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:33.171-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:33.171-07:00</updateDate>
             <referenceUri>/organizations/organization_1/supermart/Common/supermart_zh_CN.properties</referenceUri>
         </localResource>
     </resource>

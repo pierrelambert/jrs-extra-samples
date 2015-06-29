@@ -4,10 +4,12 @@
     <name>Dashboards</name>
     <label>Dashboards</label>
     <description>Dashboards</description>
-    <creationDate>2015-05-07T08:57:14.164-04:00</creationDate>
-    <updateDate>2012-10-15T12:21:02.359-04:00</updateDate>
-    <resource>1g__Supermart_Dashboard</resource>
-    <resource>2g__Performance_Summary_Dashboard</resource>
-    <resource>Performance_Summary_Dashboard</resource>
-    <resource>Supermart_Dashboard</resource>
+    <creationDate>2015-05-27T15:05:35.834-07:00</creationDate>
+    <updateDate>2012-10-15T09:21:02.359-07:00</updateDate>
+    <resource>1._Supermart_Dashboard</resource>
+    <resource>2._Performance_Summary_Dashboard</resource>
+    <resource>3.1_Sales_Metrics</resource>
+    <resource>3.2_Inventory_Metrics</resource>
+    <resource>3.3_Expense_Metrics</resource>
+    <resource>4._New_Dashboard</resource>
 </folder>

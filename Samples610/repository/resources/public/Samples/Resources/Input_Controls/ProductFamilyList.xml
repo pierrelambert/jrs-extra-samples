@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Product Family List</label>
     <description>Displays Food, Drink, Non-Consumable</description>
-    <creationDate>2015-05-07T08:57:25.205-04:00</creationDate>
-    <updateDate>2012-10-22T09:18:32.815-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:49.976-07:00</creationDate>
+    <updateDate>2012-10-22T06:18:32.815-07:00</updateDate>
     <item>
         <itemLabel>Drink</itemLabel>
         <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

@@ -5,7 +5,7 @@
     <version>0</version>
     <label>Foodmart Schema Uppercase</label>
     <description>Foodmart Analysis Schema Uppercase</description>
-    <creationDate>2015-05-07T08:57:33.553-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.372-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.736-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.736-07:00</updateDate>
     <fileType>olapMondrianSchema</fileType>
 </fileResource>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>adhoc</name>
+    <label>Ad Hoc Components</label>
+    <description>Ad Hoc Components</description>
+    <creationDate>2015-05-27T15:05:14.935-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:14.935-07:00</updateDate>
+    <folder>topics</folder>
+</folder>

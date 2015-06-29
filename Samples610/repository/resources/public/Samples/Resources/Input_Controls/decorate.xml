@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Decorate</label>
     <description>Decorate with SiteMesh: yes or no</description>
-    <creationDate>2015-05-07T08:57:23.475-04:00</creationDate>
-    <updateDate>2013-08-29T01:47:03.110-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:53.418-07:00</creationDate>
+    <updateDate>2013-08-28T22:47:03.110-07:00</updateDate>
     <type>3</type>
     <mandatory>false</mandatory>
     <readOnly>false</readOnly>

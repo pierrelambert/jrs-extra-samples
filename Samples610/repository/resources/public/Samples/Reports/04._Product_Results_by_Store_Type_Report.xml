@@ -5,8 +5,8 @@
     <version>0</version>
     <label>04. Product Results by Store Type Report</label>
     <description>Sample Filtered Table Report Showing Multiple Measures. Created from Sample Ad Hoc View.</description>
-    <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-    <updateDate>2014-05-15T20:06:02.384-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+    <updateDate>2014-05-15T17:06:02.384-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <name>mainReportJrxml</name>
             <version>0</version>
             <label>mainReportJrxml</label>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -49,8 +49,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -64,8 +64,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -79,8 +79,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -94,8 +94,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -109,8 +109,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -124,8 +124,8 @@
             <version>0</version>
             <label>bundle</label>
             <description>bundle</description>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>prop</fileType>
         </localResource>
     </resource>
@@ -137,8 +137,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:25.086-04:00</creationDate>
-            <updateDate>2014-05-15T20:05:25.735-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.597-07:00</creationDate>
+            <updateDate>2014-05-15T17:05:25.735-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

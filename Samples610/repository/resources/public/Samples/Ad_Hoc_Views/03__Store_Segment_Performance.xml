@@ -5,8 +5,8 @@
     <version>0</version>
     <label>03. Store Segment Performance</label>
     <description>Sample OLAP chart with HTML5 Grouped Bar chart and Filter</description>
-    <creationDate>2015-05-07T08:57:21.765-04:00</creationDate>
-    <updateDate>2014-04-25T12:06:57.151-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:39.401-07:00</creationDate>
+    <updateDate>2014-04-25T09:06:57.151-07:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/connections/Foodmart2013</uri>
     </dataSource>
@@ -18,8 +18,8 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2015-05-07T08:57:21.765-04:00</creationDate>
-            <updateDate>2014-04-25T11:57:13.577-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.401-07:00</creationDate>
+            <updateDate>2014-04-25T08:57:13.577-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -31,8 +31,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:21.765-04:00</creationDate>
-            <updateDate>2014-04-25T11:57:13.577-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.401-07:00</creationDate>
+            <updateDate>2014-04-25T08:57:13.577-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

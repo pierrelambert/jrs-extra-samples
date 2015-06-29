@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes/default</parent>
+    <name>common</name>
+    <label>common</label>
+    <creationDate>2015-05-27T15:05:15.210-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:00.016-07:00</updateDate>
+    <resource>base.css</resource>
+    <resource>controls.css</resource>
+    <resource>js_reset.css</resource>
+    <resource>layout.css</resource>
+    <resource>modules.css</resource>
+    <resource>state.css</resource>
+    <resource>utility.css</resource>
+</folder>

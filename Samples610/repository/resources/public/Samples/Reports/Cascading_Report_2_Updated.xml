@@ -5,8 +5,8 @@
     <version>0</version>
     <label>16. Interactive Sales Report</label>
     <description>Interactive table and chart.</description>
-    <creationDate>2015-05-07T08:57:26.741-04:00</creationDate>
-    <updateDate>2014-05-13T19:34:40.689-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:57.856-07:00</creationDate>
+    <updateDate>2014-05-13T16:34:40.689-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,8 +15,8 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>main_jrxml</label>
-            <creationDate>2015-05-07T08:57:26.741-04:00</creationDate>
-            <updateDate>2013-09-03T03:21:52.421-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:57.856-07:00</creationDate>
+            <updateDate>2013-09-03T00:21:52.421-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -49,8 +49,8 @@
             <name>js_logo.png</name>
             <version>0</version>
             <label>js_logo.png</label>
-            <creationDate>2015-05-07T08:57:26.741-04:00</creationDate>
-            <updateDate>2012-11-08T18:36:27.684-05:00</updateDate>
+            <creationDate>2015-05-27T15:05:57.856-07:00</creationDate>
+            <updateDate>2012-11-08T15:36:27.684-08:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Jaspersoft_logo.png</referenceUri>
         </localResource>
     </resource>
@@ -62,8 +62,8 @@
             <name>SampleReportStyles.jrtx</name>
             <version>0</version>
             <label>SampleReportStyles.jrtx</label>
-            <creationDate>2015-05-07T08:57:26.741-04:00</creationDate>
-            <updateDate>2013-09-25T07:43:31.152-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:57.856-07:00</creationDate>
+            <updateDate>2013-09-25T04:43:31.152-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/SampleReportStyles.jrtx</referenceUri>
         </localResource>
     </resource>

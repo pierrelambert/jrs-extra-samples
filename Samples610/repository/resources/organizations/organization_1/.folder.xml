@@ -4,6 +4,20 @@
     <name>organization_1</name>
     <label>Organization</label>
     <description>Organization</description>
-    <creationDate>2015-05-07T08:56:32.938-04:00</creationDate>
-    <updateDate>2015-04-30T16:32:05.614-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:11.772-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.772-07:00</updateDate>
+    <folder>adhoc</folder>
+    <folder>analysis</folder>
+    <folder>ContentFiles</folder>
+    <folder>dashboards</folder>
+    <folder>datasources</folder>
+    <folder>Domains</folder>
+    <folder>images</folder>
+    <folder>organizations</folder>
+    <folder>performance</folder>
+    <folder>reports</folder>
+    <folder>supermart</folder>
+    <folder>temp</folder>
+    <folder>templates</folder>
+    <folder>themes</folder>
 </folder>

@@ -5,10 +5,10 @@
     <version>0</version>
     <label>SugarCRM Data Source</label>
     <description>SugarCRM Data Source</description>
-    <creationDate>2015-05-07T08:57:33.342-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.427-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.821-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.821-07:00</updateDate>
     <driver>org.postgresql.Driver</driver>
-    <connectionUrl>jdbc:postgresql://localhost:5432/sugarcrm</connectionUrl>
+    <connectionUrl>jdbc:postgresql://ci-catalogs.jaspersoft.com:5432/sugarcrm</connectionUrl>
     <connectionUser>postgres</connectionUser>
-    <connectionPassword>ENC&lt;B7C77EB9023F241CECD504AD17BE454D&gt;</connectionPassword>
+    <connectionPassword>ENC&lt;5138E073D85983D4BC86A2BEDBE0CA8D&gt;</connectionPassword>
 </jdbcDataSource>

@@ -5,8 +5,8 @@
     <version>0</version>
     <label>03. Store Segment Performance Report</label>
     <description>Sample OLAP chart with HTML5 Grouped Bar chart and Filter. Created from an Ad Hoc View.</description>
-    <creationDate>2015-05-07T08:57:25.021-04:00</creationDate>
-    <updateDate>2014-04-25T12:06:57.607-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:49.399-07:00</creationDate>
+    <updateDate>2014-04-25T09:06:57.607-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,8 +16,8 @@
             <name>mainReportJrxml</name>
             <version>0</version>
             <label>mainReportJrxml</label>
-            <creationDate>2015-05-07T08:57:25.021-04:00</creationDate>
-            <updateDate>2014-04-25T12:06:57.607-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.399-07:00</creationDate>
+            <updateDate>2014-04-25T09:06:57.607-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -32,8 +32,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:25.021-04:00</creationDate>
-            <updateDate>2014-04-25T12:06:57.607-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:49.399-07:00</creationDate>
+            <updateDate>2014-04-25T09:06:57.607-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiJdbcDataSource exportedWithPermissions="true">
+    <folder>/organizations/organization_1/performance/datasources</folder>
+    <name>ProfileDataSourceJNDI</name>
+    <version>0</version>
+    <label>Profile Data Source JNDI</label>
+    <description>Profile Data Source JNDI</description>
+    <creationDate>2015-05-27T15:05:11.538-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.538-07:00</updateDate>
+    <jndiName>jdbc/jasperserver</jndiName>
+</jndiJdbcDataSource>

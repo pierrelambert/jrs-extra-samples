@@ -4,8 +4,8 @@
     <name>analysis</name>
     <label>Analysis Components</label>
     <description>Analysis Components</description>
-    <creationDate>2015-05-07T08:57:13.325-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.231-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.546-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.546-07:00</updateDate>
     <folder>connections</folder>
     <folder>datasources</folder>
     <folder>reports</folder>

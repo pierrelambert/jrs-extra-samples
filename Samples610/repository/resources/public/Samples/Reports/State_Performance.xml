@@ -5,8 +5,8 @@
     <version>0</version>
     <label>10. Performance By Store Type</label>
     <description>Sample report with Pie Chart and crosstab showing sales performance by store type and product category.</description>
-    <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-    <updateDate>2014-05-13T19:36:19.010-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+    <updateDate>2014-05-13T16:36:19.010-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,8 +15,8 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:58:40.053-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:58:40.053-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -40,8 +40,8 @@
             <name>monthNumber</name>
             <version>0</version>
             <label>monthNumber</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-10-07T22:27:27.500-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-10-07T19:27:27.500-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -52,8 +52,8 @@
                     <name>myDatatype</name>
                     <version>0</version>
                     <label>myDatatype</label>
-                    <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-                    <updateDate>2013-10-07T22:27:27.500-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+                    <updateDate>2013-10-07T19:27:27.500-07:00</updateDate>
                     <type>2</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -69,8 +69,8 @@
             <name>pickStateIsNull</name>
             <version>0</version>
             <label>pickStateIsNull</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-10-07T22:27:34.998-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-10-07T19:27:34.998-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -81,8 +81,8 @@
                     <name>myDatatype</name>
                     <version>0</version>
                     <label>myDatatype</label>
-                    <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-                    <updateDate>2013-10-07T22:27:34.998-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+                    <updateDate>2013-10-07T19:27:34.998-07:00</updateDate>
                     <type>2</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -98,8 +98,8 @@
             <name>states</name>
             <version>0</version>
             <label>states</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-10-07T22:27:43.110-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-10-07T19:27:43.110-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -110,8 +110,8 @@
                     <name>myDatatype</name>
                     <version>0</version>
                     <label>myDatatype</label>
-                    <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-                    <updateDate>2013-10-07T22:27:43.110-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+                    <updateDate>2013-10-07T19:27:43.110-07:00</updateDate>
                     <type>1</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -128,8 +128,8 @@
             <version>0</version>
             <label>Jaspersoft_logo.png</label>
             <description>Jaspersoft_logo.png</description>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Jaspersoft_logo.png</referenceUri>
         </localResource>
     </resource>
@@ -141,8 +141,8 @@
             <name>supermart.properties</name>
             <version>0</version>
             <label>supermart.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
     </resource>
@@ -154,8 +154,8 @@
             <name>supermart_zh_CN.properties</name>
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
     </resource>
@@ -167,8 +167,8 @@
             <name>supermart_ja.properties</name>
             <version>0</version>
             <label>supermart_ja.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
     </resource>
@@ -180,8 +180,8 @@
             <name>supermart_fr.properties</name>
             <version>0</version>
             <label>supermart_fr.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
     </resource>
@@ -193,8 +193,8 @@
             <name>supermart_es.properties</name>
             <version>0</version>
             <label>supermart_es.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
     </resource>
@@ -206,8 +206,8 @@
             <name>supermart_en_US.properties</name>
             <version>0</version>
             <label>supermart_en_US.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>
     </resource>
@@ -219,8 +219,8 @@
             <name>supermart_de.properties</name>
             <version>0</version>
             <label>supermart_de.properties</label>
-            <creationDate>2015-05-07T08:57:27.082-04:00</creationDate>
-            <updateDate>2013-08-29T01:53:07.738-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:59.032-07:00</creationDate>
+            <updateDate>2013-08-28T22:53:07.738-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
     </resource>

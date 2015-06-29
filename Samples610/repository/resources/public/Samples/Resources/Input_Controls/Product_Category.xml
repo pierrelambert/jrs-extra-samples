@@ -4,8 +4,8 @@
     <name>Product_Category</name>
     <version>0</version>
     <label>Product Category</label>
-    <creationDate>2015-05-07T08:57:25.957-04:00</creationDate>
-    <updateDate>2013-09-20T02:30:24.649-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:55.272-07:00</creationDate>
+    <updateDate>2013-09-19T23:30:24.649-07:00</updateDate>
     <type>4</type>
     <mandatory>true</mandatory>
     <readOnly>false</readOnly>
@@ -18,8 +18,8 @@
             <name>ProductCategory_Query</name>
             <version>0</version>
             <label>ProductCategory Query</label>
-            <creationDate>2015-05-07T08:57:25.957-04:00</creationDate>
-            <updateDate>2013-09-20T02:30:24.649-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:55.272-07:00</creationDate>
+            <updateDate>2013-09-19T23:30:24.649-07:00</updateDate>
             <language>sql</language>
             <queryString>select 
 	2 as "seq",

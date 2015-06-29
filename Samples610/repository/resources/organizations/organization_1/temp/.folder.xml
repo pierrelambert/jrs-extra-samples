@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1</parent>
+    <name>temp</name>
+    <label>Temp</label>
+    <description>temp aru folder</description>
+    <creationDate>2015-05-27T15:05:11.417-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.417-07:00</updateDate>
+    <permission>
+        <permissionMask>1</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

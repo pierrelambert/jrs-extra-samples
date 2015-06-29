@@ -5,8 +5,8 @@
     <version>0</version>
     <label>20.2 Cities</label>
     <description>Sample Report used for basic Visualize.js demo</description>
-    <creationDate>2015-05-07T08:57:26.803-04:00</creationDate>
-    <updateDate>2014-04-24T17:12:34.242-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:58.038-07:00</creationDate>
+    <updateDate>2014-04-24T14:12:34.242-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,8 +15,8 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2015-05-07T08:57:26.803-04:00</creationDate>
-            <updateDate>2014-04-24T17:15:52.017-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.038-07:00</creationDate>
+            <updateDate>2014-04-24T14:15:52.017-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -31,8 +31,8 @@
             <name>state</name>
             <version>0</version>
             <label>state</label>
-            <creationDate>2015-05-07T08:57:26.803-04:00</creationDate>
-            <updateDate>2014-04-24T17:15:52.017-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.038-07:00</creationDate>
+            <updateDate>2014-04-24T14:15:52.017-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -43,8 +43,8 @@
                     <name>myDatatype</name>
                     <version>0</version>
                     <label>myDatatype</label>
-                    <creationDate>2015-05-07T08:57:26.803-04:00</creationDate>
-                    <updateDate>2014-04-24T17:15:52.017-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:58.038-07:00</creationDate>
+                    <updateDate>2014-04-24T14:15:52.017-07:00</updateDate>
                     <type>1</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>

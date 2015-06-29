@@ -2,11 +2,11 @@
 <secureMondrianConnection exportedWithPermissions="true">
     <folder>/organizations/organization_1/analysis/connections</folder>
     <name>Foodmart</name>
-    <version>0</version>
+    <version>1</version>
     <label>Foodmart</label>
     <description>Foodmart Mondrian Analysis Connection</description>
-    <creationDate>2015-05-07T08:57:33.166-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:24.914-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:10.944-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:33.443-07:00</updateDate>
     <schema>
         <uri>/organizations/organization_1/analysis/schemas/FoodmartSchema</uri>
     </schema>

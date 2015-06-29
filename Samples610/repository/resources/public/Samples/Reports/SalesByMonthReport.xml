@@ -5,8 +5,8 @@
     <version>0</version>
     <label>11. Sales By Month Report</label>
     <description>Used in the Supermart dashboard.</description>
-    <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-    <updateDate>2013-09-25T07:48:31.858-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+    <updateDate>2013-09-25T04:48:31.858-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,8 +15,8 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-09-03T03:34:43.055-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-09-03T00:34:43.055-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -47,8 +47,8 @@
             <version>0</version>
             <label>supermart.properties</label>
             <description>supermart.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
     </resource>
@@ -61,8 +61,8 @@
             <version>0</version>
             <label>supermart_en_US.properties</label>
             <description>supermart_en_US.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>
     </resource>
@@ -75,8 +75,8 @@
             <version>0</version>
             <label>supermart_de.properties</label>
             <description>supermart_de.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
     </resource>
@@ -89,8 +89,8 @@
             <version>0</version>
             <label>supermart_fr.properties</label>
             <description>supermart_fr.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
     </resource>
@@ -103,8 +103,8 @@
             <version>0</version>
             <label>supermart_es.properties</label>
             <description>supermart_es.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
     </resource>
@@ -117,8 +117,8 @@
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
             <description>supermart_zh_CN.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
     </resource>
@@ -131,8 +131,8 @@
             <version>0</version>
             <label>supermart_ja.properties</label>
             <description>supermart_ja.properties</description>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-08-29T01:24:39.188-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-08-28T22:24:39.188-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
     </resource>
@@ -144,8 +144,8 @@
             <name>SampleReportStyles.jrtx</name>
             <version>0</version>
             <label>SampleReportStyles.jrtx</label>
-            <creationDate>2015-05-07T08:57:24.541-04:00</creationDate>
-            <updateDate>2013-09-25T07:48:22.674-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:58.686-07:00</creationDate>
+            <updateDate>2013-09-25T04:48:22.674-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/SampleReportStyles.jrtx</referenceUri>
         </localResource>
     </resource>

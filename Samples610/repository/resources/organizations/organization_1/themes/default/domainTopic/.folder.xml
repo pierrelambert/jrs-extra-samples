@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/themes/default</parent>
+    <name>domainTopic</name>
+    <label>domainTopic</label>
+    <creationDate>2015-05-27T15:05:00.623-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:00.623-07:00</updateDate>
+    <resource>saveAsTopic.css</resource>
+</folder>

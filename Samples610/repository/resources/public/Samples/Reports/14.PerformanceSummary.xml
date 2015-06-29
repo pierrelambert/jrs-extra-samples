@@ -5,8 +5,8 @@
     <version>0</version>
     <label>14. Performance Summary</label>
     <description>Report used for Performance Summary Dashboard.</description>
-    <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-    <updateDate>2014-05-13T19:32:53.770-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+    <updateDate>2014-05-13T16:32:53.770-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -15,8 +15,8 @@
             <name>main_jrxml</name>
             <version>0</version>
             <label>Main jrxml</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-09-16T05:29:48.834-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-09-16T02:29:48.834-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -35,8 +35,8 @@
             <name>top5Customers.jrxml</name>
             <version>0</version>
             <label>top5Customers.jrxml</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:01.208-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:01.208-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -49,8 +49,8 @@
             <name>top5Geographies.jrxml</name>
             <version>0</version>
             <label>top5Geographies.jrxml</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:01.436-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:01.436-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -63,8 +63,8 @@
             <name>TrafficLight.jrxml</name>
             <version>0</version>
             <label>TrafficLight.jrxml</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:01.898-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:01.898-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -76,8 +76,8 @@
             <name>supermart_de.properties</name>
             <version>0</version>
             <label>supermart_de.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:02.145-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:02.145-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_de.properties</referenceUri>
         </localResource>
     </resource>
@@ -89,8 +89,8 @@
             <name>supermart_es.properties</name>
             <version>0</version>
             <label>supermart_es.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:02.398-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:02.398-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_es.properties</referenceUri>
         </localResource>
     </resource>
@@ -102,8 +102,8 @@
             <name>supermart_fr.properties</name>
             <version>0</version>
             <label>supermart_fr.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:02.657-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:02.657-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_fr.properties</referenceUri>
         </localResource>
     </resource>
@@ -115,8 +115,8 @@
             <name>supermart_ja.properties</name>
             <version>0</version>
             <label>supermart_ja.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:02.912-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:02.912-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_ja.properties</referenceUri>
         </localResource>
     </resource>
@@ -128,8 +128,8 @@
             <name>supermart_zh_CN.properties</name>
             <version>0</version>
             <label>supermart_zh_CN.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:03.172-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:03.172-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_zh_CN.properties</referenceUri>
         </localResource>
     </resource>
@@ -141,8 +141,8 @@
             <name>supermart.properties</name>
             <version>0</version>
             <label>supermart.properties</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:03.433-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:03.433-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart.properties</referenceUri>
         </localResource>
     </resource>
@@ -155,8 +155,8 @@
             <version>0</version>
             <label>supermart_en_US.properties</label>
             <description>supermart_en_US.properties</description>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:03.693-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:03.693-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Extras/supermart_en_US.properties</referenceUri>
         </localResource>
     </resource>
@@ -168,8 +168,8 @@
             <name>Green</name>
             <version>0</version>
             <label>Green</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:03.962-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:03.962-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Green</referenceUri>
         </localResource>
     </resource>
@@ -181,8 +181,8 @@
             <name>Red</name>
             <version>0</version>
             <label>Red</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:04.240-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:04.240-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Red</referenceUri>
         </localResource>
     </resource>
@@ -194,8 +194,8 @@
             <name>Yellow</name>
             <version>0</version>
             <label>Yellow</label>
-            <creationDate>2015-05-07T08:57:24.123-04:00</creationDate>
-            <updateDate>2013-08-29T09:48:04.516-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:54.396-07:00</creationDate>
+            <updateDate>2013-08-29T06:48:04.516-07:00</updateDate>
             <referenceUri>/public/Samples/Resources/Images/Yellow</referenceUri>
         </localResource>
     </resource>

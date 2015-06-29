@@ -7,6 +7,6 @@
     <enabled>true</enabled>
     <role>ROLE_USER</role>
     <role>ROLE_DEMO</role>
-    <previousPasswordChangeTime>2015-04-30T16:33:25.896-04:00</previousPasswordChangeTime>
+    <previousPasswordChangeTime>2015-05-27T15:05:34.774-07:00</previousPasswordChangeTime>
     <tenantId>organization_1</tenantId>
 </user>

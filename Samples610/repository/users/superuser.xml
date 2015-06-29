@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+    <username>superuser</username>
+    <fullName>superuser</fullName>
+    <password>ENC&lt;5722ABED2862F7E853887951E333D694&gt;</password>
+    <externallyDefined>false</externallyDefined>
+    <enabled>true</enabled>
+    <role>ROLE_ADMINISTRATOR</role>
+    <role>ROLE_SUPERUSER</role>
+    <previousPasswordChangeTime>2015-05-27T15:05:11.741-07:00</previousPasswordChangeTime>
+</user>

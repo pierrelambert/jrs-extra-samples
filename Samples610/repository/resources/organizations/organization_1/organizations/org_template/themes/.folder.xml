@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/organizations/organization_1/organizations/org_template</parent>
+    <name>themes</name>
+    <label>Themes</label>
+    <description>themes</description>
+    <creationDate>2015-05-27T15:05:14.510-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.850-07:00</updateDate>
+    <folder>default</folder>
+    <permission>
+        <permissionMask>32</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

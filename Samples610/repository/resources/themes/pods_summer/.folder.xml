@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/themes</parent>
+    <name>pods_summer</name>
+    <label>pods_summer</label>
+    <creationDate>2015-05-27T15:05:15.210-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:10.122-07:00</updateDate>
+    <folder>images</folder>
+    <resource>overrides_custom.css</resource>
+</folder>

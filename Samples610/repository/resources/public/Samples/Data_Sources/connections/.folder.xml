@@ -4,8 +4,8 @@
     <name>connections</name>
     <label>Analysis Connections</label>
     <description>Connections used by Analysis</description>
-    <creationDate>2015-05-07T08:57:15.481-04:00</creationDate>
-    <updateDate>2012-10-15T16:16:13.705-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:36.646-07:00</creationDate>
+    <updateDate>2012-10-15T13:16:13.705-07:00</updateDate>
     <resource>Foodmart2013</resource>
     <resource>FoodmartXmlaConnection</resource>
 </folder>

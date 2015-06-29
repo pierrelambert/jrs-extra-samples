@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<folder exportedWithPermissions="true">
+    <parent>/public</parent>
+    <name>audit</name>
+    <label>Audit</label>
+    <description>Audit Components</description>
+    <creationDate>2015-05-27T15:05:24.452-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:24.452-07:00</updateDate>
+    <folder>datasources</folder>
+    <folder>domains</folder>
+    <folder>reports</folder>
+    <permission>
+        <permissionMask>0</permissionMask>
+        <recipient recipientType="role">ROLE_USER</recipient>
+    </permission>
+</folder>

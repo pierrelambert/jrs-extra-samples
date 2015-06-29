@@ -4,8 +4,8 @@
     <name>definitions</name>
     <label>definitions</label>
     <description>definitions folder</description>
-    <creationDate>2015-05-07T08:57:15.764-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.612-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:11.129-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.129-07:00</updateDate>
     <resource>FoodmartXmlaDefinition</resource>
     <resource>SugarCRMXmlaDefinition</resource>
 </folder>

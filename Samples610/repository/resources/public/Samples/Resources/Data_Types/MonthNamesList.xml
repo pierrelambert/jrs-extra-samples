@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Month Names List</label>
     <description>January = 1, December = 12</description>
-    <creationDate>2015-05-07T08:57:22.789-04:00</creationDate>
-    <updateDate>2012-11-02T09:03:30.919-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:41.837-07:00</creationDate>
+    <updateDate>2012-11-02T06:03:30.919-07:00</updateDate>
     <item>
         <itemLabel>January</itemLabel>
         <itemValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

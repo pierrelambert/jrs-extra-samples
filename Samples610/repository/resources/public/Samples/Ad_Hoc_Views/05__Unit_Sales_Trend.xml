@@ -5,8 +5,8 @@
     <version>0</version>
     <label>05. Unit Sales Trend</label>
     <description>Sample HTML5 Time Series chart from Topic for Unit Sales data over relative 90 rolling day window with filtering by Country and Product Family </description>
-    <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-    <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+    <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
     <dataSource>
         <uri>/public/Samples/Data_Sources/FoodmartDataSourceJNDI</uri>
     </dataSource>
@@ -18,8 +18,8 @@
             <name>c_country_1</name>
             <version>0</version>
             <label>Customer Country</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -30,8 +30,8 @@
                     <name>c_country_1</name>
                     <version>0</version>
                     <label>Customer Country</label>
-                    <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-                    <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+                    <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
@@ -562,8 +562,8 @@
             <name>product_family_1</name>
             <version>0</version>
             <label>Product Family</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
             <type>7</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -574,8 +574,8 @@
                     <name>product_family_1</name>
                     <version>0</version>
                     <label>Product Family</label>
-                    <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-                    <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+                    <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
                     <language>domain</language>
                     <queryString>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;query xmlns="http://www.jaspersoft.com/2007/SL/XMLSchema"&gt;
@@ -1106,8 +1106,8 @@
             <name>the_date_1</name>
             <version>0</version>
             <label>Date between</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -1118,8 +1118,8 @@
                     <name>timestamp</name>
                     <version>0</version>
                     <label>Timestamp</label>
-                    <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-                    <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+                    <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
                     <type>4</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -1135,8 +1135,8 @@
             <name>the_date_2</name>
             <version>0</version>
             <label>and</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
             <type>2</type>
             <mandatory>false</mandatory>
             <readOnly>false</readOnly>
@@ -1147,8 +1147,8 @@
                     <name>timestamp</name>
                     <version>0</version>
                     <label>Timestamp</label>
-                    <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-                    <updateDate>2014-04-25T11:56:09.048-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+                    <updateDate>2014-04-25T08:56:09.048-07:00</updateDate>
                     <type>4</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -1164,8 +1164,8 @@
             <name>topicJRXML</name>
             <version>0</version>
             <label>topicJRXML</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:54:46.859-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:54:46.859-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </resource>
@@ -1177,8 +1177,8 @@
             <name>stateXML</name>
             <version>0</version>
             <label>stateXML</label>
-            <creationDate>2015-05-07T08:57:21.914-04:00</creationDate>
-            <updateDate>2014-04-25T11:54:46.859-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:39.767-07:00</creationDate>
+            <updateDate>2014-04-25T08:54:46.859-07:00</updateDate>
             <fileType>xml</fileType>
         </localResource>
     </resource>

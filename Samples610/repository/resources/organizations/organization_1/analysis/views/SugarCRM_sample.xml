@@ -5,8 +5,8 @@
     <version>0</version>
     <label>SugarCRM Sample Analysis View</label>
     <description>Sample SugarCRM Analysis View: Sales Performance by Industry/Account</description>
-    <creationDate>2015-05-07T08:57:33.687-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:10.576-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:11.079-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.079-07:00</updateDate>
     <olapClientConnection>
         <uri>/organizations/organization_1/analysis/connections/SugarCRM</uri>
     </olapClientConnection>

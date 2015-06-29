@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Customer Name ID Input Control</label>
     <description>Uses CustomerNameIdQuery. Maps to customerId parameter.</description>
-    <creationDate>2015-05-07T08:57:26.317-04:00</creationDate>
-    <updateDate>2012-10-17T05:52:10.868-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:56.679-07:00</creationDate>
+    <updateDate>2012-10-17T02:52:10.868-07:00</updateDate>
     <type>4</type>
     <mandatory>false</mandatory>
     <readOnly>false</readOnly>

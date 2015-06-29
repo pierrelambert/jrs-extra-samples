@@ -5,8 +5,8 @@
     <version>0</version>
     <label>Customers Report</label>
     <description>Parameterized Report with no default values for parameters</description>
-    <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-    <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+    <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
     <mainReport>
         <localResource
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -17,8 +17,8 @@
             <version>0</version>
             <label>CustomersReport_label</label>
             <description>CustomersReport description</description>
-            <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
             <fileType>jrxml</fileType>
         </localResource>
     </mainReport>
@@ -34,8 +34,8 @@
             <version>0</version>
             <label>DateFrom</label>
             <description>DateFrom</description>
-            <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
             <readOnly>false</readOnly>
@@ -47,8 +47,8 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-                    <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+                    <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>
@@ -65,8 +65,8 @@
             <version>0</version>
             <label>DateTo</label>
             <description>DateTo</description>
-            <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-            <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+            <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+            <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
             <type>2</type>
             <mandatory>true</mandatory>
             <readOnly>false</readOnly>
@@ -78,8 +78,8 @@
                     <version>0</version>
                     <label>Date_label</label>
                     <description>Date description</description>
-                    <creationDate>2015-05-07T08:57:32.287-04:00</creationDate>
-                    <updateDate>2015-04-30T16:33:24.354-04:00</updateDate>
+                    <creationDate>2015-05-27T15:05:32.858-07:00</creationDate>
+                    <updateDate>2015-05-27T15:05:32.858-07:00</updateDate>
                     <type>3</type>
                     <strictMin>false</strictMin>
                     <strictMax>false</strictMax>

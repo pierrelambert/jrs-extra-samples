@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fileResource exportedWithPermissions="true" dataFile="CustomersDataAdapter.data">
+    <folder>/organizations/organization_1/reports/interactive</folder>
+    <name>CustomersDataAdapter</name>
+    <version>0</version>
+    <label>Customers Data Adapter</label>
+    <description>Customers Data Adapter</description>
+    <creationDate>2015-05-27T15:05:11.334-07:00</creationDate>
+    <updateDate>2015-05-27T15:05:11.334-07:00</updateDate>
+    <fileType>xml</fileType>
+</fileResource>
